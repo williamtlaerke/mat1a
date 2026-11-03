@@ -34,7 +34,7 @@ button:disabled{opacity:.6}
   <div class="err" id="err" role="alert"></div>
 </form>
 <script>
-const META={"salt": "gshD8pELBCSg1Cy5NbWEAw==", "it": 310000, "v": "9abc200d65"};
+const META={"salt": "gshD8pELBCSg1Cy5NbWEAw==", "it": 310000, "v": "105cf3e2dc", "keys": ["zY2UWK10O2A4Gjwx6OavqzZzvEAxDgdLm1RmDnf37JUDa3VRoGyyTbk8ozQxvwOZ0u9WCCxDjnxVeqfE"]};
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
 const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 const KEYNAME='mat1a-nøgle';
@@ -49,7 +49,11 @@ async function derive(pw){const base=await crypto.subtle.importKey('raw',new Tex
   if(saved){try{const k=await crypto.subtle.importKey('raw',b64(saved),'AES-GCM',false,['decrypt']);return boot(await open_(k,buf))}catch(e){try{localStorage.removeItem(KEYNAME)}catch(_){}}}
   document.getElementById('boot').hidden=true;const f=document.getElementById('f');f.hidden=false;document.getElementById('pw').focus();
   f.onsubmit=async ev=>{ev.preventDefault();const btn=document.getElementById('go'),err=document.getElementById('err');btn.disabled=true;btn.textContent='Låser op …';err.textContent='';
-    try{const k=await derive(document.getElementById('pw').value);const html=await open_(k,buf);
+    try{const kek=await derive(document.getElementById('pw').value);let k=null,html=null;
+      // Williams kode er selve indholdsnøglen; andres kode låser en krypteret kopi af den op
+      try{html=await open_(kek,buf);k=kek}catch(e){
+        for(const w of META.keys||[]){try{const wb=b64(w);const raw=await crypto.subtle.decrypt({name:'AES-GCM',iv:wb.slice(0,12)},kek,wb.slice(12));k=await crypto.subtle.importKey('raw',raw,'AES-GCM',true,['decrypt']);break}catch(_){}}
+        if(!k)throw new Error('kode');html=await open_(k,buf)}
       if(document.getElementById('rem').checked){try{const raw=new Uint8Array(await crypto.subtle.exportKey('raw',k));localStorage.setItem(KEYNAME,btoa(String.fromCharCode(...raw)))}catch(e){}}
       boot(html)}
     catch(e){err.textContent='Forkert adgangskode. Prøv igen.';btn.disabled=false;btn.textContent='Lås op'}}
