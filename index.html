@@ -34,11 +34,11 @@ button:disabled{opacity:.6}
   <div class="err" id="err" role="alert"></div>
 </form>
 <script>
-const META={"salt": "gshD8pELBCSg1Cy5NbWEAw==", "it": 310000, "v": "a0b146449f"};
+const META={"salt": "gshD8pELBCSg1Cy5NbWEAw==", "it": 310000, "v": "9abc200d65"};
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
 const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 const KEYNAME='mat1a-nøgle';
-async function data(){const r=await fetch('app.bin',{cache:'no-cache'}).catch(()=>caches.match('app.bin'));if(!r||!r.ok)throw new Error('net');return new Uint8Array(await r.arrayBuffer())}
+async function data(){const r=await fetch('app.bin').catch(()=>caches.match('app.bin'));if(!r||!r.ok)throw new Error('net');return new Uint8Array(await r.arrayBuffer())}
 async function open_(key,buf){const iv=buf.slice(0,12),ct=buf.slice(12);const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv},key,ct);return new TextDecoder().decode(pt)}
 function boot(html){document.open();document.write(html);document.close()}
 async function derive(pw){const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
