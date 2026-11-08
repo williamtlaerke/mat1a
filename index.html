@@ -22,22 +22,34 @@ button{font:inherit;font-weight:900;font-size:17px;padding:13px;border:0;border-
 button:disabled{opacity:.6}
 .err{color:var(--bad);font-size:14px;min-height:1.2em}
 .boot{color:var(--muted);font-size:15px}
+.pwrow{position:relative;display:flex}.pwrow input{flex:1;min-width:0;width:100%;padding-right:64px}form{box-sizing:border-box}.show{position:absolute;right:6px;top:50%;transform:translateY(-50%);font:inherit;font-size:14px;padding:6px 10px;border-radius:10px;border:0;background:transparent;color:var(--accent);cursor:pointer;box-shadow:none;font-weight:700}
 </style></head><body>
 <div class="boot" id="boot">Åbner Mat1a …</div>
-<form id="f" hidden autocomplete="off">
+<form id="f" hidden autocomplete="on" method="post" action="#">
   <img src="icon-180.png" alt="">
   <h1>Mat1a</h1>
-  <p>Skriv din adgangskode. Telefonen husker den bagefter, så appen også virker uden net.</p>
-  <input type="password" id="pw" placeholder="Adgangskode" autocapitalize="none" autocorrect="off" spellcheck="false" aria-label="Adgangskode">
-  <label><input type="checkbox" id="rem" checked> Husk på denne telefon</label>
+  <p>Skriv din adgangskode én gang. Enheden husker den bagefter, og appen virker også uden net.</p>
+  <input type="text" name="username" autocomplete="username" value="Mat1a" readonly tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+  <div class="pwrow"><input type="password" id="pw" name="password" placeholder="Adgangskode" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" aria-label="Adgangskode"><button type="button" id="show" class="show" aria-label="Vis adgangskode">Vis</button></div>
+  <label><input type="checkbox" id="rem" checked> Husk på denne enhed</label>
   <button id="go">Lås op</button>
   <div class="err" id="err" role="alert"></div>
 </form>
 <script>
-const META={"salt": "gshD8pELBCSg1Cy5NbWEAw==", "it": 310000, "v": "76481b2858", "keys": ["5IKXklx80BDAglIZFpbUwIcnxoMAikAAza11SpmxuHC/ZVU85kx+1Ks/cAkA6lLgkhixhlqv7sm7K037"]};
+const META={"salt": "gshD8pELBCSg1Cy5NbWEAw==", "it": 310000, "v": "669fc54ff5", "keys": ["cZU4i1CmIVXn/qsOicfWtVJfS+L+fFg9LSFmjCqwwSSrJ/1Od991AVADItxM9qNS0vSuY72f7+w9r2XD"]};
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
 const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 const KEYNAME='mat1a-nøgle';
+// Den huskede nøgle gemmes som en ikke-eksporterbar CryptoKey i IndexedDB (kan bruges, men ikke læses ud). localStorage er kun reserve.
+const idb=()=>new Promise((res,rej)=>{const r=indexedDB.open('mat1a',1);r.onupgradeneeded=()=>r.result.createObjectStore('k');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});
+const idbDo=(mode,fn)=>idb().then(db=>new Promise((res,rej)=>{const q=fn(db.transaction('k',mode).objectStore('k'));q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)}));
+const keyGet=()=>idbDo('readonly',s=>s.get('key')).catch(()=>null);
+const keyPut=k=>idbDo('readwrite',s=>s.put(k,'key'));
+const keyDel=()=>idbDo('readwrite',s=>s.delete('key')).catch(()=>{});
+async function remember(raw){
+  try{const k=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']);await keyPut(k);try{localStorage.removeItem(KEYNAME)}catch(_){}}
+  catch(e){try{localStorage.setItem(KEYNAME,btoa(String.fromCharCode(...raw)))}catch(_){}}
+  try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(_){}}
 async function data(){const r=await fetch('app.bin').catch(()=>caches.match('app.bin'));if(!r||!r.ok)throw new Error('net');return new Uint8Array(await r.arrayBuffer())}
 async function open_(key,buf){const iv=buf.slice(0,12),ct=buf.slice(12);const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv},key,ct);return new TextDecoder().decode(pt)}
 function boot(html){document.open();document.write(html);document.close()}
@@ -45,16 +57,20 @@ async function derive(pw){const base=await crypto.subtle.importKey('raw',new Tex
   return crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(META.salt),iterations:META.it,hash:'SHA-256'},base,{name:'AES-GCM',length:256},true,['decrypt'])}
 (async()=>{let buf;
   try{buf=await data()}catch(e){document.getElementById('boot').textContent='Mat1a kunne ikke hentes. Åbn appen én gang med net, så virker den offline bagefter.';return}
+  const stored=await keyGet();
+  if(stored){try{return boot(await open_(stored,buf))}catch(e){await keyDel()}}
   let saved=null;try{saved=localStorage.getItem(KEYNAME)}catch(e){}
-  if(saved){try{const k=await crypto.subtle.importKey('raw',b64(saved),'AES-GCM',false,['decrypt']);return boot(await open_(k,buf))}catch(e){try{localStorage.removeItem(KEYNAME)}catch(_){}}}
+  if(saved){try{const raw=b64(saved);const k=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']);const html=await open_(k,buf);await remember(raw);return boot(html)}catch(e){try{localStorage.removeItem(KEYNAME)}catch(_){}}}
   document.getElementById('boot').hidden=true;const f=document.getElementById('f');f.hidden=false;document.getElementById('pw').focus();
-  f.onsubmit=async ev=>{ev.preventDefault();const btn=document.getElementById('go'),err=document.getElementById('err');btn.disabled=true;btn.textContent='Låser op …';err.textContent='';
+  const pw=document.getElementById('pw'),sh=document.getElementById('show');
+  sh.onclick=()=>{const v=pw.type==='password';pw.type=v?'text':'password';sh.textContent=v?'Skjul':'Vis';sh.setAttribute('aria-label',v?'Skjul adgangskode':'Vis adgangskode');pw.focus()};
+  f.onsubmit=async ev=>{ev.preventDefault();pw.type='password';const btn=document.getElementById('go'),err=document.getElementById('err');btn.disabled=true;btn.textContent='Låser op …';err.textContent='';
     try{const kek=await derive(document.getElementById('pw').value);let k=null,html=null;
       // Williams kode er selve indholdsnøglen; andres kode låser en krypteret kopi af den op
       try{html=await open_(kek,buf);k=kek}catch(e){
         for(const w of META.keys||[]){try{const wb=b64(w);const raw=await crypto.subtle.decrypt({name:'AES-GCM',iv:wb.slice(0,12)},kek,wb.slice(12));k=await crypto.subtle.importKey('raw',raw,'AES-GCM',true,['decrypt']);break}catch(_){}}
         if(!k)throw new Error('kode');html=await open_(k,buf)}
-      if(document.getElementById('rem').checked){try{const raw=new Uint8Array(await crypto.subtle.exportKey('raw',k));localStorage.setItem(KEYNAME,btoa(String.fromCharCode(...raw)))}catch(e){}}
+      if(document.getElementById('rem').checked){try{await remember(new Uint8Array(await crypto.subtle.exportKey('raw',k)))}catch(e){}}
       boot(html)}
     catch(e){err.textContent='Forkert adgangskode. Prøv igen.';btn.disabled=false;btn.textContent='Lås op'}}
 })();
