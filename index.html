@@ -1,5 +1,5 @@
 <!doctype html><html lang="da"><head><meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <script>/* framebust: appen må ikke vises inde i en anden side */if(window.top!==window.self){document.documentElement.style.display='none';try{window.top.location=window.self.location}catch(e){}}</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -39,41 +39,48 @@ button:disabled{opacity:.6}
   <div class="err" id="err" role="alert"></div>
 </form>
 <script>
-const META={"salt": "HDVHt9nMuOqvgEeo6OHV6Q==", "it": 600000, "v": "775012cef5", "keys": ["FK93YLp9Y4C2fXHy9H4WV2TnjwDNev9hR3YZkX8qVs6dNVacCgd9VTVPBlmH5Tjziv7nIuMcsgoz3l7W"]};
+const META={"salt": "HDVHt9nMuOqvgEeo6OHV6Q==", "it": 600000, "v": "0ce54d62e9", "keys": ["1HZEx0dVZK+w8qLtLucjg9OvzgSfh9hNis7X0lLw32zfKeXLklQdEa/sKcmWsw6ZLEijm0GYrrTrH5pI"], "vids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]};
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
 const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 const KEYNAME='mat1a-nøgle';
-// Den huskede nøgle gemmes som en ikke-eksporterbar CryptoKey i IndexedDB (kan bruges, men ikke læses ud). localStorage er kun reserve.
+// Den huskede nøgle gemmes som en ikke-eksporterbar CryptoKey i IndexedDB (kan bruges, men ikke læses ud).
+// Virker IndexedDB ikke, huskes intet, og koden skal tastes igen. Ældre versioner lagde en reserve i localStorage; den læses én gang og flyttes.
 const idb=()=>new Promise((res,rej)=>{const r=indexedDB.open('mat1a',1);r.onupgradeneeded=()=>r.result.createObjectStore('k');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});
 const idbDo=(mode,fn)=>idb().then(db=>new Promise((res,rej)=>{const q=fn(db.transaction('k',mode).objectStore('k'));q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)}));
 const keyGet=()=>idbDo('readonly',s=>s.get('key')).catch(()=>null);
 const keyPut=k=>idbDo('readwrite',s=>s.put(k,'key'));
 const keyDel=()=>idbDo('readwrite',s=>s.delete('key')).catch(()=>{});
-async function remember(raw){
-  try{const k=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']);await keyPut(k);try{localStorage.removeItem(KEYNAME)}catch(_){}}
-  catch(e){try{localStorage.setItem(KEYNAME,btoa(String.fromCharCode(...raw)))}catch(_){}}
+async function remember(k){
+  try{await keyPut(k)}catch(e){}
+  try{localStorage.removeItem(KEYNAME)}catch(_){}
   try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(_){}}
 async function data(){const r=await fetch('app.bin').catch(()=>caches.match('app.bin'));if(!r||!r.ok)throw new Error('net');return new Uint8Array(await r.arrayBuffer())}
+// frisk kopi direkte fra nettet (service workeren går udenom sin cache ved cache:'reload'); null hvis offline
+async function fresh(){try{const r=await fetch('app.bin',{cache:'reload'});return r&&r.ok?new Uint8Array(await r.arrayBuffer()):null}catch(e){return null}}
 async function open_(key,buf){const iv=buf.slice(0,12),ct=buf.slice(12);const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv},key,ct);return new TextDecoder().decode(pt)}
 function boot(html){document.open();document.write(html);document.close()}
 async function derive(pw){const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
-  return crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(META.salt),iterations:META.it,hash:'SHA-256'},base,{name:'AES-GCM',length:256},true,['decrypt'])}
+  return crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(META.salt),iterations:META.it,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt'])}
 (async()=>{let buf;
   try{buf=await data()}catch(e){document.getElementById('boot').textContent='Mat1a kunne ikke hentes. Åbn appen én gang med net, så virker den offline bagefter.';return}
   const stored=await keyGet();
-  if(stored){try{return boot(await open_(stored,buf))}catch(e){await keyDel()}}
+  // En fejl kan skyldes en halvt gennemført opdatering (gammel/afkortet app.bin i cachen). Prøv derfor en frisk kopi,
+  // og glem kun nøglen, hvis også den friske kopi fra nettet afviser den. Offline beholdes nøglen.
+  let fb=null;const retry=async k=>{if(fb===null)fb=(await fresh())||false;if(!fb)return null;buf=fb;return open_(k,fb)};
+  if(stored){try{return boot(await open_(stored,buf))}catch(e){let ok=null;try{ok=await retry(stored)}catch(_){await keyDel()}if(ok)return boot(ok)}}
   let saved=null;try{saved=localStorage.getItem(KEYNAME)}catch(e){}
-  if(saved){try{const raw=b64(saved);const k=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']);const html=await open_(k,buf);await remember(raw);return boot(html)}catch(e){try{localStorage.removeItem(KEYNAME)}catch(_){}}}
+  if(saved){try{const k=await crypto.subtle.importKey('raw',b64(saved),'AES-GCM',false,['decrypt']);let html;try{html=await open_(k,buf)}catch(e){html=await retry(k);if(!html)throw e}await remember(k);return boot(html)}catch(e){try{localStorage.removeItem(KEYNAME)}catch(_){}}}
   document.getElementById('boot').hidden=true;const f=document.getElementById('f');f.hidden=false;document.getElementById('pw').focus();
   const pw=document.getElementById('pw'),sh=document.getElementById('show');
   sh.onclick=()=>{const v=pw.type==='password';pw.type=v?'text':'password';sh.textContent=v?'Skjul':'Vis';sh.setAttribute('aria-label',v?'Skjul adgangskode':'Vis adgangskode');pw.focus()};
   f.onsubmit=async ev=>{ev.preventDefault();pw.type='password';const btn=document.getElementById('go'),err=document.getElementById('err');btn.disabled=true;btn.textContent='Låser op …';err.textContent='';
     try{const kek=await derive(document.getElementById('pw').value);let k=null,html=null;
-      // Williams kode er selve indholdsnøglen; andres kode låser en krypteret kopi af den op
+      const tryOpen=async key=>{try{return await open_(key,buf)}catch(e){const h=await retry(key);if(!h)throw e;return h}};
       try{html=await open_(kek,buf);k=kek}catch(e){
-        for(const w of META.keys||[]){try{const wb=b64(w);const raw=await crypto.subtle.decrypt({name:'AES-GCM',iv:wb.slice(0,12)},kek,wb.slice(12));k=await crypto.subtle.importKey('raw',raw,'AES-GCM',true,['decrypt']);break}catch(_){}}
-        if(!k)throw new Error('kode');html=await open_(k,buf)}
-      if(document.getElementById('rem').checked){try{await remember(new Uint8Array(await crypto.subtle.exportKey('raw',k)))}catch(e){}}
+        for(const w of META.keys||[]){try{const wb=b64(w);const raw=await crypto.subtle.decrypt({name:'AES-GCM',iv:wb.slice(0,12)},kek,wb.slice(12));k=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']);break}catch(_){}}
+        if(!k){try{html=await retry(kek)}catch(_){}if(!html)throw new Error('kode');k=kek}
+        else html=await tryOpen(k)}
+      if(document.getElementById('rem').checked){try{await remember(k)}catch(e){}}
       boot(html)}
     catch(e){err.textContent='Forkert adgangskode. Prøv igen.';btn.disabled=false;btn.textContent='Lås op'}}
 })();
