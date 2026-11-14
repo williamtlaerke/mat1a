@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-rXYY/uFPDFrfcH28H8tOZK3yLmcXru/ll0k5s4lvPPs=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-kLW4tOkUnirWoPs+cTswlu+nP8KuEze3y01wqPrzwss=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-rXYY/uFPDFrfcH28H8tOZK3yLmcXru/ll0k5s4lvPPs=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-8Gjz2sghbZbEqQaftO0ua3T61FhvKfA9hBPtE6hmyQA=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -1407,6 +1407,167 @@ button.ubanner{width:100%; border:0; font:inherit; text-align:left; cursor:point
 .exself label{align-items:flex-start; gap:10px; padding:4px 0; cursor:pointer}
 .exself input{width:22px; height:22px; flex:none; margin:1px 0 0; accent-color:#2fb36b}
 .exself label>span{min-width:0}
+
+/* ---------- Læringsideer (learn.js): kontrastkort, eksamensplan, prætest, pause før hint, coach, eksport, eksamensmorgen ---------- */
+.menu .mhead{padding:10px 12px 2px; font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-top:2px solid var(--line); margin:6px 4px 0}
+.lkubi{display:block; flex:none; width:56px; height:56px; position:relative}
+.lkubi .masc{position:static!important; width:56px!important; height:56px!important; display:block; filter:none}
+
+/* kontrastkort */
+.kontags{margin-top:8px; display:flex; flex-wrap:wrap; gap:6px}
+.tag.kon{background:var(--accent-soft); color:var(--accent-ink)}
+.tag.kon:hover{background:var(--accent); color:#fff}
+.konmix{margin:8px 0 0; font-size:14.5px; font-weight:700; color:var(--muted)}
+.kon .ktab{margin-top:18px; padding:0; overflow:hidden}
+.kon .ktab:hover{transform:none}
+.krow{display:grid; grid-template-columns:1fr 1fr}
+.kcell{padding:12px 16px; min-width:0; overflow-wrap:anywhere}
+.kcell.ka{border-right:2px solid var(--line)}
+.khead .kcell{padding:14px 16px}
+.khead .kcell b{display:block; font-size:19px; font-weight:900; line-height:1.25}
+.khead .kcell small{color:var(--muted); font-weight:800; font-size:13.5px}
+.khead .kcell.ka{background:color-mix(in srgb, var(--c1) 12%, var(--card))}
+.khead .kcell.kb{background:color-mix(in srgb, var(--c5) 14%, var(--card))}
+.klab{padding:6px 16px; font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); background:var(--bg); border-top:2px solid var(--line); border-bottom:2px solid var(--line)}
+.kcell .kn{display:none}
+.kcell .katex{font-size:1.05em}
+.kdiff{margin-top:14px; padding:14px 16px; border-radius:18px; background:var(--warn-soft); border-left:6px solid var(--warn)}
+.kdiff>b{display:block; font-size:14px; font-weight:900; color:var(--warn-ink); margin-bottom:2px}
+.kcheck{margin-top:14px}
+.kcheck:hover{transform:none}
+.kcheck .qtext{font-size:18px; font-weight:700; margin:6px 0 12px}
+.kcheck .opts{display:grid; gap:8px}
+.kcheck .conflbl{margin-top:0}
+.kon .socbtns{margin-top:16px}
+@media (max-width:560px){
+  .krow{grid-template-columns:1fr}
+  .kcell.ka{border-right:0; border-bottom:2px solid var(--line)}
+  .krow:not(.khead) .kcell{border-left:5px solid var(--c1)}
+  .krow:not(.khead) .kcell.kb{border-left-color:var(--c5)}
+  .krow:not(.khead) .kcell .kn{display:block; font-size:12.5px; font-weight:900; color:var(--muted)}
+  .krow.khead{grid-template-columns:1fr 1fr}
+  .krow.khead .kcell.ka{border-bottom:0; border-right:2px solid var(--line)}
+  .khead .kcell b{font-size:16px}
+}
+
+/* eksamensplan */
+.lhome{display:grid; gap:14px; margin-top:16px}
+.lhc{display:flex; align-items:center; gap:14px; text-decoration:none; color:inherit}
+.lhc .lct{flex:1; min-width:0}
+.lhc .lct b{display:block; font-size:19px; font-weight:900; line-height:1.2}
+.lhc .lct span{color:var(--muted); font-weight:700; font-size:14.5px}
+.lhc>.b{flex:none}
+.lph{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:4px}
+.lph b{font-size:19px; font-weight:900}
+.lph .link{padding:4px}
+.lplan .pday{margin:0; padding:0; border:0; background:none; box-shadow:none}
+.plan .pintro,.pwait{display:flex; gap:14px; align-items:center; margin-top:14px}
+.plan .pintro p,.pwait p{margin:4px 0 0}
+.pwait p{margin:0}
+.plan .pq{margin-top:14px}
+.plan .pq:hover{transform:none}
+.plan .pq h3{margin:0; display:flex; align-items:center; gap:10px; font-size:19px}
+.pqn{width:32px; height:32px; border-radius:10px; background:var(--accent-soft); color:var(--accent-ink); display:grid; place-items:center; font-weight:900; font-size:16px; flex:none}
+.plan .pq .sub{margin:6px 0 10px; font-size:15px}
+.plan textarea,.morn textarea{display:block; width:100%; font:inherit; font-size:16px; padding:11px 13px; border-radius:14px; border:2px solid var(--line); background:var(--bg); color:var(--ink); resize:vertical}
+.pchips{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px}
+.pchips button{min-height:44px; padding:8px 14px; border-radius:12px; border:2px solid var(--line); background:var(--card); font-weight:800; font-size:15px}
+.pchips button[aria-pressed=true],.pchips button[aria-checked=true]{border-color:var(--accent); background:var(--accent-soft); color:var(--accent-ink)}
+.pchips button[aria-pressed=true]::before{content:"✓ "}
+.pnote{margin:12px 0 0; font-weight:700; font-size:14.5px; color:var(--muted); min-height:0}
+.pnote:empty{display:none}
+.pfine{font-size:14px}
+.panswers{margin-top:14px}
+.panswers summary,.ppast summary{font-weight:900; cursor:pointer; min-height:28px}
+.panswers p{margin:10px 0 0; overflow-wrap:anywhere}
+.ppast{margin-top:18px}
+.pday{margin-top:14px; background:var(--card); border:2px solid var(--line); border-radius:20px; padding:14px 16px}
+.pday.today{border-color:var(--accent); box-shadow:0 4px 0 color-mix(in srgb, var(--accent) 35%, var(--line))}
+.pday.past{opacity:.75}
+.pday h3{margin:0 0 4px; font-size:18px}
+.pday h3::first-letter{text-transform:uppercase}
+.pday h3 small{display:block; font-size:13.5px; font-weight:800; color:var(--muted)}
+.pit{display:flex; align-items:center; gap:12px; padding:9px 0; border-top:1px solid var(--line)}
+.lplan .pit:first-of-type{border-top:0}
+.pit input{width:26px; height:26px; flex:none; accent-color:var(--ok); margin:0}
+.pit label{flex:1; min-width:0; cursor:pointer; padding:2px 0}
+.pit label b{display:block; font-size:16px; line-height:1.3}
+.pit label span{display:block; color:var(--muted); font-weight:700; font-size:14px; line-height:1.35}
+.pit.done label b{text-decoration:line-through; color:var(--muted)}
+.pit .b{flex:none}
+.pfoot{margin-top:18px}
+.pfoot p{margin:0; font-size:15px; color:var(--muted); font-weight:600}
+
+/* prætest */
+.prerow{display:flex; align-items:center; gap:12px; margin:0 0 14px; padding:12px 14px; border-radius:18px; background:var(--card); border:2px solid var(--line); text-decoration:none; color:inherit; position:relative; z-index:2}
+.prerow .lct{flex:1; min-width:0}
+.prerow .lct b{display:block; font-size:16px; font-weight:900; line-height:1.25}
+.prerow .lct>span{display:block; color:var(--muted); font-weight:700; font-size:14px; line-height:1.4}
+.prerow .preb{display:flex; flex-direction:column; align-items:center; gap:2px; flex:none}
+.prerow .preb .link{font-size:13.5px; padding:6px; min-height:32px}
+.prerow.done{border-style:dashed}
+.prerow .chevr{font-size:24px; font-weight:900; color:var(--muted)}
+.prerow .predots{display:inline-flex; gap:4px; vertical-align:middle; margin-left:4px}
+.predots i{display:block; flex:none; width:11px; height:11px; border-radius:50%; background:var(--line2)}
+.predots i.on{background:var(--ok)}
+.predots i.na{background:none; border:2px solid var(--line2)}
+.prehint{display:flex; gap:14px; align-items:center; margin:14px 0}
+.prehint p{margin:0}
+.pre .repacts{align-items:center; justify-content:space-between}
+.pretab{padding:6px 18px}
+.pretab:hover{transform:none}
+.prer{display:grid; grid-template-columns:minmax(0,1fr) 64px 64px; gap:8px; align-items:center; padding:11px 0; border-top:1px solid var(--line); font-weight:700}
+.prer>:nth-child(n+2){text-align:center}
+.prer.preh{border-top:0; font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.prer.pres{font-weight:900}
+.pm{font-weight:900; font-size:18px}
+.pm.ok{color:var(--ok-ink)} .pm.bad{color:var(--bad-ink)} .pm.na{color:var(--faint)}
+
+/* pause før hint */
+.plock{position:relative; opacity:.62; cursor:default}
+.plock:hover{transform:none!important; filter:none!important}
+.plock::after{content:""; position:absolute; left:10px; bottom:5px; height:3px; border-radius:3px; background:currentColor; opacity:.55; width:calc((100% - 20px) * var(--plf, 0)); transition:width .25s linear}
+.plnote{margin:12px 0 -6px; text-align:right}
+.plnote.nudge{animation:plnudge .4s ease}
+@keyframes plnudge{0%{opacity:.3} 100%{opacity:1}}
+@media (prefers-reduced-motion: reduce){.plock::after{transition:none}.plnote.nudge{animation:none}}
+
+/* indstillinger */
+.setp .panel{margin-top:14px}
+.setp h3{margin:0 0 6px}
+.setrow{display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-top:1px solid var(--line); cursor:pointer}
+.setp h3+.setrow{border-top:0}
+.setrow input{width:26px; height:26px; flex:none; margin:2px 0 0; accent-color:var(--accent)}
+.setrow b{display:block; font-size:17px}
+.setrow small{display:block; color:var(--muted); font-weight:600; font-size:14.5px; line-height:1.45}
+
+/* Kubi som coach */
+.lcoach{display:flex; align-items:flex-start; gap:14px; border-left:6px solid #ff8a2a}
+.lcoach .lct{flex:1; min-width:0}
+.lcoach small{font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.lcoach p{margin:2px 0 2px; font-weight:700; font-size:16.5px; line-height:1.45}
+.lcoach .link{padding:6px 0; display:inline-block; color:var(--accent-ink)}
+.lcoach .ibtn{flex:none}
+
+/* eksport */
+.expwhat{margin-top:14px}
+.expwhat summary{font-weight:800; cursor:pointer; color:var(--muted)}
+.expwhat ul{margin:8px 0; padding-left:20px}
+.expwhat li{margin:3px 0}
+
+/* eksamensmorgen */
+.morn .mbox{margin-top:14px}
+.morn .mbox:hover{transform:none}
+.mbar{display:flex; align-items:center; gap:12px; margin-bottom:10px; font-weight:800; font-size:14px; color:var(--muted)}
+.mbar span{white-space:nowrap; min-width:92px}
+.mbar .prog{flex:1; height:10px; border-radius:99px; background:var(--line); overflow:hidden}
+.mbar .prog i{display:block; position:static; height:100%; background:var(--accent); border-radius:99px; transition:width 1s linear}
+.mbar .prog i::before,.mbar .prog i::after{display:none}
+.morn textarea{min-height:200px; line-height:1.6}
+
+/* forsidekortene ligger i .hello-gitteret: fuld bredde på computer, lige under ugekortet på telefon */
+.hello>.lhome{grid-column:1/-1; margin-top:0}
+@media (max-width:760px){.hello>.lhome{order:1}.hello>.panel:not(.hero){order:2}}
 </style>
 <script>try{var t=localStorage.getItem("mat1a-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1b1550"></head>
@@ -1444,8 +1605,8 @@ button.ubanner{width:100%; border:0; font:inherit; text-align:left; cursor:point
   <button class="ibtn" id="themeBtn" aria-label="Skift farvetema" title="Farvetema"><svg><use href="#i-auto"/></svg></button>
   <button class="ibtn" id="menuBtn" aria-label="Menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
   <nav class="menu" id="menu" hidden>
-    <a href="#">Læringssti</a><a href="#uge-h">Hjemmeopgaver</a><a href="#repetition">Repetition</a><a href="#metode">Hvilken metode?</a><a href="#formler">Formeltræner</a><a href="#begreber">Begreber</a><a href="#graf">Videnskort</a><a href="#tools">Værktøjer</a><a href="#eksamen">Prøveeksamen</a><a href="#videoer">Ugevideoer</a><a href="#repetition/fejl">Fejllog</a><a href="#faelles">Fællesskab</a><hr><button id="mBook" class="monly">Lærebogen</button><button id="mTheme" class="monly">Farvetema</button><hr class="monly">
-    <button id="expBtn">Gem en backup af fremgang</button><button id="impBtn">Hent backup …</button><input type="file" id="impFile" accept="application/json" hidden><hr id="lockHr" hidden><button id="lockBtn" hidden>🔒 Lås appen på denne enhed</button>
+    <a href="#">Læringssti</a><a href="#uge-h">Hjemmeopgaver</a><a href="#repetition">Repetition</a><a href="#metode">Hvilken metode?</a><a href="#formler">Formeltræner</a><a href="#kontrast">Kontrastkort</a><a href="#begreber">Begreber</a><a href="#graf">Videnskort</a><a href="#tools">Værktøjer</a><a href="#videoer">Ugevideoer</a><a href="#repetition/fejl">Fejllog</a><a href="#faelles">Fællesskab</a><div class="mhead" id="mExam">Eksamen</div><a href="#plan">Eksamensplan</a><a href="#eksamen">Prøveeksamen</a><a href="#mini">Minieksamen</a><hr><button id="mBook" class="monly">Lærebogen</button><button id="mTheme" class="monly">Farvetema</button><hr class="monly">
+    <a href="#indstillinger">Indstillinger og statistik</a><button id="expBtn">Gem en backup af fremgang</button><button id="impBtn">Hent backup …</button><input type="file" id="impFile" accept="application/json" hidden><hr id="lockHr" hidden><button id="lockBtn" hidden>🔒 Lås appen på denne enhed</button>
   </nav>
 </div></header>
 <main id="main" tabindex="-1"></main>
@@ -3325,7 +3486,22 @@ function normState(s){s=isObj(s)?s:{};return {
   /* "Hvilken metode?": forvekslinger (rigtig>valgt), tællere pr. opgave [set, rigtige], svartider og runder */
   mix:normMix(s.mix),
   /* minieksamen (mini.js): forsøget i gang, sidste afleverede og en kort historik */
-  mini:normMini(s.mini)}}
+  mini:normMini(s.mini),
+  /* læringsideer (learn.js): eksamensplan, prætest, kontrastkort, coach, indstillinger, eksamensmorgen */
+  learn:normLearn(s.learn)}}
+function normLearn(l){l=isObj(l)?l:{};const DK=/^\d{4}-\d\d-\d\d$/,str=(v,n)=>typeof v==='string'?v.slice(0,n):'',day=v=>typeof v==='string'&&DK.test(v)?v:'';
+  const item=x=>{if(!isObj(x)||typeof x.t!=='string'||!/^[a-z]{1,10}$/.test(x.t))return null;const o={t:x.t};
+    if(typeof x.a==='string'&&/^[a-z0-9]{1,12}$/.test(x.a)||Number.isInteger(x.a)&&x.a>=0&&x.a<100)o.a=x.a;if(x.done)o.done=1;return o};
+  const p=l.plan,plan=isObj(p)&&ts(p.at)?{at:p.at,q:[0,1,2,3].map(i=>str((Array.isArray(p.q)?p.q:[])[i],600)),
+    res:(Array.isArray(p.res)?p.res:[]).filter(x=>typeof x==='string'&&/^[a-z]{1,12}$/.test(x)).slice(0,12),min:fint(p.min,10,240),
+    days:(Array.isArray(p.days)?p.days:[]).slice(0,40).filter(d=>isObj(d)&&day(d.d)&&Array.isArray(d.it)).map(d=>({d:d.d,it:d.it.slice(0,12).map(item).filter(Boolean)}))}:null;
+  const c=isObj(l.coach)?l.coach:{},st=isObj(l.set)?l.set:{};
+  return{plan,
+    pre:clean(l.pre,(v,k)=>/^\d{1,2}$/.test(k)&&isObj(v)&&ts(v.at)?(v.skip?{at:v.at,skip:1}:{at:v.at,ids:(Array.isArray(v.ids)?v.ids:[]).filter(x=>typeof x==='string'&&/^c-[a-z0-9-]{1,60}$/.test(x)).slice(0,5),ok:(Array.isArray(v.ok)?v.ok:[]).slice(0,5).map(x=>x?1:0)}):undefined),
+    kon:clean(l.kon,(v,k)=>/^[a-z0-9]{1,16}$/.test(k)&&Array.isArray(v)?[fint(v[0],0,1e4),fint(v[1],0,10),ts(v[2])||0]:undefined),
+    coach:{d:day(c.d),k:typeof c.k==='string'&&/^[a-z0-9:]{1,24}$/.test(c.k)?c.k:'',x:day(c.x),h:lim(clean(c.h,(v,k)=>/^[a-z0-9:]{1,24}$/.test(k)&&day(v)?v:undefined),40)},
+    set:{nopause:st.nopause===true,nocoach:st.nocoach===true},
+    morn:day(l.morn)}}
 function normMini(m){m=isObj(m)?m:{};const run=c=>{if(!isObj(c)||!ts(c.at)||!Array.isArray(c.ids))return null;const ids=c.ids.filter(x=>typeof x==='string'&&ITEM_RE.test(x)).slice(0,20);
     const a=lim(clean(c.a,(v,k)=>!ids.includes(k)?undefined:Number.isInteger(v)&&v>=0&&v<20?v:Array.isArray(v)?v.slice(0,12).map(x=>typeof x==='string'?x.slice(0,200):''):isObj(v)?clean(v,(x,kk)=>/^\d{1,2},\d{1,2},\d{1,2}$/.test(kk)&&typeof x==='string'?x.slice(0,60):undefined):undefined),20);
     return{at:c.at,ids,a,...(Number.isFinite(c.s)?{s:fint(c.s,0,86400)}:{}),...(c.auto?{auto:1}:{})}};
@@ -3524,10 +3700,10 @@ function hjemProg(){return[HJEM.reduce((a,o)=>a+opgProgress(o)[0],0),HJEM.reduce
 function weekPct(n){if(n==='h'){const [a,b]=hjemProg();return b?Math.round(a/b*100):0}if(!weekOf(+n))return null;const [a,b]=weekProg(+n);return b?Math.round(a/b*100):0}
 function unitHTML(n){const k=String(n),open=OPENW.has(k),isH=k==='h',u=isH?unit(0):unit(+k),pct=weekPct(k);
   const lab=isH?'Afleveringer':'Uge '+k+(+k===CUR?' · nu':''),right=pct==null?'snart':isH?hjemProg().join('/'):pct+'%';
-  return`<section class="unit${open?' open':''}${pct==null?' soon':''}" id="unit-${k}" style="${uvars(isH?0:+k)}"><button class="ubanner${pct==null?' locked':''}" aria-expanded="${open}" aria-controls="up-${k}" data-w="${k}"><span class="ug">${esc(u[2])}</span><span class="ut"><small>${lab}</small><b>${esc(u[1])}</b></span><span class="pct">${right}</span><span class="chev" aria-hidden="true">›</span></button><div class="upath" id="up-${k}">${open?vidRow(k)+pathHTML(k):''}</div></section>`}
+  return`<section class="unit${open?' open':''}${pct==null?' soon':''}" id="unit-${k}" style="${uvars(isH?0:+k)}"><button class="ubanner${pct==null?' locked':''}" aria-expanded="${open}" aria-controls="up-${k}" data-w="${k}"><span class="ug">${esc(u[2])}</span><span class="ut"><small>${lab}</small><b>${esc(u[1])}</b></span><span class="pct">${right}</span><span class="chev" aria-hidden="true">›</span></button><div class="upath" id="up-${k}">${open?preRow(k)+vidRow(k)+pathHTML(k):''}</div></section>`}
 function toggleWeek(k,force){const sec=document.getElementById('unit-'+k);if(!sec)return;const open=force!=null?force:!OPENW.has(k);
   if(open)OPENW.add(k);else OPENW.delete(k);const box=sec.querySelector('.upath'),btn=sec.querySelector('.ubanner');
-  sec.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);if(open&&!box.firstChild){box.innerHTML=vidRow(k)+pathHTML(k);decoLive(box);box.querySelectorAll('.node').forEach((n,i)=>n.style.setProperty('--d',Math.min(i,14)*45+'ms'))}}
+  sec.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);if(open&&!box.firstChild){box.innerHTML=preRow(k)+vidRow(k)+pathHTML(k);decoLive(box);box.querySelectorAll('.node').forEach((n,i)=>n.style.setProperty('--d',Math.min(i,14)*45+'ms'))}}
 function weekStrip(){const ks=['h',...UNITS.map(x=>String(x[0]))];
   return`<nav class="wkstrip" aria-label="Spring til en uge">${ks.map(k=>{const isH=k==='h',u=isH?unit(0):unit(+k),pct=weekPct(k);
     return`<a href="#uge-${k}" class="wkc${+k===CUR?' now':''}${pct==null?' soon':''}" style="${uvars(isH?0:+k)}" aria-label="${isH?'Hjemmeopgaver':'Uge '+k}${pct!=null?', '+pct+' %':''}${+k===CUR?', denne uge':''}"><span class="wg">${isH?'H':k}</span><small>${+k===CUR?'nu':pct==null?'–':pct+'%'}</small></a>`}).join('')}</nav>`}
@@ -3548,7 +3724,7 @@ function viewHome(){
   const d=new Date(),dow=(d.getDay()+6)%7,wk=[];for(let k=0;k<7;k++){const x=new Date(d);x.setDate(d.getDate()-dow+k);wk.push([['M','T','O','T','F','L','S'][k],activeDay(dkey(x)),k===dow])}
   const nxt=DEADLINES.filter(x=>x.d>NOW).sort((a,b)=>a.d-b.d)[0];const sk=streak();const fresh=!ST.last&&!ST.xp;
   const calm=calmMode();if(calm&&!CALMW){CALMW=1;OPENW.delete(String(CUR))}
-  let h=calm?`<div class="page homepage">${calmHome()}${weekStrip()}`:`<div class="page homepage">${onboardHTML()}<div class="hello">
+  let h=calm?`<div class="page homepage">${calmHome()}${learnHome()}${weekStrip()}`:`<div class="page homepage">${onboardHTML()}<div class="hello">
     <div class="panel hero" style="${uvars(CUR)}"><div class="hi">${greet()} 👋</div><div class="ey">Uge ${CUR} · denne uge</div><h2>${esc(u[1])}</h2><p>${w?esc(plain(w.keywords).slice(0,160))+'…':'Opgaverne er ikke lagt op endnu.'}</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap">${curId?`<a class="b" href="#${curId}">${ico('play')} ${fresh?'Start':'Fortsæt'}</a>`:''}${last?`<a class="b lastb" href="#${last.opg.id}">Sidst: ${esc(last.opg.kind==='hjem'?last.opg.title:'U'+last.opg.week+' opg. '+last.opg.nr)}</a>`:''}${VID_TITLES[CUR]?`<button class="b lastb" data-v="${CUR}">🎬 Ugens video</button>`:''}</div>
       <div class="glyph${u[2].length>2?' long':''}">${esc(u[2])}</div>${MASCOT('wave')}</div>
@@ -3558,9 +3734,9 @@ function viewHome(){
       <div class="week-dots" aria-label="Aktive dage denne uge">${wk.map(([l,on,t])=>`<i class="${on?'on':''} ${t?'today':''}">${l}</i>`).join('')}</div>
       <div class="stat" style="margin-top:16px"><div class="ic" style="background:#fff7d6">⚡</div><div><b>${ST.xp} XP</b><span>${done} af ${tot} delopgaver klaret</span></div></div>
       ${nxt?`<a class="stat" href="#${nxt.go}"><div class="ic" style="background:var(--accent-soft)">${ico('flag')}</div><div><b>${esc(nxt.t)}</b><span>om ${Math.max(0,Math.ceil((nxt.d-NOW)/864e5))} dage · ${nxt.d.getDate()}/${nxt.d.getMonth()+1}</span></div></a>`:''}<a class="stat" href="#eksamen"><div class="ic" style="background:var(--accent-soft)">📝</div><div><b>Prøveeksamen</b><span>Rigtige eksamenssæt</span></div></a>${mixHomeCard()}<a class="stat" href="#videoer"><div class="ic" style="background:var(--accent-soft)">🎬</div><div><b>Ugevideoer</b><span>${Object.keys(ST.vids||{}).length} af ${Object.keys(VID_LEN).length||12} set</span></div></a>
-    </div></div>${weekStrip()}`;
+    </div>${learnHome()}</div>${weekStrip()}`;
   h+=unitHTML('h');UNITS.forEach(x=>h+=unitHTML(x[0]));
-  main.innerHTML=h+'</div>'+bgfx();decoLive(main);wireOnboard();
+  main.innerHTML=h+'</div>'+bgfx();decoLive(main);wireOnboard();learnWire(main);
   main.querySelectorAll('.unit>.ubanner').forEach(b=>b.onclick=()=>toggleWeek(b.dataset.w));
   window.scrollTo(0,0)}
 /* #uge-N: fold ugen ud og rul hen til den (uden at tegne forsiden igen, hvis den allerede vises) */
@@ -3912,6 +4088,7 @@ function viewConcept(id){const c=CONCEPTS[id];document.title=c.title+' · Mat1a'
   <div class="pcard" style="margin-top:20px"><div class="prose">${MD.block(c.body)}</div>${(c.viz||[]).map(v=>`<figure class="viz" data-viz='${esc(JSON.stringify(v))}'></figure>`).join('')}</div>`;
   const rel=[...new Set([...c.links,...back.con])];
   if(rel.length)h+=`<h3 style="margin-top:26px">Hænger sammen med</h3><div class="tags">${rel.map(x=>`<a class="tag" href="#${x}" data-c="${x}"># ${esc(CONCEPTS[x].title)}</a>`).join('')}</div>`;
+  h+=konForConcept(id);
   h+=`<h3 style="margin-top:26px">Øv det i ${back.opg.length} opgave${back.opg.length===1?'':'r'}</h3><div class="plist">${back.opg.map(o=>{const p=o.parts.find(p=>p.concepts.includes(id))||o.parts[0];return`<div class="pcard" style="${uvars(o.week||0)}"><div class="ph"><span class="pl">${esc(o.kind==='hjem'?'H':o.nr)}</span><span class="pt">${MD.inline(o.title||'Opgave '+o.nr)}<small>${esc(o.kind==='hjem'?'Hjemmeopgave':'Uge '+o.week+' · '+DAYNAME[o.day])}${p.label?' · delopgave '+esc(p.label):''}</small></span>${isDone(p.key)?'<span class="badge ok">✓ klaret</span>':''}<a class="b u sm" href="#L-${p.key}">${ico('play')} Øv</a></div></div>`}).join('')||'<p class="empty">Ingen endnu.</p>'}</div></div>`;
   main.innerHTML=h;main.querySelectorAll('figure[data-viz]').forEach(f=>mountViz(f));
   if(c.try){const pc=main.querySelector('.pcard');pc.after(tryBox(c.try,id))}
@@ -4199,7 +4376,7 @@ function route_(o){const r=HASH;pop.classList.remove('on');closePal();closeSide(
   requestAnimationFrame(enterFx);requestAnimationFrame(()=>fitMath(main));
   if(!r)viewHome();else if(/^uge-(\d+|h)$/.test(r))showWeek(r.slice(4));
   else if(r==='repetition'||r.startsWith('repetition/'))viewRep(r.slice(11))
-  else if(r==='faelles'||r.startsWith('faelles/')){if(window.SOCIAL)SOCIAL.view(r.slice(8));else viewHome()}else if(r==='eksamen'||r.startsWith('eksamen-')){viewExams(r.slice(8));if(r==='eksamen')examExtras()}else if(r==='mini')viewMini();else if(r==='begreber')viewConcepts();else if(r==='metode')viewMix();else if(r==='formler')viewForms();else if(r==='videoer'){main.innerHTML=viewVideos();document.title='Ugevideoer · Mat1a';window.scrollTo(0,0)}else if(r==='graf')viewGraph();else if(r==='tools'||r.startsWith('tools-'))viewTools(r.slice(6));else if(OPG[r])viewOpg(r);else if(CONCEPTS[r])viewConcept(r);else viewHome()}
+  else if(r==='faelles'||r.startsWith('faelles/')){if(window.SOCIAL)SOCIAL.view(r.slice(8));else viewHome()}else if(r==='eksamen'||r.startsWith('eksamen-')){viewExams(r.slice(8));if(r==='eksamen')examExtras()}else if(r==='mini')viewMini();else if(r==='begreber')viewConcepts();else if(r==='metode')viewMix();else if(r==='formler')viewForms();else if(r==='videoer'){main.innerHTML=viewVideos();document.title='Ugevideoer · Mat1a';window.scrollTo(0,0)}else if(r==='graf')viewGraph();else if(r==='tools'||r.startsWith('tools-'))viewTools(r.slice(6));else if(learnRoute(r)){}else if(OPG[r])viewOpg(r);else if(CONCEPTS[r])viewConcept(r);else viewHome()}
 /* fejlskærm i stedet for hvid skærm: tilbyd forsiden, eksport af de rå data og nulstilling */
 function crashUI(e){try{main.innerHTML=`<div class="page narrow"><h1>Noget gik galt</h1><p>Siden kunne ikke vises. Din fremgang og dine noter er ikke slettet.</p>
   <p class="fine" style="color:var(--muted)">${esc(e&&e.message||e)}</p><div class="socbtns" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
@@ -4735,7 +4912,7 @@ function repRender(){const R=REP;const sub=R.mode==='fejl'?'Øv de åbne fejl':'
   os.forEach((b,i)=>b.onclick=()=>{if(stage!=='ask')return;pick=i;os.forEach((x,j)=>x.setAttribute('aria-checked',j===i));upd()});
   ins.forEach(x=>x.oninput=upd);
   card.querySelectorAll('.conf button').forEach(b=>b.onclick=()=>{if(stage!=='ask')return;conf=+b.dataset.c;card.querySelectorAll('.conf button').forEach(x=>x.setAttribute('aria-checked',x===b));upd()});
-  const hb=card.querySelector('#rhint');if(hb)hb.onclick=()=>{if(hints>=it.hints.length)return;card.querySelector('#rhints').insertAdjacentHTML('beforeend',`<div class="hintbox"><div class="hb">${ico('bulb')}Hint ${hints+1}</div><div class="prose">${MD.inline(it.hints[hints])}</div></div>`);hints++;if(hints>=it.hints.length)hb.remove();else hb.lastChild.textContent=' Næste hint'};
+  const hb=card.querySelector('#rhint');if(hb)hb.onclick=()=>{if(pauseBusy(hb)||hints>=it.hints.length)return;card.querySelector('#rhints').insertAdjacentHTML('beforeend',`<div class="hintbox"><div class="hb">${ico('bulb')}Hint ${hints+1}</div><div class="prose">${MD.inline(it.hints[hints])}</div></div>`);hints++;if(hints>=it.hints.length)hb.remove();else hb.lastChild.textContent=' Næste hint'};
   const evalOk=()=>{try{
     if(q.t==='mc')return!!q.opts[pick].ok;
     if(q.t==='in')return q.fields.every((f,i)=>{try{return close(evalExpr(ins[i].value),evalExpr(f.ans))}catch(e){return false}});
@@ -4760,7 +4937,9 @@ function repRender(){const R=REP;const sub=R.mode==='fejl'?'Øv de åbne fejl':'
     const ta=fb.querySelector('#errnote');if(ta)ta.oninput=()=>{const v=ta.value.trim();if(v)ST.errs[id].note=v.slice(0,300);else delete ST.errs[id].note;save()};
     go.textContent=R.i+1<R.q.length?'Næste':'Afslut';go.className='b '+(ok?'ok':'u');go.disabled=false;if(hb)hb.remove();
     setTimeout(()=>{fb.scrollIntoView({block:'nearest',behavior:'smooth'});go.focus({preventScroll:true})},40)};
-  go.onclick=()=>{if(stage==='done'){R.i++;return repRender()}
+  /* pause før hint (learn.js): hintet, og løsningen til et bevis, åbner først efter 20 sekunder */
+  pauseLock(hb,'Hintet');if(q.t==='self')pauseLock(go,'Løsningen');
+  go.onclick=()=>{if(stage==='done'){R.i++;return repRender()}if(q.t==='self'&&stage==='ask'&&pauseBusy(go))return;
     if(q.t==='self'){if(stage==='ask'){stage='self';card.querySelector('.conf').querySelectorAll('button').forEach(b=>b.disabled=true);
         fb.innerHTML=`<div class="repfb"><b>Løsning</b><div class="prose">${it.why}</div><div class="conflbl">Havde du det hele med?</div><div class="exself">${q.self.map((t,i)=>`<label><input type="checkbox" data-i="${i}"> ${MD.inline(t)}</label>`).join('')}</div></div>`;fitMath(fb);go.textContent='Gem';return}
       if(stage==='self'){const n=[...fb.querySelectorAll('input[type=checkbox]')].filter(x=>x.checked).length;grade(n===q.self.length);return}}
@@ -5009,7 +5188,7 @@ function mixPick(block){const pool=mixPool(),S=mixSt().it,now=Math.random;
   return out}
 const pairTxt=(k,n)=>{const[a,b]=k.split('>');if(!MIX_M[a]||!MIX_M[b])return'';return`<tr><td>Valgte <i>${MD.inline(MIX_M[b])}</i>, men opgaven kaldte på <b>${MD.inline(MIX_M[a])}</b></td><td class="n">${n}×</td></tr>`};
 function mixConfTable(lim){const pairs=Object.entries(mixSt().conf).sort((a,b)=>b[1]-a[1]).slice(0,lim||3);
-  return pairs.length?`<table class="mixconf"><tbody>${pairs.map(([k,n])=>pairTxt(k,n)).join('')}</tbody></table>`:''}
+  return pairs.length?`<table class="mixconf"><tbody>${pairs.map(([k,n])=>pairTxt(k,n)).join('')}</tbody></table>${konForMix(pairs.map(x=>x[0]))}`:''}
 function viewMix(){document.title='Hvilken metode? · Mat1a';if(MIXR&&!MIXR.over)return mixShow();
   const S=mixSt(),last=S.runs[S.runs.length-1],pool=mixPool(),maxw=Math.max(...MIX_P.map(p=>p.w));
   main.innerHTML=`<div class="page narrow rep mix"><h1>Hvilken metode?</h1><div class="sub">Til eksamen står der ikke, hvilken uge en opgave hører til. Her øver du det svære: at se, hvilket værktøj opgaven kalder på. Du skal ikke regne den færdig.</div>
@@ -5026,24 +5205,26 @@ function mixShow(){const R=MIXR;if(R.i>=R.order.length)return mixDone();
     <div class="pcard repcard" style="${uvars(p.w)}"><div class="reptags"><span class="tag">Uge ${p.w}</span><span class="tag plain">${R.ok} rigtige</span></div>
     <div class="qtext">${MD.inline(p.p)}</div><div class="conflbl" id="mxq">Hvilken metode starter du med?</div>
     <div class="opts" role="radiogroup" aria-labelledby="mxq">${opts.map((k,i)=>`<button class="opt" role="radio" aria-checked="false" data-k="${k}"><span class="k">${i+1}</span><span>${MD.inline(MIX_M[k])}</span></button>`).join('')}</div>
-    <div id="mxfb" role="status"></div><div class="repacts"><button class="b u" id="mxnext" hidden>Næste opgave</button></div></div></div>`;
+    <div id="mxfb" role="status"></div><div class="repacts"><button class="b ghost sm" id="mxshow">Vis svaret</button><button class="b u" id="mxnext" hidden>Næste opgave</button></div></div></div>`;
   fitMath(main);window.scrollTo(0,0);
   main.querySelector('#mxstop').onclick=e=>{e.preventDefault();R.over=true;viewMix()};
-  const t0=Date.now(),os=[...main.querySelectorAll('.opt')],nx=main.querySelector('#mxnext');let done=false;
-  os.forEach(b=>b.onclick=()=>{if(done)return;done=true;const k=b.dataset.k,ok=k===p.m,S=mixSt(),id=mixId(p);
+  const t0=Date.now(),os=[...main.querySelectorAll('.opt')],nx=main.querySelector('#mxnext'),sh=main.querySelector('#mxshow');let done=false;
+  /* b=null: "Vis svaret" (giver op). Tæller som forkert, men uden forvekslingspar og svartid. Knappen åbner først efter 20 sekunder (learn.js). */
+  const pick=b=>{if(done)return;done=true;sh.remove();const k=b?b.dataset.k:null,ok=k===p.m,S=mixSt(),id=mixId(p);
     os.forEach(x=>{x.disabled=true;x.setAttribute('aria-checked',x===b);if(x.dataset.k===p.m)x.classList.add('right');else if(x===b)x.classList.add('wrong')});
-    S.n++;const v=S.it[p.id]||[0,0];S.it[p.id]=[v[0]+1,v[1]+(ok?1:0)];const dt=Math.min(6e5,Date.now()-t0);S.ms.push(dt);R.ms.push({p,dt,ok});if(S.ms.length>200)S.ms.splice(0,S.ms.length-200);
-    if(ok){S.ok++;R.ok++;if(errOpen(id))noteFix(id)}else{const pair=p.m+'>'+k;S.conf[pair]=(S.conf[pair]||0)+1;R.miss.push(p);
+    S.n++;const v=S.it[p.id]||[0,0];S.it[p.id]=[v[0]+1,v[1]+(ok?1:0)];const dt=Math.min(6e5,Date.now()-t0);if(b){S.ms.push(dt);R.ms.push({p,dt,ok})}if(S.ms.length>200)S.ms.splice(0,S.ms.length-200);
+    if(ok){S.ok++;R.ok++;if(errOpen(id))noteFix(id)}else{if(b){const pair=p.m+'>'+k;S.conf[pair]=(S.conf[pair]||0)+1}R.miss.push(p);
       seedItem(id);noteError(id,{src:'mix',w:p.w});if(!ST.errs[id].t)ST.errs[id].t='met'}
     logAns(id,ok,'mix',p.w);addXP(ok?3:1);
-    const why=!ok&&p.x&&p.x[k]?`<p>${MD.inline(p.x[k])}</p>`:'';
+    const why=!ok&&k&&p.x&&p.x[k]?`<p>${MD.inline(p.x[k])}</p>`:'';
     const sim=typeof exSimLink==='function'?exSimLink(p.c):'';
     const fb=main.querySelector('#mxfb');
     fb.innerHTML=`<div class="repfb ${ok?'ok':'bad'}"><b>${ok?'Rigtig metode.':'Den her kalder på: '+MD.inline(MIX_M[p.m])+'.'}</b>${why}
       <p class="mixcue"><b>Sporet i teksten:</b> ${MD.inline(p.cue)}</p><p><b>Første skridt:</b> ${MD.inline(p.s)}</p></div>
       <p class="mixlinks"><a class="link" href="#${p.c}">Regn den færdig: ${esc((CONCEPTS[p.c]||{}).title||'begrebet')} ›</a>${sim}</p>${ok?'':'<p class="repnext">Opgaven er lagt i din repetition og kommer igen i morgen.</p>'}`;
     fitMath(fb);nx.hidden=false;nx.textContent=R.i+1<R.order.length?'Næste opgave':'Se resultat';nx.className='b '+(ok?'ok':'u');
-    setTimeout(()=>{fb.scrollIntoView({block:'nearest',behavior:'smooth'});nx.focus({preventScroll:true})},40)});
+    setTimeout(()=>{fb.scrollIntoView({block:'nearest',behavior:'smooth'});nx.focus({preventScroll:true})},40)};
+  os.forEach(b=>b.onclick=()=>pick(b));sh.onclick=()=>{if(!pauseBusy(sh))pick(null)};pauseLock(sh,'Svaret');
   nx.onclick=()=>{R.i++;mixShow()};
   R.key=e=>{if(e.target.tagName==='INPUT')return;const n=+e.key;if(!done&&n>=1&&n<=os.length){os[n-1].click();return}if(done&&e.key==='Enter'){e.preventDefault();nx.click()}}}
 document.addEventListener('keydown',e=>{if(MIXR&&MIXR.key&&!MIXR.over&&main.querySelector('.mix .repcard')&&L.hidden&&!e.ctrlKey&&!e.metaKey&&!e.altKey)MIXR.key(e)});
@@ -5228,6 +5409,456 @@ function wireVideos(root){(root||document).querySelectorAll('[data-v]').forEach(
 function vidRow(k){const n=+k;if(!VID_TITLES[n])return '';const L=VID_LEN[n];const seen=(ST.vids||{})[n];
   return `<button class="vidrow${seen?' seen':''}" data-v="${n}"><span class="vidrowp">▶</span><span><b>Se ugens video</b><small>${L?Math.floor(L/60)+':'+vidPad(Math.round(L%60))+' · ':''}Kubi forklarer ugens emner${seen?' · set ✓':''}</small></span></button>`}
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-v]');if(b&&!b.closest('#vidpop')){e.preventDefault();openVideo(+b.dataset.v)}});
+
+/* ---------- Kontrastkort: par, der ofte forveksles (indhold) ----------
+   Matematikken er tjekket med sympy (review/kontrast_check.py). Visningen ligger i learn.js.
+   c: begrebssider, der linker til kortet. mm: par af metoder fra "Hvilken metode?" (MIX_M), som kortet hjælper med at skelne.
+   q: to spørgsmål med tre svar; det første svar er det rigtige (rækkefølgen blandes ved visning). */
+const KR=String.raw;
+const KON=[
+{id:'arg',w:3,t:'Arg og arg',c:['c-argument','c-polaer-form'],mm:[['pol','binom'],['pol','rekt']],
+ a:{n:KR`$\mathrm{Arg}(z)$`,k:'hovedargumentet',d:KR`Ét bestemt tal: den vinkel til $z$, der ligger i $]-\pi,\pi]$.`,e:KR`$\mathrm{Arg}(-1-i)=-\frac{3\pi}{4}$`},
+ b:{n:KR`$\arg(z)$`,k:'et argument',d:KR`Enhver vinkel fra den positive reelle akse til $z$. Der er uendeligt mange, og de afviger med $2\pi$.`,e:KR`$-\frac{3\pi}{4}$ og $\frac{5\pi}{4}$ er begge argumenter for $-1-i$.`},
+ diff:KR`Står der stort A, skal svaret ligge i $]-\pi,\pi]$. Regn først med $\arg$ (læg sammen, gang med $n$), og reducér med $2\pi$ til sidst.`,
+ q:[{q:KR`$z$ har argumentet $\frac{7\pi}{4}$. Hvad er $\mathrm{Arg}(z)$?`,o:[KR`$-\frac{\pi}{4}$`,KR`$\frac{7\pi}{4}$`,KR`$\frac{3\pi}{4}$`],why:KR`$\frac{7\pi}{4}$ ligger uden for $]-\pi,\pi]$. Træk $2\pi$ fra: $\frac{7\pi}{4}-2\pi=-\frac{\pi}{4}$.`},
+    {q:KR`$\mathrm{Arg}(z)=\frac{3\pi}{4}$. Hvad er $\mathrm{Arg}(z^2)$?`,o:[KR`$-\frac{\pi}{2}$`,KR`$\frac{3\pi}{2}$`,KR`$\frac{\pi}{2}$`],why:KR`$2\cdot\frac{3\pi}{4}=\frac{3\pi}{2}$ er et argument for $z^2$, men ikke hovedargumentet. $\frac{3\pi}{2}-2\pi=-\frac{\pi}{2}$.`}]},
+{id:'konjinv',w:3,t:'Konjugeret og invers',c:['c-konjugering','c-kompleks-division'],mm:[['rekt','konjrod']],
+ a:{n:KR`$\bar z$`,k:'den konjugerede',d:KR`Skift fortegn på imaginærdelen. Geometrisk: spejling i den reelle akse.`,e:KR`$z=3+4i$ giver $\bar z=3-4i$.`},
+ b:{n:KR`$z^{-1}=\frac1z$`,k:'den inverse',d:KR`Det tal, der ganget med $z$ giver $1$. Regnes som $\frac1z=\frac{\bar z}{|z|^2}$.`,e:KR`$z=3+4i$ giver $\frac1z=\frac{3-4i}{25}$.`},
+ diff:KR`De peger i samme retning, men har forskellig længde: $|\bar z|=|z|$, mens $|z^{-1}|=\frac{1}{|z|}$. De er kun ens, når $|z|=1$. Husk: $z\bar z=|z|^2$ er et reelt tal, $z\,z^{-1}=1$.`,
+ q:[{q:KR`$z=2i$. Hvad er $z^{-1}$?`,o:[KR`$-\frac{i}{2}$`,KR`$-2i$`,KR`$\frac{i}{2}$`],why:KR`$\frac{1}{2i}=\frac{-2i}{4}=-\frac{i}{2}$. Tallet $-2i$ er den konjugerede, ikke den inverse.`},
+    {q:KR`For hvilke $z\neq0$ er $\bar z=z^{-1}$?`,o:[KR`Når $|z|=1$`,KR`Når $z$ er reel`,KR`Aldrig`],why:KR`$z^{-1}=\frac{\bar z}{|z|^2}$, så de to er ens, præcis når $|z|^2=1$. Modeksempel for reelle tal: $z=2$ har $\bar z=2$, men $z^{-1}=\frac12$.`}]},
+{id:'impbi',w:1,t:'Implikation og biimplikation',c:['c-implikation','c-logisk-aekvivalens'],mm:[['sand','kontra']],
+ a:{n:KR`$P\Rightarrow Q$`,k:'implikation',d:KR`Hvis $P$ er sand, er $Q$ også sand. Siger intet om $Q$, når $P$ er falsk.`,e:KR`$x=2\Rightarrow x^2=4$ er sand for alle reelle $x$.`},
+ b:{n:KR`$P\Leftrightarrow Q$`,k:'biimplikation',d:KR`$P$ og $Q$ har altid samme sandhedsværdi. Begge retninger skal holde.`,e:KR`$x=2\Leftrightarrow x^2=4$ er falsk for $x=-2$.`},
+ diff:KR`Spørg: holder det også baglæns? Løser du en ligning med et skridt, der kun er $\Rightarrow$ (fx at kvadrere), kan der komme falske løsninger med, og du skal gøre prøve.`,
+ q:[{q:KR`Du kvadrerer begge sider af $\sqrt{x+2}=x$. Hvilken pil hører til det skridt?`,o:[KR`$\Rightarrow$, så du skal gøre prøve`,KR`$\Leftrightarrow$, så alle løsninger gælder`,KR`$\Leftarrow$, så der kan mangle løsninger`],why:KR`Kvadrering giver $x^2-x-2=0$ med $x=2$ og $x=-1$. Kun $x=2$ passer i den oprindelige ligning, så skridtet gælder kun den ene vej.`},
+    {q:KR`$P$ er falsk, og $Q$ er sand. Hvilket udsagn er sandt?`,o:[KR`$P\Rightarrow Q$`,KR`$P\Leftrightarrow Q$`,KR`Ingen af dem`],why:KR`En implikation med falsk forudsætning er sand. Biimplikationen er falsk, fordi $P$ og $Q$ har forskellig sandhedsværdi.`}]},
+{id:'kontraomv',w:1,t:'Kontraposition og omvendt implikation',c:['c-implikation','c-modstrid'],mm:[['kontra','ind']],
+ a:{n:KR`$\neg Q\Rightarrow\neg P$`,k:'kontraposition',d:KR`Byt om og negér begge. Logisk ækvivalent med $P\Rightarrow Q$.`,e:KR`"Hvis $n^2$ er lige, er $n$ lige" bevises som "hvis $n$ er ulige, er $n^2$ ulige".`},
+ b:{n:KR`$Q\Rightarrow P$`,k:'den omvendte',d:KR`Byt kun om. Et andet udsagn, som kan være falsk, selv om $P\Rightarrow Q$ er sand.`,e:KR`$x>2\Rightarrow x>0$ er sand, men $x>0\Rightarrow x>2$ er falsk ($x=1$).`},
+ diff:KR`Kun kontrapositionen må bruges som bevis for $P\Rightarrow Q$. Den omvendte er et nyt udsagn, der skal bevises for sig. Tjek: er begge sider negeret?`,
+ q:[{q:KR`Hvad er kontrapositionen af "hvis $f$ er differentiabel, er $f$ kontinuert"?`,o:[KR`Hvis $f$ ikke er kontinuert, er $f$ ikke differentiabel`,KR`Hvis $f$ er kontinuert, er $f$ differentiabel`,KR`Hvis $f$ ikke er differentiabel, er $f$ ikke kontinuert`],why:KR`Byt om på de to dele, og negér begge. De to andre svar er den omvendte og dens kontraposition, og de er falske ($f(x)=|x|$).`},
+    {q:KR`$P\Rightarrow Q$ er sand. Hvad følger med sikkerhed?`,o:[KR`$\neg Q\Rightarrow\neg P$ er sand`,KR`$Q\Rightarrow P$ er sand`,KR`$\neg P\Rightarrow\neg Q$ er sand`],why:KR`Kontrapositionen har samme sandhedstabel som $P\Rightarrow Q$. De to andre er ækvivalente med hinanden, men ikke med $P\Rightarrow Q$.`}]},
+{id:'injsur',w:2,t:'Injektiv og surjektiv',c:['c-injektiv','c-surjektiv','c-invers-funktion'],mm:[['inj','vm'],['inj','inv']],
+ a:{n:'Injektiv',k:'højst én',d:KR`Forskellige input giver forskellige output: $f(x_1)=f(x_2)\Rightarrow x_1=x_2$.`,e:KR`$f:\mathbb R\to\mathbb R$, $f(x)=e^x$ er injektiv, men rammer aldrig $-1$.`},
+ b:{n:'Surjektiv',k:'mindst én',d:KR`Hvert element i dispositionsmængden rammes: for alle $y\in B$ findes et $x$ med $f(x)=y$.`,e:KR`$f:\mathbb R\to\mathbb R$, $f(x)=x^3-x$ er surjektiv, men $f(0)=f(1)$.`},
+ diff:KR`Kig på ligningen $f(x)=y$. Injektiv: højst én løsning for hvert $y$. Surjektiv: mindst én løsning for hvert $y$. Injektiv handler om input, surjektiv om output.`,
+ q:[{q:KR`$f:\mathbb R\to\mathbb R$, $f(x)=x^2$. Hvad viser $f(-1)=f(1)$?`,o:[KR`At $f$ ikke er injektiv`,KR`At $f$ ikke er surjektiv`,KR`At $f$ ikke er en funktion`],why:KR`To forskellige input rammer samme output. Det bryder injektivitet. Surjektivitet handler om, hvorvidt alle $y$ rammes.`},
+    {q:KR`$f:\mathbb R\to[0,\infty[$, $f(x)=x^2$ er …`,o:[KR`surjektiv, men ikke injektiv`,KR`injektiv, men ikke surjektiv`,KR`hverken injektiv eller surjektiv`],why:KR`Hvert $y\ge0$ rammes af $x=\sqrt y$, så $f$ er surjektiv på $[0,\infty[$. Men $f(-1)=f(1)$, så den er ikke injektiv.`}]},
+{id:'vmdisp',w:2,t:'Værdimængde og dispositionsmængde',c:['c-vaerdimaengde','c-surjektiv'],mm:[['vm','inv']],
+ a:{n:'Dispositionsmængde',k:KR`$B$ i $f:A\to B$`,d:KR`Den mængde, værdierne må ligge i. Den er valgt på forhånd og står i definitionen af $f$.`,e:KR`$f:\mathbb R\to\mathbb R$, $f(x)=x^2$: dispositionsmængden er $\mathbb R$.`},
+ b:{n:'Værdimængde',k:KR`$f(A)$`,d:KR`De værdier, $f$ faktisk rammer: $f(A)=\{f(x):x\in A\}$. Den skal regnes ud.`,e:KR`Samme $f$: værdimængden er $[0,\infty[$.`},
+ diff:KR`Værdimængden er altid en delmængde af dispositionsmængden. $f$ er surjektiv, præcis når de to er ens.`,
+ q:[{q:KR`$f:\mathbb R\to\mathbb R$, $f(x)=e^x+1$. Hvad er værdimængden?`,o:[KR`$]1,\infty[$`,KR`$\mathbb R$`,KR`$[1,\infty[$`],why:KR`$e^x$ antager alle værdier i $]0,\infty[$, så $e^x+1$ antager alle værdier i $]1,\infty[$. Tallet $1$ rammes ikke. $\mathbb R$ er dispositionsmængden.`},
+    {q:KR`$f:A\to B$ har værdimængden $f(A)=B$. Hvad hedder det?`,o:[KR`$f$ er surjektiv`,KR`$f$ er injektiv`,KR`$f$ er bijektiv`],why:KR`Når alt i $B$ rammes, er $f$ surjektiv. Det siger intet om, hvorvidt to input rammer det samme.`}]},
+{id:'hominh',w:6,t:'Homogen og inhomogen',c:['c-homogen','c-fuldstaendig-loesning','c-differentialligning'],mm:[['gauss','rang'],['gaet','kar2'],['panser','gaet']],
+ a:{n:'Homogen',k:'højreside nul',d:KR`$\mathbf A\mathbf x=\mathbf 0$ (eller $f'+p\,f=0$). Har altid nulløsningen, og løsningerne udgør et underrum.`,e:KR`$x_1+x_2=0$ har løsningerne $t\,(-1,1)$.`},
+ b:{n:'Inhomogen',k:'højreside ikke nul',d:KR`$\mathbf A\mathbf x=\mathbf b$ (eller $f'+p\,f=q$). Kan være uden løsninger, og løsningerne udgør ikke et underrum.`,e:KR`$x_1+x_2=2$ har løsningerne $(2,0)+t\,(-1,1)$.`},
+ diff:KR`Kig på højresiden. Strukturen er den samme for ligningssystemer og differentialligninger: alle inhomogene løsninger = én partikulær + alle homogene.`,
+ q:[{q:KR`Hvilket system har med sikkerhed mindst én løsning?`,o:[KR`$\mathbf A\mathbf x=\mathbf 0$`,KR`$\mathbf A\mathbf x=\mathbf b$ med $\mathbf b\ne\mathbf 0$`,KR`Ingen af dem`],why:KR`$\mathbf x=\mathbf 0$ løser altid det homogene system. Et inhomogent system kan være inkonsistent.`},
+    {q:KR`$\mathbf x_1$ og $\mathbf x_2$ løser begge $\mathbf A\mathbf x=\mathbf b$ med $\mathbf b\neq\mathbf 0$. Hvad løser $\mathbf x_1-\mathbf x_2$?`,o:[KR`Det homogene system $\mathbf A\mathbf x=\mathbf 0$`,KR`Det samme system $\mathbf A\mathbf x=\mathbf b$`,KR`Systemet $\mathbf A\mathbf x=2\mathbf b$`],why:KR`$\mathbf A(\mathbf x_1-\mathbf x_2)=\mathbf b-\mathbf b=\mathbf 0$. Derfor er forskellen mellem to løsninger altid en homogen løsning.`}]},
+{id:'trapred',w:6,t:'Trappeform og reduceret trappeform',c:['c-trappeform','c-rang'],mm:[['gauss','rang']],
+ a:{n:'Trappeform',k:'ikke entydig',d:KR`Nulrækker står nederst, og hver ledende indgang står til højre for den i rækken ovenover.`,e:KR`$\begin{bmatrix}2&4&6\\0&3&3\end{bmatrix}$`},
+ b:{n:'Reduceret trappeform',k:'entydig',d:KR`Desuden er hver ledende indgang $1$, og resten af dens søjle er $0$.`,e:KR`$\begin{bmatrix}1&0&1\\0&1&1\end{bmatrix}$ (samme matrix, reduceret færdig)`},
+ diff:KR`Trappeform er nok til at tælle pivoter: rang, løsbarhed og antal frie variable. Den reducerede skal du bruge, når selve løsningen skal aflæses.`,
+ q:[{q:KR`Er $\begin{bmatrix}1&2&0\\0&0&1\end{bmatrix}$ på reduceret trappeform?`,o:[KR`Ja`,KR`Nej, der står $2$ i række 1`,KR`Nej, pivoterne står ikke i diagonalen`],why:KR`Pivoterne står i søjle 1 og 3, begge er $1$, og resten af de to søjler er $0$. Tallet $2$ står i en søjle uden pivot, og det er tilladt.`},
+    {q:KR`Du skal kun bestemme rangen af en matrix. Hvor langt behøver du at reducere?`,o:[KR`Til trappeform`,KR`Til reduceret trappeform`,KR`Til enhedsmatricen`],why:KR`Rangen er antallet af pivoter, og det kan aflæses, så snart matricen er på trappeform.`}]},
+{id:'invtrans',w:7,t:'Invers og transponeret matrix',c:['c-invers','c-transponering','c-determinant'],mm:[['invm','det']],
+ a:{n:KR`$\mathbf A^{-1}$`,k:'den inverse',d:KR`Matricen med $\mathbf A\mathbf A^{-1}=\mathbf I$. Findes kun for kvadratiske matricer med $\det\mathbf A\ne0$.`,e:KR`$\begin{bmatrix}1&2\\3&4\end{bmatrix}^{-1}=\begin{bmatrix}-2&1\\ \frac32&-\frac12\end{bmatrix}$`},
+ b:{n:KR`$\mathbf A^{T}$`,k:'den transponerede',d:KR`Byt rækker og søjler. Findes for alle matricer.`,e:KR`$\begin{bmatrix}1&2\\3&4\end{bmatrix}^{T}=\begin{bmatrix}1&3\\2&4\end{bmatrix}$`},
+ diff:KR`Transponering flytter bare tallene, invertering kræver udregning. Begge vender rækkefølgen i et produkt: $(\mathbf A\mathbf B)^T=\mathbf B^T\mathbf A^T$ og $(\mathbf A\mathbf B)^{-1}=\mathbf B^{-1}\mathbf A^{-1}$. Men $\det(\mathbf A^T)=\det\mathbf A$, mens $\det(\mathbf A^{-1})=\frac{1}{\det\mathbf A}$.`,
+ q:[{q:KR`$\det\mathbf A=4$. Hvad er $\det(\mathbf A^{-1})$ og $\det(\mathbf A^T)$?`,o:[KR`$\frac14$ og $4$`,KR`$4$ og $\frac14$`,KR`$\frac14$ og $\frac14$`],why:KR`Den inverse har den reciprokke determinant. Transponering ændrer ikke determinanten.`},
+    {q:KR`$\mathbf A$ er en $2\times3$-matrix. Hvilken findes?`,o:[KR`Kun $\mathbf A^T$`,KR`Kun $\mathbf A^{-1}$`,KR`Begge`],why:KR`$\mathbf A^T$ er en $3\times2$-matrix. En invers kræver, at matricen er kvadratisk.`}]},
+{id:'basisspan',w:8,t:'Basis og udspændende sæt',c:['c-basis','c-udspaending','c-lineaer-uafhaengighed'],mm:[['koord','basis'],['koord','urum']],
+ a:{n:'Udspændende sæt',k:'mindst én måde',d:KR`Vektorer, hvis linearkombinationer giver hele rummet. Der må gerne være for mange.`,e:KR`$(1,0),\ (0,1),\ (1,1)$ udspænder $\mathbb R^2$.`},
+ b:{n:'Basis',k:'præcis én måde',d:KR`Et udspændende sæt, der også er lineært uafhængigt. Hver vektor kan skrives på præcis én måde.`,e:KR`$(1,0),\ (0,1)$ er en basis for $\mathbb R^2$.`},
+ diff:KR`Tæl vektorerne. I et rum af dimension $n$ har en basis præcis $n$ vektorer, og et udspændende sæt har mindst $n$. Er der flere end $n$, er de lineært afhængige og derfor ikke en basis.`,
+ q:[{q:KR`Fire vektorer udspænder $\mathbb R^3$. Er de en basis?`,o:[KR`Nej, de er lineært afhængige`,KR`Ja, fordi de udspænder rummet`,KR`Det afhænger af vektorerne`],why:KR`Fire vektorer i et rum af dimension $3$ er altid lineært afhængige. En af dem er overflødig.`},
+    {q:KR`Tre vektorer i $\mathbb R^3$ er lineært uafhængige. Er de en basis for $\mathbb R^3$?`,o:[KR`Ja, altid`,KR`Kun hvis de står vinkelret på hinanden`,KR`Nej, udspænding skal vises for sig`],why:KR`$n$ lineært uafhængige vektorer i et rum af dimension $n$ udspænder automatisk hele rummet.`}]},
+{id:'nulsoj',w:8,t:'Nulrum og søjlerum',c:['c-nulrum','c-soejlerum','c-kerne-billedrum'],mm:[['rang','dimsat']],
+ a:{n:'Nulrum',k:'input',d:KR`Alle $\mathbf x$ med $\mathbf A\mathbf x=\mathbf 0$. Det ligger i $\mathbb R^n$, hvor $n$ er antal søjler.`,e:KR`$\mathbf A=\begin{bmatrix}1&2\\2&4\end{bmatrix}$: nulrummet er $\mathrm{span}\{(-2,1)\}$.`},
+ b:{n:'Søjlerum',k:'output',d:KR`Alle $\mathbf b$, som $\mathbf A\mathbf x=\mathbf b$ kan ramme: span af søjlerne. Det ligger i $\mathbb R^m$, hvor $m$ er antal rækker.`,e:KR`Samme $\mathbf A$: søjlerummet er $\mathrm{span}\{(1,2)\}$.`},
+ diff:KR`Nulrummet består af løsninger, søjlerummet af højresider. Dimensionerne passer sammen: søjlerummet har dimension $\rho(\mathbf A)$, og nulrummet har dimension $n-\rho(\mathbf A)$.`,
+ q:[{q:KR`$\mathbf A$ er en $3\times5$-matrix. Hvor ligger nulrummet?`,o:[KR`I $\mathbb R^5$`,KR`I $\mathbb R^3$`,KR`I $\mathbb R^{15}$`],why:KR`$\mathbf A\mathbf x$ kræver, at $\mathbf x$ har lige så mange koordinater, som $\mathbf A$ har søjler. Søjlerummet ligger i $\mathbb R^3$.`},
+    {q:KR`$\mathbf A$ er $3\times5$ og har rang $2$. Hvad er dimensionen af nulrummet?`,o:[KR`$3$`,KR`$2$`,KR`$1$`],why:KR`$n-\rho(\mathbf A)=5-2=3$ frie variable. Tallet $2$ er dimensionen af søjlerummet.`}]},
+{id:'rangdim',w:8,t:'Rang og dimension',c:['c-rang','c-dimension','c-dimensionssaetning'],mm:[['rang','dimsat'],['dimsat','afb']],
+ a:{n:'Rang',k:'om en matrix',d:KR`Antal pivoter i trappeformen, $\rho(\mathbf A)$.`,e:KR`$\begin{bmatrix}1&2&3\\2&4&6\end{bmatrix}$ har rang $1$.`},
+ b:{n:'Dimension',k:'om et vektorrum',d:KR`Antal vektorer i en basis for rummet.`,e:KR`Nulrummet for samme matrix har dimension $3-1=2$.`},
+ diff:KR`Matricer har rang, rum har dimension. De mødes i søjlerummet: $\rho(\mathbf A)=\dim(\text{søjlerum})$. Dimensionssætningen binder dem sammen: $n=\rho(\mathbf A)+\dim(\text{nulrum})$.`,
+ q:[{q:KR`En $4\times6$-matrix har rang $4$. Hvad er dimensionen af løsningsrummet til $\mathbf A\mathbf x=\mathbf 0$?`,o:[KR`$2$`,KR`$4$`,KR`$0$`],why:KR`$6$ ubekendte minus $4$ pivoter giver $2$ frie variable.`},
+    {q:KR`Hvad er den størst mulige rang af en $3\times7$-matrix?`,o:[KR`$3$`,KR`$7$`,KR`$21$`],why:KR`Der kan højst stå én pivot i hver række og i hver søjle, så rangen er højst $\min(3,7)=3$.`}]},
+{id:'egvv',w:11,t:'Egenværdi og egenvektor',c:['c-egenvaerdi','c-egenrum','c-karakteristisk-polynomium'],mm:[['kar','egrum']],
+ a:{n:'Egenværdi',k:'et tal',d:KR`Et tal $\lambda$, hvor $\mathbf A\mathbf v=\lambda\mathbf v$ har en løsning $\mathbf v\ne\mathbf 0$. Findes som rod i $\det(\mathbf A-\lambda\mathbf I)$.`,e:KR`$\mathbf A=\begin{bmatrix}2&1\\1&2\end{bmatrix}$ har egenværdierne $1$ og $3$.`},
+ b:{n:'Egenvektor',k:'en retning',d:KR`En vektor $\mathbf v\ne\mathbf 0$ med $\mathbf A\mathbf v=\lambda\mathbf v$. Findes ved at løse $(\mathbf A-\lambda\mathbf I)\mathbf v=\mathbf 0$.`,e:KR`Samme $\mathbf A$: $(1,1)$ hører til $\lambda=3$, for $\mathbf A(1,1)=(3,3)$.`},
+ diff:KR`Egenværdien siger, hvor meget der skaleres. Egenvektoren siger, hvad der skaleres. Tallet $0$ må gerne være egenværdi, men nulvektoren er aldrig egenvektor. Find altid tallene først.`,
+ q:[{q:KR`$\mathbf A\mathbf v=\mathbf 0$ for en vektor $\mathbf v\ne\mathbf 0$. Hvad kan du sige?`,o:[KR`$0$ er egenværdi, og $\mathbf v$ er en egenvektor`,KR`$\mathbf v$ er ikke egenvektor, fordi resultatet er nulvektoren`,KR`$\mathbf A$ har ingen egenværdier`],why:KR`$\mathbf A\mathbf v=0\cdot\mathbf v$ med $\mathbf v\ne\mathbf 0$. Det er egenvektoren selv, der ikke må være nul, ikke resultatet.`},
+    {q:KR`$\mathbf v$ er egenvektor for $\mathbf A$ med egenværdi $3$. Hvad er $5\mathbf v$?`,o:[KR`Også en egenvektor med egenværdi $3$`,KR`En egenvektor med egenværdi $15$`,KR`Ikke en egenvektor`],why:KR`$\mathbf A(5\mathbf v)=5\mathbf A\mathbf v=3\cdot(5\mathbf v)$. Retningen er den samme, og det er den, egenværdien hører til.`}]},
+{id:'amgm',w:11,t:'Algebraisk og geometrisk multiplicitet',c:['c-egenrum','c-diagonalisering','c-karakteristisk-polynomium','c-rod-multiplicitet'],mm:[['diag','kar'],['diag','egrum']],
+ a:{n:KR`$\mathrm{am}(\lambda)$`,k:'algebraisk',d:KR`Hvor mange gange $\lambda$ er rod i det karakteristiske polynomium.`,e:KR`$\mathbf A=\begin{bmatrix}2&1\\0&2\end{bmatrix}$: polynomiet er $(\lambda-2)^2$, så $\mathrm{am}(2)=2$.`},
+ b:{n:KR`$\mathrm{gm}(\lambda)$`,k:'geometrisk',d:KR`Dimensionen af egenrummet $E_\lambda$: antal frie variable i $(\mathbf A-\lambda\mathbf I)\mathbf v=\mathbf 0$.`,e:KR`Samme $\mathbf A$: $E_2=\mathrm{span}\{(1,0)\}$, så $\mathrm{gm}(2)=1$.`},
+ diff:KR`am aflæses i polynomiet, gm kræver Gauss-elimination. Altid $1\le\mathrm{gm}\le\mathrm{am}$. Over $\mathbb C$ kan matricen diagonaliseres, præcis når $\mathrm{gm}=\mathrm{am}$ for alle egenværdier.`,
+ q:[{q:KR`Det karakteristiske polynomium er $(\lambda-1)^2(\lambda-4)$. Hvad ved du om $\mathrm{gm}(1)$?`,o:[KR`Den er $1$ eller $2$`,KR`Den er $2$`,KR`Den er $3$`],why:KR`$\mathrm{am}(1)=2$, og $1\le\mathrm{gm}\le\mathrm{am}$. Hvilken af de to det er, kræver, at du finder egenrummet.`},
+    {q:KR`$\mathbf A=\begin{bmatrix}3&0\\0&3\end{bmatrix}$. Hvad er $\mathrm{gm}(3)$?`,o:[KR`$2$`,KR`$1$`,KR`$0$`],why:KR`$\mathbf A-3\mathbf I$ er nulmatricen, så alle vektorer i $\mathbb R^2$ er løsninger. Egenrummet har dimension $2$.`}]},
+{id:'diaginv',w:11,t:'Diagonaliserbar og invertibel',c:['c-diagonalisering','c-invers'],mm:[['diag','invm'],['diag','det']],
+ a:{n:'Invertibel',k:KR`$0$ er ikke egenværdi`,d:KR`$\det\mathbf A\ne0$. Det er det samme som, at $0$ ikke er egenværdi.`,e:KR`$\begin{bmatrix}1&1\\0&1\end{bmatrix}$ er invertibel ($\det=1$), men kan ikke diagonaliseres.`},
+ b:{n:'Diagonaliserbar',k:'egenvektorer nok',d:KR`Der findes en basis af egenvektorer: $\mathrm{gm}=\mathrm{am}$ for alle egenværdier.`,e:KR`$\begin{bmatrix}1&0\\0&0\end{bmatrix}$ er diagonal, men ikke invertibel ($\det=0$).`},
+ diff:KR`De to egenskaber afhænger ikke af hinanden. Invertibel: er $0$ en egenværdi? Diagonaliserbar: er der egenvektorer nok? En matrix kan have den ene, begge eller ingen af dem.`,
+ q:[{q:KR`En $3\times3$-matrix har egenværdierne $0$, $1$ og $2$. Hvad gælder?`,o:[KR`Diagonaliserbar, men ikke invertibel`,KR`Invertibel, men ikke diagonaliserbar`,KR`Hverken det ene eller det andet`],why:KR`Tre forskellige egenværdier giver tre lineært uafhængige egenvektorer. Egenværdien $0$ betyder $\det\mathbf A=0$.`},
+    {q:KR`$\mathbf A=\begin{bmatrix}2&1\\0&2\end{bmatrix}$ er …`,o:[KR`invertibel, men ikke diagonaliserbar`,KR`diagonaliserbar, men ikke invertibel`,KR`begge dele`],why:KR`$\det\mathbf A=4\ne0$. Men $\mathrm{am}(2)=2$ og $\mathrm{gm}(2)=1$, så der mangler en egenvektor.`}]},
+{id:'partfuld',w:12,t:'Partikulær og fuldstændig løsning',c:['c-fuldstaendig-loesning','c-fuldstaendig-loesning-ode','c-begyndelsesbetingelse'],mm:[['gaet','bbet'],['panser','bbet'],['bbet','kar2'],['egvekt','bbet']],
+ a:{n:'Partikulær løsning',k:'én løsning',d:KR`Én bestemt løsning uden frie konstanter.`,e:KR`$f'(t)+2f(t)=4$ har løsningen $f_p(t)=2$.`},
+ b:{n:'Fuldstændig løsning',k:'alle løsninger',d:KR`Alle løsninger på én gang: en partikulær løsning plus alle homogene løsninger. Indeholder frie konstanter.`,e:KR`$f(t)=2+c\,e^{-2t}$, $c\in\mathbb R$.`},
+ diff:KR`Er der en fri konstant ($c$ eller $t$), er det den fuldstændige løsning. En begyndelsesbetingelse vælger én bestemt ud. Læs opgaven: "bestem alle løsninger" kræver konstanten, "bestem løsningen med $f(0)=\dots$" kræver ét svar.`,
+ q:[{q:KR`$f(t)=2+c\,e^{-2t}$ og $f(0)=5$. Hvad er $c$?`,o:[KR`$3$`,KR`$5$`,KR`$\frac52$`],why:KR`$f(0)=2+c=5$ giver $c=3$. Løsningen er $f(t)=2+3e^{-2t}$.`},
+    {q:KR`Den fuldstændige løsning til $\mathbf A\mathbf x=\mathbf b$ er $(1,0,2)+t\,(1,1,0)$. Hvilken er en partikulær løsning?`,o:[KR`$(2,1,2)$`,KR`$(1,1,0)$`,KR`$(0,0,0)$`],why:KR`Sæt $t=1$: $(1,0,2)+(1,1,0)=(2,1,2)$. Vektoren $(1,1,0)$ løser det homogene system, ikke det inhomogene.`}]}
+];
+
+/* ---------- Læringsideer (learn.js) ----------
+   Kontrastkort (indhold i kontrast.js), eksamensplan, prætest før en ny uge, pause før hint, Kubi som coach,
+   eksport af statistik og skriveøvelsen til eksamensmorgenen.
+   Tilstand: ST.learn = {plan, pre, kon, coach, set, morn}, typetjekket i normLearn (app.js). */
+const LRN=()=>ST.learn;
+const dayOf=k=>{const[y,m,d]=k.split('-').map(Number);return new Date(y,m-1,d)};
+/* hele dage til prøven: 0 på selve dagen, negativ bagefter */
+const examDays=()=>Math.round((sod(new Date(EXAM_DATE))-sod(Date.now()))/DAY);
+const WDAY=['søndag','mandag','tirsdag','onsdag','torsdag','fredag','lørdag'];
+const fmtDay=d=>WDAY[d.getDay()]+' '+d.getDate()+'/'+(d.getMonth()+1);
+const lkubi=mood=>`<span class="lkubi" aria-hidden="true">${MASCOT(mood||'')}</span>`;
+const shuf=a=>a.map(x=>({x,k:Math.random()})).sort((p,q)=>p.k-q.k).map(o=>o.x);
+
+/* ---------- Kontrastkort ---------- */
+const KONBY={};KON.forEach(k=>KONBY[k.id]=k);
+const konDone=id=>(LRN().kon[id]||[0,0])[1]>=2;
+function konForConcept(cid){const ks=KON.filter(k=>k.c.includes(cid));if(!ks.length)return'';
+  return`<h3 style="margin-top:26px">Forveksles ofte</h3><div class="tags kontags">${ks.map(k=>`<a class="tag kon" href="#kontrast-${k.id}">⇄ ${esc(k.t)}</a>`).join('')}</div>`}
+/* fra forvekslingerne i "Hvilken metode?": pairs er nøgler "rigtig>valgt" */
+function konForMix(pairs){const hit=[];pairs.forEach(p=>{const[a,b]=p.split('>');KON.forEach(k=>{if(!hit.includes(k)&&k.mm.some(m=>m.includes(a)&&m.includes(b)))hit.push(k)})});
+  return`<p class="konmix">${hit.length?'Kontrastkort, der kan hjælpe: '+hit.slice(0,3).map(k=>`<a href="#kontrast-${k.id}">${esc(k.t)}</a>`).join(' · '):'<a href="#kontrast">Se kontrastkortene ›</a>'}</p>`}
+function viewKonList(){document.title='Kontrastkort · Mat1a';const n=KON.filter(k=>konDone(k.id)).length;
+  main.innerHTML=`<div class="page"><h1>Kontrastkort</h1><div class="sub">${KON.length} par, der ofte forveksles. Hvert kort stiller de to begreber side om side og slutter med to spørgsmål. Du har klaret ${n}.</div>
+    <div class="cgrid kongrid">${KON.map(k=>`<a class="ccard${konDone(k.id)?' tried':''}" href="#kontrast-${k.id}" style="${uvars(k.w)}"><div class="cg" aria-hidden="true">⇄</div><div class="ct"><b>${esc(k.t)}</b><small>Uge ${k.w}${konDone(k.id)?' · <span class="cok">klaret ✓</span>':(LRN().kon[k.id]?' · prøvet':'')}</small></div></a>`).join('')}</div></div>`;window.scrollTo(0,0)}
+function viewKon(id){const K=KONBY[id];if(!K)return viewKonList();document.title=K.t+' · Kontrastkort · Mat1a';
+  const cell=(s,x,cls)=>`<div class="kcell ${cls}"><span class="kn">${MD.inline(s.n)}</span><div>${MD.inline(x)}</div></div>`;
+  const i=KON.indexOf(K),nx=KON[(i+1)%KON.length];
+  main.innerHTML=`<div class="page narrow kon" style="${uvars(K.w)}"><div class="ehead"><div class="crumb"><a href="#kontrast">Kontrastkort</a><span>›</span><a href="#uge-${K.w}">Uge ${K.w} · ${esc(unit(K.w)[1])}</a></div><h1>${esc(K.t)}</h1><div class="glyph">⇄</div></div>
+    <div class="pcard ktab"><div class="krow khead"><div class="kcell ka"><b>${MD.inline(K.a.n)}</b><small>${MD.inline(K.a.k)}</small></div><div class="kcell kb"><b>${MD.inline(K.b.n)}</b><small>${MD.inline(K.b.k)}</small></div></div>
+      <div class="klab">Definition</div><div class="krow">${cell(K.a,K.a.d,'ka')}${cell(K.b,K.b.d,'kb')}</div>
+      <div class="klab">Lille eksempel</div><div class="krow">${cell(K.a,K.a.e,'ka')}${cell(K.b,K.b.e,'kb')}</div></div>
+    <div class="kdiff"><b>Sådan kender du forskel</b><div class="prose">${MD.inline(K.diff)}</div></div>
+    <div class="pcard kcheck" id="kcheck"></div>
+    <div class="tags kontags">${K.c.filter(c=>CONCEPTS[c]).map(c=>`<a class="tag" href="#${c}"># ${esc(CONCEPTS[c].title)}</a>`).join('')}</div>
+    <div class="socbtns"><a class="b ghost" href="#kontrast">Alle kontrastkort</a><a class="b ghost" href="#kontrast-${nx.id}">Næste: ${esc(nx.t)} ›</a></div></div>`;
+  fitMath(main);window.scrollTo(0,0);
+  const box=main.querySelector('#kcheck');let qi=0,ok=0;
+  const ask=()=>{const Q=K.q[qi],opts=shuf(Q.o.map((x,j)=>({x,ok:j===0})));
+    box.innerHTML=`<div class="conflbl">Tjek dig selv · ${qi+1} af ${K.q.length}</div><div class="qtext">${MD.inline(Q.q)}</div>
+      <div class="opts" role="radiogroup">${opts.map((o,j)=>`<button class="opt" role="radio" aria-checked="false"><span class="k">${j+1}</span><span>${MD.inline(o.x)}</span></button>`).join('')}</div><div class="kfb" role="status"></div>`;
+    fitMath(box);const os=[...box.querySelectorAll('.opt')];
+    os.forEach((b,j)=>b.onclick=()=>{const good=opts[j].ok;if(good)ok++;os.forEach((x,m)=>{x.disabled=true;x.setAttribute('aria-checked',String(x===b));if(opts[m].ok)x.classList.add('right');else if(x===b)x.classList.add('wrong')});
+      const fb=box.querySelector('.kfb');fb.innerHTML=`<div class="repfb ${good?'ok':'bad'}"><b>${good?'Rigtigt.':'Ikke helt.'}</b> ${MD.inline(Q.why)}</div><div class="repacts"><button class="b ${good?'ok':'u'}" id="knext">${qi+1<K.q.length?'Næste spørgsmål':'Se resultat'}</button></div>`;
+      fitMath(fb);const nb=fb.querySelector('#knext');nb.onclick=()=>{qi++;if(qi<K.q.length)ask();else fin()};setTimeout(()=>{fb.scrollIntoView({block:'nearest',behavior:'smooth'});nb.focus({preventScroll:true})},40)})};
+  const fin=()=>{const v=LRN().kon[K.id]||[0,0,0],first=v[1]<2;LRN().kon[K.id]=[v[0]+1,Math.max(v[1],ok),Date.now()];save();if(ok&&first)addXP(2*ok);
+    box.innerHTML=`<div class="repbig">${ok} af ${K.q.length} rigtige</div><p>${ok===K.q.length?'Du kan skelne de to. Kortet er markeret som klaret.':'Læs "Sådan kender du forskel" en gang til, og prøv igen i morgen. Forskellen sidder bedre, når der har været en nat imellem.'}</p>
+      <div class="socbtns"><button class="b ghost sm" id="kagain">Prøv igen</button></div>`;
+    box.querySelector('#kagain').onclick=()=>{qi=0;ok=0;ask()}};
+  ask()}
+
+/* ---------- Eksamensplan ----------
+   Tre refleksionsspørgsmål (hvad, hvilke ressourcer og hvorfor, hvornår) og en plan dag for dag for de sidste 10 dage,
+   bygget af elevens egne tal: svage uger (hukommelse, fejlrate, sikker-men-forkert), åbne guldfejl, usete prøveeksamener og videoer.
+   Planen gemmes som typer + argument (ingen fri tekst i punkterne); teksterne dannes ved visning. */
+const PLAN_RES=[['rep','Dagens repetition'],['fejl','Fejlloggen'],['exam','Prøveeksamen'],['mix','Hvilken metode?'],['form','Formeltræner'],['kon','Kontrastkort'],['vid','Ugevideoer'],['beg','Begrebskort'],['bog','Lærebogen']];
+const PLAN_MIN=[[30,'30 min'],[60,'1 time'],[90,'1½ time'],[120,'2 timer']];
+const PLAN_COST={rep:8,guld:8,uge:20,vid:2,mix:3,form:5,kon:5,mini:40,pak:5};
+const allExams=()=>typeof EXAMS!=='undefined'?EXAMS:[];
+const goldOpen=()=>Object.keys(ST.errs).filter(id=>errOpen(id)&&ST.errs[id].gold&&getItem(id)).length;
+const examsUnseen=()=>allExams().filter(E=>!(ST.exams[E.id]&&ST.exams[E.id].done));
+function weekStats(){const st={};ST.ans.forEach(a=>{if(!a.w)return;const s=st[a.w]=st[a.w]||{n:0,bad:0,sure:0,last:0};s.n++;if(!a.ok){s.bad++;if(a.c===3)s.sure++}if(a.at>s.last)s.last=a.at});return st}
+/* svageste uger først */
+function weakWeeks(){const st=weekStats();
+  return readyData().map(x=>{const s=st[x.w]||{n:0,bad:0,sure:0},err=s.n>=3?s.bad/s.n:0.3;
+    const score=(x.s==null?0.4:x.s)-0.25*err-0.05*Math.min(x.open,4)-0.08*Math.min(s.sure,3);
+    const why=s.sure>=2?`Sikker, men forkert ${s.sure} gange`:x.open?`${x.open} åben${x.open===1?'':'e'} fejl`:x.s==null?'Ingen kort øvet endnu':s.n>=3&&err>=0.4?`${Math.round(err*100)} % fejl`:`Du husker ca. ${Math.round(x.s*100)} %`;
+    return{w:x.w,score,why}}).sort((a,b)=>a.score-b.score||a.w-b.w)}
+function planBuild(res,min,from){const has=k=>res.includes(k),ed=new Date(EXAM_DATE),t0=sod(Date.now()),days=[];
+  for(let n=10;n>=1;n--){const d=new Date(ed.getFullYear(),ed.getMonth(),ed.getDate()-n);if(d.getTime()>=t0&&(!from||dkey(d)>=from))days.push({d:dkey(d),n,dow:d.getDay(),it:[]})}
+  /* de sidste tre dage er rolige (ingen nyt stof); prøveeksamenerne lægges på de åbne dage, helst i weekenden og ikke to dage i træk */
+  const open=days.filter(x=>x.n>=4),un=has('exam')?examsUnseen():[],nEx=Math.min(un.length,min<=30?1:min<=60?2:min<=90?3:4,Math.ceil(open.length/2));
+  const order=[...open.filter(x=>x.dow===0||x.dow===6),...open.slice(1).filter(x=>x.dow%6),...open.slice(0,1)],ex=[];   /* første dag holdes helst fri til guldfejl og den svageste uge */
+  for(const strict of [true,false])for(const x of order){if(ex.length>=nEx)break;if(ex.includes(x)||(strict&&ex.some(y=>Math.abs(y.n-x.n)===1)))continue;ex.push(x)}
+  ex.sort((a,b)=>b.n-a.n).forEach((x,i)=>x.ex=un[i].id);
+  const ww=weakWeeks().map(x=>x.w),queue=ww.concat(ww.slice(0,3)),nW=min<=30?1:min<=60?2:min<=90?3:4;let k=0,gold=has('fejl');
+  days.forEach(x=>{const it=x.it,add=(t,a)=>it.push(a==null?{t}:{t,a});add('rep');
+    if(x.n===1){add('pak');return}
+    if(x.n===2){if(has('fejl'))add('guld');if(has('form'))add('form');return}
+    if(x.n===3){if(has('fejl'))add('guld');if(has('exam'))add('mini');return}
+    if(x.ex){add('exam',x.ex);return}
+    let left=min-PLAN_COST.rep;
+    if(gold){add('guld');left-=PLAN_COST.guld;gold=false}
+    for(let j=0;j<nW&&queue.length&&(j===0||left>=PLAN_COST.uge);j++){const w=queue.shift();
+      if(has('vid')&&VID_TITLES[w]&&!(ST.vids||{})[w]&&!days.some(y=>y.it.some(i=>i.t==='vid'&&i.a===w))){add('vid',w);left-=PLAN_COST.vid}
+      add('uge',w);left-=PLAN_COST.uge}
+    if(has('mix')&&k%2===0&&left>=PLAN_COST.mix){add('mix');left-=PLAN_COST.mix}
+    if(has('form')&&k%2===1&&left>=PLAN_COST.form){add('form');left-=PLAN_COST.form}
+    if(has('kon')&&k%3===1&&left>=PLAN_COST.kon)add('kon');
+    k++});
+  return days.map(x=>({d:x.d,it:x.it}))}
+/* tekst, link og minutter for ét punkt; live = dagens tal må vises */
+function planItem(it,live,why){const w=it.a;
+  switch(it.t){
+    case'rep':{const s=live?repSummary():null;return{t:'Dagens repetition',s:s&&s.n?`${s.n} kort · ca. ${s.min} min`:'Korte kort, der holder det hele varmt',go:'repetition',m:8}}
+    case'guld':{const n=goldOpen();return{t:'Ret dine guldfejl',s:live?(n?`${n} åbne · dem, du var sikker på`:'Ingen åbne guldfejl lige nu. Kig fejlloggen igennem i stedet.'):'De fejl, du var sikker på',go:n?'repetition/start-guld':'repetition/fejl',m:8}}
+    case'uge':return{t:`Uge ${w} · ${unit(w)[1]}`,s:`${why[w]||'Repetér'}. Læs begrebskortene, og regn én opgave, du ikke har klaret.`,go:'uge-'+w,m:20};
+    case'vid':return{t:`Video til uge ${w}`,s:'Et par minutter som opvarmning',vid:w,m:2};
+    case'exam':{const E=allExams().find(e=>e.id===w);return E?{t:E.title+' med ur',s:`${E.mins} min · sæt tid af, og regn den uden hjælp`,go:'eksamen-'+E.id,m:E.mins}:null}
+    case'mini':return{t:'Minieksamen',s:`${MINI_MIN} min med ur · sidste simulering før prøven`,go:'mini',m:40};
+    case'mix':return{t:'Hvilken metode?',s:'Én blandet runde · ca. 3 min',go:'metode',m:3};
+    case'form':return{t:'Formeltræner',s:'De formler, der er klar · ca. 5 min',go:'repetition/start-formler',m:5};
+    case'kon':return{t:'Kontrastkort',s:'To par, du ikke har klaret endnu',go:'kontrast',m:5};
+    case'pak':return{t:'Pak tasken, og gå tidligt i seng',s:'Studiekort og skriveredskaber. Tjek tid og sted. Søvn hjælper mere end en ekstra time nu.',m:5}}
+  return null}
+const planWhy=()=>{const o={};weakWeeks().forEach(x=>o[x.w]=x.why);return o};
+function planDayHTML(D,di,o){const d=dayOf(D.d),tk=today(),live=D.d===tk,why=o.why,n=Math.round((sod(new Date(EXAM_DATE))-d.getTime())/DAY);
+  const rows=D.it.map((it,i)=>{const x=planItem(it,live,why);if(!x)return'';const id=`pi${o.pre||''}-${di}-${i}`;
+    return`<div class="pit${it.done?' done':''}"><input type="checkbox" id="${id}" data-pd="${di}" data-pi="${i}" ${it.done?'checked':''}><label for="${id}"><b>${esc(x.t)}</b><span>${esc(x.s)}</span></label>${x.go?`<a class="b ghost sm" href="#${x.go}">Åbn</a>`:x.vid?`<button class="b ghost sm" data-v="${x.vid}">Se</button>`:''}</div>`}).join('');
+  const mins=D.it.reduce((a,it)=>a+((planItem(it,false,why)||{}).m||0),0),left=D.it.filter(it=>!it.done).length;
+  return`<section class="pday${live?' today':D.d<tk?' past':''}"><h3>${live?'I dag · ':''}${fmtDay(d)}<small>${n===1?'dagen før prøven':n+' dage før'} · ca. ${mins>=120?Math.round(mins/60)+' timer':mins+' min'}${D.d<tk&&left?` · ${left} ikke nået`:''}</small></h3>${rows}</section>`}
+function planWire(root){root.querySelectorAll('input[data-pd]').forEach(c=>c.onchange=()=>{const P=LRN().plan;if(!P)return;const D=P.days[+c.dataset.pd],it=D&&D.it[+c.dataset.pi];if(!it)return;
+  if(c.checked)it.done=1;else delete it.done;save();c.closest('.pit').classList.toggle('done',c.checked);
+  const box=c.closest('.lplan');if(box){const h=box.querySelector('.lph b');if(h)h.textContent=D.it.every(x=>x.done)?'Dagens plan er klaret ✓':'Dagens plan'}})}
+function planForm(P){const res=P?P.res:['rep','fejl','exam','mix'],min=P?P.min:60,q=P?P.q:['','',''];
+  return`<div class="panel pintro">${lkubi('think')}<div><b>Tre spørgsmål, fem minutter</b><p>Dem, der beslutter, hvad de vil bruge, hvorfor og hvornår, klarer sig bedre end dem, der bare læser løs. Bagefter får du en plan dag for dag, lavet ud fra dine egne tal i appen.</p></div></div>
+    <div class="pcard pq"><h3><span class="pqn">1</span>Hvad tror du, der kommer til prøven?</h3><p class="sub">Skriv de opgavetyper, du regner med. Kig gerne i en <a href="#eksamen">prøveeksamen</a> først.</p>
+      <textarea id="pq0" rows="3" maxlength="600" placeholder="Fx en binom ligning, Gauss-elimination med en parameter, diagonalisering …">${esc(q[0])}</textarea></div>
+    <div class="pcard pq"><h3><span class="pqn">2</span>Hvad vil du bruge, og hvorfor?</h3><p class="sub">Vælg det, du vil bruge de sidste 10 dage.</p>
+      <div class="pchips" id="pres" role="group" aria-label="Ressourcer">${PLAN_RES.map(([k,l])=>`<button type="button" data-k="${k}" aria-pressed="${res.includes(k)}">${l}</button>`).join('')}</div>
+      <textarea id="pq1" rows="2" maxlength="600" placeholder="Hvorfor netop dem? Hvad giver de dig, som du mangler?">${esc(q[1])}</textarea></div>
+    <div class="pcard pq"><h3><span class="pqn">3</span>Hvornår?</h3><p class="sub">Hvor meget tid har du på en almindelig dag?</p>
+      <div class="pchips" id="pmin" role="radiogroup" aria-label="Tid pr. dag">${PLAN_MIN.map(([m,l])=>`<button type="button" role="radio" data-m="${m}" aria-checked="${m===min}">${l}</button>`).join('')}</div>
+      <textarea id="pq2" rows="2" maxlength="600" placeholder="Hvornår på dagen, og hvor? Fx kl. 16 på biblioteket.">${esc(q[2])}</textarea></div>
+    <p class="pnote" id="pmsg" role="status"></p><div class="socbtns"><button class="b u" id="pgo">${P?'Gem, og opdatér planen':'Lav min plan'}</button>${P?'<a class="b ghost" href="#plan">Fortryd</a>':''}</div>
+    <p class="sub pfine">Dine svar bliver på denne enhed.</p>`}
+function planMake(P,res,min,q){const t=today(),old=P?P.days:[],keep=old.filter(d=>d.d<t),fresh=planBuild(res,min),td=old.find(d=>d.d===t);
+  /* dagens afkrydsninger følger med, når planen laves om */
+  if(td&&fresh[0]&&fresh[0].d===t)fresh[0].it.forEach(it=>{if(td.it.some(o=>o.done&&o.t===it.t&&o.a===it.a))it.done=1});
+  LRN().plan={at:P?P.at:Date.now(),q,res,min,days:keep.concat(fresh)};save()}
+function viewPlan(edit){document.title='Eksamensplan · Mat1a';const P=LRN().plan,dd=examDays(),ed=new Date(EXAM_DATE);
+  const sub=dd>0?`${dd} dag${dd===1?'':'e'} til den skriftlige prøve ${ed.getDate()}/${ed.getMonth()+1}.`:dd===0?'Prøven er i dag.':'Prøven er overstået.';
+  let h=`<div class="page narrow plan"><h1>Eksamensplan</h1><div class="sub">${sub}</div>`;
+  if(dd<=0&&!P)h+=`<div class="panel" style="margin-top:14px"><p style="margin:0">Planen hører til de sidste 10 dage før prøven.${dd===0?' I dag gælder kun: spis morgenmad, og læs hver opgave to gange.':''}</p>${dd===0?'<div class="socbtns"><a class="b ghost" href="#morgen">Skriv bekymringen ned</a></div>':''}</div>`;
+  else if(!P||edit)h+=planForm(P);
+  else{const t=today(),why=planWhy(),first=P.days.find(d=>d.d>=t),past=P.days.map((D,i)=>[D,i]).filter(([D])=>D.d<t),rest=P.days.map((D,i)=>[D,i]).filter(([D])=>D.d>=t);
+    const resl=PLAN_RES.filter(([k])=>P.res.includes(k)).map(x=>x[1]).join(', '),minl=(PLAN_MIN.find(x=>x[0]===P.min)||[0,P.min+' min'])[1];
+    h+=`<details class="panel panswers"><summary>Dine svar</summary>
+        <p><b>Hvad kommer til prøven?</b><br>${esc(P.q[0])||'<i>Ikke udfyldt</i>'}</p><p><b>Hvad vil du bruge, og hvorfor?</b><br>${esc(resl)}${P.q[1]?'<br>'+esc(P.q[1]):''}</p><p><b>Hvornår?</b><br>${esc(minl)} om dagen${P.q[2]?'<br>'+esc(P.q[2]):''}</p>
+        <div class="socbtns"><button class="b ghost sm" id="pedit">Ret svar</button></div></details>`;
+    if(first&&first.d>t)h+=`<div class="panel pwait">${lkubi('wave')}<p>Planen begynder ${fmtDay(dayOf(first.d))}. Indtil da: ugens opgaver og dagens repetition.</p></div>`;
+    if(!rest.length&&dd>0)h+=`<div class="panel pwait"><p>Planen har ingen dage tilbage. Lav den om, så den passer til i dag.</p></div>`;
+    h+=rest.map(([D,i])=>planDayHTML(D,i,{why})).join('');
+    if(past.length)h+=`<details class="ppast"><summary>Tidligere dage (${past.length})</summary>${past.map(([D,i])=>planDayHTML(D,i,{why})).join('')}</details>`;
+    h+=`<div class="panel pfoot"><p>Planen er lavet ud fra, hvad du husker, dine åbne fejl, og hvilke prøveeksamener og videoer du mangler. Har du øvet meget siden, kan du lave resten af dagene om. Det, du har krydset af i dag, bliver stående.</p>
+      <div class="socbtns">${dd>0?'<button class="b ghost sm" id="pre">Opdatér planen ud fra mine tal</button>':''}<button class="link" id="pdel">Slet planen</button></div></div>`}
+  main.innerHTML=h+'</div>';planWire(main);window.scrollTo(0,0);
+  const $q=s=>main.querySelector(s),go=$q('#pgo');
+  if(go){main.querySelectorAll('#pres button').forEach(b=>b.onclick=()=>b.setAttribute('aria-pressed',String(b.getAttribute('aria-pressed')!=='true')));
+    main.querySelectorAll('#pmin button').forEach(b=>b.onclick=()=>main.querySelectorAll('#pmin button').forEach(x=>x.setAttribute('aria-checked',String(x===b))));
+    go.onclick=()=>{const q=[0,1,2].map(i=>$q('#pq'+i).value.trim().slice(0,600));
+      if(q[0].length<3){$q('#pmsg').textContent='Skriv et par ord under spørgsmål 1. Det er dem, der gør planen til din.';$q('#pq0').focus();return}
+      const res=[...main.querySelectorAll('#pres button[aria-pressed=true]')].map(b=>b.dataset.k),mb=$q('#pmin button[aria-checked=true]');
+      if(!res.includes('rep'))res.unshift('rep');planMake(P,res,mb?+mb.dataset.m:60,q);viewPlan()}}
+  const pe=$q('#pedit');if(pe)pe.onclick=()=>viewPlan(true);
+  const pr=$q('#pre');if(pr)pr.onclick=()=>{planMake(P,P.res,P.min,P.q);viewPlan();toast('Planen er opdateret')};
+  const pd=$q('#pdel');if(pd)pd.onclick=()=>{if(!confirm('Slet planen og dine tre svar?'))return;LRN().plan=null;save();viewPlan()}}
+function planHomeCard(){const dd=examDays();if(dd<1||dd>10)return'';const P=LRN().plan;
+  if(!P)return`<a class="panel lhc" href="#plan">${lkubi('think')}<div class="lct"><b>Lav din eksamensplan</b><span>${dd} dag${dd===1?'':'e'} til prøven. Tre spørgsmål giver dig en plan dag for dag.</span></div><span class="b u sm" aria-hidden="true">Start</span></a>`;
+  const t=today(),di=P.days.findIndex(d=>d.d===t);if(di<0)return`<a class="panel lhc" href="#plan">${lkubi('think')}<div class="lct"><b>Eksamensplan</b><span>Planen har ikke noget for i dag. Lav den om, så den passer.</span></div><span class="b ghost sm" aria-hidden="true">Åbn</span></a>`;
+  const D=P.days[di];
+  return`<div class="panel lplan"><div class="lph"><b>${D.it.every(x=>x.done)?'Dagens plan er klaret ✓':'Dagens plan'}</b><a class="link" href="#plan">Hele planen ›</a></div>${planDayHTML(D,di,{why:planWhy(),pre:'h'}).replace(/<h3>[\s\S]*?<\/h3>/,'')}</div>`}
+
+/* ---------- Prætest før en ny uge ----------
+   Første gang en uge åbnes (og intet i ugen er regnet endnu), tilbydes tre af ugens "Prøv selv"-spørgsmål, før man har læst.
+   Svarene tæller ikke i repetition, fejllog eller statistik. Facit vises ikke: det møder man i ugen.
+   "Efter" er det seneste svar på samme begrebs Prøv selv (eller repetitionskort) efter prætesten. */
+function prePick(w){const cs=Object.values(CONCEPTS).filter(c=>c.uge===w&&c.try&&(c.try.q.t==='mc'||c.try.q.t==='in'));if(cs.length<3)return[];
+  const mc=cs.filter(c=>c.try.q.t==='mc'),pool=mc.length>=3?mc:cs,n=pool.length;return[0,Math.floor((n-1)/2),n-1].map(i=>pool[i].id)}
+const preStarted=w=>weekProg(w)[0]>0||ST.ans.some(a=>a.w===w);
+const preAfter=P=>P.ids.map(id=>{let r=null;ST.ans.forEach(a=>{if(a.i==='c:'+id&&a.at>P.at)r=a.ok});return r});
+const preDots=a=>`<span class="predots" aria-hidden="true">${a.map(x=>`<i class="${x===true||x===1?'on':x==null?'na':''}"></i>`).join('')}</span>`;
+function preRow(k){const w=+k;if(!w||!weekOf(w))return'';const P=LRN().pre[w];
+  if(!P){if(preStarted(w)||prePick(w).length<3)return'';
+    return`<div class="prerow">${lkubi('think')}<div class="lct"><b>Før du går i gang: 3 hurtige spørgsmål</b><span>Om det, ugen handler om. Det er meningen, at du ikke kan dem endnu.</span></div><div class="preb"><a class="b u sm" href="#praetest-${w}">Prøv</a><button class="link" data-preskip="${w}">Spring over</button></div></div>`}
+  if(P.skip||!P.ids.length)return'';
+  const af=preAfter(P),n=P.ids.length,b=P.ok.filter(Boolean).length,a=af.filter(x=>x===true).length,none=af.filter(x=>x==null).length;
+  return`<a class="prerow done" href="#praetest-${w}"><div class="lct"><b>Før og efter</b><span>Før du læste: ${b} af ${n} ${preDots(P.ok)}</span><span>Nu: ${none===n?'ikke øvet endnu':`${a} af ${n}`} ${preDots(af)}${none&&none<n?` · ${none} ikke øvet endnu`:''}</span></div><span class="chevr" aria-hidden="true">›</span></a>`}
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-preskip]');if(!b)return;const w=+b.dataset.preskip;if(!LRN().pre[w]){LRN().pre[w]={at:Date.now(),skip:1};save()}const r=b.closest('.prerow');if(r)r.remove()});
+let PRE=null;
+function viewPre(w){w=+w;if(!(w>=1&&w<=12))return viewHome();document.title='Før du læser · uge '+w+' · Mat1a';const P=LRN().pre[w];
+  if(P&&!P.skip&&P.ids.length)return preResult(w,false);
+  const ids=prePick(w);if(ids.length<3)return viewHome();
+  if(!PRE||PRE.w!==w)PRE={w,ids,i:0,ok:[]};preAsk()}
+function preAsk(){const R=PRE,w=R.w,c=CONCEPTS[R.ids[R.i]],q=c.try.q.t==='mc'?shuffleQ(c.try.q):c.try.q,n=R.ids.length;
+  main.innerHTML=`<div class="page narrow rep pre" style="${uvars(w)}"><div class="repbar"><a class="link" href="#uge-${w}">‹ Uge ${w}</a><div class="prog" aria-hidden="true"><i style="width:${100*R.i/n}%"></i></div><span>${R.i+1} af ${n}</span></div>
+    ${R.i===0?`<div class="panel prehint">${lkubi('wave')}<p><b>Før du læser.</b> Det er helt fint at svare forkert. Et gæt nu gør det lettere at huske svaret, når du møder det i ugen. Det koster ingen XP og tæller ikke som fejl.</p></div>`:''}
+    <div class="pcard repcard"><div class="reptags"><span class="tag">Uge ${w}</span><span class="tag plain">Før du læser</span></div>
+      <div class="qtext">${MD.inline(q.q)}</div>
+      ${q.t==='mc'?`<div class="opts" role="radiogroup">${q.opts.map((o,i)=>`<button class="opt" role="radio" aria-checked="false"><span class="k">${i+1}</span><span>${MD.inline(o.x)}</span></button>`).join('')}</div>`
+        :`<div class="fields">${q.fields.map((f,i)=>`<div class="field">${f.label?`<label for="pf${i}">${MD.inline(f.label)}</label>`:''}<input id="pf${i}" autocomplete="off" spellcheck="false" placeholder="Dit gæt"></div>`).join('')}</div>`}
+      <div id="prefb" role="status"></div><div class="repacts"><button class="link" id="preidk">Det ved jeg ikke endnu</button>${q.t==='mc'?'':'<button class="b u" id="prechk">Svar</button>'}</div></div></div>`;
+  fitMath(main);window.scrollTo(0,0);let done=false;const os=[...main.querySelectorAll('.opt')],ins=[...main.querySelectorAll('.fields input')];
+  const ans=(ok,b)=>{if(done)return;done=true;R.ok[R.i]=ok?1:0;os.forEach(x=>{x.disabled=true;x.setAttribute('aria-checked',String(x===b))});ins.forEach(x=>x.readOnly=true);
+    main.querySelector('.repacts').innerHTML=`<button class="b u" id="prenext">${R.i+1<n?'Næste':'Se resultat'}</button>`;
+    main.querySelector('#prefb').innerHTML=`<div class="repfb ${ok?'ok':''}"><b>${ok?'Rigtigt allerede.':b===null?'Helt i orden.':'Ikke endnu.'}</b> ${ok?'Det har du med hjemmefra.':`Hold øje med svaret, når du læser om <b>${esc(c.title)}</b>.`}</div>`;
+    const nb=main.querySelector('#prenext');nb.onclick=()=>{R.i++;if(R.i<n)preAsk();else{LRN().pre[w]={at:Date.now(),ids:R.ids,ok:R.ok};PRE=null;addXP(2);preResult(w,true)}};nb.focus({preventScroll:true})};
+  os.forEach((b,i)=>b.onclick=()=>ans(!!q.opts[i].ok,b));
+  main.querySelector('#preidk').onclick=()=>ans(false,null);
+  const chk=main.querySelector('#prechk');if(chk){const run=()=>{if(!ins.every(x=>x.value.trim()))return ins.find(x=>!x.value.trim()).focus();ans(q.fields.every((f,i)=>{try{return close(evalExpr(ins[i].value),evalExpr(f.ans))}catch(e){return false}}),chk)};
+    chk.onclick=run;ins.forEach(x=>x.addEventListener('keydown',e=>{if(e.key==='Enter')run()}))}}
+function preResult(w,fresh){const P=LRN().pre[w],n=P.ids.length,af=preAfter(P),b=P.ok.filter(Boolean).length,a=af.filter(x=>x===true).length,tried=af.filter(x=>x!=null).length;
+  const msg=fresh?(b===n?'Du kunne dem allerede. Så går ugen hurtigt.':`${b} af ${n}, før du har læst. Præcis som det skal være. Nu ved du, hvad du skal holde øje med.`)
+    :tried===0?'Regn ugens opgaver, og prøv "Prøv selv" på de tre begreber. Så kan du se forskellen her.':tried<n?`Du er i gang: ${a} af ${tried} rigtige efter at have læst.`:a>b?`Fra ${b} til ${a} af ${n}. Det er det, ugen har flyttet.`:a===n?`Alle ${n} rigtige, både før og efter.`:`${a} af ${n} nu. Tag de begreber, der driller, en gang til.`;
+  const mark=x=>x===true||x===1?'<span class="pm ok">✓</span>':x==null?'<span class="pm na">–</span>':'<span class="pm bad">✗</span>';
+  main.innerHTML=`<div class="page narrow pre" style="${uvars(w)}"><div class="ehead"><div class="crumb"><a href="#uge-${w}">Uge ${w} · ${esc(unit(w)[1])}</a></div><h1>Før og efter</h1><div class="glyph">${esc(unit(w)[2])}</div></div>
+    <div class="panel prehint">${lkubi(fresh?'wave':'think')}<p>${msg}</p></div>
+    <div class="pcard pretab"><div class="prer preh"><span>Begreb</span><span>Før</span><span>Nu</span></div>
+      ${P.ids.map((id,i)=>CONCEPTS[id]?`<div class="prer"><a href="#${id}">${esc(CONCEPTS[id].title)}</a>${mark(P.ok[i])}${mark(af[i])}</div>`:'').join('')}
+      <div class="prer pres"><span>I alt</span><span>${b} af ${n}</span><span>${tried?`${a} af ${tried}`:'–'}</span></div></div>
+    <p class="sub pfine">"Nu" er dit seneste svar på begrebets Prøv selv eller i repetitionen, efter at du tog de tre spørgsmål${tried<n?'. En streg betyder, at du ikke har øvet begrebet endnu':''}.</p>
+    <div class="socbtns"><a class="b u" href="#uge-${w}">Til uge ${w}</a>${VID_TITLES[w]&&!(ST.vids||{})[w]?`<button class="b ghost" data-v="${w}">🎬 Se ugens video</button>`:''}</div></div>`;
+  window.scrollTo(0,0)}
+
+/* ---------- Pause før hint ----------
+   Hint og "Vis svaret" åbner først efter 20 sekunder, så man når at prøve selv. Kan slås fra under Indstillinger.
+   Knappen er aria-disabled (ikke disabled), så et tryk kan besvares med en rolig besked. */
+const PAUSE_MS=20000;
+function pauseLock(btn,what){if(!btn||LRN().set.nopause)return;const t0=Date.now(),note=$('p',{class:'pnote plnote',role:'status',text:`Prøv selv først. ${what} åbner om 20 sekunder.`});
+  btn.setAttribute('aria-disabled','true');btn.classList.add('plock');btn.style.setProperty('--plf','0');(btn.closest('.repacts')||btn).before(note);btn._pl={t0,note};
+  const tick=setInterval(()=>{const dt=Date.now()-t0;if(!btn.isConnected){clearInterval(tick);note.remove();return}
+    if(dt>=PAUSE_MS){clearInterval(tick);btn.removeAttribute('aria-disabled');btn.classList.remove('plock');note.remove();btn._pl=null;return}
+    btn.style.setProperty('--plf',(dt/PAUSE_MS).toFixed(3))},250)}
+function pauseBusy(btn){if(!btn||!btn._pl||btn.getAttribute('aria-disabled')!=='true')return false;const n=btn._pl.note,left=Math.max(1,Math.ceil((PAUSE_MS-(Date.now()-btn._pl.t0))/1000));
+  n.textContent=`Giv det ${left} sekund${left===1?'':'er'} mere.`;n.classList.remove('nudge');void n.offsetWidth;n.classList.add('nudge');return true}
+
+/* ---------- Indstillinger og statistik ---------- */
+function viewSettings(){document.title='Indstillinger · Mat1a';const s=LRN().set;
+  const row=(id,on,t,d)=>`<label class="setrow"><input type="checkbox" id="${id}" ${on?'checked':''}><span><b>${t}</b><small>${d}</small></span></label>`;
+  main.innerHTML=`<div class="page narrow setp"><h1>Indstillinger og statistik</h1>
+    <section class="panel"><h3>Træning</h3>
+      ${row('setpause',!s.nopause,'Pause før hint','Hint og "Vis svaret" åbner først efter 20 sekunder i repetitionen og i Hvilken metode?. Et forsøg uden hjælp huskes bedre end et hurtigt kig.')}
+      ${settingsMore(row)}</section>${settingsExport()}</div>`;
+  main.querySelector('#setpause').onchange=e=>{s.nopause=!e.target.checked;save()};settingsWire();window.scrollTo(0,0)}
+function settingsMore(row){return row('setcoach',!LRN().set.nocoach,'Kubi som coach','Højst én kommentar om dagen på forsiden, lavet ud fra dine egne tal: hvor du er sikker og tager fejl, dit tempo i metodevalg og uger, du ikke har rørt længe.')}
+/* ---------- Eksportér statistik ----------
+   Anonymt udtræk til en underviser: fejlrate pr. spørgsmål, begreb og uge, kalibrering og tid. Ingen navne, noter, svartekster eller refleksioner. */
+function statData(){const A=ST.ans,pc=x=>Math.round(100*x),items={};
+  A.forEach(a=>{const x=items[a.i]=items[a.i]||{n:0,bad:0,sure:0,cs:0,cn:0,last:0,w:a.w};x.n++;if(!a.ok){x.bad++;if(a.c===3)x.sure++}if(a.c){x.cs+=a.c;x.cn++}if(a.at>x.last)x.last=a.at});
+  const SRC={c:'begreb',l:'lektion',x:'prøveeksamen',m:'metodevalg',f:'formel'},cons={};
+  const addC=(cid,x)=>{if(!CONCEPTS[cid])return;const c=cons[cid]=cons[cid]||{n:0,bad:0};c.n+=x.n;c.bad+=x.bad};
+  const qs=Object.entries(items).map(([id,x])=>{const it=getItem(id),e=ST.errs[id];
+    if(id.startsWith('c:'))addC(id.slice(2),x);else if(it&&it.part&&PK[it.part])(PK[it.part].concepts||[]).forEach(c=>addC(c,x));else if(it&&CONCEPTS[it.go])addC(it.go,x);
+    return{id,uge:x.w,kilde:SRC[id[0]]||'',emne:it?plain(it.topic+(it.step?' · '+it.step:'')):'',forsoeg:x.n,forkerte:x.bad,fejlprocent:pc(x.bad/x.n),sikker_og_forkert:x.sure,
+      sikkerhed_snit:x.cn?+(x.cs/x.cn).toFixed(2):null,aaben_fejl:!!(e&&!e.closed),guldfejl:!!(e&&e.gold),fejltype:e&&e.t?ERRN[e.t]:'',sidst:dkey(new Date(x.last))}}).sort((a,b)=>a.uge-b.uge||b.fejlprocent-a.fejlprocent||b.forsoeg-a.forsoeg);
+  const ws=weekStats(),uger=readyData().map(x=>{const s=ws[x.w]||{n:0,bad:0,sure:0},p=weekProg(x.w);
+    return{uge:x.w,emne:unit(x.w)[1],forsoeg:s.n,forkerte:s.bad,fejlprocent:s.n?pc(s.bad/s.n):null,sikker_og_forkert:s.sure,hukommelse_pct:x.s==null?null:pc(x.s),aabne_fejl:x.open,delopgaver_klaret:p[0],delopgaver_i_alt:p[1]}});
+  const begreber=Object.entries(cons).map(([id,c])=>({id,uge:CONCEPTS[id].uge,emne:CONCEPTS[id].title,forsoeg:c.n,forkerte:c.bad,fejlprocent:pc(c.bad/c.n)})).sort((a,b)=>a.uge-b.uge||b.fejlprocent-a.fejlprocent);
+  const kalibrering=[1,2,3].map(c=>{const a=A.filter(x=>x.c===c);return{svar:CONFL[c-1],lovet_pct:pc(CONFP[c-1]),antal:a.length,rigtige_pct:a.length?pc(a.filter(x=>x.ok).length/a.length):null}});
+  const M=ST.mix,bad=A.filter(a=>!a.ok).length,dn=PARTS.filter(p=>hasSol(p)&&isDone(p.key)).length;
+  const tid={aktive_dage:new Set([...Object.keys(ST.days),...Object.keys(ST.rlog)]).size,dage_med_repetition:Object.keys(ST.rlog).length,dage_i_traek:streak(),xp:ST.xp,delopgaver_klaret:dn,
+    metodevalg:{antal:M.n,rigtige:M.ok,median_sek:M.ms.length?Math.round(mixMedian(M.ms)/1000):null},
+    minieksamener:ST.mini.runs.map(r=>({rigtige:r.ok,af:r.n,minutter:Math.round(r.s/60)})),
+    proeveeksamener:allExams().filter(E=>ST.exams[E.id]&&ST.exams[E.id].done).map(E=>{const e=ST.exams[E.id];return{saet:E.title,minutter:e.start?Math.round((e.done-e.start)/60000):null,oevelse:!!e.practice}}),
+    praetest:Object.entries(LRN().pre).filter(([,P])=>!P.skip&&P.ids.length).map(([w,P])=>{const af=preAfter(P);return{uge:+w,foer:P.ok.filter(Boolean).length,efter:af.filter(x=>x===true).length,oevet_efter:af.filter(x=>x!=null).length,af:P.ids.length}})};
+  return{om:{app:'Mat1a',kursus:'DTU 01001 Matematik 1a',dato:today(),anonym:'Ingen navne, noter, svartekster eller refleksioner. Kun tal.'},
+    overblik:{svar:A.length,spoergsmaal:qs.length,fejlprocent:A.length?pc(bad/A.length):null,aabne_fejl:Object.keys(ST.errs).filter(errOpen).length,guldfejl:goldOpen()},kalibrering,uger,begreber,spoergsmaal:qs,tid}}
+function statCSV(d){const cell=v=>{let s=v==null?'':v===true?'ja':v===false?'nej':String(v);if(/^[=+\-@\t]/.test(s))s="'"+s;return/[;"\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s};
+  const H=['niveau','id','uge','emne','kilde','forsøg','forkerte','fejlprocent','sikker_og_forkert','åben_fejl','guldfejl','sidst'],rows=[H];
+  d.uger.forEach(u=>rows.push(['uge','uge-'+u.uge,u.uge,u.emne,'',u.forsoeg,u.forkerte,u.fejlprocent,u.sikker_og_forkert,u.aabne_fejl,'','']));
+  d.begreber.forEach(c=>rows.push(['begreb',c.id,c.uge,c.emne,'',c.forsoeg,c.forkerte,c.fejlprocent,'','','','']));
+  d.spoergsmaal.forEach(q=>rows.push(['spørgsmål',q.id,q.uge,q.emne,q.kilde,q.forsoeg,q.forkerte,q.fejlprocent,q.sikker_og_forkert,q.aaben_fejl,q.guldfejl,q.sidst]));
+  d.kalibrering.forEach(k=>rows.push(['kalibrering',k.svar,'',`lovet ${k.lovet_pct} % rigtige`,'',k.antal,'',k.rigtige_pct==null?'':100-k.rigtige_pct,'','','','']));
+  const t=d.tid;[['aktive dage',t.aktive_dage],['dage med repetition',t.dage_med_repetition],['XP',t.xp],['delopgaver klaret',t.delopgaver_klaret],['metodevalg: antal',t.metodevalg.antal],['metodevalg: median i sekunder',t.metodevalg.median_sek]].forEach(([l,v])=>rows.push(['tid','','',l,'',v,'','','','','','']));
+  return'﻿'+rows.map(r=>r.map(cell).join(';')).join('\r\n')+'\r\n'}
+function statDownload(text,name,type){const a=$('a',{href:URL.createObjectURL(new Blob([text],{type})),download:name});document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000)}
+function settingsExport(){const d=statData(),o=d.overblik,worst=d.uger.filter(u=>u.forsoeg>=3&&u.fejlprocent>0).sort((a,b)=>b.fejlprocent-a.fejlprocent).slice(0,3);
+  return`<section class="panel"><h3>Eksportér statistik</h3><p class="sub" style="margin:0 0 10px">Til at vise en underviser eller hjælpelærer, hvor det driller. Filen er anonym: ingen navne, noter eller svartekster. Kun tal.</p>
+    ${o.svar?`<div class="chips static"><span>${o.svar} svar på ${o.spoergsmaal} spørgsmål</span><span>${o.fejlprocent} % fejl</span><span>${d.tid.aktive_dage} aktive dage</span>${worst.map(u=>`<span>Uge ${u.uge}: ${u.fejlprocent} % fejl</span>`).join('')}</div>`:'<p class="empty">Der er ingen svar endnu. Filen bliver næsten tom.</p>'}
+    <div class="socbtns"><button class="b u" id="expcsv">Hent som CSV</button><button class="b ghost" id="expjson">Hent som JSON</button></div>
+    <details class="expwhat"><summary>Hvad står der i filen?</summary><ul><li>Fejlrate pr. spørgsmål, pr. begreb og pr. uge</li><li>Kalibrering: hvor ofte du har ret, når du siger gætter, måske og sikker</li><li>Tid: aktive dage, tempo i metodevalg, minieksamener og prøveeksamener</li><li>Før og efter fra de tre spørgsmål før hver uge</li></ul><p class="sub">CSV åbner i Excel og Numbers. JSON har det hele og kan bruges af et program.</p></details></section>`}
+function settingsWire(){const c=main.querySelector('#setcoach');if(c)c.onchange=e=>{LRN().set.nocoach=!e.target.checked;save()};
+  main.querySelector('#expcsv').onclick=()=>statDownload(statCSV(statData()),'mat1a-statistik-'+today()+'.csv','text/csv;charset=utf-8');
+  main.querySelector('#expjson').onclick=()=>statDownload(JSON.stringify(statData(),null,1),'mat1a-statistik-'+today()+'.json','application/json')}
+
+/* ---------- Kubi som coach ----------
+   Højst én kommentar om dagen på forsiden, kun ud fra elevens egne data. Samme kommentar gentages ikke inden for 4 dage.
+   Kan lukkes for i dag (✕) og slås helt fra under Indstillinger. Vises ikke de sidste 72 timer (rolig forside). */
+const COACH_TIP={reg:'Skriv én mellemregning mere, og tjek resultatet ved at indsætte.',fort:'Sæt parenteser, hver gang du trækker fra eller ganger ind.',def:'Læs definitionen på begrebskortet, før du regner.',met:'En runde Hvilken metode? træner netop det valg.',las:'Understreg, hvad der spørges om, før du regner.'};
+function coachCands(){const now=Date.now(),out=[],A=ST.ans,pc=x=>Math.round(100*x),ws=weekStats();
+  const sw={};A.forEach(a=>{if(a.c===3&&!a.ok&&a.w&&now-a.at<14*DAY)sw[a.w]=(sw[a.w]||0)+1});
+  const top=Object.entries(sw).sort((a,b)=>b[1]-a[1])[0];
+  if(top&&top[1]>=2){const w=+top[0],g=goldOpen();out.push({k:'sure:'+w,t:`Du var sikker og tog fejl ${top[1]} gange i uge ${w} (${esc(unit(w)[1])}). Det er de fejl, der overrasker til prøven, og dem, der er mest værd at rette.`,go:g?'repetition/start-guld':'uge-'+w,l:g?'Ret guldfejlene':'Åbn uge '+w})}
+  const bin=c=>{const a=A.filter(x=>x.c===c);return{n:a.length,acc:a.length?a.filter(x=>x.ok).length/a.length:0}},s3=bin(3),s1=bin(1);
+  if(s3.n>=8&&s3.acc<0.75)out.push({k:'over',t:`Når du siger "sikker", har du ret ${pc(s3.acc)} % af gangene. Vælg "måske" lidt oftere, så kommer kortene igen, før de glider.`,go:'repetition/overblik',l:'Se overblikket'});
+  if(s1.n>=5&&s1.acc>=0.8)out.push({k:'under',t:`Når du siger "gætter", har du ret ${pc(s1.acc)} % af gangene. Du kan mere, end du tror.`,go:'repetition/overblik',l:'Se overblikket'});
+  const M=ST.mix,med=mixMedian(M.ms.slice(-30)),acc=M.n?M.ok/M.n:0;
+  if(M.ms.length>=10){
+    if(med>30000)out.push({k:'slow',t:`Dit metodevalg tager typisk ${secs(med)} Målet er 15–30 sek. Find sporet i opgaveteksten, før du læser svarmulighederne.`,go:'metode',l:'Tag en runde'});
+    else if(med<8000&&acc<0.6)out.push({k:'fast',t:`Du vælger metode på ${secs(med)}, men rammer ${pc(acc)} %. Læs opgaven til ende, før du vælger.`,go:'metode',l:'Tag en runde'});
+    else if(acc>=0.8&&M.n>=20)out.push({k:'mixok',t:`Du genkender metoden ${pc(acc)} % af gangene, typisk på ${secs(med)} Det er eksamenstempo.`,go:'mini',l:'Prøv en minieksamen'})}
+  const cp=Object.entries(M.conf).sort((a,b)=>b[1]-a[1])[0];
+  if(cp&&cp[1]>=3){const[a,b]=cp[0].split('>'),K=KON.find(k=>k.mm.some(m=>m.includes(a)&&m.includes(b)));
+    if(MIX_M[a]&&MIX_M[b])out.push({k:'conf:'+a+b,t:`${cp[1]} gange har du valgt <i>${MD.inline(MIX_M[b])}</i>, hvor opgaven kaldte på <b>${MD.inline(MIX_M[a])}</b>.`,go:K?'kontrast-'+K.id:'metode',l:K?'Kontrastkort: '+K.t:'Tag en runde'})}
+  let stale=null;Object.entries(ws).forEach(([w,s])=>{const d=Math.floor((now-s.last)/DAY);if(+w<=CUR&&d>=10&&(!stale||d>stale.d))stale={w:+w,d}});
+  if(stale)out.push({k:'stale:'+stale.w,t:`Uge ${stale.w} (${esc(unit(stale.w)[1])}) har du ikke rørt i ${stale.d} dage. Fem minutter nu holder den varm.`,go:'uge-'+stale.w,l:'Åbn uge '+stale.w});
+  const ty={};Object.values(ST.errs).forEach(e=>{if(!e.closed&&e.t)ty[e.t]=(ty[e.t]||0)+1});const tt=Object.entries(ty).sort((a,b)=>b[1]-a[1])[0];
+  if(tt&&tt[1]>=3&&COACH_TIP[tt[0]])out.push({k:'type:'+tt[0],t:`${tt[1]} af dine åbne fejl er af typen "${ERRN[tt[0]].toLowerCase()}". ${COACH_TIP[tt[0]]}`,go:'repetition/fejl',l:'Se fejlloggen'});
+  return out}
+function coachPick(){const L_=LRN(),C=L_.coach,t=today();if(L_.set.nocoach||calmMode()||C.x===t)return null;const cs=coachCands();if(!cs.length)return null;
+  if(C.d===t)return cs.find(c=>c.k===C.k)||null;
+  const age=k=>C.h[k]?Math.round((dayOf(t)-dayOf(C.h[k]))/DAY):999,pick=cs.filter(c=>age(c.k)>=4).sort((p,q)=>age(q.k)-age(p.k))[0];if(!pick)return null;   /* længst siden sidst først; ellers i prioriteret rækkefølge */
+  C.d=t;C.k=pick.k;C.h[pick.k]=t;save();return pick}
+function coachCard(){const c=coachPick();if(!c)return'';
+  return`<div class="panel lcoach" id="lcoach">${lkubi('think')}<div class="lct"><small>Kubi har lagt mærke til</small><p>${c.t}</p><a class="link" href="#${c.go}">${esc(c.l)} ›</a></div><button class="ibtn" id="lcx" aria-label="Skjul for i dag" title="Skjul for i dag">${ico('x')}</button></div>`}
+
+/* ---------- Eksamensmorgen: skriv bekymringen ned ----------
+   Valgfri skriveøvelse på 10 minutter. Teksten findes kun i tekstfeltet: den gemmes ikke i ST, localStorage eller andre steder,
+   og den slettes, når man trykker færdig eller forlader siden. Kun datoen for, at øvelsen er lavet, gemmes (ST.learn.morn). */
+const MORN_MS=10*60000;let mornTick=null;
+function viewMorn(){document.title='Skriv bekymringen ned · Mat1a';clearInterval(mornTick);const dd=examDays();
+  main.innerHTML=`<div class="page narrow morn"><h1>Skriv bekymringen ned</h1><div class="sub">${dd===0?'En valgfri øvelse til i dag. Den tager 10 minutter.':'En valgfri øvelse til morgenen før prøven. Du kan også prøve den nu.'}</div>
+    <div class="panel prehint">${lkubi('wave')}<p>Skriv frit om det, du er nervøs for ved prøven. Det behøver ikke hænge sammen, og ingen skal læse det. Når bekymringerne står på skærmen, fylder de mindre i hovedet, mens du regner.</p></div>
+    <div class="pcard mbox"><div class="mbar"><span id="mleft">10 min</span><div class="prog" aria-hidden="true"><i id="mprog" style="width:0%"></i></div></div>
+      <textarea id="mtxt" rows="9" autocomplete="off" spellcheck="false" placeholder="Lige nu tænker jeg på …" aria-label="Dine tanker. Teksten gemmes ikke."></textarea>
+      <p class="pnote mnote">Teksten gemmes ikke og sendes ingen steder. Den forsvinder, når du er færdig eller forlader siden.</p>
+      <div class="socbtns"><button class="b u" id="mstart">Start de 10 minutter</button><button class="b ghost" id="mend" hidden>Jeg er færdig. Slet teksten</button></div></div></div>`;
+  window.scrollTo(0,0);const ta=main.querySelector('#mtxt'),sb=main.querySelector('#mstart'),eb=main.querySelector('#mend'),left=main.querySelector('#mleft'),pr=main.querySelector('#mprog');let t0=0;
+  const start=()=>{if(t0)return;t0=Date.now();sb.hidden=true;eb.hidden=false;
+    mornTick=setInterval(()=>{if(!ta.isConnected){clearInterval(mornTick);return}const dt=Date.now()-t0,m=Math.ceil((MORN_MS-dt)/60000);pr.style.width=Math.min(100,100*dt/MORN_MS)+'%';
+      if(dt>=MORN_MS){clearInterval(mornTick);left.textContent='Tiden er gået';main.querySelector('.mnote').textContent='De 10 minutter er gået. Skriv sætningen færdig, og slet så teksten.';eb.className='b u'}else left.textContent=m+' min tilbage'},1000)};
+  sb.onclick=()=>{start();ta.focus()};ta.addEventListener('input',start);
+  eb.onclick=()=>{clearInterval(mornTick);ta.value='';LRN().morn=today();save();
+    main.querySelector('.mbox').innerHTML=`<div class="repbig">Slettet ✓</div><p>Det, du skrev, findes ikke længere. ${dd===0?'Læs hver opgave to gange, og begynd med den, du kan. Du har øvet det her.':'På eksamensdagen ligger øvelsen på forsiden.'}</p><div class="socbtns"><a class="b u" href="#">Til forsiden</a></div>`}}
+function mornCard(){if(examDays()!==0||Date.now()>=new Date(EXAM_DATE).getTime()||LRN().morn===today())return'';
+  return`<a class="panel lhc" href="#morgen">${lkubi('wave')}<div class="lct"><b>Nervøs? Skriv bekymringen ned</b><span>10 minutter, helt valgfrit. Teksten gemmes ikke.</span></div><span class="b ghost sm" aria-hidden="true">Åbn</span></a>`}
+(()=>{const d=examDays(),m=document.querySelector('#menu a[href="#mini"]');if(m&&(d===0||d===1))m.after($('a',{href:'#morgen',text:'Eksamensmorgen'}))})();
+
+/* ---------- forsiden ---------- */
+function learnHome(){const h=mornCard()+planHomeCard()+coachCard();return h?`<div class="lhome">${h}</div>`:''}
+function learnWire(root){planWire(root);const x=root.querySelector('#lcx');if(x)x.onclick=()=>{LRN().coach.x=today();save();const c=root.querySelector('#lcoach');if(c)c.remove();const h=root.querySelector('.lhome');if(h&&!h.children.length)h.remove()}}
+
+/* ---------- ruter ---------- */
+function learnRoute(r){
+  if(r==='plan'){viewPlan();return true}
+  if(r==='indstillinger'){viewSettings();return true}
+  if(r==='morgen'){viewMorn();return true}
+  if(/^praetest-\d+$/.test(r)){viewPre(r.slice(9));return true}
+  if(r==='kontrast'){viewKonList();return true}
+  if(r.startsWith('kontrast-')){viewKon(r.slice(9));return true}
+  return false}
+PITEMS.push(pitem('Side','Eksamensplan','Tre spørgsmål og en plan dag for dag for de sidste 10 dage før prøven','plan','eksamen plan playbook strategi forberedelse',2));
+PITEMS.push(pitem('Side','Indstillinger og statistik','Pause før hint, Kubi som coach og eksport af statistik','indstillinger','indstillinger pause hint coach eksport statistik csv json underviser',1));
+PITEMS.push(pitem('Side','Skriv bekymringen ned','Valgfri skriveøvelse på 10 minutter til eksamensmorgenen. Teksten gemmes ikke.','morgen','eksamensmorgen nervøs angst bekymring eksamensangst rolig',1));
+PITEMS.push(pitem('Side','Kontrastkort','Par, der ofte forveksles, stillet side om side','kontrast','Arg arg injektiv surjektiv nulrum søjlerum forveksler forskel',2));
+KON.forEach(k=>PITEMS.push(pitem('Kontrast',k.t,plain(k.diff).slice(0,110),'kontrast-'+k.id,plain(k.a.d+' '+k.b.d+' '+k.diff)+' forskel forveksle',2)));
 
 VID_LEN[1]=105.0;VID_POSTER[1]='data:image/jpeg;base64,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';
 VID_LEN[2]=95.9;VID_POSTER[2]='data:image/jpeg;base64,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';
