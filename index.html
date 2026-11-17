@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-rXYY/uFPDFrfcH28H8tOZK3yLmcXru/ll0k5s4lvPPs=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-UhUijvOSomofOZrL+i+uv7HABb99TxzY/jMl4Ap2l7Y=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-rXYY/uFPDFrfcH28H8tOZK3yLmcXru/ll0k5s4lvPPs=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-iQewm9yLpoi8Sw7suUaisrpUuFdFY6rCrCsFvkpC7UY=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -1110,8 +1110,10 @@ table.tt tr.hl td:first-child{box-shadow:inset 3px 0 0 var(--accent,#7c5cff)}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--ok-ink:var(--ok); --bad-ink:var(--bad); --warn-ink:var(--warn)}}
 :root[data-theme="dark"]{--ok-ink:var(--ok); --bad-ink:var(--bad); --warn-ink:var(--warn)}
 /* hvid tekst ligger altid på den mørke ugefarve */
-.hero,.ubanner,.ehead,.lhero{background:linear-gradient(135deg, var(--u-ink) 0%, color-mix(in srgb, var(--u-ink) 86%, #ff9ad5) 100%)}
-.b.u,.lfoot .b.u{background:linear-gradient(135deg, var(--u-ink), color-mix(in srgb, var(--u-ink) 86%, #ff9ad5)); box-shadow:0 4px 0 color-mix(in srgb, var(--u-ink) 70%, #000)}
+/* 17/11: tilbage til de klare ugefarver (Williams ønske); en blød skygge holder den hvide tekst læselig */
+.hero,.ubanner,.ehead,.lhero{background:linear-gradient(135deg, var(--u) 0%, color-mix(in srgb, var(--u) 72%, #ff9ad5) 100%); text-shadow:0 1px 2px rgba(0,0,0,.28)}
+.hero .b,.hero .b *{text-shadow:none}
+.b.u,.lfoot .b.u{background:linear-gradient(135deg, var(--u), color-mix(in srgb, var(--u) 75%, #ff9ad5)); box-shadow:0 4px 0 color-mix(in srgb, var(--u) 65%, #000); text-shadow:0 1px 2px rgba(0,0,0,.25)}
 .hero .b{color:var(--u-ink)}
 .hero .b.lastb{background:rgba(0,0,0,.22); color:#fff; box-shadow:none}
 .b.ok{background:linear-gradient(135deg,#0b7a45,#0a6e3e); box-shadow:0 4px 0 #064d2b}
@@ -1141,7 +1143,7 @@ a.stat .ic svg{width:22px;height:22px;color:var(--accent-ink)}
 .wkc{flex:none; display:grid; place-items:center; min-width:48px; height:52px; padding:4px 6px; border-radius:14px; background:var(--card); box-shadow:0 2px 0 var(--line2); text-decoration:none; color:var(--u-ink); border:2px solid transparent}
 .wkc .wg{font-weight:900; font-size:17px; line-height:1}
 .wkc small{font-weight:800; font-size:11.5px; color:var(--muted); line-height:1}
-.wkc.now{background:var(--u-ink); color:#fff} .wkc.now small{color:#fff}
+.wkc.now{background:var(--u); color:#fff; text-shadow:0 1px 2px rgba(0,0,0,.28)} .wkc.now small{color:#fff}
 .wkc.sel{border-color:var(--u)} .wkc.soon{opacity:.6}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .wkc:not(.now){color:var(--u)}}
 :root[data-theme="dark"] .wkc:not(.now){color:var(--u)}
@@ -1263,7 +1265,7 @@ button.ubanner{width:100%; border:0; font:inherit; text-align:left; cursor:point
 .vidtxt{display:flex;flex-direction:column;gap:2px;padding:10px 14px 14px}.vidtxt small{color:var(--muted,#666)}.vidcard.seen .vidtxt small{color:#16824a}
 .vidrow{display:flex;align-items:center;gap:12px;width:100%;margin:6px 0 14px;padding:10px 14px;border-radius:16px;border:2px dashed var(--u,#7b61ff);background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer}
 .vidrow b{display:block}.vidrow small{color:var(--muted,#666)}.vidrow.seen{border-style:solid;opacity:.85}
-.vidrowp{width:40px;height:40px;flex:none;border-radius:50%;background:var(--u-ink,var(--u,#7b61ff));color:#fff;display:flex;align-items:center;justify-content:center;padding-left:3px}
+.vidrowp{width:40px;height:40px;flex:none;border-radius:50%;background:var(--u,#7b61ff);color:#fff;display:flex;align-items:center;justify-content:center;padding-left:3px}
 @media (max-width:560px){.vidpop{padding:0}.vidbox{border-radius:0}}
 
 /* ---------- Hvilken metode?, formeltræner, de sidste 72 timer ---------- */
@@ -3569,14 +3571,15 @@ function nodeHTML(o,idx){const [a,b]=opgProgress(o);const st=a===b?'done':a>0?'p
   const dx=Math.round(Math.sin(idx*0.95)*95);const stars=o.parts.reduce((m,p)=>m+((pstate(p.key)||{}).stars||0),0);
   return `<a class="node ${st} ${sol?'':'facit'} ${curId===o.id?'cur':''}" href="#${o.id}" style="--dx:${dx}px;--p:${a/b*100}%"><span class="nb">${st==='part'?`<span>${o.kind==='hjem'?'H'+o.nr:o.nr}</span>`:st==='done'?'✓':(o.kind==='hjem'?'H'+o.nr:o.nr)}${st==='done'&&stars?`<span class="stars">${'⭐'.repeat(Math.max(1,Math.min(3,Math.round(stars/b))))}</span>`:''}</span><span class="nl">${o.kind==='hjem'?esc(o.title):(o.title?MD.inline(o.title):'Opgave '+o.nr)}</span></a>`}
 let MID=0;
-const MASCOT=(mood)=>{const u='k'+(++MID);return `<svg class="masc kubi ${mood||''}" viewBox="0 0 120 120" aria-hidden="true"><defs>
+const MASCOT=(mood)=>{const u='k'+(++MID);return `<svg class="masc kubi ${mood||''}" viewBox="-4 -12 128 132" aria-hidden="true"><defs>
 <linearGradient id="${u}f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffa64a"/><stop offset="1" stop-color="#ff7116"/></linearGradient>
 <linearGradient id="${u}t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe0a8"/><stop offset="1" stop-color="#ffb35f"/></linearGradient>
 <linearGradient id="${u}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f58a2c"/><stop offset="1" stop-color="#c8510a"/></linearGradient>
 <radialGradient id="${u}g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3b0"/><stop offset="1" stop-color="#ffc93c" stop-opacity="0"/></radialGradient></defs>
 <ellipse class="msh" cx="58" cy="112" rx="34" ry="5"/><g class="mbody">
-<rect x="36" y="96" width="13" height="12" rx="6" fill="#b84a08"/><rect x="66" y="96" width="13" height="12" rx="6" fill="#b84a08"/>
-<path class="marm r" d="M86 66 C96 70 100 78 98 86" stroke="url(#${u}s)" stroke-width="8" stroke-linecap="round" fill="none"/>
+<ellipse cx="40" cy="100" rx="9" ry="7" fill="#a8430a"/><ellipse cx="66" cy="100" rx="9" ry="7" fill="#a8430a"/><ellipse cx="38" cy="102.5" rx="4" ry="2" fill="#fff" opacity=".18"/><ellipse cx="64" cy="102.5" rx="4" ry="2" fill="#fff" opacity=".18"/>
+<path class="marm r" d="M86 66 C96 70 100 78 98 86" stroke="#9a3f06" stroke-width="11" stroke-linecap="round" fill="none"/><path class="marm r" d="M86 66 C96 70 100 78 98 86" stroke="url(#${u}s)" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+<path class="marm l" d="M22 62 C12 58 8 50 10 40" stroke="#c8510a" stroke-width="11.5" stroke-linecap="round" fill="none"/><path class="marm l" d="M22 62 C12 58 8 50 10 40" stroke="url(#${u}f)" stroke-width="8" stroke-linecap="round" fill="none"/>
 <path d="M26 34 L44 20 H98 L82 34Z" fill="url(#${u}t)" stroke="url(#${u}t)" stroke-width="5" stroke-linejoin="round"/>
 <path d="M82 34 L98 20 V84 L82 98Z" fill="url(#${u}s)" stroke="url(#${u}s)" stroke-width="5" stroke-linejoin="round"/>
 <ellipse cx="63" cy="27" rx="4.5" ry="2" fill="#e8892e" opacity=".55"/>
@@ -3590,8 +3593,7 @@ const MASCOT=(mood)=>{const u='k'+(++MID);return `<svg class="masc kubi ${mood||
 <path class="mhap" d="M35.5 60q6.5-8 13 0M59.5 60q6.5-8 13 0" fill="none" stroke="#22243a" stroke-width="3.6" stroke-linecap="round"/>
 <path class="mzz" d="M36 59q6 5 12 0M60 59q6 5 12 0" fill="none" stroke="#22243a" stroke-width="3.5" stroke-linecap="round"/>
 <path class="mtongue" d="M50.5 78.5q3.5 5 7 0z" fill="#ff5f8f"/>
-<path class="mmouth" d="M46 75q8 8 16 0" fill="none" stroke="#22243a" stroke-width="3.5" stroke-linecap="round"/>
-<path class="marm l" d="M22 62 C12 58 8 50 10 40" stroke="url(#${u}f)" stroke-width="8.5" stroke-linecap="round" fill="none"/></g></svg>`};
+<path class="mmouth" d="M46 75q8 8 16 0" fill="none" stroke="#22243a" stroke-width="3.5" stroke-linecap="round"/></g></svg>`};
 function partRefs(p){const s=SOL[p.key];const txt=[p.text,...(s?[s.refs.join('; '),...s.cards.map(c=>c.body+' '+(c.q?(c.q.hints||[]).join(' '):'')),s.svar,s.bemaerk]:[]),...(p.hints||[])].join(' ');
   const h=linkRefs(txt.replace(/\$[^$]*\$/g,' '));const out=[],seen=new Set();h.replace(/data-pg="(\d+)" data-r="([^"]+)"/g,(m,pg,r)=>{r=r.replace(/&amp;/g,'&');if(!seen.has(r)){seen.add(r);out.push({r,pg:+pg,q:QUOTES[r]})}return m});
   const rank=x=>(s&&s.refs.some(y=>y.startsWith(x.r))?0:1)+(x.q?0:2);return out.sort((a,b)=>rank(a)-rank(b))}
