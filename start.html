@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-rXYY/uFPDFrfcH28H8tOZK3yLmcXru/ll0k5s4lvPPs=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-iQewm9yLpoi8Sw7suUaisrpUuFdFY6rCrCsFvkpC7UY=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-rXYY/uFPDFrfcH28H8tOZK3yLmcXru/ll0k5s4lvPPs=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-BpnG4J0Xw7LNCd2FKlWLxfHe8kbBrMO6cqZVcUS3tp0=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -1570,6 +1570,151 @@ button.ubanner{width:100%; border:0; font:inherit; text-align:left; cursor:point
 /* forsidekortene ligger i .hello-gitteret: fuld bredde på computer, lige under ugekortet på telefon */
 .hello>.lhome{grid-column:1/-1; margin-top:0}
 @media (max-width:760px){.hello>.lhome{order:1}.hello>.panel:not(.hero){order:2}}
+
+/* ---------- Eksamenshjælp (examview.js): gamle eksamensopgaver efter type, opskrifter og guidede gennemgange ---------- */
+mark.xhm{background:color-mix(in srgb, var(--warn) 26%, transparent); color:inherit; border-radius:5px; padding:0 3px; box-decoration-break:clone; -webkit-box-decoration-break:clone}
+.badge.xhbad{background:var(--bad-soft); color:var(--bad-ink)}
+.badge.plainb{background:var(--u-soft); color:var(--u-ink)}
+
+/* lektionen */
+.xhtrbar{display:inline-block; margin:10px 0 0; padding:4px 12px; border-radius:999px; background:var(--u-soft); color:var(--u-ink); font-weight:900; font-size:13.5px}
+.xhopts{margin:10px 0 0; padding-left:0; list-style:none; counter-reset:xo; display:grid; gap:6px}
+.xhopts li{counter-increment:xo; display:flex; gap:10px; align-items:baseline; padding:8px 12px; border-radius:12px; background:var(--bg); border:2px solid var(--line); overflow-x:auto}
+.xhopts li::before{content:counter(xo, lower-alpha) ")"; font-weight:900; color:var(--muted); flex:none}
+.note.xhauto{margin-top:14px; font-size:14.5px; color:var(--muted); font-weight:700}
+.xhask{margin:6px 0 12px; font-weight:700; color:var(--muted)}
+details.xhrev{margin-top:10px; border-radius:16px; border:2px solid var(--line); background:var(--card); overflow:hidden}
+details.xhrev>summary{cursor:pointer; list-style:none; padding:12px 16px; font-weight:900; color:var(--u-ink); display:flex; align-items:center; gap:8px; min-height:44px}
+details.xhrev>summary::-webkit-details-marker{display:none}
+details.xhrev>summary::before{content:'›'; font-size:20px; line-height:1; transition:transform .2s; display:inline-block}
+details.xhrev[open]>summary::before{transform:rotate(90deg)}
+details.xhrev>.blk,details.xhrev>.exhint,details.xhrev>.xhsteps,details.xhrev>.prose{margin:0 14px 12px}
+details.xhrev.hintd>summary{color:var(--warn-ink)}
+.xhsr{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 14px 14px; font-weight:800; font-size:14.5px; color:var(--muted)}
+.xhsr span{flex-basis:100%}
+.xhsr .b.on{background:var(--u); color:#fff; border-color:var(--u)}
+.blk.xhwr{margin-top:12px; background:var(--u-soft); border-color:color-mix(in srgb, var(--u) 30%, transparent)}
+.blk.xhwr>.bt{color:var(--u-ink)}
+.blk.xhwr ul{margin:6px 0 0; padding-left:20px}
+.xhdone .xhrep{font-size:14.5px; margin-top:10px}
+.xhnext{margin-top:16px; text-align:left; display:grid; gap:8px}
+.xhnext>.bt{font-weight:900; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.xhlink{display:flex; align-items:center; gap:12px; padding:10px 14px; border-radius:16px; border:2px solid var(--line); background:var(--card); color:var(--ink); text-decoration:none; font:inherit; text-align:left; width:100%; cursor:pointer; min-height:48px}
+.xhlink:hover{border-color:var(--u)}
+.xhlink>span{font-size:20px; width:28px; text-align:center; flex:none}
+.xhlink div{min-width:0}
+.xhlink b{display:block; font-weight:900; font-size:15.5px; line-height:1.3}
+.xhlink small{display:block; color:var(--muted); font-weight:700; font-size:13px}
+.xhlink.strong{background:var(--u-soft); border-color:color-mix(in srgb, var(--u) 35%, transparent)}
+
+/* rækker med delopgaver */
+.xhlist{display:grid; gap:8px; margin-top:10px}
+.xhrow{display:grid; grid-template-columns:86px 1fr auto 14px; gap:6px 12px; align-items:center; padding:10px 12px 10px 14px; border-radius:16px; background:var(--card); border:2px solid var(--line); border-left:6px solid var(--u); color:var(--ink); text-decoration:none; min-height:56px}
+.xhrow:hover{border-color:var(--u)}
+.xhset{font-weight:900; font-size:13.5px; line-height:1.25}
+.xhset small{display:block; color:var(--muted); font-weight:800; font-size:12.5px}
+.xhq{min-width:0; font-size:14.5px; line-height:1.4; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; max-height:2.9em}
+.xhq .katex-display{display:inline; margin:0}
+.xhmeta{display:flex; flex-wrap:wrap; gap:4px; justify-content:flex-end}
+.xhgo2{font-size:22px; font-weight:900; color:var(--muted)}
+.xhrow[data-st^="ok"]{border-left-color:var(--ok)}
+.xhrow[data-st^="fejl"]{border-left-color:var(--bad)}
+@media (max-width:560px){
+  .xhrow{grid-template-columns:1fr 14px; padding:10px 10px 10px 12px}
+  .xhset{display:flex; gap:6px; align-items:baseline; flex-wrap:wrap}
+  .xhset small{display:inline}
+  .xhq{grid-column:1; grid-row:2}
+  .xhmeta{grid-column:1; grid-row:3; justify-content:flex-start}
+  .xhgo2{grid-column:2; grid-row:1 / span 3}
+}
+
+/* forsiden og ugesiderne */
+.xhhome{margin-top:14px}
+.xhhc{display:flex; align-items:center; gap:12px; padding:14px 16px; border-radius:22px; background:var(--card); border:2px solid var(--line); border-left:6px solid var(--u)}
+.xhhmain{display:flex; align-items:center; gap:12px; flex:1; min-width:0; color:inherit; text-decoration:none}
+.xhhic{font-size:28px; flex:none}
+.xhht{min-width:0}
+.xhht small{display:block; color:var(--muted); font-weight:800; font-size:13px}
+.xhht b{display:block; font-size:18px; font-weight:900; line-height:1.25}
+.xhht>span{display:block; color:var(--muted); font-weight:700; font-size:14px}
+.xhhc>.b{flex:none}
+@media (max-width:440px){.xhhc{flex-wrap:wrap}.xhhc>.b{width:100%}}
+.prerow.xhwk .lkubi{display:grid; place-items:center; font-size:28px; width:44px; height:44px}
+.prerow.xhwk .chev{font-size:24px; font-weight:900; color:var(--muted)}
+.xhcsub{font-size:15px}
+
+/* oversigten */
+.xhpage h2{margin-top:28px}
+.xhrec{margin-top:18px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; padding:18px 20px; border-radius:24px; background:var(--u); color:#fff; box-shadow:0 6px 0 color-mix(in srgb, var(--u) 65%, #000)}
+.xhrec small{display:block; font-weight:800; opacity:.85; font-size:13.5px}
+.xhrec b{display:block; font-size:22px; font-weight:900; line-height:1.2}
+.xhrec span{display:block; font-weight:700; opacity:.92; font-size:14.5px; margin-top:2px}
+.xhrecb{display:flex; gap:8px; flex-wrap:wrap}
+.xhrec .b{background:#fff; color:var(--u-ink); border-color:#fff}
+.xhrec .b.ghost{background:transparent; color:#fff; border-color:rgba(255,255,255,.6)}
+.xhfreq{display:grid; gap:6px; margin-top:10px}
+.xhfrow{display:grid; grid-template-columns:40px minmax(0,1fr) auto 110px; gap:10px; align-items:center; padding:8px 12px; border-radius:14px; background:var(--card); border:2px solid var(--line); color:var(--ink); text-decoration:none}
+.xhfrow:hover{border-color:var(--u)}
+.xhfic{width:40px; height:36px; border-radius:10px; background:var(--u-soft); color:var(--u-ink); display:grid; place-items:center; font-weight:900; font-size:13px; font-family:KaTeX_Main, serif; overflow:hidden; white-space:nowrap}
+.xhft{min-width:0}
+.xhft b{display:block; font-weight:900; font-size:15px; line-height:1.25}
+.xhft small{color:var(--muted); font-weight:700; font-size:12.5px}
+.xhdots{display:flex; gap:3px}
+.xhdots i{width:10px; height:10px; border-radius:3px; background:var(--line)}
+.xhdots i.on{background:var(--u)}
+.xhrd{display:grid; gap:2px; justify-items:end}
+.xhrd small{color:var(--muted); font-weight:800; font-size:12px}
+.xhbar{display:block; width:100%; height:8px; border-radius:999px; background:var(--line); overflow:hidden}
+.xhbar i{display:block; height:100%; background:var(--ok); border-radius:999px}
+@media (max-width:560px){
+  .xhfrow{grid-template-columns:36px minmax(0,1fr) 74px; padding:8px 10px}
+  .xhfic{width:36px}
+  .xhdots{grid-column:2; grid-row:2}
+  .xhrd{grid-column:3; grid-row:1 / span 2}
+}
+.xhfilters{display:grid; gap:8px; margin-top:10px; position:sticky; top:calc(var(--toph, 60px) + 4px); z-index:5; padding:8px 0; background:var(--bg)}
+.xhseg{display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch}
+.xhseg::-webkit-scrollbar{display:none}
+.xhseg button{flex:none; font:inherit; font-weight:800; font-size:14px; padding:7px 12px; border-radius:999px; border:2px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; min-height:38px}
+.xhseg button i{font-style:normal; color:var(--muted); font-weight:900; margin-left:2px}
+.xhseg button.on{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.xhseg button.on i{color:inherit; opacity:.75}
+.xhgrp{margin-top:22px; scroll-margin-top:calc(var(--toph, 60px) + 110px)}
+.xhgh{display:flex; gap:10px; align-items:flex-end; justify-content:space-between; flex-wrap:wrap}
+.xhgh h3{margin:0; font-size:18px}
+.xhgh h3 a{color:var(--u-ink); text-decoration:none}
+.xhgh h3 a:hover{text-decoration:underline}
+.xhgh small{display:block; color:var(--muted); font-weight:700; font-size:13.5px}
+.xhgh small a{color:inherit}
+
+/* opskriften */
+.xhtype .pcard{margin-top:16px}
+.xhtype .pcard:hover{transform:none}
+.xhtype .pcard h2{margin:0 0 6px; font-size:20px}
+.xhtype>h2{margin-top:26px}
+.xhfacts{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
+.xhfacts span{background:rgba(255,255,255,.2); border-radius:999px; padding:3px 11px; font-weight:800; font-size:13.5px}
+.xhcta{display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; margin-top:16px}
+.xhcta .sub{margin:0; font-size:14px}
+.xhul{margin:4px 0 0; padding-left:20px; display:grid; gap:6px}
+ol.xhrec2{margin:4px 0 0; padding-left:0; list-style:none; counter-reset:rc; display:grid; gap:10px}
+ol.xhrec2 li{counter-increment:rc; display:grid; grid-template-columns:30px 1fr; gap:10px; align-items:start}
+ol.xhrec2 li::before{content:counter(rc); width:30px; height:30px; border-radius:9px; background:var(--u-soft); color:var(--u-ink); display:grid; place-items:center; font-weight:900}
+.pcard.xherr{background:var(--warn-soft); border-color:color-mix(in srgb, var(--warn) 30%, transparent)}
+.pcard.xherr h2{color:var(--warn-ink)}
+.pcard.xhwrc{background:var(--u-soft); border-color:color-mix(in srgb, var(--u) 30%, transparent)}
+.xhex details.xhrev{margin-top:12px}
+ol.xhsteps{margin:0 14px 12px; padding-left:22px; display:grid; gap:8px}
+.tag.xhvid{border:0; cursor:pointer; font:inherit; font-weight:800; font-size:13.5px}
+
+/* prøveeksamen */
+.excard.xhpromo{margin-bottom:14px; border-color:color-mix(in srgb, var(--accent) 40%, var(--line)); background:var(--accent-soft)}
+.exlinks .xhgo{margin-right:8px}
+.exlinks.xhprac{margin-top:8px}
+.b.xhres{margin-right:8px}
+.lhero.xhhero .lg{position:absolute; right:14px; bottom:-4px; font-size:54px; opacity:.16; max-width:60%; overflow:hidden; white-space:nowrap; pointer-events:none}
+.blk.tip>.bt svg,.blk.xhwr>.bt svg{width:18px; height:18px; flex:none}
+.xhlink>span{width:auto; min-width:28px; font-weight:900; white-space:nowrap}
 </style>
 <script>try{var t=localStorage.getItem("mat1a-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1b1550"></head>
@@ -1607,7 +1752,7 @@ button.ubanner{width:100%; border:0; font:inherit; text-align:left; cursor:point
   <button class="ibtn" id="themeBtn" aria-label="Skift farvetema" title="Farvetema"><svg><use href="#i-auto"/></svg></button>
   <button class="ibtn" id="menuBtn" aria-label="Menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
   <nav class="menu" id="menu" hidden>
-    <a href="#">Læringssti</a><a href="#uge-h">Hjemmeopgaver</a><a href="#repetition">Repetition</a><a href="#metode">Hvilken metode?</a><a href="#formler">Formeltræner</a><a href="#kontrast">Kontrastkort</a><a href="#begreber">Begreber</a><a href="#graf">Videnskort</a><a href="#tools">Værktøjer</a><a href="#videoer">Ugevideoer</a><a href="#repetition/fejl">Fejllog</a><a href="#faelles">Fællesskab</a><div class="mhead" id="mExam">Eksamen</div><a href="#plan">Eksamensplan</a><a href="#eksamen">Prøveeksamen</a><a href="#mini">Minieksamen</a><hr><button id="mBook" class="monly">Lærebogen</button><button id="mTheme" class="monly">Farvetema</button><hr class="monly">
+    <a href="#">Læringssti</a><a href="#uge-h">Hjemmeopgaver</a><a href="#repetition">Repetition</a><a href="#metode">Hvilken metode?</a><a href="#formler">Formeltræner</a><a href="#kontrast">Kontrastkort</a><a href="#begreber">Begreber</a><a href="#graf">Videnskort</a><a href="#tools">Værktøjer</a><a href="#videoer">Ugevideoer</a><a href="#repetition/fejl">Fejllog</a><a href="#faelles">Fællesskab</a><div class="mhead" id="mExam">Eksamen</div><a href="#gamle">Gamle eksamensopgaver</a><a href="#plan">Eksamensplan</a><a href="#eksamen">Prøveeksamen</a><a href="#mini">Minieksamen</a><hr><button id="mBook" class="monly">Lærebogen</button><button id="mTheme" class="monly">Farvetema</button><hr class="monly">
     <a href="#indstillinger">Indstillinger og statistik</a><button id="expBtn">Gem en backup af fremgang</button><button id="impBtn">Hent backup …</button><input type="file" id="impFile" accept="application/json" hidden><hr id="lockHr" hidden><button id="lockBtn" hidden>🔒 Lås appen på denne enhed</button>
   </nav>
 </div></header>
@@ -3461,7 +3606,7 @@ const fnum=(x,lo,hi)=>{const n=+x;return Number.isFinite(n)?Math.max(lo,Math.min
 const ts=x=>Number.isFinite(x)&&x>0&&x<4e12?x:undefined;
 const ITEM_RE=/^[clxmf]:[\w#:.\-]{1,160}$/;
 const ERRT=['reg','fort','def','met','las'];
-const SRCS=['les','try','rep','exam','mix','form'];
+const SRCS=['les','try','rep','exam','mix','form','xh'];
 const lim=(o,n)=>{const k=Object.keys(o);if(k.length<=n)return o;const r={};k.slice(-n).forEach(x=>r[x]=o[x]);return r};
 function normSrs(v){if(!isObj(v))return undefined;const S=fnum(v.S,0.01,36500),due=ts(v.due);if(S===undefined||due===undefined)return undefined;
   const o={S,D:fnum(v.D,1,10)??5,due,reps:fint(v.reps,0,1e5),lapses:fint(v.lapses,0,1e5)};const l=ts(v.last);if(l)o.last=l;return o}
@@ -3490,7 +3635,9 @@ function normState(s){s=isObj(s)?s:{};return {
   /* minieksamen (mini.js): forsøget i gang, sidste afleverede og en kort historik */
   mini:normMini(s.mini),
   /* læringsideer (learn.js): eksamensplan, prætest, kontrastkort, coach, indstillinger, eksamensmorgen */
-  learn:normLearn(s.learn)}}
+  learn:normLearn(s.learn),
+  /* eksamenshjælp (examview.js): gennemgåede delopgaver, træning i gang og valg på oversigten */
+  xh:normXh(s.xh)}}
 function normLearn(l){l=isObj(l)?l:{};const DK=/^\d{4}-\d\d-\d\d$/,str=(v,n)=>typeof v==='string'?v.slice(0,n):'',day=v=>typeof v==='string'&&DK.test(v)?v:'';
   const item=x=>{if(!isObj(x)||typeof x.t!=='string'||!/^[a-z]{1,10}$/.test(x.t))return null;const o={t:x.t};
     if(typeof x.a==='string'&&/^[a-z0-9]{1,12}$/.test(x.a)||Number.isInteger(x.a)&&x.a>=0&&x.a<100)o.a=x.a;if(x.done)o.done=1;return o};
@@ -3702,10 +3849,10 @@ function hjemProg(){return[HJEM.reduce((a,o)=>a+opgProgress(o)[0],0),HJEM.reduce
 function weekPct(n){if(n==='h'){const [a,b]=hjemProg();return b?Math.round(a/b*100):0}if(!weekOf(+n))return null;const [a,b]=weekProg(+n);return b?Math.round(a/b*100):0}
 function unitHTML(n){const k=String(n),open=OPENW.has(k),isH=k==='h',u=isH?unit(0):unit(+k),pct=weekPct(k);
   const lab=isH?'Afleveringer':'Uge '+k+(+k===CUR?' · nu':''),right=pct==null?'snart':isH?hjemProg().join('/'):pct+'%';
-  return`<section class="unit${open?' open':''}${pct==null?' soon':''}" id="unit-${k}" style="${uvars(isH?0:+k)}"><button class="ubanner${pct==null?' locked':''}" aria-expanded="${open}" aria-controls="up-${k}" data-w="${k}"><span class="ug">${esc(u[2])}</span><span class="ut"><small>${lab}</small><b>${esc(u[1])}</b></span><span class="pct">${right}</span><span class="chev" aria-hidden="true">›</span></button><div class="upath" id="up-${k}">${open?preRow(k)+vidRow(k)+pathHTML(k):''}</div></section>`}
+  return`<section class="unit${open?' open':''}${pct==null?' soon':''}" id="unit-${k}" style="${uvars(isH?0:+k)}"><button class="ubanner${pct==null?' locked':''}" aria-expanded="${open}" aria-controls="up-${k}" data-w="${k}"><span class="ug">${esc(u[2])}</span><span class="ut"><small>${lab}</small><b>${esc(u[1])}</b></span><span class="pct">${right}</span><span class="chev" aria-hidden="true">›</span></button><div class="upath" id="up-${k}">${open?preRow(k)+vidRow(k)+xhWeekRow(k)+pathHTML(k):''}</div></section>`}
 function toggleWeek(k,force){const sec=document.getElementById('unit-'+k);if(!sec)return;const open=force!=null?force:!OPENW.has(k);
   if(open)OPENW.add(k);else OPENW.delete(k);const box=sec.querySelector('.upath'),btn=sec.querySelector('.ubanner');
-  sec.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);if(open&&!box.firstChild){box.innerHTML=preRow(k)+vidRow(k)+pathHTML(k);decoLive(box);box.querySelectorAll('.node').forEach((n,i)=>n.style.setProperty('--d',Math.min(i,14)*45+'ms'))}}
+  sec.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);if(open&&!box.firstChild){box.innerHTML=preRow(k)+vidRow(k)+xhWeekRow(k)+pathHTML(k);decoLive(box);box.querySelectorAll('.node').forEach((n,i)=>n.style.setProperty('--d',Math.min(i,14)*45+'ms'))}}
 function weekStrip(){const ks=['h',...UNITS.map(x=>String(x[0]))];
   return`<nav class="wkstrip" aria-label="Spring til en uge">${ks.map(k=>{const isH=k==='h',u=isH?unit(0):unit(+k),pct=weekPct(k);
     return`<a href="#uge-${k}" class="wkc${+k===CUR?' now':''}${pct==null?' soon':''}" style="${uvars(isH?0:+k)}" aria-label="${isH?'Hjemmeopgaver':'Uge '+k}${pct!=null?', '+pct+' %':''}${+k===CUR?', denne uge':''}"><span class="wg">${isH?'H':k}</span><small>${+k===CUR?'nu':pct==null?'–':pct+'%'}</small></a>`}).join('')}</nav>`}
@@ -3726,7 +3873,7 @@ function viewHome(){
   const d=new Date(),dow=(d.getDay()+6)%7,wk=[];for(let k=0;k<7;k++){const x=new Date(d);x.setDate(d.getDate()-dow+k);wk.push([['M','T','O','T','F','L','S'][k],activeDay(dkey(x)),k===dow])}
   const nxt=DEADLINES.filter(x=>x.d>NOW).sort((a,b)=>a.d-b.d)[0];const sk=streak();const fresh=!ST.last&&!ST.xp;
   const calm=calmMode();if(calm&&!CALMW){CALMW=1;OPENW.delete(String(CUR))}
-  let h=calm?`<div class="page homepage">${calmHome()}${learnHome()}${weekStrip()}`:`<div class="page homepage">${onboardHTML()}<div class="hello">
+  let h=calm?`<div class="page homepage">${calmHome()}${xhHome()}${learnHome()}${weekStrip()}`:`<div class="page homepage">${onboardHTML()}<div class="hello">
     <div class="panel hero" style="${uvars(CUR)}"><div class="hi">${greet()} 👋</div><div class="ey">Uge ${CUR} · denne uge</div><h2>${esc(u[1])}</h2><p>${w?esc(plain(w.keywords).slice(0,160))+'…':'Opgaverne er ikke lagt op endnu.'}</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap">${curId?`<a class="b" href="#${curId}">${ico('play')} ${fresh?'Start':'Fortsæt'}</a>`:''}${last?`<a class="b lastb" href="#${last.opg.id}">Sidst: ${esc(last.opg.kind==='hjem'?last.opg.title:'U'+last.opg.week+' opg. '+last.opg.nr)}</a>`:''}${VID_TITLES[CUR]?`<button class="b lastb" data-v="${CUR}">🎬 Ugens video</button>`:''}</div>
       <div class="glyph${u[2].length>2?' long':''}">${esc(u[2])}</div>${MASCOT('wave')}</div>
@@ -3736,7 +3883,7 @@ function viewHome(){
       <div class="week-dots" aria-label="Aktive dage denne uge">${wk.map(([l,on,t])=>`<i class="${on?'on':''} ${t?'today':''}">${l}</i>`).join('')}</div>
       <div class="stat" style="margin-top:16px"><div class="ic" style="background:#fff7d6">⚡</div><div><b>${ST.xp} XP</b><span>${done} af ${tot} delopgaver klaret</span></div></div>
       ${nxt?`<a class="stat" href="#${nxt.go}"><div class="ic" style="background:var(--accent-soft)">${ico('flag')}</div><div><b>${esc(nxt.t)}</b><span>om ${Math.max(0,Math.ceil((nxt.d-NOW)/864e5))} dage · ${nxt.d.getDate()}/${nxt.d.getMonth()+1}</span></div></a>`:''}<a class="stat" href="#eksamen"><div class="ic" style="background:var(--accent-soft)">📝</div><div><b>Prøveeksamen</b><span>Rigtige eksamenssæt</span></div></a>${mixHomeCard()}<a class="stat" href="#videoer"><div class="ic" style="background:var(--accent-soft)">🎬</div><div><b>Ugevideoer</b><span>${Object.keys(ST.vids||{}).length} af ${Object.keys(VID_LEN).length||12} set</span></div></a>
-    </div>${learnHome()}</div>${weekStrip()}`;
+    </div>${xhHome()}${learnHome()}</div>${weekStrip()}`;
   h+=unitHTML('h');UNITS.forEach(x=>h+=unitHTML(x[0]));
   main.innerHTML=h+'</div>'+bgfx();decoLive(main);wireOnboard();learnWire(main);
   main.querySelectorAll('.unit>.ubanner').forEach(b=>b.onclick=()=>toggleWeek(b.dataset.w));
@@ -3874,7 +4021,8 @@ function renderLesson(){
   if(c.kind==='done')return renderDone(card,go,foot,msg);
   const [ic,kname]=KIND[c.kind];
   let h=`<span class="lkind">${ico(ic)}${kname}${c.step?' · trin '+c.step:''}</span>`;
-  if(c.kind==='opgave'){const uu=unit(p.opg.week||0);h=`<div class="lhero"><div><small>${p.opg.kind==='hjem'?'Hjemmeopgave':'Uge '+p.opg.week+' · '+esc(uu[1])}</small><b>${p.opg.kind==='hjem'?esc(p.opg.title):'Opgave '+p.opg.nr}${p.label?' · delopgave '+esc(p.label):''}</b><span>${SOL[p.key]?SOL[p.key].cards.filter(x=>x.q).length+' spørgsmål undervejs':'Kursets hint og facit'}</span></div><div class="lg">${esc(uu[2])}</div></div>`;if(c.intro)h+=`<div class="ctx"><div class="prose">${MD.block(c.intro)}</div></div>`;h+=`<div class="prose" style="font-size:19px">${MD.block(c.body)}</div>`}
+  const xh_=p.xh?xhCard(c,p,h):null;
+  if(xh_!=null)h=xh_;else if(c.kind==='opgave'){const uu=unit(p.opg.week||0);h=`<div class="lhero"><div><small>${p.opg.kind==='hjem'?'Hjemmeopgave':'Uge '+p.opg.week+' · '+esc(uu[1])}</small><b>${p.opg.kind==='hjem'?esc(p.opg.title):'Opgave '+p.opg.nr}${p.label?' · delopgave '+esc(p.label):''}</b><span>${SOL[p.key]?SOL[p.key].cards.filter(x=>x.q).length+' spørgsmål undervejs':'Kursets hint og facit'}</span></div><div class="lg">${esc(uu[2])}</div></div>`;if(c.intro)h+=`<div class="ctx"><div class="prose">${MD.block(c.intro)}</div></div>`;h+=`<div class="prose" style="font-size:19px">${MD.block(c.body)}</div>`}
   else if(c.kind==='svar')h+=`<h2>Svaret</h2><div class="blk answer" style="margin-top:8px"><div class="prose" style="font-size:19px">${MD.block(c.body)}</div></div>`;
   else if(c.kind==='hint'||c.kind==='facit'||c.kind==='selv')h+=`<h2>${c.kind==='hint'?esc(c.title):c.kind==='facit'?'Sammenlign med facit':'Prøv selv først'}</h2><div class="prose">${MD.block(c.body)}</div>`;
   else if(c.q)h+=`<div class="qtext">${MD.inline(c.q.q)}</div>`+qHTML(c.q)+`<div class="hints" id="lhints"></div>`;
@@ -4043,7 +4191,7 @@ function nextAfter(p){const o=p.opg,np=o.parts[o.parts.indexOf(p)+1];if(np)retur
   let list,i,nx=null;if(o.kind==='hjem'){i=HJEM.indexOf(o);nx=HJEM[i+1]||null}
   else{const w=weekOf(o.week);list=w.days[o.day];i=list.indexOf(o);nx=list[i+1]||(o.day==='SD'?w.days.LD[0]:null);if(!nx){const w2=weekOf(o.week+1);nx=w2?w2.days.SD[0]:null}}
   if(!nx)return null;return{part:nx.parts[0],label:'Næste: '+(nx.kind==='hjem'?nx.title:(nx.week!==o.week?'uge '+nx.week+', ':'')+'opgave '+nx.nr)}}
-function renderDone(card,go,foot,msg){const p=LS.p,s=SOL[p.key],q=LS.qs,acc=q?LS.first/q:1,stars=!s?1:acc>=0.999?3:acc>=0.6?2:1;
+function renderDone(card,go,foot,msg){if(LS.p.xh)return xhDone(card,go,foot,msg);const p=LS.p,s=SOL[p.key],q=LS.qs,acc=q?LS.first/q:1,stars=!s?1:acc>=0.999?3:acc>=0.6?2:1;
   LS.xp+=s?5:2;addXP(LS.xp);delete ST.lprog[p.key];
   const lx=document.querySelector('.lxp');if(lx)lx.textContent='⚡ '+LS.xp;
   const prev=ST.parts[p.key]||{};ST.parts[p.key]={done:true,stars:Math.max(stars,prev.stars||0),ts:Date.now()};
@@ -4090,7 +4238,7 @@ function viewConcept(id){const c=CONCEPTS[id];document.title=c.title+' · Mat1a'
   <div class="pcard" style="margin-top:20px"><div class="prose">${MD.block(c.body)}</div>${(c.viz||[]).map(v=>`<figure class="viz" data-viz='${esc(JSON.stringify(v))}'></figure>`).join('')}</div>`;
   const rel=[...new Set([...c.links,...back.con])];
   if(rel.length)h+=`<h3 style="margin-top:26px">Hænger sammen med</h3><div class="tags">${rel.map(x=>`<a class="tag" href="#${x}" data-c="${x}"># ${esc(CONCEPTS[x].title)}</a>`).join('')}</div>`;
-  h+=konForConcept(id);
+  h+=konForConcept(id)+xhForConcept(id);
   h+=`<h3 style="margin-top:26px">Øv det i ${back.opg.length} opgave${back.opg.length===1?'':'r'}</h3><div class="plist">${back.opg.map(o=>{const p=o.parts.find(p=>p.concepts.includes(id))||o.parts[0];return`<div class="pcard" style="${uvars(o.week||0)}"><div class="ph"><span class="pl">${esc(o.kind==='hjem'?'H':o.nr)}</span><span class="pt">${MD.inline(o.title||'Opgave '+o.nr)}<small>${esc(o.kind==='hjem'?'Hjemmeopgave':'Uge '+o.week+' · '+DAYNAME[o.day])}${p.label?' · delopgave '+esc(p.label):''}</small></span>${isDone(p.key)?'<span class="badge ok">✓ klaret</span>':''}<a class="b u sm" href="#L-${p.key}">${ico('play')} Øv</a></div></div>`}).join('')||'<p class="empty">Ingen endnu.</p>'}</div></div>`;
   main.innerHTML=h;main.querySelectorAll('figure[data-viz]').forEach(f=>mountViz(f));
   if(c.try){const pc=main.querySelector('.pcard');pc.after(tryBox(c.try,id))}
@@ -4371,14 +4519,14 @@ function enterFx(){const m=document.getElementById('main');if(!m)return;m.classL
 function route(o){try{route_(o||{})}catch(e){console.error(e);crashUI(e)}}
 function route_(o){const r=HASH;pop.classList.remove('on');closePal();closeSide();setMenu(false);
   /* lektion: historikken får en post til opgavesiden og en til lektionen, så "tilbage" lukker lektionen (og gemmer) */
-  if(r.startsWith('L-')&&PK[r.slice(2)]){const p=PK[r.slice(2)],oid=p.opg.id;HASH=oid;
+  if(r.startsWith('L-')&&PK[r.slice(2)]){const p=PK[r.slice(2)],oid=p.xh?xhBgId(p,o):p.opg.id;HASH=oid;
     if(canHist&&!o.noHist){try{if('from' in o){if(o.from!==oid)history.pushState({h:oid},'','#'+oid)}else history.replaceState({h:oid},'','#'+oid);history.pushState({h:oid,lesson:p.key},'','#'+oid)}catch(e){canHist=false}}
-    if(!L.hidden)closeLesson();PENDING='pc-'+(p.label||'x');viewOpg(oid);startLesson(p.key);return}
+    if(!L.hidden)closeLesson();PENDING='pc-'+(p.label||'x');if(p.xh){if(o.from!==oid||!main.children.length)route_({bg:1})}else viewOpg(oid);startLesson(p.key);return}
   if(!L.hidden)closeLesson();
   requestAnimationFrame(enterFx);requestAnimationFrame(()=>fitMath(main));
   if(!r)viewHome();else if(/^uge-(\d+|h)$/.test(r))showWeek(r.slice(4));
   else if(r==='repetition'||r.startsWith('repetition/'))viewRep(r.slice(11))
-  else if(r==='faelles'||r.startsWith('faelles/')){if(window.SOCIAL)SOCIAL.view(r.slice(8));else viewHome()}else if(r==='eksamen'||r.startsWith('eksamen-')){viewExams(r.slice(8));if(r==='eksamen')examExtras()}else if(r==='mini')viewMini();else if(r==='begreber')viewConcepts();else if(r==='metode')viewMix();else if(r==='formler')viewForms();else if(r==='videoer'){main.innerHTML=viewVideos();document.title='Ugevideoer · Mat1a';window.scrollTo(0,0)}else if(r==='graf')viewGraph();else if(r==='tools'||r.startsWith('tools-'))viewTools(r.slice(6));else if(learnRoute(r)){}else if(OPG[r])viewOpg(r);else if(CONCEPTS[r])viewConcept(r);else viewHome()}
+  else if(r==='faelles'||r.startsWith('faelles/')){if(window.SOCIAL)SOCIAL.view(r.slice(8));else viewHome()}else if(r==='eksamen'||r.startsWith('eksamen-')){viewExams(r.slice(8));if(r==='eksamen')examExtras()}else if(r==='mini')viewMini();else if(r==='begreber')viewConcepts();else if(r==='metode')viewMix();else if(r==='formler')viewForms();else if(r==='videoer'){main.innerHTML=viewVideos();document.title='Ugevideoer · Mat1a';window.scrollTo(0,0)}else if(r==='graf')viewGraph();else if(r==='tools'||r.startsWith('tools-'))viewTools(r.slice(6));else if(learnRoute(r)||xhRoute(r)){}else if(OPG[r])viewOpg(r);else if(CONCEPTS[r])viewConcept(r);else viewHome()}
 /* fejlskærm i stedet for hvid skærm: tilbyd forsiden, eksport af de rå data og nulstilling */
 function crashUI(e){try{main.innerHTML=`<div class="page narrow"><h1>Noget gik galt</h1><p>Siden kunne ikke vises. Din fremgang og dine noter er ikke slettet.</p>
   <p class="fine" style="color:var(--muted)">${esc(e&&e.message||e)}</p><div class="socbtns" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
@@ -6046,6 +6194,1133 @@ PITEMS.push(pitem('Side','Indstillinger og statistik','Pause før hint, Kubi som
 PITEMS.push(pitem('Side','Skriv bekymringen ned','Valgfri skriveøvelse på 10 minutter til eksamensmorgenen. Teksten gemmes ikke.','morgen','eksamensmorgen nervøs angst bekymring eksamensangst rolig',1));
 PITEMS.push(pitem('Side','Kontrastkort','Par, der ofte forveksles, stillet side om side','kontrast','Arg arg injektiv surjektiv nulrum søjlerum forveksler forskel',2));
 KON.forEach(k=>PITEMS.push(pitem('Kontrast',k.t,plain(k.diff).slice(0,110),'kontrast-'+k.id,plain(k.a.d+' '+k.b.d+' '+k.diff)+' forskel forveksle',2)));
+
+/* ---------- Eksamenshjælp: indhold ----------
+   XT: opgavetyperne fra de gamle sæt med opskrift, kendetegn, typiske fejl og hvad bedømmerne vil se.
+     id, t (navn), w (uge), ic (lille tegn), c (begreber, der hører til typen; første type, der nævner et begreb, vinder),
+     d (typer, den let forveksles med), kon (kontrastkort), ex (regnet eksempel), sig (kendetegn som navneled),
+     know (sådan genkender du den), rec (opskriften), err (typiske fejl), wr (det skal stå på papiret).
+   XTY: delopgaver, hvor begrebet alene giver den forkerte type.
+   XH_SRC: skrevne gennemgange, samme linjeformat som sol/*.txt. Blokken "=== e2:1a | logik" har:
+     @hl signalord (adskilt med " ; ")
+     >> type / >> plan / >> trin Titel / >> tjek   et kort; "?? mc|in | ..." er spørgsmålet, "?h" hints (lette først), resten er forklaringen
+     >> fejl / >> skriv / >> svar / >> husk          tekstafsnit
+   Rækkefølgen i lektionen: type, plan, trin, (krydset ved multiple choice), tjek, typisk fejl og opskrivning, svar. */
+const XT=[
+{id:'logik',t:'Sandhedstabeller og logisk ækvivalens',w:1,ic:'⊨',kon:'impbi',ex:'e2:1b',
+ c:['c-logisk-aekvivalens','c-implikation','c-tautologi','c-negation','c-modstrid'],d:['maengder','homogen','induktion'],
+ sig:'et udsagn med $P$, $Q$, $R$ og tegn som $\\Rightarrow$, $\\Leftrightarrow$ og $\\neg$, og ordene "sandhedstabel", "logisk ækvivalent" eller "tautologi"',
+ know:['Et udsagn bygget af $P$, $Q$ (og $R$) med $\\neg$, $\\land$, $\\lor$, $\\Rightarrow$ og $\\Leftrightarrow$.','Der står "udfyld sandhedstabellen", "er udsagnene logisk ækvivalente?" eller "er det en tautologi?".','Kommer næsten altid som opgave 1 i prøven uden hjælpemidler.'],
+ rec:['Skriv alle kombinationer af sandhedsværdier op: 4 rækker for to variable, 8 for tre. Brug samme rækkefølge hver gang: $11,10,01,00$.','Lav en søjle for hvert deludsagn, indefra og ud: først parenteser og $\\neg$, så $\\land$ og $\\lor$, til sidst $\\Rightarrow$ og $\\Leftrightarrow$.','Husk de to regler: $A\\Rightarrow B$ er kun falsk ved sand $\\Rightarrow$ falsk, og $A\\Leftrightarrow B$ er sand, når de to sider er ens.','Ækvivalens: lav begge udsagn i samme tabel, og sammenlign søjlerne række for række. Én række med forskel er nok til et nej.','Tautologi: udsagnet skal være sandt i alle rækker. Én falsk række er et modeksempel.'],
+ err:['At tro, at $A\\Rightarrow B$ er falsk, når $A$ er falsk. Den er sand.','At glemme parentesen, fx at regne $\\neg(Q\\Leftrightarrow P)$ som $(\\neg Q)\\Leftrightarrow P$.','At svare "nej, ikke ækvivalente" uden at pege på den række, hvor de er forskellige.'],
+ wr:['Hele sandhedstabellen med en søjle for hvert deludsagn.','Konklusionen i en sætning med henvisning til tabellen, fx "søjlerne er ens i alle rækker, så udsagnene er logisk ækvivalente".','Ved et nej: den konkrete række (værdierne af $P$, $Q$ og $R$), hvor det går galt.']},
+{id:'maengder',t:'Mængder og funktioner',w:2,ic:'∪',kon:'injsur',ex:'e5:1b',
+ c:['c-maengdeoperationer','c-surjektiv','c-injektiv','c-invers-funktion','c-vaerdimaengde','c-sammensaetning'],d:['logik','rekursion','kerne'],
+ sig:'mængder med $\\cup$, $\\cap$ og $\\setminus$, eller en funktion, hvor der spørges om injektiv, surjektiv eller bijektiv',
+ know:['Konkrete mængder som $\\{0,1,2\\}$ eller talmængder som $\\mathbb N$, $\\mathbb Z$ og $\\mathbb R$ med $\\cup$, $\\cap$ og $\\setminus$.','"Er $x\\in S$?" eller "bestem mængden".','En funktion med definitionsmængde og dispositionsmængde og spørgsmålet "injektiv, surjektiv eller bijektiv?".'],
+ rec:['Regn parenteserne først, og skriv hver mellemmængde op.','$\\cup$: med i mindst én. $\\cap$: med i begge. $A\\setminus B$: i $A$, men ikke i $B$.','Ved talmængder: tjek tallet mod hver mængde for sig, fx: er $-2\\in\\mathbb N$? Er $-2\\in\\mathbb Z$?','Injektiv: to forskellige $x$ giver aldrig samme $f(x)$. Surjektiv: hver værdi i dispositionsmængden rammes. Bijektiv: begge dele.','Til et nej er ét modeksempel nok: to $x$ med samme værdi, eller en værdi, der ikke rammes.'],
+ err:['At bruge fællesmængden, hvor der står foreningsmængde, eller omvendt.','At glemme, at $\\mathbb N$ ikke indeholder negative tal.','At afgøre surjektivitet uden at se på dispositionsmængden. Samme forskrift kan være surjektiv på én mængde og ikke på en anden.'],
+ wr:['Mellemresultaterne, fx $A\\cup B=\\{0,1,2,3\\}$, før det endelige svar.','Ved et nej: et konkret modeksempel.','Ved et ja: en kort begrundelse, fx hvordan man finder $x$ ud fra $y$.']},
+{id:'rekursion',t:'Rekursion og summer: regn leddene ud',w:2,ic:'aₙ',ex:'e2:mc2',
+ c:['c-rekursion','c-sumtegn'],d:['induktion','maengder','polrod'],
+ sig:'en følge givet ved startværdier og en formel som $f(n)=\\dots f(n-1)\\dots$, eller en sum med $\\sum$, hvor de første led skal regnes ud',
+ know:['$f(1)$ og $f(2)$ er givet, og $f(n)$ er udtrykt ved tidligere led.','En sum som $s_n=\\sum_{k=2}^{n}\\dots$, hvor der spørges om $s_2$, $s_3$ og $s_4$.','Ofte delopgave a før et induktionsbevis i b.'],
+ rec:['Skriv startværdierne op.','Regn ét led ad gangen: sæt $n=3$ ind i formlen, så $n=4$ og så videre. Skriv hver udregning op.','Ved en sum: skriv leddene ud for det konkrete $n$, og læg dem sammen. Hvert nyt $s_n$ er det forrige plus ét led.','Tjek det sidste tal mod formlen i næste delopgave, hvis der er en.'],
+ err:['At bruge $f(n-1)$ to gange, hvor formlen kræver både $f(n-1)$ og $f(n-2)$.','At stoppe et led for tidligt, fx svare med $f(4)$, når der spørges om $f(5)$.','At starte summen ved det forkerte indeks.'],
+ wr:['Hvert led med sin udregning, fx $f(3)=3\\cdot2-1=5$.','Det endelige svar tydeligt markeret.']},
+{id:'induktion',t:'Induktionsbevis',w:5,ic:'n+1',ex:'e4:3b',
+ c:['c-induktion','c-induktion-basistrin'],d:['rekursion','logik','matregn'],
+ sig:'ordene "vis med induktion efter $n$" og en påstand, der skal gælde for alle $n$ fra et vist tal',
+ know:['"Vis med induktion" og "for alle $n\\in\\mathbb Z_{\\ge2}$" eller lignende.','Påstanden er en formel (en sum, en matrixpotens, en rekursiv følge) eller en ulighed.','Delopgaven før giver ofte basistrinnet gratis.'],
+ rec:['Basistrin: vis påstanden for det mindste $n$ (det står i opgaven, fx $n=2$). Regn begge sider ud.','Induktionsantagelse: "Antag, at påstanden gælder for et vilkårligt $n\\ge n_0$." Skriv formlen op.','Induktionsskridt: skriv målet op for $n+1$. Del venstresiden op, så $n$-udgaven indgår (fx $s_{n+1}=s_n+\\text{nyt led}$ eller $\\mathbf A^{n+1}=\\mathbf A^n\\mathbf A$), og brug antagelsen.','Regn om, til du står med højresiden for $n+1$.','Konklusion: "Ifølge induktionsprincippet gælder påstanden for alle $n\\ge n_0$."'],
+ err:['At starte i $n=1$, når påstanden først gælder fra $n=2$ eller $n=3$.','At antage det, der skal vises: antagelsen er for $n$, målet er $n+1$.','At glemme at bruge antagelsen. Bruges den ikke, er det ikke et induktionsbevis.','Ved uligheder: at skrive $=$, hvor der kun gælder $\\ge$.'],
+ wr:['Overskrifterne basistrin, induktionsantagelse og induktionsskridt.','I skridtet: præcis hvor antagelsen bruges, fx "ifølge induktionsantagelsen".','Konklusionen med henvisning til induktionsprincippet.']},
+{id:'kompleks',t:'Komplekse tal: rektangulær og polær form',w:3,ic:'z',kon:'arg',ex:'e1:9a',
+ c:['c-kompleks-division','c-kompleks-eksponential','c-polaer-form','c-rektangulaer-form','c-modulus','c-argument','c-konjugering'],d:['binom','polrod','ode'],
+ sig:'komplekse tal, der skal skrives om mellem $a+bi$ og $re^{i\\theta}$, eller ganges, divideres og opløftes',
+ know:['"Skriv på rektangulær form" eller "skriv på polær form".','Brøker med $i$ i nævneren, potenser som $z^4$, eller $e^{i\\theta}$ ganget med et tal.'],
+ rec:['Division: gang tæller og nævner med den konjugerede af nævneren. Nævneren bliver $|w|^2$, et reelt tal.','Fra $a+bi$ til polær form: $r=\\sqrt{a^2+b^2}$. Find vinklen ud fra fortegnene på $a$ og $b$, og tegn punktet.','Potenser: på polær form er $(re^{i\\theta})^n=r^ne^{in\\theta}$.','Fra polær til rektangulær form: $re^{i\\theta}=r\\cos\\theta+ir\\sin\\theta$.','Tjek kvadranten til sidst: passer fortegnene i svaret med vinklen?'],
+ err:['At bruge $\\arctan(b/a)$ uden at tjekke kvadranten. $-2+2i$ har argumentet $\\frac{3\\pi}4$, ikke $-\\frac\\pi4$.','At glemme kvadratroden: $|z|=\\sqrt{a^2+b^2}$, mens $|z|^2=a^2+b^2$.','At gange med $i$ i stedet for den konjugerede ved division.'],
+ wr:['Mellemregningen med den konjugerede ved division.','$r$ og vinklen hver for sig, med en kort begrundelse for kvadranten.','Svaret på den form, der spørges om.']},
+{id:'binom',t:'Binome ligninger',w:4,ic:'ⁿ√',kon:'arg',ex:'e5:2a',
+ c:['c-binom'],d:['kompleks','polrod','egen'],
+ sig:'en ligning af formen $z^n=w$, hvor $w$ er et komplekst tal',
+ know:['$z^3=-i$, $z^4=-4$ eller "polynomiet $Z^3+27$" (rødderne i $Z^3=-27$).','Der spørges om alle løsninger, eller om én bestemt, fx den i første kvadrant.'],
+ rec:['Skriv højresiden på polær form: $w=|w|e^{i\\varphi}$.','Modulus: alle løsninger har $|z|=\\sqrt[n]{|w|}$.','Argumenter: $\\theta_p=\\frac{\\varphi}{n}+p\\frac{2\\pi}{n}$ for $p=0,1,\\dots,n-1$.','Omregn til rektangulær form, hvis der spørges om det, og vælg den rigtige løsning.','Tjek én løsning ved at opløfte den.'],
+ err:['At finde én løsning og stoppe. Der er altid $n$.','At dele forkert: afstanden mellem løsningernes argumenter er $\\frac{2\\pi}n$.','At glemme at tage den $n$-te rod af modulus.','At angive argumenter uden for det ønskede interval, fx $\\frac{7\\pi}6$ i stedet for $-\\frac{5\\pi}6$.'],
+ wr:['Højresiden på polær form.','Den generelle formel med $p$ og alle løsningerne.','Omregningen til rektangulær form, hvis den bruges.']},
+{id:'polrod',t:'Polynomier: rødder og faktorisering',w:5,ic:'p(Z)',kon:'konjinv',ex:'e2:2a',
+ c:['c-divisionsalgoritmen','c-andengrad','c-rod-multiplicitet','c-polynomium'],d:['binom','kompleks','egen'],
+ sig:'et polynomium, hvor rødder skal findes, eller hvor der skal divideres, faktoriseres eller bestemmes koefficienter ud fra rødderne',
+ know:['"$3$ er rod i $p$", "faktorisér", "resten ved division" eller "alle koefficienter er reelle".','Andengradsligninger med komplekse rødder.','Rødder med multiplicitet og en ekstra oplysning som $p(1)=7$.'],
+ rec:['Kendt rod $z_0$: divider med $Z-z_0$ (polynomiers division eller Horners skema). Resten skal være $0$.','Andengradsfaktoren løses med $\\frac{-b\\pm\\sqrt d}{2a}$. Er $d<0$, er $\\sqrt d=i\\sqrt{-d}$.','Reelle koefficienter: er $z_0$ rod, er $\\overline{z_0}$ også rod.','Fra rødder til polynomium: $p(Z)=a_n(Z-z_1)\\cdots(Z-z_n)$. Brug den ekstra oplysning til at finde $a_n$.','Resten ved division med $Z-a$ er $p(a)$.'],
+ err:['At glemme den konjugerede rod, når koefficienterne er reelle.','At glemme den ledende koefficient $a_n$, når polynomiet bygges ud fra rødderne.','Fortegnsfejl: roden $3$ giver faktoren $Z-3$.'],
+ wr:['Divisionen (eller Horners skema) med resten $0$.','Diskriminanten og rødderne.','Faktoriseringen skrevet helt ud.']},
+{id:'homogen',t:'Homogen eller inhomogen?',w:6,ic:'= 0?',kon:'hominh',ex:'e4:6a',
+ c:['c-homogen'],d:['lignsys','odesys','ode'],
+ sig:'spørgsmålet "er systemet homogent eller inhomogent?" om et ligningssystem eller en differentialligning',
+ know:['Står ofte som delopgave a før en større opgave om et ligningssystem eller differentialligninger.','Svaret er et af to ord, men det skal begrundes.'],
+ rec:['Saml alle led med de ubekendte (eller med $f$ og dens afledte) på venstre side.','Se på det, der er tilbage på højre side.','Er højresiden $0$ (nulvektoren eller nulfunktionen), er det homogent. Ellers er det inhomogent.'],
+ err:['At kalde et system inhomogent, fordi koefficienterne ikke er $0$. Det er kun højresiden, der tæller.','At overse et led som $4e^{t}$ eller $2t$, der ikke indeholder $f$.'],
+ wr:['En sætning med begrundelse, fx "Højresiden er nulvektoren, så systemet er homogent."']},
+{id:'lignsys',t:'Ligningssystemer: fuldstændig løsning',w:6,ic:'[A|b]',kon:'partfuld',ex:'e2:mc7',
+ c:['c-fuldstaendig-loesning','c-totalmatrix','c-trappeform','c-loesbarhed'],d:['homogen','kerne','matregn'],
+ sig:'et lineært ligningssystem, hvor der spørges om den fuldstændige løsning',
+ know:['Ligninger i $x_1,x_2,\\dots$, eller en totalmatrix $[\\mathbf A\\mid\\mathbf b]$.','"Bestem den fuldstændige løsning", "hvor mange løsninger?" eller "er $\\mathbf v-\\mathbf w$ en løsning?".'],
+ rec:['Opstil totalmatricen $[\\mathbf A\\mid\\mathbf b]$.','Rækkereducér til reduceret trappeform. Skriv hver rækkeoperation op.','Læs rangen af: antal pivoter i $\\mathbf A$ og i $[\\mathbf A\\mid\\mathbf b]$. Er de forskellige, er der ingen løsning.','Søjler uden pivot giver frie variable. Sæt dem lig parametre $t_1,t_2,\\dots$','Skriv løsningen som en partikulær løsning plus $t_1\\mathbf v_1+t_2\\mathbf v_2+\\cdots$','Tjek: den faste vektor løser systemet, og retningsvektorerne giver $\\mathbf 0$.'],
+ err:['At glemme den partikulære løsning, så kun det homogene system er løst.','For få parametre: antallet er antal ubekendte minus rangen.','Regnefejl i rækkeoperationerne. Sæt løsningen ind i de oprindelige ligninger.'],
+ wr:['Totalmatricen og rækkeoperationerne.','Den reducerede trappeform, og hvilke variable der er frie.','Løsningen på parameterform med $t_i\\in\\mathbb R$.']},
+{id:'matregn',t:'Matrixregning og invers matrix',w:7,ic:'AB',kon:'invtrans',ex:'e3:4a',
+ c:['c-matrixprodukt','c-transponering','c-invers'],d:['det','lignsys','afbm'],
+ sig:'konkrete matricer, der skal ganges, transponeres eller inverteres',
+ know:['$\\mathbf A\\mathbf B$, $\\mathbf A^{\\mathsf T}$, $\\mathbf A^2$ eller $\\mathbf A^{-1}$ med tal eller med en parameter $a$.','"Afgør, om $\\mathbf A$ er invertibel. Hvis ja, beregn $\\mathbf A^{-1}$."'],
+ rec:['Tjek formaterne først: $\\mathbf A\\mathbf B$ kræver, at antal søjler i $\\mathbf A$ er antal rækker i $\\mathbf B$.','Produkt: element $(i,j)$ er række $i$ gange søjle $j$.','Invers af en $2\\times2$-matrix: $\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}^{-1}=\\frac1{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$, hvis $ad-bc\\neq0$.','Større matricer: rækkereducér $[\\mathbf A\\mid\\mathbf I]$ til $[\\mathbf I\\mid\\mathbf A^{-1}]$.','Tjek: $\\mathbf A\\mathbf A^{-1}=\\mathbf I$.'],
+ err:['At gange element for element. Matrixproduktet er række gange søjle.','At bytte rækkefølgen: $\\mathbf A\\mathbf B\\neq\\mathbf B\\mathbf A$ i almindelighed, og $(\\mathbf A\\mathbf B)^{-1}=\\mathbf B^{-1}\\mathbf A^{-1}$.','At glemme at bytte $a$ og $d$ og skifte fortegn på $b$ og $c$ i formlen for $2\\times2$.'],
+ wr:['Determinanten (eller rækkereduktionen), der viser, at matricen er invertibel.','Resultatet og et tjek, fx $\\mathbf A\\mathbf A^{-1}=\\mathbf I$.']},
+{id:'det',t:'Determinanter',w:7,ic:'det',kon:'invtrans',ex:'e1:mc0',
+ c:['c-determinant'],d:['matregn','egen','lignsys'],
+ sig:'en kvadratisk matrix og spørgsmålet om $\\det$, eller for hvilke værdier af en parameter matricen er invertibel',
+ know:['"Hvilket tal er $\\det\\mathbf A$?", "$\\det(\\mathbf A\\mathbf B)$" eller "for hvilke $k$ er $\\mathbf A$ invertibel?".','Udtryk med transponering, produkter og inverse, som skal reduceres først.'],
+ rec:['Reducér udtrykket med regnereglerne: $\\det(\\mathbf A\\mathbf B)=\\det\\mathbf A\\det\\mathbf B$, $\\det\\mathbf A^{\\mathsf T}=\\det\\mathbf A$ og $\\det\\mathbf A^{-1}=\\frac1{\\det\\mathbf A}$.','$2\\times2$: $ad-bc$. $3\\times3$: udvikl efter den række eller søjle, der har flest nuller.','Husk fortegnsmønstret $+,-,+$ ved udviklingen.','Parameter: regn $\\det$ ud som et udtryk i parameteren, og find, hvor det er $0$. Matricen er invertibel, netop når $\\det\\neq0$.'],
+ err:['Fortegnsfejl i udviklingen (skakbrætmønstret).','At tro, at $\\det(\\mathbf A+\\mathbf B)=\\det\\mathbf A+\\det\\mathbf B$.','At glemme, at $\\det(c\\mathbf A)=c^n\\det\\mathbf A$ for en $n\\times n$-matrix.'],
+ wr:['Hvilken række eller søjle der udvikles efter, og underdeterminanterne.','Ved en parameter: ligningen $\\det\\mathbf A=0$ og konklusionen.']},
+{id:'span',t:'Span, basis og dimension',w:8,ic:'span',kon:'basisspan',ex:'e4:4a',
+ c:['c-basis','c-udspaending','c-lineaer-uafhaengighed','c-dimension','c-linearkombination','c-koordinater'],d:['kerne','lignsys','afbm'],
+ sig:'vektorer, hvor der spørges om span, basis, lineær uafhængighed eller dimension',
+ know:['"Find en basis for $\\mathrm{span}(\\dots)$", "er $\\mathbf x\\in\\mathrm{span}(\\dots)$?" eller "angiv en vektor, der ikke ligger i $W$".','"Angiv dimensionen af $V$".'],
+ rec:['Stil vektorerne op som søjler i en matrix.','Rækkereducér. Pivotsøjlerne viser, hvilke af de oprindelige vektorer der danner en basis.','Antallet af pivoter er dimensionen af spannet.','Er $\\mathbf x$ i spannet? Rækkereducér $[\\mathbf v_1\\ \\cdots\\ \\mathbf v_k\\mid\\mathbf x]$. En pivot i sidste søjle betyder nej.','Dimensionen af et kendt rum: tæl en basis. Fx har $\\mathbb R^{2\\times2}$ dimension $4$.'],
+ err:['At tage søjlerne fra trappeformen som basis. Brug de oprindelige vektorer i pivotsøjlerne.','At tro, at $k$ vektorer altid udspænder et $k$-dimensionalt rum. De kan være lineært afhængige.'],
+ wr:['Matricen og trappeformen.','Hvilke søjler der er pivotsøjler, og basisen.','Konklusionen i en sætning.']},
+{id:'kerne',t:'Kerne, billedrum og rang',w:10,ic:'ker',kon:'nulsoj',ex:'e2:4a',
+ c:['c-kerne-billedrum','c-nulrum','c-soejlerum','c-rang','c-dimensionssaetning','c-lineaer-afbildning'],d:['span','lignsys','afbm'],
+ sig:'en matrix eller lineær afbildning, hvor der spørges om kerne, nulrum, søjlerum, billedrum, rang, injektiv eller surjektiv',
+ know:['"Find en basis for kernen", "bestem rangen", "er $L$ injektiv?" eller "er $L$ surjektiv?".','En afbildning mellem polynomier eller matricer, der først skal skrives som en matrix.'],
+ rec:['Skriv afbildningen som en matrix, hvis den ikke er givet som en.','Rækkereducér matricen. Rangen er antal pivoter.','Kernen: løs $\\mathbf A\\mathbf x=\\mathbf 0$. Hver fri variabel giver én basisvektor.','Billedrummet (søjlerummet): de oprindelige søjler i pivotsøjlerne.','Dimensionssætningen: $\\dim\\ker+\\mathrm{rang}=$ antal søjler. Injektiv, netop når $\\ker=\\{\\mathbf 0\\}$. Surjektiv, netop når rangen er dimensionen af målrummet.'],
+ err:['At blande kernen (løsninger til $\\mathbf A\\mathbf x=\\mathbf 0$) og billedrummet (søjlerne) sammen.','At tage billedrummets basis fra trappeformens søjler i stedet for de oprindelige.','At glemme dimensionssætningen som tjek.'],
+ wr:['Trappeformen, og hvilke variable der er frie.','Basisvektorerne og dimensionerne.','Konklusionen om injektiv eller surjektiv med henvisning til kernen eller rangen.']},
+{id:'afbm',t:'Afbildningsmatrix og basisskifte',w:9,ic:'[L]',ex:'e1:14a',
+ c:['c-basisskifte','c-afbildningsmatrix','c-vektorrum','c-underrum'],d:['egen','kerne','span'],
+ sig:'en lineær afbildning og to baser, hvor der spørges om ${}_\\gamma[L]_\\beta$ eller en basisskiftematrix som ${}_\\beta[\\mathrm{id}]_\\gamma$',
+ know:['Notationen ${}_\\gamma[L]_\\beta$ eller ${}_\\beta[\\mathrm{id}]_\\gamma$.','En basis givet som vektorer eller polynomier, og "angiv", "beregn" eller "bestem" matricen.'],
+ rec:['Basisskifte ${}_e[\\mathrm{id}]_\\gamma$: søjlerne er $\\gamma$-vektorerne skrevet i standardbasen. Skriv dem bare ind.','Den anden vej: ${}_\\gamma[\\mathrm{id}]_e=\\big({}_e[\\mathrm{id}]_\\gamma\\big)^{-1}$.','Afbildningsmatrix ${}_\\gamma[L]_\\beta$: søjle $j$ er koordinaterne af $L(\\beta_j)$ med hensyn til $\\gamma$.','Skift basis: ${}_e[L]_e={}_e[\\mathrm{id}]_\\gamma\\cdot{}_\\gamma[L]_\\gamma\\cdot{}_\\gamma[\\mathrm{id}]_e$. Læs fra højre.','Tjek én søjle ved at regne $L$ ud på en basisvektor.'],
+ err:['At bytte om på ${}_\\beta[\\mathrm{id}]_\\gamma$ og ${}_\\gamma[\\mathrm{id}]_\\beta$. Indekset til højre er den basis, der går ind.','At skrive koordinaterne som rækker i stedet for søjler.','At gange basisskiftematricerne i forkert rækkefølge.'],
+ wr:['Hvad hver søjle er, fx "søjle 1 er $[L(\\beta_1)]_\\gamma$".','Produktet skrevet op med indeks, før det regnes ud.']},
+{id:'egen',t:'Egenværdier og egenvektorer',w:11,ic:'λ',kon:'egvv',ex:'e2:mc5',
+ c:['c-egenvaerdi','c-karakteristisk-polynomium','c-egenrum'],d:['diag','det','odesys'],
+ sig:'en matrix, hvor der spørges om egenværdier, egenvektorer, egenrum eller det karakteristiske polynomium',
+ know:['"Bestem egenværdierne", "hvilken vektor er IKKE en egenvektor?" eller "vis, at $p_{\\mathbf A}(Z)=\\dots$".','Egenvektorer og egenværdier er givet, og der spørges om $\\mathbf A$.'],
+ rec:['Karakteristisk polynomium: $p(\\lambda)=\\det(\\mathbf A-\\lambda\\mathbf I)$. Udvikl efter en række eller søjle med nuller, hvis der er en.','Egenværdierne er rødderne i $p(\\lambda)$.','Egenvektorer: løs $(\\mathbf A-\\lambda\\mathbf I)\\mathbf v=\\mathbf 0$ for hver egenværdi.','Er en vektor en egenvektor? Gang $\\mathbf A$ på den, og se, om resultatet er et multiplum af vektoren.','Tjek: $\\mathbf A\\mathbf v=\\lambda\\mathbf v$ for mindst én af dine egenvektorer.'],
+ err:['Fortegnsfejl i $\\det(\\mathbf A-\\lambda\\mathbf I)$.','At glemme, at nulvektoren aldrig er en egenvektor.','At finde egenvektorer med den forkerte egenværdi sat ind.'],
+ wr:['$\\det(\\mathbf A-\\lambda\\mathbf I)$ udregnet og faktoriseret.','For hver egenværdi: matricen $\\mathbf A-\\lambda\\mathbf I$, trappeformen og egenrummet.']},
+{id:'diag',t:'Diagonalisering',w:11,ic:'D',kon:'amgm',ex:'e1:13a',
+ c:['c-diagonalisering'],d:['egen','odesys','afbm'],
+ sig:'spørgsmålet "find $\\mathbf D$ og $\\mathbf Q$ med $\\mathbf D=\\mathbf Q^{-1}\\mathbf A\\mathbf Q$" eller "er afbildningen diagonaliserbar?"',
+ know:['$\\mathbf D=\\mathbf Q^{-1}\\mathbf A\\mathbf Q$ eller $\\mathbf A=\\mathbf V\\mathbf\\Lambda\\mathbf V^{-1}$.','"Er afbildningen diagonaliserbar?" med oplysninger om egenværdier og egenrum.'],
+ rec:['Find egenværdierne og en basis for hvert egenrum.','$\\mathbf A$ er diagonaliserbar, netop når egenrummenes dimensioner tilsammen giver $n$ (geometrisk lig algebraisk multiplicitet for hver egenværdi).','$\\mathbf Q$: egenvektorerne som søjler. $\\mathbf D$: egenværdierne på diagonalen i samme rækkefølge.','Tjek: $\\mathbf A\\mathbf Q=\\mathbf Q\\mathbf D$. Så slipper du for at invertere.'],
+ err:['At stille egenværdierne i en anden rækkefølge i $\\mathbf D$ end egenvektorerne i $\\mathbf Q$.','At tro, at en dobbelt egenværdi altid giver to lineært uafhængige egenvektorer.'],
+ wr:['Egenværdierne, egenvektorerne, $\\mathbf Q$ og $\\mathbf D$.','En begrundelse for, at $\\mathbf Q$ er invertibel: egenvektorerne er lineært uafhængige.']},
+{id:'ode',t:'Differentialligninger: én ligning',w:12,ic:"f''",kon:'partfuld',ex:'e4:6b',
+ c:['c-andenordens-ode','c-differentialligning','c-panserformlen','c-fuldstaendig-loesning-ode','c-kompleks-til-reel'],d:['odesys','homogen','polrod'],
+ sig:'én differentialligning i $f(t)$ med $f\'$ og måske $f\'\'$, hvor der spørges om løsninger',
+ know:['$f\'\'+a_1f\'+a_0f=q(t)$ eller $f\'+a(t)f=b(t)$.','"Hvilket udtryk er en løsning?", "vis, at $f$ er en løsning" eller "beregn den fuldstændige løsning".'],
+ rec:['Homogen andenordens: løs karakterligningen $\\lambda^2+a_1\\lambda+a_0=0$.','To reelle rødder: $c_1e^{\\lambda_1t}+c_2e^{\\lambda_2t}$. Dobbeltrod: $(c_1+c_2t)e^{\\lambda t}$. Komplekse rødder $\\alpha\\pm\\beta i$: $e^{\\alpha t}(c_1\\cos\\beta t+c_2\\sin\\beta t)$.','Inhomogen: den fuldstændige løsning er en partikulær løsning plus alle homogene løsninger. En given løsning tjekkes ved indsættelse.','Førsteordens $f\'+a(t)f=b(t)$: brug panserformlen.','Begyndelsesværdier: sæt $t=0$ ind i $f$ og $f\'$, og løs for konstanterne.'],
+ err:['At glemme $t$ i $te^{\\lambda t}$ ved en dobbeltrod.','At glemme den partikulære løsning, så kun den homogene ligning er løst.','Fortegnsfejl i karakterligningen: $f\'\'-6f\'+9f$ giver $\\lambda^2-6\\lambda+9$.'],
+ wr:['Karakterligningen og dens rødder.','Den homogene løsning, den partikulære løsning og summen, med $c_1,c_2\\in\\mathbb R$.','Indsættelsen, når du skal vise, at en funktion er en løsning.']},
+{id:'odesys',t:'Systemer af differentialligninger',w:12,ic:"f'=Af",kon:'egvv',ex:'e2:6b',
+ c:['c-egenvektor-metoden','c-ode-system','c-begyndelsesbetingelse'],d:['ode','egen','diag'],
+ sig:'et system $\\mathbf f\'(t)=\\mathbf A\\mathbf f(t)$ af differentialligninger i $f_1$ og $f_2$',
+ know:['$f_1\'=\\dots$ og $f_2\'=\\dots$, eller $\\mathbf f\'(t)=\\mathbf A\\mathbf f(t)$.','"Find den fuldstændige reelle løsning", "angiv egenværdier og egenvektorer" eller "find løsningen med $f_1(0)=\\dots$".'],
+ rec:['Skriv systemet på matrixform, og aflæs $\\mathbf A$.','Find egenværdierne og en egenvektor til hver.','Fuldstændig løsning: $\\mathbf f(t)=c_1e^{\\lambda_1t}\\mathbf v_1+c_2e^{\\lambda_2t}\\mathbf v_2$ med $c_1,c_2\\in\\mathbb R$.','Komplekse egenværdier: brug real- og imaginærdelen af $e^{\\lambda t}\\mathbf v$ som de to reelle løsninger.','Begyndelsesværdier: $\\mathbf f(0)=c_1\\mathbf v_1+c_2\\mathbf v_2$. Løs for $c_1$ og $c_2$.'],
+ err:['At parre egenværdierne med de forkerte egenvektorer.','At glemme egenvektorerne og kun skrive $c_1e^{\\lambda_1t}+c_2e^{\\lambda_2t}$.','At aflæse $\\mathbf A$ forkert, fx med rækker og søjler byttet.'],
+ wr:['$\\mathbf A$, egenværdierne og egenvektorerne med udregning.','Den fuldstændige løsning med $c_1,c_2\\in\\mathbb R$.','Ved begyndelsesværdier: ligningssystemet for $c_1$ og $c_2$ og løsningen.']}];
+
+/* delopgaver, hvor begrebet alene giver den forkerte type */
+const XTY={'e2:4c':'kerne','e2:5b':'afbm','e6:mc2':'det','e2:mc0':'polrod','e3:mc2':'polrod','e4:mc3':'polrod','e3:4b':'egen','e5:6b':'afbm','e1:mc5':'odesys','e3:mc6':'diag'};
+
+/* $§{ står for dollar og krøllet parentes, som ikke må stå i en skabelonstreng */
+const XH_SRC=String.raw`
+=== e2:1a | logik
+@hl Udfyld sandhedstabellen ; Det logiske udsagn
+>> type
+Et udsagn med $P$, $Q$ og $\Leftrightarrow$, og ordet sandhedstabel. Den type er opgave 1 i næsten alle sæt.
+>> plan
+?? mc | Hvordan griber du tabellen an? | *Én søjle pr. deludsagn, indefra og ud: $Q\Leftrightarrow P$, så $\neg(Q\Leftrightarrow P)$, så $\neg Q$ og til sidst $\land$ | Skriv søjlen for hele udsagnet direkte ~ Det går ofte godt, men én fejl i hovedet giver en forkert række, og bedømmerne vil se mellemsøjlerne. | Start med $\land$, fordi det er det yderste tegn ~ Det yderste tegn regnes til sidst, ligesom i en regning med parenteser.
+?h Tænk på parenteser i en almindelig regning: hvad regnes først?
+?h Det inderste udtryk er $Q\Leftrightarrow P$.
+?h Rækkefølgen er $Q\Leftrightarrow P$, så $\neg(Q\Leftrightarrow P)$, så $\neg Q$ og til sidst $\land$.
+Med fire rækker ($P,Q=11,10,01,00$) og en søjle for hvert deludsagn bliver hver søjle en lille og sikker udregning.
+>> trin $Q\Leftrightarrow P$
+?? in | Udfyld søjlen for $Q\Leftrightarrow P$. | $P=1,\ Q=1$ = 1 | $P=1,\ Q=0$ = 0 | $P=0,\ Q=1$ = 0 | $P=0,\ Q=0$ = 1
+?h $\Leftrightarrow$ spørger: har de to samme sandhedsværdi?
+?h Samme værdi giver $1$, forskellig værdi giver $0$.
+?h $P$ og $Q$ er ens i rækkerne $11$ og $00$.
+$Q\Leftrightarrow P$ er sand, når $P$ og $Q$ er ens, så søjlen er $1,0,0,1$. Negationen vender hver række: $\neg(Q\Leftrightarrow P)$ er $0,1,1,0$.
+>> trin Hele udsagnet
+?? in | $\neg(Q\Leftrightarrow P)$ er $0,1,1,0$, og $\neg Q$ er $0,1,0,1$. Udfyld søjlen for $(\neg(Q\Leftrightarrow P))\land(\neg Q)$. | $P=1,\ Q=1$ = 0 | $P=1,\ Q=0$ = 1 | $P=0,\ Q=1$ = 0 | $P=0,\ Q=0$ = 0
+?h $\land$ er kun sand, når begge sider er sande.
+?h Sammenlign $0,1,1,0$ og $0,1,0,1$ række for række.
+?h Kun anden række har $1$ i begge søjler.
+Kun rækken $P=1$, $Q=0$ har $1$ i begge søjler. Søjlen for udsagnet er $0,1,0,0$.
+>> tjek
+?? mc | Læs udsagnet i ord: "$P$ og $Q$ er forskellige, og $Q$ er falsk". Hvilken række passer det med? | *$P=1$, $Q=0$ | $P=0$, $Q=0$ ~ $Q$ er falsk, men $P$ og $Q$ er ens, så første halvdel er falsk. | $P=0$, $Q=1$ ~ De er forskellige, men $Q$ er sand, så anden halvdel er falsk.
+?h Start med anden halvdel: $Q$ er falsk.
+?h Hvis $Q=0$, og $P$ skal være forskellig fra $Q$, hvad er $P$ så?
+?h $P$ må være $1$.
+Ordene giver samme række som tabellen. At læse udsagnet i ord er et hurtigt tjek, der fanger fejl i en enkelt søjle.
+>> fejl
+At læse $\Leftrightarrow$ som $\Rightarrow$. $Q\Leftrightarrow P$ er falsk i begge rækker, hvor $P$ og $Q$ er forskellige, ikke kun i én af dem.
+>> skriv
+En tabel med søjlerne $P$, $Q$, $Q\Leftrightarrow P$, $\neg(Q\Leftrightarrow P)$, $\neg Q$ og hele udsagnet. Afslut med en sætning, fx: "Udsagnet er kun sandt for $P=1$, $Q=0$."
+>> svar
+Søjlen er $0,1,0,0$ i rækkefølgen $P,Q=11,10,01,00$. Udsagnet er kun sandt for $P=1$, $Q=0$.
+>> husk
+$\Leftrightarrow$ er sand, når siderne er ens. $\land$ er kun sand, når begge sider er sande.
+
+=== e2:1b | logik
+@hl logisk ækvivalent
+>> type
+Spørgsmålet "er det logisk ækvivalent med …?" lige efter en sandhedstabel. Svaret er ja eller nej, men det skal begrundes med tabellen.
+>> plan
+?? mc | Hvordan afgør du det? | *Lav søjlen for $P\land(\neg Q)$, og sammenlign den med søjlen fra 1a | Forenkl udsagnet med regneregler ~ Det kan lade sig gøre, men søjlen fra 1a ligger klar, så en sammenligning er hurtigst og sikrest. | Se, om udsagnene har de samme bogstaver ~ Bogstaverne siger intet. Det er sandhedsværdierne i alle rækker, der afgør det.
+?h Hvad betyder logisk ækvivalent?
+?h Samme sandhedsværdi i alle rækker.
+?h Søjlen for det første udsagn har du allerede fra 1a.
+Logisk ækvivalent betyder samme sandhedsværdi i alle rækker. Tabellen fra 1a giver den ene søjle gratis.
+>> trin Søjlen for $P\land(\neg Q)$
+?? in | Udfyld søjlen for $P\land(\neg Q)$. | $P=1,\ Q=1$ = 0 | $P=1,\ Q=0$ = 1 | $P=0,\ Q=1$ = 0 | $P=0,\ Q=0$ = 0
+?h $\land$ kræver, at begge sider er sande.
+?h Begge sider er sande, når $P=1$ og $\neg Q=1$.
+?h $\neg Q=1$ betyder $Q=0$.
+$P\land\neg Q$ kræver $P=1$ og $Q=0$, så søjlen er $0,1,0,0$.
+>> trin Sammenlign
+?? mc | Søjlen fra 1a er også $0,1,0,0$. Hvad er konklusionen? | *Ja, udsagnene er logisk ækvivalente | Nej, for udsagnene ser forskellige ud ~ Udseendet er ligegyldigt. Søjlerne er ens i alle fire rækker. | Det kan ikke afgøres uden flere rækker ~ To variable giver præcis fire rækker, og de er alle med.
+?h Hvor mange rækker er der med to variable?
+?h Der er fire rækker, og du har dem alle.
+?h Er søjlerne ens i alle fire rækker?
+Søjlerne er ens i alle fire rækker. Det er præcis definitionen på logisk ækvivalens.
+>> fejl
+At svare ja uden at vise begge søjler. Et ja kræver, at alle rækker stemmer, så tabellen skal med.
+>> skriv
+Tabellen med begge søjler side om side og sætningen: "Søjlerne er ens i alle rækker, så udsagnene er logisk ækvivalente."
+>> svar
+Ja. Begge udsagn har søjlen $0,1,0,0$, så de er logisk ækvivalente.
+
+=== e4:3b | induktion
+@hl Vis med induktion efter ; for alle
+>> type
+"Vis med induktion" og en formel, der skal gælde for alle $n\ge2$. Delopgave a har allerede regnet $t_2$ ud, så basistrinnet er næsten gratis.
+>> plan
+?? mc | Hvilke dele skal beviset have? | *Basistrin for $n=2$, induktionsantagelse for $n$ og induktionsskridt fra $n$ til $n+1$ | Basistrin for $n=1$, antagelse og skridt ~ Påstanden gælder fra $n=2$. For $n=1$ er summen tom. | Regn $t_2$, $t_3$ og $t_4$ ud, og se mønstret ~ Det er god intuition, men ikke et bevis. Eksempler kan ikke vise "for alle $n$".
+?h Opgaven siger "for alle $n\in\mathbb Z_{\ge2}$".
+?h Et induktionsbevis har altid tre dele.
+?h Basistrinnet ligger ved det mindste $n$, her $n=2$.
+Et induktionsbevis har tre dele: basistrin, induktionsantagelse og induktionsskridt. Basistrinnet ligger ved det mindste $n$, påstanden handler om.
+>> trin Basistrin
+?? in | Udregn begge sider for $n=2$. | $t_2$ = 1/2 | $\dfrac{n-1}{n}$ for $n=2$ = 1/2
+?h Summen $t_2$ har kun ét led, nemlig $k=2$.
+?h Leddet er $\frac{1}{(2-1)\cdot2}$.
+?h Begge sider giver $\frac12$.
+$t_2=\frac{1}{1\cdot2}=\frac12$ og $\frac{2-1}{2}=\frac12$. Formlen passer for $n=2$.
+>> trin Det nye led
+?? mc | Hvad er $t_{n+1}-t_n$? | *$\dfrac{1}{n(n+1)}$ | $\dfrac{1}{(n-1)n}$ ~ Det er leddet med $k=n$, som allerede er med i $t_n$. | $\dfrac{1}{(n+1)(n+2)}$ ~ Det er leddet med $k=n+2$. Sæt $k=n+1$ ind i $\frac{1}{(k-1)k}$.
+?h Summen $t_{n+1}$ har ét led mere end $t_n$.
+?h Det nye led har $k=n+1$.
+?h $(k-1)k$ med $k=n+1$ er $n(n+1)$.
+$t_{n+1}=t_n+\frac{1}{n(n+1)}$. Her kommer antagelsen ind: $t_n$ erstattes med $\frac{n-1}{n}$.
+>> trin Saml brøken
+?? mc | $\dfrac{n-1}{n}+\dfrac{1}{n(n+1)}=\dfrac{(n-1)(n+1)+1}{n(n+1)}$. Hvad bliver tælleren? | *$n^2$ | $n^2-1$ ~ Du har glemt $+1$. $(n-1)(n+1)=n^2-1$, og så lægges $1$ til. | $n^2+1$ ~ $(n-1)(n+1)=n^2-1$, ikke $n^2$.
+?h Brug $(a-b)(a+b)=a^2-b^2$.
+?h $(n-1)(n+1)=n^2-1$.
+?h Læg $1$ til.
+Tælleren er $n^2-1+1=n^2$, så $t_{n+1}=\frac{n^2}{n(n+1)}=\frac{n}{n+1}$.
+>> tjek
+?? mc | Er $\dfrac{n}{n+1}$ det, vi skulle nå frem til? | *Ja, formlen med $n+1$ indsat er $\frac{(n+1)-1}{n+1}=\frac{n}{n+1}$ | Nej, vi skulle nå $\frac{n-1}{n}$ ~ Det er antagelsen for $n$. Målet er formlen med $n+1$ indsat. | Nej, vi skulle nå $\frac{n+1}{n+2}$ ~ Det er formlen for $n+2$. Sæt $n+1$ ind i $\frac{n-1}{n}$.
+?h Skriv målet op: formlen med $n+1$ i stedet for $n$.
+?h $\frac{(n+1)-1}{n+1}$.
+?h Det forenkles til $\frac{n}{n+1}$.
+Skriv målet op, før du regner, så ved du, hvornår du er færdig. Tjek også med et tal: $t_3=\frac12+\frac16=\frac23$, og formlen giver $\frac{3-1}{3}=\frac23$.
+>> fejl
+At skrive $t_{n+1}=\frac{n}{n+1}$ uden udregning, eller at regne uden at bruge antagelsen. Det er netop skridtet med antagelsen, der giver point.
+>> skriv
+**Basistrin.** $t_2=\frac12=\frac{2-1}{2}$.
+
+**Induktionsantagelse.** Antag, at $t_n=\frac{n-1}{n}$ for et $n\ge2$.
+
+**Induktionsskridt.** $t_{n+1}=t_n+\frac{1}{n(n+1)}=\frac{n-1}{n}+\frac{1}{n(n+1)}=\frac{n^2}{n(n+1)}=\frac{n}{n+1}$, hvor antagelsen er brugt i andet lighedstegn.
+
+**Konklusion.** Ifølge induktionsprincippet gælder $t_n=\frac{n-1}{n}$ for alle $n\ge2$.
+>> svar
+Basistrin $t_2=\frac12$. Skridtet: $t_{n+1}=t_n+\frac{1}{n(n+1)}=\frac{n}{n+1}$ med antagelsen. Konklusion ved induktionsprincippet.
+>> husk
+Skriv målet for $n+1$ op først. Find det nye led, sæt antagelsen ind, og regn til du står med målet.
+
+=== e2:6b | odesys
+@hl Find den fuldstændige reelle løsning ; Angiv egenværdier og egenvektorer
+>> type
+To ligninger, hvor $f_1'$ afhænger af $f_2$ og omvendt. Ordene "egenværdier og egenvektorer" siger direkte, at det er egenvektormetoden.
+>> plan
+?? mc | Hvad er første skridt? | *Skriv systemet som $\mathbf f'=\mathbf A\mathbf f$, og find egenværdierne for $\mathbf A$ | Løs den første ligning for sig ~ Ligningerne hænger sammen: $f_1'$ afhænger af $f_2$. Derfor bruges egenvektormetoden. | Gæt på $f_1(t)=e^{t}$ ~ Et gæt kan tjekkes, men det finder ikke alle løsninger.
+?h Hænger ligningerne sammen?
+?h Et koblet system løses med egenvektormetoden.
+?h Metoden starter med matricen $\mathbf A$ og dens egenværdier.
+Planen er: aflæs $\mathbf A$, find egenværdier og egenvektorer, og skriv løsningen som $c_1e^{\lambda_1t}\mathbf v_1+c_2e^{\lambda_2t}\mathbf v_2$.
+>> trin Matricen
+?? in | Aflæs $\mathbf A$ i $\mathbf f'=\mathbf A\mathbf f$. | $a_{11}$ = 1 | $a_{12}$ = 2 | $a_{21}$ = 2 | $a_{22}$ = 1
+?h Række 1 er koefficienterne i ligningen for $f_1'$.
+?h $f_1'=1\cdot f_1+2\cdot f_2$.
+?h Række 2 kommer fra $f_2'=2f_1+1\cdot f_2$.
+$\mathbf A=\begin{bmatrix}1&2\\2&1\end{bmatrix}$. Række $i$ er koefficienterne i ligningen for $f_i'$.
+>> trin Egenværdierne
+?? in | Find egenværdierne. | Største = 3 | Mindste = -1
+?h $\det(\mathbf A-\lambda\mathbf I)=(1-\lambda)^2-2\cdot2$.
+?h Sæt lig $0$: $(1-\lambda)^2=4$, så $1-\lambda=\pm2$.
+?h $\lambda=1-2$ eller $\lambda=1+2$.
+$(1-\lambda)^2-4=0$ giver $1-\lambda=\pm2$, altså $\lambda=3$ og $\lambda=-1$.
+>> trin Egenvektorerne
+?? in | Find en egenvektor på formen $(1,y)$ til hver egenværdi. | $y$ for $\lambda=3$ = 1 | $y$ for $\lambda=-1$ = -1
+?h For $\lambda=3$: løs $\begin{bmatrix}-2&2\\2&-2\end{bmatrix}\begin{bmatrix}1\\y\end{bmatrix}=\mathbf 0$.
+?h Første række giver $-2+2y=0$.
+?h For $\lambda=-1$ er matricen $\begin{bmatrix}2&2\\2&2\end{bmatrix}$, så $2+2y=0$.
+$\lambda=3$ giver $\mathbf v_1=(1,1)$, og $\lambda=-1$ giver $\mathbf v_2=(1,-1)$.
+>> trin Den fuldstændige løsning
+?? mc | Hvilket udtryk er den fuldstændige reelle løsning? | *$c_1e^{3t}\begin{bmatrix}1\\1\end{bmatrix}+c_2e^{-t}\begin{bmatrix}1\\-1\end{bmatrix}$ | $c_1e^{-t}\begin{bmatrix}1\\1\end{bmatrix}+c_2e^{3t}\begin{bmatrix}1\\-1\end{bmatrix}$ ~ Egenværdierne er parret med de forkerte egenvektorer. $(1,1)$ hører til $\lambda=3$. | $c_1e^{3t}+c_2e^{-t}$ ~ Løsningen er en vektor. Egenvektorerne skal med.
+?h Hver egenværdi giver en løsning $e^{\lambda t}\mathbf v$.
+?h Egenvektoren skal høre til den egenværdi, der står i eksponenten.
+?h $(1,1)$ hører til $3$, og $(1,-1)$ hører til $-1$.
+Hver egenværdi giver en løsning $e^{\lambda t}\mathbf v$ med sin egen egenvektor. Alle løsninger er linearkombinationer af de to, med $c_1,c_2\in\mathbb R$.
+>> tjek
+?? mc | Tjek løsningen $f_1=f_2=e^{3t}$ i første ligning. Hvad er $f_1'$ og $f_1+2f_2$? | *Begge er $3e^{3t}$ | $f_1'=e^{3t}$ og $f_1+2f_2=3e^{3t}$ ~ Differentiér: $(e^{3t})'=3e^{3t}$. | Begge er $e^{3t}$ ~ $f_1+2f_2=e^{3t}+2e^{3t}=3e^{3t}$.
+?h $(e^{3t})'=3e^{3t}$.
+?h $f_1+2f_2=e^{3t}+2e^{3t}$.
+?h Sammenlign de to.
+Begge sider er $3e^{3t}$, så første ligning passer, og den anden giver det samme. Ét tjek på én løsning fanger de fleste fejl.
+>> fejl
+At parre egenværdierne med de forkerte egenvektorer, eller at glemme vektorerne og kun skrive $c_1e^{3t}+c_2e^{-t}$.
+>> skriv
+$\mathbf A$, det karakteristiske polynomium og egenværdierne. For hver egenværdi: $\mathbf A-\lambda\mathbf I$ og en egenvektor. Til sidst løsningen med "$c_1,c_2\in\mathbb R$".
+>> svar
+Egenværdier $3$ og $-1$ med egenvektorer $(1,1)$ og $(1,-1)$. $\mathbf f(t)=c_1e^{3t}\begin{bmatrix}1\\1\end{bmatrix}+c_2e^{-t}\begin{bmatrix}1\\-1\end{bmatrix}$, hvor $c_1,c_2\in\mathbb R$.
+
+=== e2:6c | odesys
+@hl Find løsningen med
+>> type
+En begyndelsesbetingelse til et system, du allerede har løst. Opgaven er nu kun at finde $c_1$ og $c_2$.
+>> plan
+?? mc | Hvordan finder du konstanterne? | *Sæt $t=0$ ind i den fuldstændige løsning, og løs for $c_1$ og $c_2$ | Løs systemet forfra med de nye oplysninger ~ Den fuldstændige løsning fra 6b gælder stadig. Kun konstanterne mangler. | Sæt $c_1=3$ og $c_2=5$ ~ $3$ og $5$ er værdierne af $f_1(0)$ og $f_2(0)$, ikke konstanterne.
+?h Den fuldstændige løsning fra 6b har to ukendte konstanter.
+?h Ved $t=0$ er alle eksponentialfunktioner $1$.
+?h Sæt $t=0$ ind, og brug de to betingelser.
+Ved $t=0$ er $e^{3t}=e^{-t}=1$, så betingelserne bliver to lineære ligninger i $c_1$ og $c_2$.
+>> trin Ligningerne
+?? mc | Hvilke ligninger giver $\mathbf f(0)=(3,5)$? | *$c_1+c_2=3$ og $c_1-c_2=5$ | $c_1+c_2=3$ og $c_1+c_2=5$ ~ Anden koordinat af $(1,-1)$ er $-1$, så $c_2$ får minus. | $3c_1-c_2=3$ og $3c_1+c_2=5$ ~ Ved $t=0$ er $e^{3t}=1$, ikke $3$.
+?h $\mathbf f(0)=c_1(1,1)+c_2(1,-1)$.
+?h Første koordinat: $c_1+c_2$.
+?h Anden koordinat: $c_1-c_2$.
+$c_1(1,1)+c_2(1,-1)=(3,5)$ giver $c_1+c_2=3$ og $c_1-c_2=5$.
+>> trin Konstanterne
+?? in | Løs for $c_1$ og $c_2$. | $c_1$ = 4 | $c_2$ = -1
+?h Læg de to ligninger sammen.
+?h $2c_1=8$.
+?h $c_1=4$, og så er $c_2=3-4$.
+$2c_1=8$ giver $c_1=4$, og så er $c_2=-1$.
+>> trin Løsningen
+?? in | Skriv løsningen som $f_1=Ae^{3t}+Be^{-t}$ og $f_2=Ce^{3t}+De^{-t}$. | $A$ = 4 | $B$ = -1 | $C$ = 4 | $D$ = 1
+?h $\mathbf f=4e^{3t}(1,1)-e^{-t}(1,-1)$.
+?h Første koordinat: $4e^{3t}-e^{-t}$.
+?h Anden koordinat: $4e^{3t}-(-1)e^{-t}$.
+$f_1(t)=4e^{3t}-e^{-t}$ og $f_2(t)=4e^{3t}+e^{-t}$.
+>> tjek
+?? mc | Hvad giver $f_1(0)$ og $f_2(0)$? | *$3$ og $5$, som de skal | $5$ og $3$ ~ $f_1(0)=4-1=3$. Tjek fortegnet på $e^{-t}$-leddet. | $4$ og $4$ ~ Husk $e^{-t}$-leddet: $e^0=1$.
+?h Sæt $t=0$ ind: $e^0=1$.
+?h $f_1(0)=4-1$.
+?h $f_2(0)=4+1$.
+$f_1(0)=4-1=3$ og $f_2(0)=4+1=5$. Betingelserne er opfyldt.
+>> fejl
+At sætte $c_1$ og $c_2$ lig begyndelsesværdierne direkte. Konstanterne er koefficienter foran egenvektorerne, ikke værdierne af $f_1$ og $f_2$.
+>> skriv
+Ligningssystemet for $c_1$ og $c_2$, løsningen af det og de to funktioner skrevet helt ud.
+>> svar
+$f_1(t)=4e^{3t}-e^{-t}$ og $f_2(t)=4e^{3t}+e^{-t}$.
+
+=== e4:6a | homogen
+@hl homogen eller inhomogen
+>> type
+Et kort spørgsmål om en differentialligning. Det handler kun om højresiden.
+>> plan
+?? mc | Hvad afgør, om ligningen er homogen? | *Om højresiden, leddet uden $f$, er nulfunktionen | Om koefficienterne $-6$ og $9$ er $0$ ~ Koefficienterne må gerne være forskellige fra $0$. Det er højresiden, der tæller. | Om karakterligningen har en dobbeltrod ~ Det bestemmer formen af løsningerne, ikke om ligningen er homogen.
+?h Saml alle led med $f$, $f'$ og $f''$ til venstre.
+?h Se på det, der står tilbage til højre.
+?h Homogen betyder, at det, der står tilbage, er $0$.
+En lineær differentialligning er homogen, når højresiden (leddet uden $f$) er nulfunktionen.
+>> trin Højresiden
+?? mc | Hvad står på højresiden? | *$4e^{t}$ | $0$ ~ Højresiden er $4e^{t}$. $0$ står der kun i den homogene ligning. | $9f(t)$ ~ $9f(t)$ indeholder $f$ og hører til venstresiden.
+?h Hvilket led indeholder hverken $f$, $f'$ eller $f''$?
+?h Det står efter lighedstegnet.
+?h $4e^{t}$.
+Højresiden er $4e^{t}$, og den er ikke nulfunktionen. Ligningen er altså inhomogen.
+>> fejl
+At kalde ligningen homogen, fordi venstresiden ligner en homogen ligning. Det er højresiden, der afgør det.
+>> skriv
+"Højresiden $4e^{t}$ er ikke nulfunktionen, så ligningen er inhomogen."
+>> svar
+Inhomogen, fordi højresiden $4e^{t}$ ikke er nulfunktionen.
+
+=== e2:2a | polrod
+@hl er rod ; Skriv $p(Z)$ som et produkt
+>> type
+Et polynomium med en kendt rod og "skriv som et produkt". Det er divisionsalgoritmen.
+>> plan
+?? mc | Hvorfor er det nyttigt, at $3$ er rod? | *Så går $Z-3$ op i $p(Z)$, og man kan dividere | Så er $p(Z)=(Z+3)\cdot q(Z)$ ~ Roden $3$ giver faktoren $Z-3$, ikke $Z+3$. | Så er $3$ den eneste rod ~ Et tredjegradspolynomium har tre rødder med multiplicitet.
+?h Faktorsætningen forbinder rødder og faktorer.
+?h $z_0$ er rod, netop når $Z-z_0$ går op i $p(Z)$.
+?h Her er $z_0=3$.
+Når $3$ er rod, går $Z-3$ op i $p(Z)$. Kvotienten ved divisionen er andengradsfaktoren.
+>> trin Tjek roden
+?? in | Udregn $p(3)$. | $p(3)$ = 0
+?h $2\cdot27-2\cdot9-8\cdot3-12$.
+?h $54-18-24-12$.
+?h Det skal give $0$.
+$p(3)=54-18-24-12=0$. Roden passer, så divisionen går op.
+>> trin Horners skema
+?? in | Divider med $Z-3$ (Horner med $3$ og koefficienterne $2,-2,-8,-12$). | Koefficient til $Z^2$ = 2 | Koefficient til $Z$ = 4 | Konstantled = 4 | Rest = 0
+?h Første koefficient føres ned: $2$.
+?h Gang med $3$ og læg til næste: $-2+2\cdot3=4$.
+?h Næste: $-8+4\cdot3=4$, og resten er $-12+4\cdot3=0$.
+Horners skema giver $2,4,4$ og resten $0$. Altså $p(Z)=(Z-3)(2Z^2+4Z+4)$.
+>> tjek
+?? mc | Gang ud: hvad er $Z^2$-koefficienten i $(Z-3)(2Z^2+4Z+4)$? | *$-2$ | $10$ ~ $Z\cdot4Z=4Z^2$ og $-3\cdot2Z^2=-6Z^2$. Fortegnet på $-3$ skal med. | $4$ ~ Du mangler bidraget $-3\cdot2Z^2=-6Z^2$.
+?h $Z^2$-led kommer fra $Z\cdot4Z$ og $-3\cdot2Z^2$.
+?h $4Z^2-6Z^2$.
+?h Sammenlign med $-2Z^2$ i $p(Z)$.
+$4-6=-2$ passer med $p(Z)$. At gange ud igen fanger fortegnsfejl.
+>> fejl
+At skrive faktoren som $Z+3$. Roden $3$ giver faktoren $Z-3$.
+>> skriv
+At $p(3)=0$, divisionen eller Horners skema med resten $0$, og produktet $(Z-3)(2Z^2+4Z+4)$.
+>> svar
+$p(Z)=(Z-3)(2Z^2+4Z+4)$, altså $a=2$, $b=4$ og $c=4$.
+
+=== e2:2b | polrod
+@hl Find alle rødder ; på rektangulær form
+>> type
+Alle rødder i et polynomium, hvor én faktor allerede er fundet. Resten er en andengradsligning med komplekse rødder.
+>> plan
+?? mc | Hvor er de to manglende rødder? | *I andengradsfaktoren $2Z^2+4Z+4$ | I $Z-3$ ~ Den giver kun roden $3$. | De findes ved at sætte $Z=-3$ ind ~ $p(-3)\neq0$. De manglende rødder kommer fra andengradsfaktoren.
+?h Et produkt er $0$, når en af faktorerne er $0$.
+?h $Z-3=0$ giver roden $3$.
+?h De to andre er rødderne i $2Z^2+4Z+4$.
+Et produkt er $0$, netop når en faktor er $0$. Rødderne er $3$ og rødderne i $2Z^2+4Z+4$.
+>> trin Diskriminanten
+?? in | Del med $2$: $Z^2+2Z+2=0$. Hvad er diskriminanten $d$? | $d$ = -4
+?h $d=b^2-4ac$ med $a=1$, $b=2$ og $c=2$.
+?h $d=4-8$.
+?h $d=-4$.
+$d=2^2-4\cdot1\cdot2=-4<0$, så rødderne er komplekse, og $\sqrt d=2i$.
+>> trin Rødderne
+?? in | Find de to komplekse rødder. | Roden med positiv imaginærdel = -1+i | Roden med negativ imaginærdel = -1-i
+?h $Z=\frac{-2\pm\sqrt{-4}}{2}$.
+?h $\sqrt{-4}=2i$.
+?h $Z=\frac{-2\pm2i}{2}$.
+$Z=\frac{-2\pm2i}{2}=-1\pm i$.
+>> tjek
+?? mc | Passer det, at rødderne er hinandens konjugerede? | *Ja, koefficienterne er reelle, så ikke-reelle rødder kommer i konjugerede par | Nej, det er et tilfælde ~ Det er en sætning: et polynomium med reelle koefficienter har konjugerede rødder. | Nej, rødderne burde være $1\pm i$ ~ Indsæt $Z=-1+i$: $(-1+i)^2+2(-1+i)+2=-2i-2+2i+2=0$.
+?h Er koefficienterne i $p$ reelle?
+?h Ja: $2,-2,-8,-12$.
+?h Så kommer ikke-reelle rødder i par $z,\overline z$.
+Reelle koefficienter giver konjugerede par, så $-1\pm i$ passer. Tjek evt. ved indsættelse: $(-1+i)^2+2(-1+i)+2=0$.
+>> fejl
+At glemme roden $3$, eller at skrive $\sqrt{-4}=-2$. Kvadratroden af et negativt tal er imaginær: $\sqrt{-4}=2i$.
+>> skriv
+Diskriminanten, formlen med indsatte tal og alle tre rødder samlet til sidst.
+>> svar
+$Z=3$, $Z=-1+i$ og $Z=-1-i$.
+
+=== e4:6b | ode
+@hl fuldstændige reelle løsning ; er en løsning
+>> type
+Én andenordens differentialligning med en højreside og en oplyst løsning. Den fuldstændige løsning er den oplyste løsning plus alle homogene løsninger.
+>> plan
+?? mc | Hvordan er den fuldstændige løsning bygget op? | *Den oplyste løsning $e^{t}$ plus alle løsninger til den homogene ligning | Kun løsningerne til den homogene ligning ~ Så mangler højresiden $4e^{t}$. Den partikulære løsning skal med. | $c\cdot e^{t}$ for alle $c\in\mathbb R$ ~ Det er ikke en løsning for $c\neq1$: venstresiden giver $4ce^{t}$.
+?h Strukturen er den samme for ligningssystemer og differentialligninger.
+?h Fuldstændig løsning = partikulær løsning + homogen løsning.
+?h $e^{t}$ er den partikulære løsning.
+Den fuldstændige løsning er en partikulær løsning plus alle løsninger til den homogene ligning $f''-6f'+9f=0$.
+>> trin Karakterligningen
+?? in | Løs $\lambda^2-6\lambda+9=0$. | Roden = 3
+?h Kan venstresiden skrives som et kvadrat?
+?h $\lambda^2-6\lambda+9=(\lambda-3)^2$.
+?h Dobbeltroden er $\lambda=3$.
+$(\lambda-3)^2=0$ har dobbeltroden $3$. De homogene løsninger er $c_1e^{3t}+c_2te^{3t}$.
+>> trin Formen
+?? mc | Hvilken form har den fuldstændige løsning? | *$f(t)=e^{t}+c_1e^{3t}+c_2te^{3t}$ | $f(t)=e^{t}+c_1e^{3t}+c_2e^{3t}$ ~ To led med $e^{3t}$ er reelt kun ét. Ved en dobbeltrod er den anden løsning $te^{3t}$. | $f(t)=c_1e^{3t}+c_2te^{3t}$ ~ Den partikulære løsning $e^{t}$ mangler.
+?h Ved en dobbeltrod giver $e^{3t}$ kun én løsning.
+?h Den anden homogene løsning er $te^{3t}$.
+?h Læg den partikulære løsning $e^{t}$ til.
+$f(t)=e^{t}+c_1e^{3t}+c_2te^{3t}$, hvor $c_1,c_2\in\mathbb R$.
+>> trin Tjek med begyndelsesværdier
+?? in | Find konstanterne, når $f(0)=3$ og $f'(0)=5$. | $c_1$ = 2 | $c_2$ = -2
+?h $f(0)=1+c_1$.
+?h $f'(t)=e^{t}+3c_1e^{3t}+c_2(1+3t)e^{3t}$, så $f'(0)=1+3c_1+c_2$.
+?h $c_1=2$ giver $1+6+c_2=5$.
+$f(0)=1+c_1=3$ giver $c_1=2$, og $f'(0)=1+6+c_2=5$ giver $c_2=-2$.
+>> tjek
+?? mc | Hvordan tjekker du, at $e^{t}$ virkelig er en løsning? | *Indsæt: $e^{t}-6e^{t}+9e^{t}=4e^{t}$ | Tjek, at $e^{0}=1$ ~ Det siger intet om ligningen. Indsæt i venstresiden. | Tjek, at $1$ er rod i karakterligningen ~ $1$ er ikke rod: $1-6+9=4$. Det er netop derfor, $e^{t}$ giver $4e^{t}$.
+?h Alle afledte af $e^{t}$ er $e^{t}$.
+?h Indsæt i $f''-6f'+9f$.
+?h $1-6+9=4$.
+$e^{t}-6e^{t}+9e^{t}=4e^{t}$, som er højresiden. Den oplyste løsning passer.
+>> fejl
+At glemme $t$ i $te^{3t}$ ved dobbeltroden, eller at glemme den partikulære løsning $e^{t}$.
+>> skriv
+Karakterligningen og dobbeltroden, de homogene løsninger, den partikulære løsning og summen med "$c_1,c_2\in\mathbb R$".
+>> svar
+$f(t)=e^{t}+c_1e^{3t}+c_2te^{3t}$, hvor $c_1,c_2\in\mathbb R$. Med $f(0)=3$ og $f'(0)=5$ er $c_1=2$ og $c_2=-2$.
+
+=== e2:mc2 | rekursion
+@hl er givet ved ; Hvilket tal er
+>> type
+Startværdier og en formel, der bruger de to forrige led. Der spørges om et konkret led, så det er ren udregning.
+>> plan
+?? mc | Hvordan finder du $f(5)$? | *Regn $f(3)$, $f(4)$ og $f(5)$ ét ad gangen | Sæt $n=5$ ind i en lukket formel ~ Der er ingen lukket formel i opgaven. Rekursionen skal bruges trin for trin. | Gang $f(2)$ med $3$ tre gange ~ Formlen trækker også $f(n-2)$ fra.
+?h Formlen bruger de to forrige led.
+?h Du kender $f(1)$ og $f(2)$.
+?h Start med $f(3)=3f(2)-f(1)$.
+Hvert led kræver de to forrige, så man regner fremad ét led ad gangen.
+>> trin $f(3)$ og $f(4)$
+?? in | Udregn de næste to led. | $f(3)$ = 5 | $f(4)$ = 13
+?h $f(3)=3\cdot2-1$.
+?h $f(4)=3f(3)-f(2)$.
+?h $f(4)=3\cdot5-2$.
+$f(3)=3\cdot2-1=5$ og $f(4)=3\cdot5-2=13$.
+>> trin $f(5)$
+?? in | Udregn $f(5)$. | $f(5)$ = 34
+?h $f(5)=3f(4)-f(3)$.
+?h $3\cdot13-5$.
+?h $39-5$.
+$f(5)=3\cdot13-5=34$.
+>> tjek
+?? mc | Svarmulighederne indeholder $13$, $26$ og $5$. Hvorfor er de der? | *Det er typiske fejl: et led for tidligt, eller det forkerte led trukket fra | De er også rigtige på en anden måde ~ Kun $34$ er $f(5)$. De andre er $f(4)$, $f(3)$ og $3f(4)-f(4)$. | Det er tilfældige tal ~ Svarmulighederne i multiple choice er valgt, så de fanger bestemte fejl.
+?h Hvad er $13$ i din udregning?
+?h $13=f(4)$ og $5=f(3)$.
+?h $26=3\cdot13-13$, altså det forkerte led trukket fra.
+Forkerte svarmuligheder fanger bestemte fejl. Genkender du dem i din egen udregning, ved du, at du skal tjekke indeksene.
+>> fejl
+At stoppe ved $f(4)=13$, eller at trække $f(n-1)$ fra i stedet for $f(n-2)$.
+>> svar
+$f(5)=34$.
+
+=== e1:mc0 | det
+@hl Hvilket tal er
+>> type
+En konkret $3\times3$-matrix og "hvilket tal er $\det\mathbf A$?". Ren udregning, hvor fortegnene er faldgruben.
+>> plan
+?? mc | Hvilken række eller søjle er bedst at udvikle efter? | *Første række, fordi den starter med $0$ | Anden række, fordi den har det største tal ~ Store tal gør det ikke nemmere. Et nul sparer et helt led. | Det er lige meget, så tag tredje søjle ~ Svaret bliver det samme, men et nul sparer et led og en mulig fejl.
+?h Hvor mange nuller står der i hver række?
+?h Et nul gør et helt led til $0$.
+?h Første række er $0,1,2$.
+Udvikling efter første række: leddet med $0$ forsvinder, og der er kun to $2\times2$-determinanter tilbage.
+>> trin De to underdeterminanter
+?? in | Udregn underdeterminanterne til elementerne $1$ og $2$ i første række. | Til $a_{12}=1$: $\det\begin{bmatrix}-1&1\\1&2\end{bmatrix}$ = -3 | Til $a_{13}=2$: $\det\begin{bmatrix}-1&4\\1&1\end{bmatrix}$ = -5
+?h Stryg række 1 og søjle 2 for $a_{12}$, række 1 og søjle 3 for $a_{13}$.
+?h $\det\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc$.
+?h $(-1)\cdot2-1\cdot1$ og $(-1)\cdot1-4\cdot1$.
+Underdeterminanterne er $-3$ og $-5$.
+>> trin Fortegnene
+?? in | Brug fortegnsmønstret $+,-,+$. Hvad er $\det\mathbf A=0-1\cdot(-3)+2\cdot(-5)$? | $\det\mathbf A$ = -7
+?h Det midterste led har minus foran.
+?h $-1\cdot(-3)=3$ og $2\cdot(-5)=-10$.
+?h $3-10$.
+$\det\mathbf A=0+3-10=-7$.
+>> tjek
+?? mc | Svarmuligheden $3$ er også med. Hvilken fejl giver $3$? | *At glemme det sidste led: $3$ er kun det midterste led | Ingen, $3$ er også rigtig ~ Determinanten er ét bestemt tal: $-7$. | At regne $\det$ af den transponerede ~ $\det\mathbf A^{\mathsf T}=\det\mathbf A$, så det giver også $-7$.
+?h Hvilke led er der i udviklingen?
+?h $3$ er det midterste led alene.
+?h Det sidste led $-10$ er glemt.
+$3$ er kun det midterste led. Skriv altid alle tre led op med fortegn, også det, der er $0$.
+>> fejl
+At glemme fortegnsmønstret $+,-,+$. Det midterste led i første række har altid minus.
+>> svar
+$\det\mathbf A=-7$.
+
+=== e3:4a | matregn
+@hl Afgør, om ; er invertibel ; beregn
+>> type
+En $2\times2$-matrix og "er den invertibel? Hvis ja, beregn den inverse". Determinanten afgør begge dele.
+>> plan
+?? mc | Hvad regner du først? | *Determinanten, fordi den afgør invertibiliteten og indgår i formlen | Den inverse direkte, og ser, om det går ~ Det kan gå, men determinanten er hurtigere og skal alligevel bruges. | Egenværdierne ~ De afgør også invertibiliteten (ingen er $0$), men det er en omvej.
+?h Hvornår er en kvadratisk matrix invertibel?
+?h Netop når $\det\mathbf A\neq0$.
+?h Formlen for den inverse deler med $\det\mathbf A$.
+Determinanten afgør invertibiliteten, og den skal bruges i formlen for den inverse.
+>> trin Determinanten
+?? in | Udregn $\det\mathbf A$. | $\det\mathbf A$ = 1
+?h $ad-bc$ med $a=1$, $b=-2$, $c=-3$ og $d=7$.
+?h $1\cdot7-(-2)(-3)$.
+?h $7-6$.
+$\det\mathbf A=7-6=1\neq0$, så $\mathbf A$ er invertibel.
+>> trin Den inverse
+?? in | Brug $\frac{1}{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$. | Øverst til venstre = 7 | Øverst til højre = 2 | Nederst til venstre = 3 | Nederst til højre = 1
+?h Byt de to diagonalelementer: $7$ og $1$.
+?h Skift fortegn på de to andre: $-(-2)=2$ og $-(-3)=3$.
+?h Del med determinanten $1$.
+$\mathbf A^{-1}=\begin{bmatrix}7&2\\3&1\end{bmatrix}$.
+>> tjek
+?? mc | Hvad er første række i $\mathbf A\mathbf A^{-1}$? | *$(1,0)$ | $(7,-2)$ ~ Det er ikke et matrixprodukt. Række 1 i $\mathbf A$ gange søjle 1 i $\mathbf A^{-1}$ er $1\cdot7+(-2)\cdot3$. | $(13,4)$ ~ Fortegnet på $-2$ skal med: $1\cdot7+(-2)\cdot3=1$.
+?h Række 1 i $\mathbf A$ er $(1,-2)$.
+?h Gang med søjlerne $(7,3)$ og $(2,1)$.
+?h $7-6$ og $2-2$.
+$\mathbf A\mathbf A^{-1}=\begin{bmatrix}1&0\\0&1\end{bmatrix}$. Tjekket bekræfter den inverse.
+>> fejl
+At glemme at skifte fortegn uden for diagonalen, så man får $\begin{bmatrix}7&-2\\-3&1\end{bmatrix}$.
+>> skriv
+Determinanten med konklusionen "$\det\mathbf A=1\neq0$, så $\mathbf A$ er invertibel", formlen med tal og gerne tjekket $\mathbf A\mathbf A^{-1}=\mathbf I$.
+>> svar
+$\det\mathbf A=1\neq0$, så $\mathbf A$ er invertibel, og $\mathbf A^{-1}=\begin{bmatrix}7&2\\3&1\end{bmatrix}$.
+
+=== e2:4a | kerne
+@hl Find en basis for kernen
+>> type
+"Basis for kernen" af en matrix. Kernen er løsningerne til $\mathbf B\mathbf v=\mathbf 0$.
+>> plan
+?? mc | Hvad skal du løse? | *$\mathbf B\mathbf v=\mathbf 0$ ved rækkereduktion | $\mathbf B\mathbf v=\mathbf v$ ~ Det er egenvektorer til egenværdien $1$. Kernen er det, der sendes i $\mathbf 0$. | Find pivotsøjlerne i $\mathbf B$ og brug dem ~ Pivotsøjlerne giver en basis for søjlerummet, ikke kernen.
+?h Kernen er alle $\mathbf v$, som $\mathbf B$ sender i $\mathbf 0$.
+?h Det er et homogent ligningssystem.
+?h Rækkereducér $\mathbf B$.
+Kernen er løsningsmængden til $\mathbf B\mathbf v=\mathbf 0$, og den findes ved rækkereduktion.
+>> trin Trappeformen
+?? in | Den reducerede trappeform er $\begin{bmatrix}1&0&a\\0&1&b\\0&0&0\end{bmatrix}$. Find $a$ og $b$. | $a$ = 3 | $b$ = -2
+?h $R_2-2R_1$ og $R_3-2R_1$ giver rækkerne $(0,-5,10)$ og $(0,-7,14)$.
+?h Begge er multipla af $(0,1,-2)$.
+?h Ryd søjle 2 i første række: $(1,3,-3)-3(0,1,-2)$.
+Den reducerede form er $\begin{bmatrix}1&0&3\\0&1&-2\\0&0&0\end{bmatrix}$. Søjle 3 har ingen pivot.
+>> trin Basisvektoren
+?? in | Sæt den frie variabel $v_3=1$. Find $v_1$ og $v_2$. | $v_1$ = -3 | $v_2$ = 2
+?h Første række: $v_1+3v_3=0$.
+?h Anden række: $v_2-2v_3=0$.
+?h Med $v_3=1$ er $v_1=-3$ og $v_2=2$.
+Basisvektoren er $(-3,2,1)$, og kernen er $\mathrm{span}\{(-3,2,1)\}$.
+>> tjek
+?? mc | Hvad er $\mathbf B\begin{bmatrix}-3\\2\\1\end{bmatrix}$? | *Nulvektoren | $\begin{bmatrix}-3\\2\\1\end{bmatrix}$ ~ Så ville den være en egenvektor med egenværdi $1$. Regn efter: første koordinat er $-3+6-3=0$. | $\begin{bmatrix}0\\0\\1\end{bmatrix}$ ~ Tredje koordinat er $2\cdot(-3)-1\cdot2+8\cdot1=0$.
+?h Første række: $1\cdot(-3)+3\cdot2-3\cdot1$.
+?h Anden række: $2\cdot(-3)+1\cdot2+4\cdot1$.
+?h Alle tre giver $0$.
+$\mathbf B(-3,2,1)=(0,0,0)$. Vektoren ligger i kernen, og dimensionssætningen passer: rang $2$ plus $\dim\ker=1$ giver $3$.
+>> fejl
+At tage en række fra trappeformen som basisvektor. Kernens vektorer findes ved at løse systemet med den frie variabel.
+>> skriv
+Rækkeoperationerne, den reducerede form, den frie variabel og løsningen $\mathbf v=t(-3,2,1)$, $t\in\mathbb R$. Til sidst: "$\big((-3,2,1)\big)$ er en basis for $\ker\mathbf B$."
+>> svar
+$\ker\mathbf B=\mathrm{span}\{(-3,2,1)\}$, og $\big((-3,2,1)\big)$ er en basis.
+
+=== e5:2a | binom
+@hl Den binome ligning ; på polær form
+>> type
+$z^3=-i$ er en binom ligning: en potens af $z$ lig et komplekst tal. Der er altid tre løsninger.
+>> plan
+?? mc | Hvad gør du først? | *Skriver $-i$ på polær form | Sætter $z=a+bi$ og ganger $(a+bi)^3$ ud ~ Det kan lade sig gøre, men giver et svært ligningssystem. Polær form gør det til division. | Gætter $z=i$ og stopper ~ $i^3=-i$, så $i$ er en løsning, men der er tre.
+?h Potenser er nemme på polær form.
+?h $(re^{i\theta})^3=r^3e^{3i\theta}$.
+?h Start med at skrive $-i$ som $re^{i\varphi}$.
+På polær form bliver $z^3=w$ til: tag den tredje rod af modulus, og del argumentet med $3$.
+>> trin Højresiden
+?? in | Skriv $-i=re^{i\varphi}$ med $\varphi\in\,]-\pi,\pi]$. | $r$ = 1 | $\varphi$ = -pi/2
+?h Hvor ligger $-i$ i den komplekse talplan?
+?h På den negative imaginære akse, i afstand $1$ fra $0$.
+?h Vinklen er $-\frac\pi2$.
+$-i=e^{-i\pi/2}$.
+>> trin Argumenterne
+?? in | Løsningerne har argumenterne $-\frac\pi6+p\frac{2\pi}{3}$. Hvad giver $p=1$ og $p=2$? | $p=1$ = pi/2 | $p=2$ = 7pi/6
+?h $-\frac\pi6+\frac{2\pi}3=-\frac\pi6+\frac{4\pi}6$.
+?h $=\frac{3\pi}6=\frac\pi2$.
+?h $p=2$: $-\frac\pi6+\frac{8\pi}6=\frac{7\pi}6$.
+Argumenterne er $-\frac\pi6$, $\frac\pi2$ og $\frac{7\pi}6$.
+>> trin Det rigtige interval
+?? in | $\frac{7\pi}6$ ligger uden for $]-\pi,\pi]$. Hvad er samme vinkel i intervallet? | Vinkel = -5pi/6
+?h Træk en hel omgang fra.
+?h $\frac{7\pi}6-2\pi$.
+?h $\frac{7\pi}6-\frac{12\pi}6=-\frac{5\pi}6$.
+$\frac{7\pi}6-2\pi=-\frac{5\pi}6$. Løsningerne er $e^{-i5\pi/6}$, $e^{-i\pi/6}$ og $e^{i\pi/2}$.
+>> tjek
+?? mc | Tjek løsningen $e^{i\pi/2}$. Hvad er den på rektangulær form, og passer den? | *$i$, og $i^3=-i$ | $1$, og $1^3=1$ ~ $e^{i\pi/2}=\cos\frac\pi2+i\sin\frac\pi2=i$. | $-i$, og $(-i)^3=-i$ ~ $(-i)^3=i$, og $e^{i\pi/2}=i$, ikke $-i$.
+?h $e^{i\pi/2}=\cos\frac\pi2+i\sin\frac\pi2$.
+?h Det er $i$.
+?h $i^3=i^2\cdot i$.
+$e^{i\pi/2}=i$, og $i^3=-i$. En løsning, der er let at regne efter, fanger fejl i vinklen.
+>> fejl
+At stoppe efter én løsning, eller at angive $\frac{7\pi}6$, når der spørges om argumenter i $]-\pi,\pi]$.
+>> skriv
+$-i=e^{-i\pi/2}$, den generelle formel $z=e^{i(-\pi/6+2p\pi/3)}$ for $p=0,1,2$ og de tre løsninger med argumenter i det ønskede interval.
+>> svar
+Alle løsninger har modulus $1$ og argumenterne $-\frac{5\pi}6$, $-\frac\pi6$ og $\frac\pi2$.
+
+=== e1:9a | kompleks
+@hl rektangulær form ; polær form
+>> type
+To omskrivninger: en brøk til $a+bi$ og en potens til $re^{i\theta}$. Begge er klassisk regning med komplekse tal.
+>> plan
+?? mc | Hvilken form er nemmest til hvad? | *Rektangulær form til brøken, polær form til potensen | Polær form til begge ~ Brøken kan godt regnes polært, men vinklen til $4+5i$ er ikke pæn. | Rektangulær form til begge ~ $(-2+2i)^4$ kan ganges ud, men polær form er hurtigere og mindre fejlbehæftet.
+?h Hvad er nemt at gøre på polær form?
+?h Potenser: modulus opløftes, argumentet ganges.
+?h En brøk regnes nemt med den konjugerede.
+Brøken klares med den konjugerede af nævneren. Potensen klares polært: $(re^{i\theta})^4=r^4e^{4i\theta}$.
+>> trin Brøken
+?? in | Gang med $\overline{z_1}=-2-2i$ i tæller og nævner. Hvad bliver tæller og nævner? | Tæller $(4+5i)(-2-2i)$ = 2-18i | Nævner $|z_1|^2$ = 8
+?h $(4+5i)(-2-2i)=-8-8i-10i-10i^2$.
+?h $i^2=-1$, så $-10i^2=10$.
+?h Nævneren er $(-2)^2+2^2$.
+$\frac{2-18i}{8}=\frac14-\frac94i$.
+>> trin Modulus og argument af $z_1$
+?? in | Find $|z_1|$ og $\arg z_1$ for $z_1=-2+2i$. | $|z_1|$ = 2sqrt(2) | $\arg z_1$ = 3pi/4
+?h $|z_1|=\sqrt{(-2)^2+2^2}$.
+?h $z_1$ ligger i anden kvadrant.
+?h Vinklen er $\pi-\frac\pi4$.
+$|z_1|=\sqrt8=2\sqrt2$ og $\arg z_1=\frac{3\pi}4$, fordi realdelen er negativ og imaginærdelen positiv.
+>> trin Potensen
+?? in | Find modulus og argument af $z_1^4$, med argumentet i $]-\pi,\pi]$. | $|z_1^4|$ = 64 | $\arg(z_1^4)$ = pi
+?h $(2\sqrt2)^4=(\sqrt8)^4=8^2$.
+?h $4\cdot\frac{3\pi}4=3\pi$.
+?h $3\pi-2\pi=\pi$.
+$z_1^4=64e^{3\pi i}=64e^{i\pi}$, altså $-64$.
+>> tjek
+?? mc | Tjek $z_1^4$ på en anden måde: hvad er $z_1^2$? | *$-8i$, så $z_1^4=(-8i)^2=-64$ | $8i$, så $z_1^4=-64$ ~ $(-2+2i)^2=4-8i+4i^2=-8i$. Fortegnet er minus, men slutresultatet bliver det samme. | $8$, så $z_1^4=64$ ~ $(-2+2i)^2=4-8i-4=-8i$. Krydsleddet $-8i$ må ikke glemmes.
+?h $(-2+2i)^2=4+2\cdot(-2)(2i)+(2i)^2$.
+?h $=4-8i-4$.
+?h $(-8i)^2=64i^2$.
+$z_1^2=-8i$ og $z_1^4=(-8i)^2=-64=64e^{i\pi}$. Begge veje giver samme svar.
+>> fejl
+At finde argumentet med $\arctan\frac{2}{-2}=-\frac\pi4$ uden at tjekke kvadranten. $z_1$ ligger i anden kvadrant, så $\arg z_1=\frac{3\pi}4$.
+>> skriv
+Mellemregningen med den konjugerede, $|z_1|$ og $\arg z_1$ med kvadranten, og $z_1^4=r^4e^{4i\theta}$ med tal.
+>> svar
+$z_2/z_1=\frac14-\frac94i$ og $z_1^4=64e^{i\pi}$ $(=-64)$.
+
+=== e4:4a | span
+@hl Find en basis for underrummet
+>> type
+Tre vektorer og "find en basis for spannet". Spørgsmålet er, om alle tre er nødvendige.
+>> plan
+?? mc | Hvordan finder du ud af, hvilke vektorer der skal med? | *Stil dem som søjler i en matrix, rækkereducér og se på pivotsøjlerne | Tag alle tre, fordi der er tre vektorer i $\mathbb R^3$ ~ Tre vektorer kan være lineært afhængige, og så er de ikke en basis. | Tag de to korteste ~ Længden siger intet om lineær uafhængighed.
+?h En basis skal være lineært uafhængig.
+?h Rækkereduktion viser afhængighederne mellem søjlerne.
+?h Søjler med pivot svarer til vektorer, der skal med.
+Pivotsøjlerne viser, hvilke af de oprindelige vektorer der er lineært uafhængige og udspænder det samme.
+>> trin Rækkereduktion
+?? in | Den reducerede form af $[\mathbf v_1\ \mathbf v_2\ \mathbf v_3]$ er $\begin{bmatrix}1&0&a\\0&1&b\\0&0&0\end{bmatrix}$. Find $a$ og $b$. | $a$ = -2 | $b$ = 1
+?h Sidste søjle viser, hvordan $\mathbf v_3$ er en kombination af $\mathbf v_1$ og $\mathbf v_2$.
+?h Prøv $\mathbf v_3=a\mathbf v_1+b\mathbf v_2$ i første og tredje koordinat: $a+4b=2$ og $2a+b=-3$.
+?h $a=-2$ og $b=1$.
+$\mathbf v_3=-2\mathbf v_1+\mathbf v_2$. Tjek: $-2(1,-3,2)+(4,1,1)=(2,7,-3)$.
+>> trin Basisen
+?? mc | Hvilke vektorer udgør en basis for $W$? | *$(\mathbf v_1,\mathbf v_2)$ | $(\mathbf v_1,\mathbf v_2,\mathbf v_3)$ ~ $\mathbf v_3=-2\mathbf v_1+\mathbf v_2$, så de tre er lineært afhængige. | De to første rækker i trappeformen ~ For et span af søjler bruges de oprindelige vektorer i pivotsøjlerne.
+?h Hvilke søjler har en pivot?
+?h Søjle 1 og 2.
+?h Brug de oprindelige vektorer i de søjler.
+$(\mathbf v_1,\mathbf v_2)$ er en basis, og $\dim W=2$.
+>> tjek
+?? mc | Er $\mathbf v_1$ og $\mathbf v_2$ lineært uafhængige? | *Ja, ingen af dem er et multiplum af den anden | Nej, for $\mathbf v_3$ afhænger af dem ~ Det siger noget om $\mathbf v_3$, ikke om $\mathbf v_1$ og $\mathbf v_2$. | Det kan ikke afgøres ~ To vektorer er afhængige, netop når den ene er et multiplum af den anden.
+?h To vektorer er afhængige, netop når den ene er et multiplum af den anden.
+?h $(1,-3,2)$ og $(4,1,1)$.
+?h Forholdet mellem første koordinater er $4$, men mellem anden koordinater er det $-\frac13$.
+$(4,1,1)$ er ikke et multiplum af $(1,-3,2)$, så de to er uafhængige.
+>> fejl
+At svare med alle tre vektorer uden at tjekke uafhængighed, eller at tage rækkerne fra trappeformen som basis.
+>> skriv
+Matricen, trappeformen, hvilke søjler der er pivotsøjler, og konklusionen "$(\mathbf v_1,\mathbf v_2)$ er en basis for $W$, og $\dim W=2$".
+>> svar
+$(\mathbf v_1,\mathbf v_2)$ er en basis for $W$.
+
+=== e1:13a | diag
+@hl Find en diagonalmatrix ; invertibel
+>> type
+$\mathbf D=\mathbf Q^{-1}\mathbf A\mathbf Q$ betyder diagonalisering: egenværdierne i $\mathbf D$ og egenvektorerne som søjler i $\mathbf Q$.
+>> plan
+?? mc | Hvad skal du finde? | *Egenværdierne og en egenvektor til hver | $\mathbf Q^{-1}$ først ~ $\mathbf Q$ kendes ikke endnu. Den bygges af egenvektorerne. | Den reducerede trappeform af $\mathbf A$ ~ Trappeformen ændrer egenværdierne og hjælper ikke her.
+?h $\mathbf D$ har egenværdierne på diagonalen.
+?h $\mathbf Q$ har egenvektorerne som søjler.
+?h Start med egenværdierne.
+Diagonalisering kræver egenværdierne (til $\mathbf D$) og en egenvektor til hver (til $\mathbf Q$).
+>> trin Egenværdierne
+?? in | Find egenværdierne. | Mindste = 1 | Største = 3
+?h $\mathbf A$ er en nedre trekantsmatrix.
+?h For en trekantsmatrix er egenværdierne diagonalelementerne.
+?h $\det(\mathbf A-\lambda\mathbf I)=(1-\lambda)(3-\lambda)$.
+$(1-\lambda)(3-\lambda)=0$ giver $\lambda=1$ og $\lambda=3$.
+>> trin Egenvektorerne
+?? in | Find egenvektorer på formen $(x,1)$. | $x$ for $\lambda=1$ = -2 | $x$ for $\lambda=3$ = 0
+?h $\mathbf A-\mathbf I=\begin{bmatrix}0&0\\1&2\end{bmatrix}$, så $x+2=0$.
+?h $\mathbf A-3\mathbf I=\begin{bmatrix}-2&0\\1&0\end{bmatrix}$, så $-2x=0$.
+?h $x=-2$ og $x=0$.
+$\lambda=1$ giver $(-2,1)$, og $\lambda=3$ giver $(0,1)$.
+>> trin $\mathbf Q$ og $\mathbf D$
+?? mc | Hvilket par passer sammen? | *$\mathbf D=\begin{bmatrix}1&0\\0&3\end{bmatrix}$ og $\mathbf Q=\begin{bmatrix}-2&0\\1&1\end{bmatrix}$ | $\mathbf D=\begin{bmatrix}3&0\\0&1\end{bmatrix}$ og $\mathbf Q=\begin{bmatrix}-2&0\\1&1\end{bmatrix}$ ~ Rækkefølgen passer ikke: første søjle i $\mathbf Q$ hører til $\lambda=1$, så $1$ skal stå først i $\mathbf D$. | $\mathbf D=\begin{bmatrix}1&0\\0&3\end{bmatrix}$ og $\mathbf Q=\begin{bmatrix}-2&1\\0&1\end{bmatrix}$ ~ Egenvektorerne skal stå som søjler, ikke rækker.
+?h Søjle $j$ i $\mathbf Q$ hører til diagonalelement $j$ i $\mathbf D$.
+?h Egenvektorerne står som søjler.
+?h $(-2,1)$ til $\lambda=1$ først, så $(0,1)$ til $\lambda=3$.
+$\mathbf Q=\begin{bmatrix}-2&0\\1&1\end{bmatrix}$ og $\mathbf D=\begin{bmatrix}1&0\\0&3\end{bmatrix}$. $\det\mathbf Q=-2\neq0$, så $\mathbf Q$ er invertibel.
+>> tjek
+?? mc | Hvordan tjekker du uden at invertere $\mathbf Q$? | *Vis, at $\mathbf A\mathbf Q=\mathbf Q\mathbf D$ | Vis, at $\mathbf Q\mathbf D=\mathbf D\mathbf Q$ ~ Det gælder ikke i almindelighed og siger intet om $\mathbf A$. | Vis, at $\det\mathbf D=\det\mathbf Q$ ~ $\det\mathbf D=3$ og $\det\mathbf Q=-2$. Det er ikke et tjek.
+?h Gang $\mathbf D=\mathbf Q^{-1}\mathbf A\mathbf Q$ med $\mathbf Q$ fra venstre.
+?h Så forsvinder $\mathbf Q^{-1}$.
+?h $\mathbf Q\mathbf D=\mathbf A\mathbf Q$.
+$\mathbf A\mathbf Q=\begin{bmatrix}-2&0\\1&3\end{bmatrix}=\mathbf Q\mathbf D$. Det er hurtigere end at invertere.
+>> fejl
+At stille egenværdierne i en anden rækkefølge i $\mathbf D$ end egenvektorerne i $\mathbf Q$.
+>> skriv
+Det karakteristiske polynomium og egenværdierne, $\mathbf A-\lambda\mathbf I$ og en egenvektor for hver, og så $\mathbf Q$ og $\mathbf D$ med en sætning om, at $\mathbf Q$ er invertibel.
+>> svar
+$\mathbf D=\begin{bmatrix}1&0\\0&3\end{bmatrix}$ og $\mathbf Q=\begin{bmatrix}-2&0\\1&1\end{bmatrix}$.
+
+=== e2:mc5 | egen
+@hl IKKE en egenvektor
+>> type
+En matrix og en række vektorer: "hvilken er IKKE en egenvektor?". Det kræver ikke egenværdierne, kun matrix gange vektor.
+>> plan
+?? mc | Hvad er den hurtigste fremgangsmåde? | *Gang $\mathbf A$ på vektorerne, og se, hvilken der ikke bliver et multiplum af sig selv | Find det karakteristiske polynomium først ~ Det virker, men det er en omvej. Definitionen $\mathbf A\mathbf v=\lambda\mathbf v$ kan tjekkes direkte. | Se, hvilken vektor der har størst længde ~ Længden betyder intet. Et multiplum af en egenvektor er også en egenvektor.
+?h Hvad er definitionen på en egenvektor?
+?h $\mathbf A\mathbf v=\lambda\mathbf v$ for et tal $\lambda$, og $\mathbf v\neq\mathbf 0$.
+?h Udregn $\mathbf A\mathbf v$, og sammenlign med $\mathbf v$.
+$\mathbf v$ er en egenvektor, netop når $\mathbf A\mathbf v$ er et multiplum af $\mathbf v$. Det kan tjekkes for hver vektor med ét matrixprodukt.
+>> trin Et produkt
+?? in | Udregn $\mathbf A\begin{bmatrix}1\\-2\\1\end{bmatrix}$. | 1. koordinat = -5 | 2. koordinat = -6 | 3. koordinat = 3
+?h Første række: $-1\cdot1+4\cdot(-2)+4\cdot1$.
+?h Anden række: $0+7\cdot(-2)+8\cdot1$.
+?h Tredje række: $0-4\cdot(-2)-5\cdot1$.
+$\mathbf A(1,-2,1)=(-5,-6,3)$.
+>> trin Multiplum?
+?? mc | Er $(-5,-6,3)$ et multiplum af $(1,-2,1)$? | *Nej | Ja, med $\lambda=-5$ ~ $-5\cdot(1,-2,1)=(-5,10,-5)$, ikke $(-5,-6,3)$. | Ja, med $\lambda=3$ ~ $3\cdot(1,-2,1)=(3,-6,3)$, ikke $(-5,-6,3)$.
+?h Hvis det var $\lambda(1,-2,1)$, hvad skulle $\lambda$ være ud fra første koordinat?
+?h $\lambda=-5$.
+?h Passer $-5\cdot(-2)$ med $-6$?
+Første koordinat kræver $\lambda=-5$, men så skulle anden koordinat være $10$. Vektoren er ikke en egenvektor.
+>> fejl
+At vælge den første vektor, der ser anderledes ud, uden at regne. Spørgsmålet er negeret: find den ene, der IKKE opfylder $\mathbf A\mathbf v=\lambda\mathbf v$.
+>> svar
+$(1,-2,1)$ er ikke en egenvektor, fordi $\mathbf A(1,-2,1)=(-5,-6,3)$.
+
+=== e5:1b | maengder
+@hl Bestem mængden
+>> type
+Tre konkrete mængder og et udtryk med $\cup$ og $\cap$. Parentesen afgør rækkefølgen.
+>> plan
+?? mc | Hvad regner du først? | *$A\cup B$, fordi den står i parentesen | $B\cap C$ ~ Parentesen omkring $A\cup B$ betyder, at den regnes først. | $A\cap C$ ~ $A$ og $C$ mødes ikke i udtrykket, før $A\cup B$ er regnet.
+?h Hvad står i parentesen?
+?h $A\cup B$.
+?h Parenteser regnes først.
+Parentesen regnes først: $A\cup B$, og bagefter fællesmængden med $C$.
+>> trin $A\cup B$
+?? mc | Hvad er $A\cup B$? | *$\{0,1,2,3\}$ | $\{1,2\}$ ~ Det er $A\cap B$. Foreningsmængden har alt, der ligger i mindst én af dem. | $\{0,1,2,1,2,3\}$ ~ Hvert element skrives kun én gang.
+?h $\cup$ betyder: med i mindst én af mængderne.
+?h Saml $0,1,2$ og $1,2,3$.
+?h Skriv hvert tal én gang.
+$A\cup B=\{0,1,2,3\}$.
+>> trin Fællesmængden
+?? mc | Hvad er $\{0,1,2,3\}\cap\{3,4,5\}$? | *$\{3\}$ | $\emptyset$ ~ $3$ ligger i begge mængder. | $\{0,1,2,3,4,5\}$ ~ Det er foreningsmængden. $\cap$ kræver, at tallet ligger i begge.
+?h $\cap$ betyder: med i begge mængder.
+?h Hvilke tal i $\{0,1,2,3\}$ ligger også i $\{3,4,5\}$?
+?h Kun $3$.
+$(A\cup B)\cap C=\{3\}$.
+>> fejl
+At blande $\cup$ og $\cap$ sammen, eller at regne $A\cup(B\cap C)$ i stedet. Det giver $\{0,1,2,3\}$.
+>> skriv
+Mellemresultatet $A\cup B=\{0,1,2,3\}$ og så svaret $(A\cup B)\cap C=\{3\}$.
+>> svar
+$(A\cup B)\cap C=\{3\}$.
+
+=== e2:mc7 | lignsys
+@hl den fuldstændige løsning
+>> type
+To ligninger i fire ubekendte og "den fuldstændige løsning". Svarmulighederne er på parameterform.
+>> plan
+?? mc | Hvad er den hurtigste vej i multiple choice? | *Find antallet af frie parametre, og tjek den faste vektor og retningerne i ligningerne | Rækkereducér og sammenlign tal for tal ~ Det virker, men en løsning kan skrives på mange måder. At tjekke er hurtigere og sikrere. | Vælg den med flest parametre ~ Antallet af parametre er bestemt: ubekendte minus rang.
+?h Hvor mange parametre skal løsningen have?
+?h Fire ubekendte og rang to.
+?h Tjek bagefter, at den faste vektor løser systemet.
+I multiple choice kan man tjekke i stedet for at løse: antal parametre, en partikulær løsning og retninger, der løser det homogene system.
+>> trin Antal parametre
+?? in | Hvor mange frie parametre har løsningen? | Antal = 2
+?h Hvor mange ubekendte er der?
+?h De to ligninger er uafhængige, så rangen er $2$.
+?h $4-2$.
+$4$ ubekendte minus rang $2$ giver $2$ frie parametre.
+>> trin Den faste vektor
+?? mc | Hvilken vektor løser systemet $x_1+x_2+3x_3+x_4=7$, $-x_1+x_3=-5$? | *$(5,2,0,0)$ | $(7,-5,0,0)$ ~ $-7+0=-7\neq-5$. Højresiderne er ikke en løsning. | $(0,0,0,0)$ ~ Nulvektoren løser kun det homogene system.
+?h Anden ligning: $-x_1+x_3=-5$.
+?h Med $x_3=0$ er $x_1=5$.
+?h Første ligning: $5+x_2=7$.
+$(5,2,0,0)$ giver $5+2=7$ og $-5=-5$.
+>> trin Retningerne
+?? mc | Retningerne skal løse det homogene system. Gør $(1,-4,1,0)$ det? | *Ja: $1-4+3=0$ og $-1+1=0$ | Nej, fordi den ikke indeholder $5$ ~ Retningerne skal give $0$ i begge ligninger, ikke $7$ og $-5$. | Nej, fordi $x_4=0$ ~ $x_4=0$ er fint. Det afgørende er, at begge ligninger giver $0$.
+?h Sæt ind i venstresiderne.
+?h $1+(-4)+3\cdot1+0$.
+?h $-1+1$.
+Begge venstresider giver $0$. Det samme gælder $(0,-1,0,1)$: $-1+1=0$ og $0=0$.
+>> fejl
+At vælge en løsning uden den faste vektor. Det er kun løsningen til det homogene system.
+>> svar
+$\mathbf x=(5,2,0,0)+t_1(0,-1,0,1)+t_2(1,-4,1,0)$ med $t_1,t_2\in\mathbb R$.
+
+=== e1:14a | afbm
+@hl basisskiftematricerne
+>> type
+Notationen $§{}_\varepsilon[\mathrm{id}]_\beta$: en basisskiftematrix mellem standardbasen og en anden basis.
+>> plan
+?? mc | Hvilken af de to matricer er nemmest? | *$§{}_\varepsilon[\mathrm{id}]_\beta$: søjlerne er $\beta$-vektorerne | $§{}_\beta[\mathrm{id}]_\varepsilon$: søjlerne er standardbasen ~ Søjlerne i $§{}_\beta[\mathrm{id}]_\varepsilon$ er standardvektorerne skrevet i $\beta$-koordinater. Dem skal man regne ud. | De er lige svære ~ Den ene kan skrives direkte op, den anden er dens inverse.
+?h Indekset til højre er den basis, der går ind.
+?h $§{}_\varepsilon[\mathrm{id}]_\beta$ tager $\beta$-koordinater og giver standardkoordinater.
+?h Søjle $j$ er $\beta_j$ i standardkoordinater.
+$§{}_\varepsilon[\mathrm{id}]_\beta$ skrives direkte op. $§{}_\beta[\mathrm{id}]_\varepsilon$ er dens inverse.
+>> trin Den første matrix
+?? mc | Hvad er $§{}_\varepsilon[\mathrm{id}]_\beta$? | *$\begin{bmatrix}1&1&0\\1&2&0\\0&0&1\end{bmatrix}$ | $\begin{bmatrix}1&1&0\\1&2&0\\0&0&1\end{bmatrix}^{-1}$ ~ Det er den anden matrix. | $\begin{bmatrix}1&0&0\\0&1&0\\0&0&1\end{bmatrix}$ ~ Det er $§{}_\varepsilon[\mathrm{id}]_\varepsilon$.
+?h Søjlerne er $\beta$-vektorerne.
+?h $\beta_1=(1,1,0)$, $\beta_2=(1,2,0)$ og $\beta_3=(0,0,1)$.
+?h Stil dem op som søjler.
+$\beta$-vektorerne som søjler: $\begin{bmatrix}1&1&0\\1&2&0\\0&0&1\end{bmatrix}$. Her er matricen tilfældigvis symmetrisk, så søjler og rækker ser ens ud.
+>> trin Den inverse
+?? in | Den øverste $2\times2$-blok er $\begin{bmatrix}1&1\\1&2\end{bmatrix}$. Find dens inverse. | Øverst til venstre = 2 | Øverst til højre = -1 | Nederst til venstre = -1 | Nederst til højre = 1
+?h Determinanten er $1\cdot2-1\cdot1=1$.
+?h Byt diagonalen, og skift fortegn på resten.
+?h $\begin{bmatrix}2&-1\\-1&1\end{bmatrix}$.
+Blokken har determinant $1$, så $§{}_\beta[\mathrm{id}]_\varepsilon=\begin{bmatrix}2&-1&0\\-1&1&0\\0&0&1\end{bmatrix}$. Den tredje basisvektor er $\mathbf e_3$, så den sidste række og søjle ændres ikke.
+>> tjek
+?? mc | Hvad giver produktet af de to matricer? | *Identitetsmatricen | Nulmatricen ~ De er hinandens inverse, så produktet er $\mathbf I$. | $§{}_\beta[L]_\beta$ ~ Afbildningen $L$ indgår ikke i basisskiftematricerne.
+?h $§{}_\beta[\mathrm{id}]_\varepsilon\cdot{}_\varepsilon[\mathrm{id}]_\beta={}_\beta[\mathrm{id}]_\beta$.
+?h Det er identiteten skrevet i samme basis.
+?h $\mathbf I$.
+De to er hinandens inverse, så produktet er $\mathbf I$. Tjek fx første række gange første søjle: $2\cdot1-1\cdot1+0=1$.
+>> fejl
+At bytte om på de to matricer. Indekset til højre er den basis, koordinaterne kommer fra.
+>> skriv
+"Søjlerne i $§{}_\varepsilon[\mathrm{id}]_\beta$ er $\beta$-vektorerne", matricen, og $§{}_\beta[\mathrm{id}]_\varepsilon=\big({}_\varepsilon[\mathrm{id}]_\beta\big)^{-1}$ med udregningen af den inverse.
+>> svar
+$§{}_\varepsilon[\mathrm{id}]_\beta=\begin{bmatrix}1&1&0\\1&2&0\\0&0&1\end{bmatrix}$ og $§{}_\beta[\mathrm{id}]_\varepsilon=\begin{bmatrix}2&-1&0\\-1&1&0\\0&0&1\end{bmatrix}$.
+`.split('$§{').join('$'+'{');
+
+/* ---------- Eksamenshjælp: gennemgang, opgavetyper og oversigt (visning) ----------
+   Indholdet ligger i examhelp.js: XT (opgavetyper med opskrifter) og XH_SRC (en guidet gennemgang pr. delopgave, samme format som sol/*.txt).
+   Hver delopgave i EXAMS bliver en lektion med nøglen x-<sæt>-<del> (fx x-e1-mc0), som kører i den almindelige lektionsmotor i app.js.
+   Delopgaver uden skrevet gennemgang får en automatisk: ledetrådene (h) bliver hints, løsningstrinene (s) åbnes ét ad gangen, hvorfor-linjerne (y) står under.
+   Nye sæt: tilføj dem i exam.js; de dukker selv op her. Skriv en blok "=== e5:1a | type" i XH_SRC for at give delopgaven en rigtig gennemgang. */
+function normXh(x){x=isObj(x)?x:{};const K=/^e\d{1,2}:[a-z0-9]{1,8}$/,tr=x.tr,ui=isObj(x.ui)?x.ui:{};
+  return{w:lim(clean(x.w,(v,k)=>K.test(k)&&isObj(v)&&ts(v.d)?{d:v.d,n:fint(v.n,1,999),q:fint(v.q,0,60),f:fint(v.f,0,60),g:fint(v.g,0,60),c:v.c?1:0}:undefined),800),
+    tr:isObj(tr)&&typeof tr.t==='string'&&/^[a-z0-9-]{1,24}$/.test(tr.t)&&Array.isArray(tr.ids)?{t:tr.t,ids:tr.ids.filter(k=>typeof k==='string'&&K.test(k)).slice(0,120),i:fint(tr.i,0,120),at:ts(tr.at)||0}:null,
+    ui:{g:['type','uge','saet'].includes(ui.g)?ui.g:'type',s:['alle','ny','fejl','ok','set'].includes(ui.s)?ui.s:'alle'}}}
+
+Object.assign(KIND,{xtype:['eye','Hvad er det for en opgave?'],xplan:['route','Planen'],xtjek:['shield','Tjek dit svar'],xnote:['flag','Til eksamen'],xstep:['calc','Løsningen']});
+const XT_BY={};XT.forEach(t=>XT_BY[t.id]=t);
+const XT_ANDET={id:'andet',t:'Andre opgaver',w:0,ic:'?',c:[],d:[],sig:'',know:[],rec:[],err:[],wr:[]};XT_BY.andet=XT_ANDET;
+const XC2T={};XT.forEach(t=>t.c.forEach(c=>{if(!XC2T[c])XC2T[c]=t.id}));
+const xhLk=k=>'x-'+k.replace(':','-');
+
+/* ---- indholdet: samme linjeformat som sol/*.txt (>> afsnit, ?? spørgsmål, ?h hint) ---- */
+function xhParseQ(line,where){const ps=line.slice(3).split(' | ').map(x=>x.trim()),t=ps[0],q=ps[1],rest=ps.slice(2);
+  if(t==='mc'){const opts=rest.map(o=>{const j=o.indexOf(' ~ '),x=j<0?o:o.slice(0,j),ok=x.startsWith('*');return{x:(ok?x.slice(1):x).trim(),ok,fb:j<0?'':o.slice(j+3).trim()}});
+    if(opts.filter(o=>o.ok).length!==1)console.error('eksamenshjælp: mc skal have præcis ét rigtigt svar i '+where);return{t:'mc',q,opts}}
+  if(t==='in'){const fields=[];let fb='';rest.forEach(f=>{if(f.startsWith('fb:')){fb=f.slice(3).trim();return}let lab='',ans=f;if(f.startsWith('= '))ans=f.slice(2);else{const j=f.lastIndexOf(' = ');if(j>=0){lab=f.slice(0,j);ans=f.slice(j+3)}}fields.push({label:lab.trim(),ans:ans.trim()})});return{t:'in',q,fields,fb}}
+  console.error('eksamenshjælp: ukendt spørgsmålstype i '+where);return null}
+const XKW={type:'xtype',plan:'xplan',trin:'trin',tjek:'xtjek'};
+function xhParse(src){const out={};String(src).split(/^=== /m).slice(1).forEach(blk=>{const nl=blk.indexOf('\n'),head=blk.slice(0,nl).split('|').map(x=>x.trim()),key=head[0];
+    const s={ty:head[1]||'',hl:[],cards:[],svar:'',fejl:'',skriv:'',husk:''};let cur=null,buf=[];
+    const flush=()=>{const body=buf.join('\n').trim();buf=[];if(!cur)return;if(typeof cur==='string')s[cur]=body;else{cur.body=body;s.cards.push(cur)}};
+    blk.slice(nl+1).split('\n').forEach(ln=>{
+      if(ln.startsWith('@hl '))s.hl=ln.slice(4).split(' ; ').map(x=>x.trim()).filter(Boolean);
+      else if(ln.startsWith('?? ')){if(cur&&typeof cur!=='string')cur.q=xhParseQ(ln,key)}
+      else if(ln.startsWith('?h ')){if(cur&&cur.q)(cur.q.hints=cur.q.hints||[]).push(ln.slice(3).trim())}
+      else if(ln.startsWith('>> ')){flush();const sp=ln.indexOf(' ',3),kw=sp<0?ln.slice(3):ln.slice(3,sp),title=sp<0?'':ln.slice(sp+1).trim();
+        cur=XKW[kw]?{kind:XKW[kw],title,body:'',q:null}:['svar','fejl','skriv','husk'].includes(kw)?kw:null;if(!cur)console.error('eksamenshjælp: ukendt afsnit "'+kw+'" i '+key)}
+      else buf.push(ln)});
+    flush();out[key]=s});return out}
+const XW=xhParse(XH_SRC);
+
+/* ---- kataloget over alle delopgaver i alle sæt ---- */
+function xhSet(E){const src=E.src||'',m=/(?:\d{1,2}\.\s*)?([a-zæøå]+)\s+(\d{4})/i.exec(src),re=/^re/i.test(src),te=/^test/i.test(src),mi=m?MONTHS.indexOf(m[1].toLowerCase()):-1;
+  if(!m||mi<0)return{s:E.title,l:E.title,d:0};const mo=m[1].toLowerCase();
+  return{s:(re?'Reeks. ':te?'Test ':'')+mo.slice(0,3)+' '+m[2],l:(re?'Reeksamen ':te?'Testeksamen ':'Eksamen ')+mo+' '+m[2],d:+m[2]*100+mi}}
+const XP=[],XPK={};
+function xhAdd(X){const C=XW[X.key];X.C=C||null;X.ty=(C&&XT_BY[C.ty]?C.ty:XT_BY[XTY[X.key]]?XTY[X.key]:XC2T[X.c])||'andet';X.T=XT_BY[X.ty];X.w=(CONCEPTS[X.c]||{}).uge||X.T.w||0;X.lk=xhLk(X.key);X.sid=`x:${X.E.id}:${X.pid}`;
+  X.name=X.S.s+' · '+X.lab;XP.push(X);XPK[X.key]=X;
+  const text=X.mc?X.q+'\n\n'+X.src.o.map((o,k)=>`- **${String.fromCharCode(97+k)})** ${o}`).join('\n'):X.q;
+  const p={key:X.lk,xh:X,label:'',text,hints:[],answers:[],concepts:CONCEPTS[X.c]?[X.c]:[]};
+  p.opg={id:'type-'+X.ty,kind:'hjem',title:X.E.title+' · '+X.lab,week:X.w,intro:X.intro||'',parts:[p],concepts:p.concepts};PK[X.lk]=p;
+  try{SOL[X.lk]=xhSol(X)}catch(e){console.error(e);SOL[X.lk]={cards:[],svar:'',bemaerk:'',viz:[],refs:[],concepts:[]}}}
+const xhLetter=k=>String.fromCharCode(97+k);
+/* markér signalordene i opgaveteksten, hvor de står ordret; resten vises som en linje for sig */
+function xhMarked(X,hl){let t=(X.intro?X.intro+' ':'')+X.q;const rest=[];(hl||[]).forEach(w=>{if(t.includes(w))t=t.split(w).join('<mark class="xhm">'+w+'</mark>');else rest.push(w)});
+  return{t,rest}}
+function xhTypeCard(X,C){const T=X.T;if(T.id==='andet')return null;const c=C&&C.cards.find(c=>c.kind==='xtype');
+  const hl=C?C.hl:[],mk=xhMarked(X,hl);
+  const body=(hl.length?`> ${mk.t.replace(/\n+/g,' ')}\n\n`+(mk.rest.length?`**Signalord:** ${mk.rest.map(w=>'<mark class="xhm">'+w+'</mark>').join(' · ')}\n\n`:''):'')+(c&&c.body?c.body:`Kendetegn: ${T.sig}.`)+`\n\nOpgavetypen hedder **${T.t}**. [Se opskriften](#type-${T.id}).`;
+  if(c&&c.q)return{...c,body};
+  const ds=(T.d||[]).map(d=>XT_BY[d]).filter(Boolean).slice(0,3);
+  return{kind:'xtype',title:'',body,q:{t:'mc',q:'Hvilken type opgave er det?',opts:[{x:T.t,ok:true,fb:''},...ds.map(d=>({x:d.t,ok:false,fb:`Den type kender du på ${d.sig}.`}))],
+    hints:['Læs opgaven igen og find de ord eller symboler, der afslører typen.',...(hl.length?['Signalordene er: '+hl.join(' · ')]:[]),`Du kender typen på ${T.sig}.`]}}}
+function xhFinalQ(X){const P=X.src;
+  if(X.mc)return{kind:'trin',title:'Sæt krydset',body:P.s,q:{t:'mc',q:'Hvilket svar er rigtigt? '+X.q,opts:P.o.map((x,k)=>({x,ok:k===P.a,fb:(P.w||{})[k]||P.wd||''})),hints:(P.h||[]).slice()}};
+  if(P.ch)return{kind:'trin',title:'Dit svar',body:P.s[P.s.length-1],q:{t:'mc',q:P.q,opts:P.ch.map((x,k)=>({x,ok:k===P.a,fb:''})),hints:(P.h||[]).slice()}};
+  if(P.f&&P.f.length<=8)return{kind:'trin',title:'Dit svar',body:P.s[P.s.length-1],q:{t:'in',q:P.q,fields:P.f.map(f=>({label:f.l,ans:f.a[0]})),fb:'',hints:(P.h||[]).slice()}};
+  return null}
+function xhNote(X,C){const T=X.T;return{kind:'xnote',title:'',body:'',fejl:(C&&C.fejl)||T.err[0]||'',skriv:(C&&C.skriv)||'',mc:!!X.mc}}
+function xhSol(X){const C=X.C,P=X.src,cards=[],tc=xhTypeCard(X,C);if(tc)cards.push(tc);
+  const svar=X.mc?`Svaret er **${xhLetter(P.a)})** ${P.o[P.a]}`:(C&&C.svar)||String(P.s[P.s.length-1]||'').replace(/^Svar:\s*/,'');
+  if(C){C.cards.filter(c=>c.kind!=='xtype'&&c.kind!=='xtjek').forEach(c=>cards.push(c));if(X.mc)cards.push(xhFinalQ(X));
+    C.cards.filter(c=>c.kind==='xtjek').forEach(c=>cards.push(c));cards.push(xhNote(X,C));
+    return{cards,svar,bemaerk:C.husk||'',viz:[],refs:[],concepts:[X.c],xh:1}}
+  /* ingen skrevet gennemgang endnu: byg en af sættets egne ledetråde, trin og hvorfor-linjer */
+  const fq=xhFinalQ(X);
+  if(X.mc){if(fq)cards.push(fq)}
+  /* først dit eget svar med sættets ledetråde som hints, så løsningen ét trin ad gangen med "havde du selv trinnet?" */
+  else{if(fq){fq.title='Prøv selv først';cards.push(fq)}P.s.forEach((x,i)=>cards.push({kind:'xstep',title:'',body:x,why:(P.y||[])[i]||'',n:i+1,N:P.s.length,hint:!fq&&i===0?(P.h||[]):[]}))}
+  cards.push(xhNote(X,null));
+  return{cards,svar,bemaerk:'',viz:[],refs:[],concepts:[X.c],xh:1,auto:1}}
+EXAMS.forEach(E=>{const S=xhSet(E);
+  E.mc.forEach((q,i)=>xhAdd({key:E.id+':mc'+i,E,S,mc:true,i,pid:'mc'+i,q:q.q,c:q.c,src:q,lab:'MC '+(i+1),intro:''}));
+  E.written.forEach(W=>W.parts.forEach(P=>xhAdd({key:E.id+':'+P.id,E,S,pid:P.id,q:P.q,c:P.c,src:P,lab:'opgave '+P.id,intro:W.q||''})))});
+Object.keys(XW).forEach(k=>{if(!XPK[k])console.warn('eksamenshjælp: gennemgang uden delopgave: '+k)});
+const XSETS=EXAMS.map(E=>({E,S:xhSet(E)})).sort((a,b)=>b.S.d-a.S.d);
+const xhOfType=id=>XP.filter(X=>X.ty===id);
+const XTL=()=>[...XT,XT_ANDET].filter(T=>xhOfType(T.id).length);
+
+/* ---- status og parathed ---- */
+function xhLast(X){for(let i=ST.ans.length-1;i>=0;i--){const a=ST.ans[i];if(a.i===X.sid&&a.src!=='xh')return a}return null}
+function xhStatus(X){const a=xhLast(X),w=ST.xh.w[X.key];return{a,w,own:a?(a.ok?'ok':'fejl'):'ny',set:!!w,
+  r:a&&a.ok?1:a?(w&&w.d>a.at?0.5:0.15):w?(w.c?0.6:0.45):0}}
+function xhBadge(X){const s=xhStatus(X);return(s.own==='ok'?'<span class="badge ok">✓ rigtig</span>':s.own==='fejl'?'<span class="badge xhbad">forkert</span>':s.set?'':'<span class="badge">ikke prøvet</span>')+(s.set?'<span class="badge u">gennemgået</span>':'')}
+function xhTypeStat(T){const ps=xhOfType(T.id),sets=XSETS.filter(x=>ps.some(X=>X.E===x.E));
+  const r=ps.length?ps.reduce((a,X)=>a+xhStatus(X).r,0)/ps.length:0;return{T,ps,sets,n:ps.length,freq:sets.length/Math.max(1,XSETS.length),r,pct:Math.round(r*100),seen:ps.filter(X=>xhStatus(X).set).length}}
+const xhStats=()=>XTL().map(xhTypeStat);
+/* næste anbefalede type: den, der kommer oftest, og som du er mindst klar til */
+function xhNext(){const st=xhStats().filter(s=>s.T.id!=='andet');if(!st.length)return null;
+  return st.map(s=>({s,v:s.freq*(1-s.r)+Math.min(s.n,8)*0.004})).sort((a,b)=>b.v-a.v)[0].s}
+const xhSetList=s=>s.sets.map(x=>x.S.s).join(', ');
+const xhFreqTxt=s=>`${s.sets.length} af ${XSETS.length} sæt`;
+
+/* ---- træning: delopgaverne af én type (eller de forkerte fra ét sæt) efter hinanden ---- */
+function xhQueue(ps){return ps.slice().sort((a,b)=>(xhStatus(a).set-xhStatus(b).set)||(a.S.d-b.S.d)).map(X=>X.key)}
+function xhTrain(t,ids){if(!ids.length)return;ST.xh.tr={t,ids,i:0,at:Date.now()};save();go('L-'+xhLk(ids[0]))}
+function xhTrainType(id){const T=XT_BY[id];if(!T)return;const tr=ST.xh.tr;
+  if(tr&&tr.t===id&&tr.i<tr.ids.length&&XPK[tr.ids[tr.i]]){go('L-'+xhLk(tr.ids[tr.i]));return}xhTrain(id,xhQueue(xhOfType(id)))}
+function xhTrainWrong(eid){const E=EXAMS.find(e=>e.id===eid),st=E&&ST.exams[eid];if(!st||!st.done)return;
+  xhTrain(eid,XP.filter(X=>X.E===E&&!(X.mc?st.mc[X.i]===X.src.a:exCheckPart(X.src,st))).map(X=>X.key))}
+const xhTrActive=id=>{const tr=ST.xh.tr;return tr&&tr.t===id&&tr.i>0&&tr.i<tr.ids.length?tr:null};
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-xhtr],[data-xhwr],[data-xhui]');if(!b)return;
+  if(b.dataset.xhtr){e.preventDefault();xhTrainType(b.dataset.xhtr)}else if(b.dataset.xhwr){e.preventDefault();xhTrainWrong(b.dataset.xhwr)}
+  else{const [k,v]=b.dataset.xhui.split(':');ST.xh.ui[k]=v;ST.xh=normXh(ST.xh);save();const y=scrollY;viewXh();window.scrollTo(0,y)}});
+
+/* ---- lektionen: kort, der ikke findes i de almindelige lektioner ---- */
+function xhBgId(p,o){if('from' in o&&o.from&&!o.from.startsWith('L-'))return o.from;
+  try{const s=history.state;if(!('from' in o)&&s&&s.lesson===p.key&&typeof s.h==='string'&&s.h&&!s.h.startsWith('L-'))return s.h}catch(e){}return p.opg.id}
+function xhCard(c,p,head){const X=p.xh;
+  if(c.kind==='opgave'){const P=X.src,nq=SOL[p.key].cards.filter(x=>x.q).length,tr=ST.xh.tr,ti=tr?tr.ids.indexOf(X.key):-1;
+    return`<div class="lhero xhhero"><div><small>${esc(X.S.l)} · ${X.mc?'multiple choice':'skriftlig del'}</small><b>${esc(X.lab[0].toUpperCase()+X.lab.slice(1))}</b><span>${X.T.id!=='andet'?esc(X.T.t)+' · ':''}${nq?nq+' spørgsmål undervejs':'trin for trin'}</span></div><div class="lg">${esc(X.T.ic||'')}</div></div>
+      ${ti>=0&&tr.ids.length>1?`<div class="xhtrbar">Træning · ${ti+1} af ${tr.ids.length}</div>`:''}
+      ${X.intro?`<div class="ctx"><div class="prose">${MD.block(X.intro)}</div></div>`:''}<div class="prose" style="font-size:19px">${MD.block(X.q)}</div>
+      ${X.mc?`<ol class="xhopts">${P.o.map(o=>`<li>${MD.inline(o)}</li>`).join('')}</ol>`:''}
+      ${SOL[p.key].auto?`<p class="note xhauto">${X.mc?'Sæt dit kryds med sættets ledetråde som hints. Bagefter ser du, hvorfor de andre svar er forkerte.':P.self?'Skriv beviset på papir først. Derefter kommer løsningen ét trin ad gangen.':'Regn opgaven på papir og giv dit svar. Derefter kommer løsningen ét trin ad gangen.'}</p>`:'<p class="note xhauto">Gennemgangen spørger dig før hvert trin. Hav papir klar, og regn med.</p>'}`}
+  if(c.kind==='xstep')return head+`<h2>Trin ${c.n} af ${c.N}</h2><p class="xhask">Tænk først: hvad ville du gøre nu? Skriv det ned, eller sig det højt. Åbn så trinnet og sammenlign.</p>
+    ${c.hint.length?`<details class="xhrev hintd"><summary>💡 Ledetråde</summary>${c.hint.map((h,i)=>`<div class="exhint"><b>Ledetråd ${i+1}.</b> ${MD.inline(h)}</div>`).join('')}</details>`:''}
+    <details class="xhrev" data-xhstep="1"><summary>Vis trin ${c.n}</summary><div class="blk"><div class="prose">${MD.inline(c.body)}</div>${c.why?`<div class="exy"><b>Hvorfor?</b> ${MD.inline(c.why)}</div>`:''}</div>
+      <div class="xhsr" role="group" aria-label="Havde du selv trinnet?"><span>Havde du selv trinnet?</span><button type="button" class="b ghost sm" data-xhsr="2">Ja</button><button type="button" class="b ghost sm" data-xhsr="1">Delvist</button><button type="button" class="b ghost sm" data-xhsr="0">Nej</button></div></details>`;
+  if(c.kind==='xnote'){const T=X.T;
+    return head+`<h2>Typisk fejl og opskrivning</h2>${c.fejl?`<div class="blk tip"><div class="bt">${ico('flag')}Typisk fejl</div><div class="prose">${MD.block(c.fejl)}</div></div>`:''}
+      <div class="blk xhwr"><div class="bt">${ico('task')}Sådan skriver du det op</div><div class="prose">${c.skriv?MD.block(c.skriv):''}${c.mc?`<p>I multiple choice tæller kun krydset. Regn på kladde, og sæt først krydset, når du har tjekket svaret.${T.wr.length?' Kommer samme type i den skriftlige del, skal dette med:':''}</p>`:''}${(c.mc||!c.skriv)&&T.wr.length?`<ul>${T.wr.map(x=>`<li>${MD.inline(x)}</li>`).join('')}</ul>`:''}</div></div>`}
+  return null}
+L.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-xhsr]');if(!b||!LS)return;const g=b.parentNode;g.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+  (LS.xsr=LS.xsr||{})[LS.i]=+b.dataset.xhsr});
+function xhSimilar(X){const o=xhOfType(X.ty).filter(Y=>Y!==X);if(!o.length)return null;
+  return o.find(Y=>Y.E!==X.E&&!xhStatus(Y).set)||o.find(Y=>!xhStatus(Y).set)||o.find(Y=>Y.E!==X.E)||o[0]}
+function xhDone(card,go,foot,msg){const p=LS.p,X=p.xh,q=LS.qs,sr=Object.values(LS.xsr||{}),auto=!!SOL[p.key].auto;
+  const acc=q?LS.first/q:sr.length?sr.reduce((a,b)=>a+b,0)/(2*sr.length):0,clean=LS.gave===0&&acc>=0.75&&(q>0||sr.length>0),stars=acc>=0.999&&!LS.gave?3:acc>=0.6?2:1;
+  LS.xp+=5;addXP(LS.xp);delete ST.lprog[p.key];const lx=document.querySelector('.lxp');if(lx)lx.textContent='⚡ '+LS.xp;
+  const old=ST.xh.w[X.key];ST.xh.w[X.key]={d:Date.now(),n:((old&&old.n)||0)+1,q,f:Math.floor(LS.first),g:LS.gave,c:clean?1:0};
+  /* repetition og fejllog: hele delopgaven kommer igen, så den kan prøves uden hjælp (i morgen, hvis der var brug for hjælp undervejs) */
+  let days=1;try{logAns(X.sid,clean,'xh',X.w);if(!clean){seedItem(X.sid);noteError(X.sid,{src:'xh',w:X.w})}else{if(errOpen(X.sid))noteFix(X.sid);if(!ST.srs[X.sid])days=schedule(X.sid,3);else days=Math.max(1,Math.round((ST.srs[X.sid].due-Date.now())/DAY))}}catch(e){console.error(e)}
+  const tr=ST.xh.tr,ti=tr?tr.ids.indexOf(X.key):-1;if(ti>=0)tr.i=Math.max(tr.i,ti+1);save();
+  const T=X.T,sim=xhSimilar(X),kon=KON.find(k=>k.id===T.kon)||KON.find(k=>k.c.includes(X.c)),fst=Math.floor(LS.first);
+  const nxk=ti>=0&&tr.ids[ti+1]&&XPK[tr.ids[ti+1]]?tr.ids[ti+1]:null,trEnd=ti>=0&&!nxk&&tr.ids.length>1;
+  card.innerHTML=`<div class="done-card xhdone"><div class="cheer">${MASCOT('jump')}<div class="big">${stars===3?'🏆':stars===2?'🌟':'✅'}</div></div><h2 style="margin-top:12px">${trEnd?'Træningen er færdig':stars===3?'Fejlfrit!':'Gennemgået'}</h2><div class="sub">${esc(X.S.l)} · ${esc(X.lab)}${T.id!=='andet'?' · '+esc(T.t):''}</div>
+    <div class="tiles"><div class="tile"><small>XP</small><b class="xpv">+${LS.xp}</b></div>${q?`<div class="tile"><small>Rigtigt første gang</small><b style="color:${acc>=0.6?'var(--ok-ink)':'var(--warn-ink)'}">${fst} af ${q}</b></div>`:''}${ti>=0&&tr.ids.length>1?`<div class="tile"><small>Træning</small><b>${ti+1} af ${tr.ids.length}</b></div>`:''}</div>
+    <p class="sub xhrep">${clean?`Godt. Opgaven kommer i din repetition ${days<=1?'i morgen':'om '+days+' dage'}, så du kan prøve den uden hjælp.`:'Du fik hjælp undervejs, og det er fint. Opgaven kommer i din repetition i morgen, så du kan prøve den selv.'}</p>
+    <div class="xhnext"><div class="bt">Byg videre</div>
+      ${sim?`<a class="xhlink strong" href="#L-${sim.lk}" data-xhgo="${sim.lk}"><span>🎯</span><div><b>Prøv en lignende</b><small>${esc(sim.name)} · samme type</small></div></a>`:''}
+      ${T.id!=='andet'?`<a class="xhlink" href="#type-${T.id}"><span>${esc(T.ic||'📋')}</span><div><b>Opskriften: ${esc(T.t)}</b><small>Kom i ${xhFreqTxt(xhTypeStat(T))}</small></div></a>`:''}
+      ${CONCEPTS[X.c]?`<a class="xhlink" href="#${X.c}"><span>📖</span><div><b>Begrebet: ${esc(CONCEPTS[X.c].title)}</b><small>Definition, figur og Prøv selv</small></div></a>`:''}
+      ${kon?`<a class="xhlink" href="#kontrast-${kon.id}"><span>⇄</span><div><b>Kontrastkort: ${esc(kon.t)}</b><small>To begreber, der ofte forveksles</small></div></a>`:''}
+      ${VID_TITLES[X.w]?`<button class="xhlink" data-v="${X.w}"><span>🎬</span><div><b>Ugens video: ${esc(VID_TITLES[X.w])}</b><small>Uge ${X.w}</small></div></button>`:''}
+      <a class="xhlink" href="#eksamen-${X.E.id}"><span>📝</span><div><b>Hele sættet: ${esc(X.E.title)}</b><small>${esc(X.S.l)}</small></div></a></div></div>`;
+  card.querySelectorAll('a.xhlink').forEach(a=>a.onclick=e=>{e.preventDefault();e.stopPropagation();const k=a.dataset.xhgo;if(k)xhOpenNext(k);else{const h=a.getAttribute('href');closeLesson();go_(h)}});
+  document.querySelector('.prog i').style.width='100%';go.className='b ok';go.disabled=false;
+  if(nxk){go.textContent=`Næste: ${XPK[nxk].name} →`;go.onclick=()=>xhOpenNext(xhLk(nxk))}
+  else if(trEnd){go.textContent='Til opskriften';go.onclick=()=>{closeLesson();go_(XT_BY[tr.t]?'type-'+tr.t:'gamle')}}
+  else{go.textContent='Til oversigten';go.onclick=()=>{closeLesson();go_('gamle')}}
+  msg.innerHTML=`<button class="link" id="toopg">Luk</button>`;document.getElementById('toopg').onclick=leaveLesson;
+  confetti(stars);setTimeout(()=>go.focus({preventScroll:true}),30)}
+function xhOpenNext(lk){const bg=HASH;closeLesson();if(canHist){try{history.replaceState({h:bg,lesson:lk},'','#'+bg)}catch(e){canHist=false}}startLesson(lk)}
+
+/* ---- sider ---- */
+function xhRow(X,o){o=o||{};const s=xhStatus(X);
+  return`<a class="xhrow" href="#L-${X.lk}" style="${uvars(X.w)}" data-st="${s.own}${s.set?' set':''}"><span class="xhset">${esc(X.S.s)}<small>${esc(X.lab)}</small></span><span class="xhq">${MD.inline(((X.intro?X.intro+' ':'')+X.q).replace(/\\dfrac/g,'\\frac').replace(/\\displaystyle/g,''))}</span><span class="xhmeta">${o.type&&X.T.id!=='andet'?`<span class="badge plainb">${esc(X.T.t)}</span>`:''}${xhBadge(X)}</span><span class="xhgo2" aria-hidden="true">›</span></a>`}
+function xhReadyBar(pct){return`<span class="xhbar" role="img" aria-label="${pct} % klar"><i style="width:${pct}%"></i></span>`}
+function xhHome(){const s=xhNext();if(!s)return'';const T=s.T,tr=xhTrActive(T.id),all=XP.length,seen=XP.filter(X=>xhStatus(X).set).length;
+  return`<div class="lhome xhhome"><div class="xhhc" style="${uvars(T.w)}"><a class="xhhmain" href="#gamle"><span class="xhhic" aria-hidden="true">📝</span><span class="xhht"><small>Gamle eksamensopgaver · ${seen} af ${all} gennemgået</small><b>Næste type: ${esc(T.t)}</b><span>Kom i ${xhFreqTxt(s)} · du er ${s.pct} % klar</span></span></a><button class="b u sm" data-xhtr="${T.id}">${tr?'Fortsæt':'Træn typen'}</button></div></div>`}
+function xhWeekRow(k){const w=+k;if(!w)return'';const ts=XTL().filter(T=>T.w===w),n=XP.filter(X=>X.w===w).length;if(!ts.length&&!n)return'';
+  return`<a class="prerow xhwk" href="#gamle-u${w}"><span class="lkubi" aria-hidden="true">📝</span><span class="lct"><b>Sådan kommer ugen til eksamen</b><span>${ts.length?ts.map(T=>esc(T.t)).join(' · '):n+' gamle delopgaver'}</span></span><span class="chev" aria-hidden="true">›</span></a>`}
+function xhForConcept(id){const ps=XP.filter(X=>X.c===id),T=XT_BY[XC2T[id]],more=T?xhOfType(T.id).filter(X=>X.c!==id):[];if(!ps.length&&!more.length)return'';
+  const list=(ps.length?ps:more).slice(0,6);
+  return`<h3 style="margin-top:26px">Sådan kommer det til eksamen</h3>${T?`<p class="sub xhcsub">Opgavetype: <a href="#type-${T.id}">${esc(T.t)}</a>. Den kom i ${xhFreqTxt(xhTypeStat(T))}.</p>`:''}<div class="xhlist">${list.map(X=>xhRow(X)).join('')}</div>${T&&xhOfType(T.id).length>list.length?`<p><a class="link" href="#type-${T.id}">Se alle ${xhOfType(T.id).length} delopgaver af typen ›</a></p>`:''}`}
+function xhFreqTable(st){return`<div class="xhfreq">${st.slice().sort((a,b)=>b.sets.length-a.sets.length||b.n-a.n).map(s=>`<a class="xhfrow" href="#type-${s.T.id}" style="${uvars(s.T.w)}"><span class="xhfic" aria-hidden="true">${esc(s.T.ic||'')}</span><span class="xhft"><b>${esc(s.T.t)}</b><small>${s.n} delopgave${s.n===1?'':'r'} · ${xhFreqTxt(s)}</small></span><span class="xhdots" aria-label="Kom i ${esc(xhSetList(s))}">${XSETS.map(x=>`<i class="${s.sets.includes(x)?'on':''}" title="${esc(x.S.s)}"></i>`).join('')}</span><span class="xhrd">${xhReadyBar(s.pct)}<small>${s.pct} % klar</small></span></a>`).join('')}</div>`}
+function viewXh(wk){document.title='Gamle eksamensopgaver · Mat1a';const ui=ST.xh.ui;if(wk){ui.g='uge';save()}
+  const st=xhStats(),nx=xhNext(),all=XP.length,cnt={alle:all,ny:0,fejl:0,ok:0,set:0};XP.forEach(X=>{const s=xhStatus(X);cnt[s.own]++;if(s.set)cnt.set++});
+  const keep=X=>{const s=xhStatus(X);return ui.s==='alle'||(ui.s==='set'?s.set:s.own===ui.s)};
+  const groups=ui.g==='type'?st.slice().sort((a,b)=>a.T.w-b.T.w).map(s=>({id:'t-'+s.T.id,h:`<a href="#type-${s.T.id}">${esc(s.T.t)}</a>`,sub:`${xhFreqTxt(s)} · ${s.pct} % klar`,ps:s.ps,tr:s.T.id!=='andet'?s.T.id:null,w:s.T.w}))
+    :ui.g==='uge'?[...new Set(XP.map(X=>X.w))].sort((a,b)=>a-b).map(w=>({id:'u'+w,h:w?`Uge ${w} · ${esc(unit(w)[1])}`:'Uden uge',sub:[...new Set(XP.filter(X=>X.w===w&&CONCEPTS[X.c]).map(X=>X.c))].map(c=>`<a href="#${c}">${esc(CONCEPTS[c].title)}</a>`).join(' · '),ps:XP.filter(X=>X.w===w),w}))
+    :XSETS.map(x=>({id:'s-'+x.E.id,h:`<a href="#eksamen-${x.E.id}">${esc(x.S.l)}</a>`,sub:esc(x.E.title),ps:XP.filter(X=>X.E===x.E),w:0}));
+  const seg=(k,opts)=>`<div class="xhseg" role="group">${opts.map(([v,l,n])=>`<button class="${ui[k]===v?'on':''}" aria-pressed="${ui[k]===v}" data-xhui="${k}:${v}">${l}${n!=null?` <i>${n}</i>`:''}</button>`).join('')}</div>`;
+  main.innerHTML=`<div class="page xhpage"><h1>Gamle eksamensopgaver</h1><div class="sub">${all} delopgaver fra ${XSETS.length} rigtige sæt, sorteret efter type. Hver delopgave har en gennemgang, der spørger dig før hvert trin, og hver type har en opskrift.</div>
+    ${nx?`<div class="xhrec" style="${uvars(nx.T.w)}"><div><small>Næste anbefalede type</small><b>${esc(nx.T.t)}</b><span>Kom i ${xhFreqTxt(nx)} (${esc(xhSetList(nx))}). Du er ${nx.pct} % klar.</span></div><div class="xhrecb"><button class="b" data-xhtr="${nx.T.id}">${xhTrActive(nx.T.id)?'Fortsæt træningen':'Træn denne type'}</button><a class="b ghost" href="#type-${nx.T.id}">Se opskriften</a></div></div>`:''}
+    <h2>Hvad kommer oftest?</h2><p class="sub">Prikkerne viser, hvilke sæt typen kom i (nyeste først). Bjælken viser, hvor klar du er.</p>${xhFreqTable(st.filter(s=>s.T.id!=='andet'))}
+    <h2 id="xhall">Alle delopgaver</h2>
+    <div class="xhfilters">${seg('g',[['type','Efter type'],['uge','Efter uge'],['saet','Efter sæt']])}${seg('s',[['alle','Alle',cnt.alle],['ny','Ikke prøvet',cnt.ny],['fejl','Forkert',cnt.fejl],['ok','Rigtig',cnt.ok],['set','Gennemgået',cnt.set]])}</div>
+    ${groups.map(g=>{const ps=g.ps.filter(keep);if(!ps.length)return'';return`<section class="xhgrp" id="xh-${g.id}" style="${uvars(g.w)}"><div class="xhgh"><div><h3>${g.h}</h3>${g.sub?`<small>${g.sub}</small>`:''}</div>${g.tr?`<button class="b ghost sm" data-xhtr="${g.tr}">${xhTrActive(g.tr)?'Fortsæt':'Træn denne type'}</button>`:''}</div><div class="xhlist">${ps.map(X=>xhRow(X,{type:ui.g!=='type'})).join('')}</div></section>`}).join('')||'<p class="empty">Ingen delopgaver passer til filteret.</p>'}
+    <p class="note">Status "rigtig" og "forkert" kommer fra prøveeksamen, minieksamen og repetitionen, hvor du svarer uden hjælp. "Gennemgået" betyder, at du har taget gennemgangen med hjælp.</p></div>`;
+  if(wk){const el=document.getElementById('xh-u'+wk);requestAnimationFrame(()=>el?el.scrollIntoView({block:'start',behavior:'instant'}):window.scrollTo(0,0))}else if(wk!==0)window.scrollTo(0,0)}
+function xhExample(X){const P=X.src;
+  return`<div class="pcard xhex"><div class="ph"><span class="pl">${esc(X.T.ic||'')}</span><span class="pt">${esc(X.S.l)} · ${esc(X.lab)}<small>Regnet eksempel fra et rigtigt sæt</small></span></div>
+    <div class="prose">${X.intro?MD.inline(X.intro)+' ':''}${MD.inline(X.q)}</div>${X.mc?`<ol class="xhopts">${P.o.map(o=>`<li>${MD.inline(o)}</li>`).join('')}</ol>`:''}
+    <details class="xhrev"><summary>Vis løsningen trin for trin</summary>${X.mc?`<div class="prose"><p><b>Svar ${xhLetter(P.a)}.</b> ${MD.inline(P.s)}</p></div>`:`<ol class="xhsteps">${P.s.map((x,i)=>`<li>${MD.inline(x)}${P.y&&P.y[i]?`<div class="exy"><b>Hvorfor?</b> ${MD.inline(P.y[i])}</div>`:''}</li>`).join('')}</ol>`}</details>
+    <div class="acts"><a class="b u sm" href="#L-${X.lk}">${ico('play')} Gennemgå den med hjælp</a></div></div>`}
+function viewXhType(id){const T=XT_BY[id];if(!T||!xhOfType(id).length&&id==='andet')return viewXh();document.title=T.t+' · Opgavetyper · Mat1a';
+  const s=xhTypeStat(T),ex=XPK[T.ex]||s.ps.find(X=>X.C)||s.ps[0],tr=xhTrActive(id),kon=KON.find(k=>k.id===T.kon),cs=T.c.filter(c=>CONCEPTS[c]);
+  const li=a=>a.map(x=>`<li>${MD.inline(x)}</li>`).join('');
+  main.innerHTML=`<div class="page narrow xhtype" style="${uvars(T.w)}"><div class="ehead"><div class="crumb"><a href="#gamle">Gamle eksamensopgaver</a><span>›</span>${T.w?`<a href="#uge-${T.w}">Uge ${T.w} · ${esc(unit(T.w)[1])}</a>`:'<span>Opgavetype</span>'}</div><h1>${esc(T.t)}</h1><div class="xhfacts"><span>${s.n} delopgave${s.n===1?'':'r'}</span><span>${s.sets.length?'Kom i '+xhFreqTxt(s)+': '+esc(xhSetList(s)):'Har ikke været i de sæt, appen har'}</span><span>Du er ${s.pct} % klar</span></div><div class="glyph">${esc(T.ic||'')}</div></div>
+    ${s.n?`<div class="xhcta"><button class="b" data-xhtr="${id}">${tr?`Fortsæt træningen (${tr.i} af ${tr.ids.length})`:`Træn denne type · ${s.n} delopgave${s.n===1?'':'r'}`}</button><span class="sub">Delopgaverne fra alle sæt, én ad gangen, med fuld hjælp.</span></div>`:''}
+    ${T.know.length?`<div class="pcard"><h2>Sådan genkender du den</h2><ul class="xhul">${li(T.know)}</ul></div>`:''}
+    ${T.rec.length?`<div class="pcard"><h2>Opskriften</h2><ol class="xhrec2">${li(T.rec)}</ol></div>`:''}
+    ${ex?`<h2>Regnet eksempel</h2>${xhExample(ex)}`:''}
+    ${T.err.length?`<div class="pcard xherr"><h2>Typiske fejl</h2><ul class="xhul">${li(T.err)}</ul></div>`:''}
+    ${T.wr.length?`<div class="pcard xhwrc"><h2>Det skal stå på papiret</h2><p class="sub">I den skriftlige del får du point for begrundelsen og mellemregningerne, ikke kun for svaret.</p><ul class="xhul">${li(T.wr)}</ul></div>`:''}
+    <h2>Fra de gamle sæt</h2><p class="sub">${s.sets.length?`${T.t} kom i ${xhFreqTxt(s)}.`:''}</p><div class="xhlist">${s.ps.slice().sort((a,b)=>b.S.d-a.S.d).map(X=>xhRow(X)).join('')||'<p class="empty">Ingen endnu.</p>'}</div>
+    <h3 style="margin-top:26px">Læs og øv mere</h3><div class="tags">${cs.map(c=>`<a class="tag" href="#${c}"># ${esc(CONCEPTS[c].title)}</a>`).join('')}${kon?`<a class="tag kon" href="#kontrast-${kon.id}">⇄ ${esc(kon.t)}</a>`:''}${VID_TITLES[T.w]?`<button class="tag xhvid" data-v="${T.w}">🎬 Ugens video · uge ${T.w}</button>`:''}<a class="tag plain" href="#metode">Hvilken metode?</a></div></div>`;
+  window.scrollTo(0,0)}
+function xhRoute(r){if(r==='gamle'){viewXh();return true}let m=/^gamle-u(\d{1,2})$/.exec(r);if(m){viewXh(+m[1]);return true}
+  if(r.startsWith('type-')&&XT_BY[r.slice(5)]){viewXhType(r.slice(5));return true}return false}
+
+/* ---- prøveeksamen: link til gennemgangen på hver delopgave (øvetilstand og efter aflevering; aldrig mens uret går) ---- */
+function xhDecorate(){try{
+  const list=main.querySelector('.exlist');
+  if(list&&!main.querySelector('.xhpromo')){const nx=xhNext();list.insertAdjacentHTML('beforebegin',`<a class="excard xhpromo" href="#gamle"><b>📝 Gamle eksamensopgaver efter type</b><small>Opskrifter og guidede gennemgange af alle ${XP.length} delopgaver${nx?'. Næste anbefalede type: '+esc(nx.T.t):''}</small><span class="exst">Åbn oversigten ›</span></a>`)}
+  const pg=main.querySelector('.page.exam');if(!pg||!pg.querySelector('.exq'))return;const m=/^eksamen-(\w+)$/.exec(HASH),E=m&&EXAMS.find(e=>e.id===m[1]),st=E&&ST.exams[E.id];if(!st||!(st.practice||st.done))return;
+  const done=!!st.done;let bad=0;
+  XP.filter(X=>X.E===E).forEach(X=>{const box=document.getElementById(X.mc?'exmc'+X.i:'ex'+X.pid);if(!box||box.querySelector('.xhgo'))return;
+    const ok=done&&(X.mc?st.mc[X.i]===X.src.a:exCheckPart(X.src,st));if(done&&!ok)bad++;
+    const a=`<a class="xhgo ${done&&!ok?'b sm u':'link'}" href="#L-${X.lk}">${done&&!ok?'Gennemgå med hjælp':'Gennemgang med hjælp ›'}</a>`;
+    const ln=box.querySelector('.exlinks');if(ln)ln.insertAdjacentHTML('afterbegin',a);else box.insertAdjacentHTML('beforeend',`<div class="exlinks xhprac">${a}</div>`)});
+  const res=pg.querySelector('.exres');if(res&&bad&&!res.querySelector('.xhres'))res.querySelector('.socbtns').insertAdjacentHTML('afterbegin',`<button class="b xhres" data-xhwr="${E.id}">Gennemgå de ${bad} forkerte med hjælp</button>`)}catch(e){console.error(e)}}
+new MutationObserver(xhDecorate).observe(main,{childList:true});
+
+/* ---- søgning ---- */
+PITEMS.push(pitem('Side','Gamle eksamensopgaver','Alle delopgaver fra de gamle sæt efter type, med opskrifter og guidede gennemgange','gamle','eksamensopgaver gamle sæt opgavetyper opskrifter gennemgang hvad kommer oftest',3));
+XT.forEach(T=>PITEMS.push(pitem('Opgavetype',T.t,'Opskrift: '+plain(T.sig),'type-'+T.id,plain(T.know.join(' ')+' '+T.rec.join(' '))+' eksamen opskrift',2)));
+XP.forEach(X=>{const t=plain((X.intro?X.intro+' ':'')+X.q);PITEMS.push(pitem('Eksamen',X.name+(X.T.id!=='andet'?' · '+X.T.t:''),t.slice(0,110),'L-'+X.lk,t,1))});
+window.__XH={XP,XPK,XT_BY,stats:xhStats,q:()=>LS&&LS.cards[LS.i].q};
 
 VID_LEN[1]=105.0;VID_POSTER[1]='data:image/jpeg;base64,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';
 VID_LEN[2]=95.9;VID_POSTER[2]='data:image/jpeg;base64,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';
