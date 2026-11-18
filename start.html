@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-rXYY/uFPDFrfcH28H8tOZK3yLmcXru/ll0k5s4lvPPs=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-3neRGJ5NPfGIagfHRDHnj+v14OMiPGdEEzAGtEuPijY=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-rXYY/uFPDFrfcH28H8tOZK3yLmcXru/ll0k5s4lvPPs=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-/KS+D9LfemsZkUkUMG1uMgIl9k86lyzLHcwv7Jv19ys=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -1409,6 +1409,14 @@ button.ubanner{width:100%; border:0; font:inherit; text-align:left; cursor:point
 .exself label{align-items:flex-start; gap:10px; padding:4px 0; cursor:pointer}
 .exself input{width:22px; height:22px; flex:none; margin:1px 0 0; accent-color:#2fb36b}
 .exself label>span{min-width:0}
+
+/* 18/11: 5 min med Kubi, fridage */
+.b.fiveb{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1.15;padding-top:9px;padding-bottom:9px}
+.b.fiveb small{font-size:.74em;font-weight:700;opacity:.75;margin-top:2px}
+.week-dots i.fz{background:#d9eefc;color:#1f6fa8}
+.fznote{margin:8px 0 0;font-size:.9rem;font-weight:700;color:var(--ink,inherit)}
+.fznote.sub{font-weight:600;color:var(--muted)}
+.b.fiveb .fl{display:inline-flex;align-items:center;gap:6px}
 
 /* ---------- Læringsideer (learn.js): kontrastkort, eksamensplan, prætest, pause før hint, coach, eksport, eksamensmorgen ---------- */
 .menu .mhead{padding:10px 12px 2px; font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-top:2px solid var(--line); margin:6px 4px 0}
@@ -3654,7 +3662,11 @@ function normState(s){s=isObj(s)?s:{};return {
   /* eksamenshjælp (examview.js): gennemgåede delopgaver, træning i gang og valg på oversigten */
   xh:normXh(s.xh),
   /* daglig påmindelse (kun iOS-appen): til/fra og klokkeslæt */
-  rem:normRem(s.rem)}}
+  rem:normRem(s.rem),
+  /* fridage (18/11): optjenes hver 7. dag i træk (højst 2) og dækker automatisk en glemt dag */
+  fz:normFz(s.fz)}}
+const DK_RE=/^\d{4}-\d\d-\d\d$/;
+function normFz(f){f=isObj(f)?f:{};return{n:fint(f.n,0,2),at:fint(f.at,0,1e5),used:lim(clean(f.used,(v,k)=>DK_RE.test(k)&&v?1:undefined),400),msg:typeof f.msg==='string'&&DK_RE.test(f.msg)?f.msg:null,cnt:fint(f.cnt,0,3),earn:typeof f.earn==='string'&&DK_RE.test(f.earn)?f.earn:null}}
 function normRem(r){r=isObj(r)?r:{};return{on:!!r.on,t:typeof r.t==='string'&&/^([01]\d|2[0-3]):[0-5]\d$/.test(r.t)?r.t:'19:00'}}
 function normLearn(l){l=isObj(l)?l:{};const DK=/^\d{4}-\d\d-\d\d$/,str=(v,n)=>typeof v==='string'?v.slice(0,n):'',day=v=>typeof v==='string'&&DK.test(v)?v:'';
   const item=x=>{if(!isObj(x)||typeof x.t!=='string'||!/^[a-z]{1,10}$/.test(x.t))return null;const o={t:x.t};
@@ -3687,9 +3699,17 @@ const today=()=>dkey(new Date());
 function addXP(n){ST.xp+=n;const t=today();ST.days[t]=(ST.days[t]||0)+n;save();topbar()}
 /* en dag tæller, hvis der er tjent XP, eller hvis dagens repetition er gennemført */
 const activeDay=k=>!!(ST.days[k]||ST.rlog[k]);
-function streak(){let n=0;const d=new Date();if(!activeDay(today()))d.setDate(d.getDate()-1);while(activeDay(dkey(d))){n++;d.setDate(d.getDate()-1)}return n}
+function streak(){let n=0;const d=new Date();if(!activeDay(today()))d.setDate(d.getDate()-1);const U=(ST.fz||{}).used||{};
+  for(;;){const k=dkey(d);if(activeDay(k))n++;else if(!U[k])break;d.setDate(d.getDate()-1)}return n}
+/* fridage: dæk glemte dage (op til 3 i træk, hvis der er fridage nok og en stime bag dem), og giv en ny fridag for hver 7. dag i træk */
+function fzTick(){const F=ST.fz;if(!F)return;let ch=false;const d=new Date();d.setDate(d.getDate()-1);const miss=[];
+  for(let i=0;i<4;i++){const k=dkey(d);if(activeDay(k)||F.used[k])break;miss.push(k);d.setDate(d.getDate()-1)}
+  const k0=dkey(d);if(miss.length&&miss.length<=F.n&&(activeDay(k0)||F.used[k0])){miss.forEach(k=>F.used[k]=1);F.n-=miss.length;F.msg=today();F.cnt=miss.length;ch=true}
+  const m=Math.floor(streak()/7)*7;if(m<F.at){F.at=m;ch=true}else if(m>F.at){F.at=m;if(F.n<2){F.n++;F.earn=today()}ch=true}
+  if(ch)try{save()}catch(_){}}
+const fzDay=k=>!!(ST.fz&&ST.fz.used[k])&&!activeDay(k);
 let _lastXP=null;
-function topbar(){const sk=streak();document.querySelector('#streak span').textContent=sk;const se=document.getElementById('streak');se.setAttribute('aria-label',sk+(sk===1?' dag':' dage')+' i træk');const x=document.getElementById('xp');x.querySelector('span').textContent=ST.xp;x.setAttribute('aria-label',ST.xp+' XP');if(_lastXP!=null&&ST.xp>_lastXP){x.classList.remove('bump');void x.offsetWidth;x.classList.add('bump')}_lastXP=ST.xp}
+function topbar(){try{fzTick()}catch(e){console.error(e)}const sk=streak();document.querySelector('#streak span').textContent=sk;const se=document.getElementById('streak');se.setAttribute('aria-label',sk+(sk===1?' dag':' dage')+' i træk');const x=document.getElementById('xp');x.querySelector('span').textContent=ST.xp;x.setAttribute('aria-label',ST.xp+' XP');if(_lastXP!=null&&ST.xp>_lastXP){x.classList.remove('bump');void x.offsetWidth;x.classList.add('bump')}_lastXP=ST.xp}
 function flyXP(n,from){try{const t=document.querySelector('.lxp');if(!t)return;const s=document.createElement('div');s.className='xpfly';s.textContent='+'+n;const r=(from||t).getBoundingClientRect(),q=t.getBoundingClientRect();s.style.left=(r.left+r.width/2)+'px';s.style.top=(r.top)+'px';s.style.setProperty('--tx',(q.left+q.width/2-r.left-r.width/2)+'px');s.style.setProperty('--ty',(q.top-r.top)+'px');document.body.append(s);setTimeout(()=>s.remove(),1100);t.classList.remove('bump');void t.offsetWidth;t.classList.add('bump')}catch(e){}}
 const pstate=k=>ST.parts[k]||null;
 const isDone=k=>!!(ST.parts[k]&&ST.parts[k].done);
@@ -3885,21 +3905,32 @@ function wireOnboard(){const box=document.getElementById('onb');if(!box)return;l
   const end=()=>{ST.seen.onb=1;save();box.remove()};box.querySelector('#onbskip').onclick=end;
   nx.onclick=()=>{if(i>=sl.length-1)return end();sl[i].hidden=true;i++;sl[i].hidden=false;dots.forEach((d,j)=>d.classList.toggle('on',j===i));if(i===sl.length-1)nx.textContent='Kom i gang'}}
 let CALMW=0;
+function fzNote(){const F=ST.fz,t=today();let h='';
+  if(F.msg===t)h+=`<p class="fznote">❄ Kubi brugte ${F.cnt>1?F.cnt+' fridage':'en fridag'} på ${F.cnt>1?'de dage':'dagen'}, du ikke nåede. Din stime er reddet.</p>`;
+  if(F.earn===t)h+=`<p class="fznote">🎁 ${F.at} dage i træk! Du har fået en fridag. Den dækker automatisk en dag, du ikke når.</p>`;
+  if(!h&&!F.n&&streak()>=2)h=`<p class="fznote sub">Hver 7. dag i træk giver en fridag (højst 2), som dækker en glemt dag.</p>`;return h}
+/* "5 min med Kubi": højst 8 repetitionskort, derefter næste opgave – ét tryk, ingen valg */
+function nextPart(){const ok=p=>hasSol(p)&&!isDone(p.key)&&!p.xh&&p.opg&&p.opg.kind!=='hjem';
+  const cur=PARTS.filter(p=>ok(p)&&p.opg.week===CUR);if(cur.length)return cur[0];
+  return PARTS.filter(p=>ok(p)&&(p.opg.week||0)<CUR)[0]||PARTS.filter(ok)[0]||null}
+function fiveBtn(){let n=0;try{n=Math.min(8,repSummary().n)}catch(_){}const p=nextPart();if(!n&&!p)return'';
+  const sub=[n?n+' kort':'',p?'1 ny opgave':''].filter(Boolean).join(' + ');
+  return`<a class="b fiveb" href="#repetition/start-5"><span class="fl">${ico('play')} 5 min med Kubi</span><small>${sub}</small></a>`}
 function viewHome(){
   document.title='Mat1a';curId=curNode();
   const w=weekOf(CUR),u=unit(CUR),last=ST.last&&PK[ST.last];
   const tot=PARTS.filter(hasSol).length,done=PARTS.filter(p=>hasSol(p)&&isDone(p.key)).length;
-  const d=new Date(),dow=(d.getDay()+6)%7,wk=[];for(let k=0;k<7;k++){const x=new Date(d);x.setDate(d.getDate()-dow+k);wk.push([['M','T','O','T','F','L','S'][k],activeDay(dkey(x)),k===dow])}
+  const d=new Date(),dow=(d.getDay()+6)%7,wk=[];for(let k=0;k<7;k++){const x=new Date(d);x.setDate(d.getDate()-dow+k);wk.push([['M','T','O','T','F','L','S'][k],activeDay(dkey(x)),k===dow,fzDay(dkey(x))])}
   const nxt=DEADLINES.filter(x=>x.d>NOW).sort((a,b)=>a.d-b.d)[0];const sk=streak();const fresh=!ST.last&&!ST.xp;
   const calm=calmMode();if(calm&&!CALMW){CALMW=1;OPENW.delete(String(CUR))}
   let h=calm?`<div class="page homepage">${calmHome()}${xhHome()}${learnHome()}${weekStrip()}`:`<div class="page homepage">${onboardHTML()}<div class="hello">
     <div class="panel hero" style="${uvars(CUR)}"><div class="hi">${greet()} 👋</div><div class="ey">Uge ${CUR} · denne uge</div><h2>${esc(u[1])}</h2><p>${w?esc(plain(w.keywords).slice(0,160))+'…':'Opgaverne er ikke lagt op endnu.'}</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">${curId?`<a class="b" href="#${curId}">${ico('play')} ${fresh?'Start':'Fortsæt'}</a>`:''}${last?`<a class="b lastb" href="#${last.opg.id}">Sidst: ${esc(last.opg.kind==='hjem'?last.opg.title:'U'+last.opg.week+' opg. '+last.opg.nr)}</a>`:''}${VID_TITLES[CUR]?`<button class="b lastb" data-v="${CUR}">🎬 Ugens video</button>`:''}</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">${fiveBtn()}${curId?`<a class="b lastb" href="#${curId}">${fresh?'Start ugen':'Fortsæt ugen'}</a>`:''}${last?`<a class="b lastb" href="#${last.opg.id}">Sidst: ${esc(last.opg.kind==='hjem'?last.opg.title:'U'+last.opg.week+' opg. '+last.opg.nr)}</a>`:''}${VID_TITLES[CUR]?`<button class="b lastb" data-v="${CUR}">🎬 Ugens video</button>`:''}</div>
       <div class="glyph${u[2].length>2?' long':''}">${esc(u[2])}</div>${MASCOT('wave')}</div>
     <div class="panel">
       ${repHomeCard()}
-      <div class="stat"><div class="ic" style="background:#fff1e6">🔥</div><div><b>${sk} dag${sk===1?'':'e'} i træk</b><span>Repetition eller ét spørgsmål om dagen holder flammen i live</span></div></div>
-      <div class="week-dots" aria-label="Aktive dage denne uge">${wk.map(([l,on,t])=>`<i class="${on?'on':''} ${t?'today':''}">${l}</i>`).join('')}</div>
+      <div class="stat"><div class="ic" style="background:#fff1e6">🔥</div><div><b>${sk} dag${sk===1?'':'e'} i træk</b><span>Én aktivitet om dagen holder flammen i live${ST.fz.n?` · ❄ ${ST.fz.n} fridag${ST.fz.n>1?'e':''} gemt`:''}</span></div></div>${fzNote()}
+      <div class="week-dots" aria-label="Aktive dage denne uge">${wk.map(([l,on,t,f])=>`<i class="${on?'on':''} ${t?'today':''} ${f?'fz':''}" ${f?'title="Dækket af en fridag"':''}>${f?'❄':l}</i>`).join('')}</div>
       <div class="stat" style="margin-top:16px"><div class="ic" style="background:#fff7d6">⚡</div><div><b>${ST.xp} XP</b><span>${done} af ${tot} delopgaver klaret</span></div></div>
       ${nxt?`<a class="stat" href="#${nxt.go}"><div class="ic" style="background:var(--accent-soft)">${ico('flag')}</div><div><b>${esc(nxt.t)}</b><span>om ${Math.max(0,Math.ceil((nxt.d-NOW)/864e5))} dage · ${nxt.d.getDate()}/${nxt.d.getMonth()+1}</span></div></a>`:''}<a class="stat" href="#eksamen"><div class="ic" style="background:var(--accent-soft)">📝</div><div><b>Prøveeksamen</b><span>Rigtige eksamenssæt</span></div></a>${mixHomeCard()}<a class="stat" href="#videoer"><div class="ic" style="background:var(--accent-soft)">🎬</div><div><b>Ugevideoer</b><span>${Object.keys(ST.vids||{}).length} af ${Object.keys(VID_LEN).length||12} set</span></div></a>
     </div>${xhHome()}${learnHome()}</div>${weekStrip()}`;
@@ -5231,6 +5262,8 @@ function repTabs(sub){const t=[['','I dag'],['fejl','Fejllog'],['overblik','Over
   return`<nav class="soctabs reptabs" aria-label="Repetition">${t.map(([k,l])=>`<a href="#repetition${k?'/'+k:''}" ${sub===k?'aria-current="page"':''}>${l}</a>`).join('')}</nav>`}
 function viewRep(sub){sub=sub||'';document.title=({'':'Dagens repetition',fejl:'Fejllog',overblik:'Overblik'}[sub]||'Repetition')+' · Mat1a';
   if(sub==='fejl')return repLog();if(sub==='overblik')return repOverview();
+  if(sub==='start-5'){document.title='5 min med Kubi · Mat1a';REP=newSession('today');REP.q=REP.q.slice(0,8);REP.five=true;
+    if(!REP.q.length){REP.over=true;const p=nextPart();if(p){main.innerHTML='';setTimeout(()=>go_('L-'+p.key),0);return}return fiveNext(null)}return repRender()}
   if(sub==='start-fejl'){REP=newSession('fejl');return repRender()}
   if(sub==='start-guld'){REP=newSession('guld');return repRender()}
   if(sub==='start-formler'){document.title='Formeltræning · Mat1a';REP=newSession('form');return repRender()}
@@ -5305,9 +5338,15 @@ function repRender(){const R=REP;const sub=R.mode==='fejl'?'Øv de åbne fejl':'
     grade(evalOk())};
   REP.key=e=>{if(e.target.tagName==='TEXTAREA')return;if(stage==='ask'&&q.t==='mc'&&e.target.tagName!=='INPUT'){const n=+e.key;if(n>=1&&n<=os.length){os[n-1].click();return}}if(e.key==='Enter'&&!go.disabled){e.preventDefault();go.click()}}}
 document.addEventListener('keydown',e=>{if(REP&&REP.key&&!REP.over&&main.querySelector('.repcard')&&L.hidden&&!e.ctrlKey&&!e.metaKey)REP.key(e)});
+function fiveNext(R){const p=nextPart();const lab=p?(`Uge ${p.opg.week} · opgave ${p.opg.nr}${p.label?' '+p.label:''}`):'';
+  main.innerHTML=`<div class="page narrow rep"><h1>5 min med Kubi</h1><div class="panel repstart"><div class="repbig">${R&&R.n?'✓ Repetition klaret':'Ingen kort lige nu'}</div>
+    <p>${R&&R.n?`${R.ok} af ${R.n} rigtige. `:''}${p?'Nu én ny opgave, så er du færdig for i dag.':'Du har lavet alle opgaver med gennemgang. Tag en minieksamen i stedet.'}</p>
+    <div class="socbtns">${p?`<a class="b u" href="#L-${p.key}">${ico('play')} Næste: ${esc(lab)}</a>`:'<a class="b u" href="#mini">Minieksamen</a>'}<a class="b ghost" href="#">Stop her for i dag</a></div></div></div>`;
+  if(R&&R.n)confetti(1);window.scrollTo(0,0)}
 function repDone(){const R=REP;R.over=true;const t=today();const prev=ST.rlog[t]||{n:0,ok:0};ST.rlog[t]={...prev,n:prev.n+R.n,ok:prev.ok+R.ok};if(R.n)addXP(5);save();topbar();
   const nextDue=Object.values(ST.srs).map(s=>s.due).filter(d=>d>Date.now()).sort((a,b)=>a-b)[0];
   const nd=nextDue?Math.max(1,Math.round((sod(nextDue)-sod(Date.now()))/DAY)):null;
+  if(R.five)return fiveNext(R);
   const ttl={form:'Formeltræning',fejl:'Øv de åbne fejl',guld:'Guldfejl'}[R.mode];
   main.innerHTML=`<div class="page narrow rep"><h1>${ttl||'Dagens repetition'}</h1>${repTabs(ttl?'-':'')}<div class="panel repstart"><div class="repbig">✓ ${ttl?'Færdig':'Færdig for i dag'}</div>
     <p>${R.n?`${R.ok} af ${R.n} rigtige. `:''}${nd?`Næste kort er klar ${nd===1?'i morgen':'om '+nd+' dage'}.`:''}</p><p class="sub">Små daglige runder husker bedre end én lang aften inden eksamen.</p>
@@ -6106,8 +6145,8 @@ function viewSettings(){document.title='Indstillinger · Mat1a';const s=LRN().se
   main.innerHTML=`<div class="page narrow setp"><h1>Indstillinger og statistik</h1>
     <section class="panel"><h3>Træning</h3>
       ${row('setpause',!s.nopause,'Pause før hint','Hint og "Vis svaret" åbner først efter 20 sekunder i repetitionen og i Hvilken metode?. Et forsøg uden hjælp huskes bedre end et hurtigt kig.')}
-      ${settingsMore(row)}</section>${typeof remHTML==='function'?remHTML():''}${settingsExport()}</div>`;
-  main.querySelector('#setpause').onchange=e=>{s.nopause=!e.target.checked;save()};settingsWire();if(typeof remWire==='function')remWire();window.scrollTo(0,0)}
+      ${settingsMore(row)}</section>${typeof remHTML==='function'?remHTML():calHTML()}${settingsExport()}</div>`;
+  main.querySelector('#setpause').onchange=e=>{s.nopause=!e.target.checked;save()};settingsWire();if(typeof remWire==='function')remWire();else calWire();window.scrollTo(0,0)}
 function settingsMore(row){return row('setcoach',!LRN().set.nocoach,'Kubi som coach','Højst én kommentar om dagen på forsiden, lavet ud fra dine egne tal: hvor du er sikker og tager fejl, dit tempo i metodevalg og uger, du ikke har rørt længe.')}
 /* ---------- Eksportér statistik ----------
    Anonymt udtræk til en underviser: fejlrate pr. spørgsmål, begreb og uge, kalibrering og tid. Ingen navne, noter, svartekster eller refleksioner. */
@@ -6221,6 +6260,15 @@ PITEMS.push(pitem('Side','Indstillinger og statistik','Pause før hint, Kubi som
 PITEMS.push(pitem('Side','Skriv bekymringen ned','Valgfri skriveøvelse på 10 minutter til eksamensmorgenen. Teksten gemmes ikke.','morgen','eksamensmorgen nervøs angst bekymring eksamensangst rolig',1));
 PITEMS.push(pitem('Side','Kontrastkort','Par, der ofte forveksles, stillet side om side','kontrast','Arg arg injektiv surjektiv nulrum søjlerum forveksler forskel',2));
 KON.forEach(k=>PITEMS.push(pitem('Kontrast',k.t,plain(k.diff).slice(0,110),'kontrast-'+k.id,plain(k.a.d+' '+k.b.d+' '+k.diff)+' forskel forveksle',2)));
+
+/* web-udgaven kan ikke selv sende en daglig besked, så den får en gentagen kalenderbegivenhed (pa/HHMM.ics fra open_build.py) */
+const calTimes=()=>{const a=[];for(let h=6;h<24;h++)for(const m of['00','30'])a.push(String(h).padStart(2,'0')+':'+m);return a};
+const calHref=t=>'pa/'+t.replace(':','')+'.ics';
+function calHTML(){if(STORE)return'';{const t=calTimes().includes(ST.rem.t)?ST.rem.t:'19:00';
+    return`<section class="panel"><h3>Daglig påmindelse</h3><p class="sub">Læg en påmindelse i din kalender hver dag. Den åbner "5 min med Kubi" direkte: dagens kort og én ny opgave.</p>
+    <label class="remtime"><span>Tidspunkt</span><select id="remcal">${calTimes().map(x=>`<option${x===t?' selected':''}>${x}</option>`).join('')}</select></label>
+    <p><a class="b u" id="remcalgo" href="${calHref(t)}">📅 Tilføj til kalender</a></p><p class="sub">På iPhone: tryk på knappen og vælg "Tilføj alle". Du kan slette begivenheden i Kalender, når du vil.</p></section>`}}
+function calWire(){const cs=main.querySelector('#remcal');if(cs)cs.onchange=()=>{ST.rem.t=cs.value;save();main.querySelector('#remcalgo').href=calHref(cs.value)}}
 
 /* ---------- Eksamenshjælp: indhold ----------
    XT: opgavetyperne fra de gamle sæt med opskrift, kendetegn, typiske fejl og hvad bedømmerne vil se.
