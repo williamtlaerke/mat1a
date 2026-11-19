@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-rXYY/uFPDFrfcH28H8tOZK3yLmcXru/ll0k5s4lvPPs=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-/KS+D9LfemsZkUkUMG1uMgIl9k86lyzLHcwv7Jv19ys=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-rXYY/uFPDFrfcH28H8tOZK3yLmcXru/ll0k5s4lvPPs=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-8xz5ctx1Uws8pHl4pzhgSdbKYcFpyAy6EiZL/wP1PfQ=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -1730,6 +1730,35 @@ ol.xhsteps{margin:0 14px 12px; padding-left:22px; display:grid; gap:8px}
 .lhero.xhhero .lg{position:absolute; right:14px; bottom:-4px; font-size:54px; opacity:.16; max-width:60%; overflow:hidden; white-space:nowrap; pointer-events:none}
 .blk.tip>.bt svg,.blk.xhwr>.bt svg{width:18px; height:18px; flex:none}
 .xhlink>span{width:auto; min-width:28px; font-weight:900; white-space:nowrap}
+
+/* emnekort (19/11) */
+.xhmap{margin-top:22px}
+.xhmh{display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap}
+.xhmh h2{margin:0}
+.xhmsum{font-weight:800; color:var(--muted)} .xhmsum b{color:var(--ink); font-size:1.25em}
+.xhmgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:8px; margin-top:12px}
+.xhmt{display:grid; gap:4px; align-content:start; padding:12px; border-radius:16px; background:var(--card); border:2px solid var(--line); color:var(--ink); text-decoration:none; position:relative; min-height:118px}
+.xhmt:hover{border-color:var(--u)}
+.xhmt b{font-size:14px; line-height:1.25; font-weight:800; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+.xhmt small{color:var(--muted); font-weight:700; font-size:12.5px; line-height:1.3}
+.xhmic{font-size:18px; font-weight:900; color:var(--u-ink, var(--u))}
+.xhmn{display:flex; align-items:center; gap:6px; font-size:12.5px; font-weight:800; color:var(--muted)}
+.xhmdots{display:inline-flex; gap:3px} .xhmdots em{width:9px; height:9px; border-radius:50%; background:var(--line)} .xhmdots em.on{background:var(--ok)}
+.xhmt.l1{border-color:color-mix(in srgb, var(--u) 35%, var(--line))}
+.xhmt.l2{border-color:color-mix(in srgb, var(--u) 60%, var(--line)); background:color-mix(in srgb, var(--u) 6%, var(--card))}
+.xhmt.l3{border-color:var(--ok); background:color-mix(in srgb, var(--ok) 12%, var(--card))}
+.xhmt.l3 small{color:var(--ok); font-weight:900}
+.xhmt.next{box-shadow:0 0 0 3px color-mix(in srgb, var(--u) 45%, transparent)}
+.xhmt.next small{color:var(--u-ink, var(--ink)); font-weight:900}
+.xhmleg{display:flex; flex-wrap:wrap; gap:12px; margin-top:8px; font-size:12.5px; font-weight:700; color:var(--muted)}
+.xhmleg span{display:inline-flex; align-items:center; gap:5px} .xhmleg i{width:11px; height:11px; border-radius:3px; background:var(--line)}
+.xhmleg .l1 i,.xhsd .l1{background:color-mix(in srgb, var(--accent, #7c5cff) 35%, var(--line))}
+.xhmleg .l2 i,.xhsd .l2{background:color-mix(in srgb, var(--accent, #7c5cff) 75%, var(--line))}
+.xhmleg .l3 i,.xhsd .l3{background:var(--ok)}
+.xhstrip{display:flex; align-items:center; gap:10px; margin-top:8px; padding:6px 4px; color:var(--muted); text-decoration:none; font-weight:700; font-size:13px}
+.xhsd{display:flex; gap:3px; flex-wrap:wrap} .xhsd i{width:12px; height:12px; border-radius:3px; background:var(--line)}
+.xhstrip b{color:var(--ink)}
+@media (max-width:560px){.xhmgrid{grid-template-columns:repeat(2,minmax(0,1fr))} .xhmt{min-height:0}}
 </style>
 <script>try{var t=localStorage.getItem("mat1a-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1b1550"></head>
@@ -7168,6 +7197,2981 @@ At bytte om på de to matricer. Indekset til højre er den basis, koordinaterne 
 "Søjlerne i $§{}_\varepsilon[\mathrm{id}]_\beta$ er $\beta$-vektorerne", matricen, og $§{}_\beta[\mathrm{id}]_\varepsilon=\big({}_\varepsilon[\mathrm{id}]_\beta\big)^{-1}$ med udregningen af den inverse.
 >> svar
 $§{}_\varepsilon[\mathrm{id}]_\beta=\begin{bmatrix}1&1&0\\1&2&0\\0&0&1\end{bmatrix}$ og $§{}_\beta[\mathrm{id}]_\varepsilon=\begin{bmatrix}2&-1&0\\-1&1&0\\0&0&1\end{bmatrix}$.
+
+=== e1:mc1 | ode
+@hl er en løsning til
+>> type
+En homogen andenordens differentialligning med konstante koefficienter og syv kandidater. Karakterligningens rødder afgør, hvilken der passer.
+>> plan
+?? mc | Hvad gør du først? | *Deler med $3$ og løser karakterligningen | Sætter hver mulighed ind og differentierer to gange ~ Det virker, men med syv muligheder tager det alt for lang tid. Rødderne afgør det på én gang. | Vælger den med $e^{3t}$, fordi der står $3$ foran $f''$ ~ Tallet foran $f''$ er ikke en rod. Del med $3$ først, og løs karakterligningen.
+?h Ligningen er homogen og har konstante koefficienter.
+?h Sådan en løses med karakterligningen.
+?h Del først med $3$, så $f''$ står alene.
+Del med $3$: $f''-2f'+5f=0$. Karakterligningen er $\lambda^2-2\lambda+5=0$.
+>> trin Rødderne
+?? in | Rødderne i $\lambda^2-2\lambda+5=0$ er $\alpha\pm\beta i$ med $\beta>0$. Find $\alpha$ og $\beta$. | $\alpha$ = 1 | $\beta$ = 2
+?h Diskriminanten er $(-2)^2-4\cdot5=-16$.
+?h $\sqrt{-16}=4i$.
+?h $\lambda=\frac{2\pm4i}{2}=1\pm2i$.
+Rødderne er $\lambda=1\pm2i$, så $\alpha=1$ og $\beta=2$.
+>> trin Løsningerne
+?? mc | Hvilke funktioner løser så ligningen? | *$e^{t}(c_1\cos2t+c_2\sin2t)$ | $e^{2t}(c_1\cos t+c_2\sin t)$ ~ Her er $\alpha$ og $\beta$ byttet om. Realdelen $\alpha=1$ står i eksponenten, og $\beta=2$ står inde i $\cos$ og $\sin$. | $c_1\cos2t+c_2\sin2t$ ~ Faktoren $e^{t}$ mangler. Den form passer kun, når realdelen er $0$.
+?h Rødderne $\alpha\pm\beta i$ giver $e^{\alpha t}\cos(\beta t)$ og $e^{\alpha t}\sin(\beta t)$.
+?h $\alpha=1$ og $\beta=2$.
+?h Eksponenten er $1\cdot t$, og vinklen er $2t$.
+Alle løsninger er $e^{t}(c_1\cos2t+c_2\sin2t)$. Med $c_1=1$ og $c_2=0$ får du $e^{t}\cos(2t)$.
+>> tjek
+?? mc | $e^{-t}\cos(-2t)$ ligner svaret. Hvorfor er den forkert? | *Eksponenten skal være $+t$, fordi realdelen af rødderne er $+1$ | Fordi $\cos(-2t)$ ikke er tilladt ~ $\cos$ er lige, så $\cos(-2t)=\cos2t$. Det er ikke problemet. | Den er også rigtig ~ Den passer til rødderne $-1\pm2i$. Her er realdelen $+1$.
+?h Hvad er realdelen af rødderne?
+?h $\cos(-2t)=\cos(2t)$, så det er kun eksponenten, der er anderledes.
+?h $e^{-t}$ svarer til realdel $-1$.
+Fortegnet i eksponenten er realdelen af roden. Her er den $+1$, så $e^{-t}$ passer ikke.
+>> fejl
+At bytte om på real- og imaginærdel. Rødderne $1\pm2i$ giver $e^{t}\cos(2t)$, ikke $e^{2t}\cos t$.
+>> svar
+$e^{t}\cos(2t)$, fordi karakterligningen har rødderne $1\pm2i$.
+
+=== e1:mc2 | polrod
+@hl Hvad er resten
+>> type
+"Hvad er resten" ved division med $Z+1$. Du behøver ikke lave divisionen: resten ved division med $Z-a$ er $p(a)$.
+>> plan
+?? mc | Hvad er den hurtigste vej til resten? | *Indsæt $Z=-1$ i $p$ | Lav hele polynomiers division ~ Det giver det rigtige, men tager tid. Resten ved division med $Z-a$ er bare $p(a)$. | Indsæt $Z=1$ i $p$ ~ $Z+1=Z-(-1)$, så $a=-1$. $p(1)$ er resten ved division med $Z-1$.
+?h Hvad siger restsætningen?
+?h Resten ved division med $Z-a$ er $p(a)$.
+?h $Z+1=Z-(-1)$.
+Resten ved division med $Z+1=Z-(-1)$ er $p(-1)$.
+>> trin Led for led
+?? in | Udregn de tre første led af $p(-1)=(-1)^3-2(-1)^2-(-1)+7$. | $(-1)^3$ = -1 | $-2(-1)^2$ = -2 | $-(-1)$ = 1
+?h Ulige potenser af $-1$ giver $-1$, lige potenser giver $1$.
+?h $(-1)^2=1$, så $-2\cdot1=-2$.
+?h Minus minus giver plus.
+Leddene er $-1$, $-2$, $+1$ og $+7$.
+>> trin Resten
+?? in | Læg leddene sammen. | $p(-1)$ = 5
+?h $-1-2+1+7$.
+?h $-3+8$.
+?h Det giver $5$.
+$p(-1)=5$, så resten er $5$.
+>> tjek
+?? mc | Hvad betyder det, at resten er $5$ og ikke $0$? | *At $-1$ ikke er en rod i $p$ | At $Z+1$ går op i $p$ ~ Det gælder kun, hvis resten er $0$. | Ingenting ~ Rest $0$ er netop kriteriet for, at $-1$ er en rod. Rest $5$ betyder, at den ikke er.
+?h Hvornår går $Z-a$ op i $p$?
+?h Når $p(a)=0$.
+?h Her er $p(-1)=5\neq0$.
+Rest $0$ ville betyde, at $-1$ er en rod. Med rest $5$ er den det ikke, så $0$ kan udelukkes som svar.
+>> fejl
+At indsætte $Z=1$ i stedet for $Z=-1$, eller fortegnsfejl ved de ulige potenser.
+>> svar
+Resten er $p(-1)=5$.
+
+=== e1:mc3 | maengder
+@hl bijektiv
+>> type
+"Hvilken funktion er bijektiv?" med de samme forskrifter på forskellige mængder. Definitions- og dispositionsmængden er lige så vigtige som forskriften.
+>> plan
+?? mc | Hvad skal du tjekke for hver funktion? | *At den er både injektiv og surjektiv på de mængder, der står | Kun om forskriften har en invers ~ $\cos$ har ingen invers på $\mathbb R$, men på $[0,\pi]$ har den. Mængderne afgør det. | Kun om den er kontinuert ~ Kontinuitet siger intet om bijektivitet.
+?h Bijektiv betyder injektiv og surjektiv.
+?h Injektiv: ingen værdi rammes to gange.
+?h Surjektiv: hele dispositionsmængden rammes.
+Bijektiv betyder både injektiv og surjektiv. Begge dele afhænger af definitions- og dispositionsmængden.
+>> trin Injektiv
+?? mc | Hvilken af disse er injektiv? | *$\cos$ på $[0,\pi]$ | $\sin$ på $[0,\pi]$ ~ $\sin\frac\pi6=\sin\frac{5\pi}6=\frac12$. To forskellige $x$ med samme værdi. | $|x|$ på $[-1,1]$ ~ $|-1|=|1|$. To forskellige $x$ med samme værdi.
+?h Er funktionen monoton på hele definitionsmængden?
+?h $\sin$ vokser op til $\frac\pi2$ og aftager derefter.
+?h $\cos$ aftager på hele $[0,\pi]$.
+$\cos$ er strengt aftagende på $[0,\pi]$, så ingen værdi rammes to gange. $\sin$ og $|x|$ rammer værdier to gange.
+>> trin Surjektiv
+?? mc | $f_3(x)=e^x$ fra $\mathbb R$ til $\mathbb R$ er injektiv. Er den også surjektiv? | *Nej, den rammer aldrig tal $\le0$ | Ja, fordi den er voksende ~ Voksende giver injektiv, ikke surjektiv. | Ja, fordi den går mod uendelig ~ Den rammer alle positive tal, men aldrig fx $-1$.
+?h Kan $e^x$ blive negativ?
+?h $e^x>0$ for alle $x$.
+?h Dispositionsmængden er hele $\mathbb R$.
+$e^x>0$, så fx $-1$ rammes aldrig. Den er ikke surjektiv på $\mathbb R$.
+>> tjek
+?? mc | $\cos$ aftager på $[0,\pi]$ fra $\cos0$ til $\cos\pi$. Hvilke værdier rammer den? | *Hele $[-1,1]$, præcis dispositionsmængden for $f_6$ | Kun $[0,1]$ ~ $\cos\pi=-1$, så den når ned til $-1$. | Kun $[-1,0]$ ~ $\cos0=1$, så den starter i $1$.
+?h $\cos0=1$.
+?h $\cos\pi=-1$.
+?h Den er kontinuert og rammer alt imellem.
+$f_6$ rammer hele $[-1,1]$ og hver værdi kun én gang. Den er bijektiv.
+>> fejl
+At se på forskriften alene. $\cos$ er hverken injektiv eller surjektiv på $\mathbb R\to\mathbb R$, men bijektiv fra $[0,\pi]$ til $[-1,1]$.
+>> svar
+$f_6:[0,\pi]\to[-1,1]$, $x\mapsto\cos x$, er bijektiv.
+
+=== e1:mc4 | egen
+@hl er en egenvektor for
+>> type
+Egenværdien er givet, og du skal finde en egenvektor blandt syv. Løs $(\mathbf A-i\mathbf I)\mathbf v=\mathbf 0$, eller sæt kandidaterne ind.
+>> plan
+?? mc | Hvordan finder du en egenvektor til $\lambda=i$? | *Løser $(\mathbf A-i\mathbf I)\mathbf v=\mathbf 0$. Første række er nok | Finder egenværdierne først ~ Egenværdien er allerede givet. Gå direkte til $\mathbf A-i\mathbf I$. | Vælger den med $i$ i, fordi egenværdien er $i$ ~ Flere kandidater har $i$ i. Du skal regne.
+?h En egenvektor opfylder $\mathbf A\mathbf v=\lambda\mathbf v$.
+?h Det er det samme som $(\mathbf A-\lambda\mathbf I)\mathbf v=\mathbf 0$.
+?h Ved en $2\times2$-matrix er én række nok, fordi den anden er afhængig af den.
+Egenvektorerne er løsningerne til $(\mathbf A-i\mathbf I)\mathbf v=\mathbf 0$, og ved $2\times2$ er én række nok.
+>> trin Første række
+?? mc | Første række af $\mathbf A-i\mathbf I$ giver $(3-i)v_1-2v_2=0$. Sæt $v_1=2$. Hvad er $v_2$? | *$3-i$ | $3+i$ ~ $2v_2=(3-i)\cdot2$, så $v_2=3-i$. $3+i$ hører til den konjugerede egenværdi $-i$. | $\frac{3-i}{2}$ ~ Det får du med $v_1=1$. Med $v_1=2$ er $v_2=3-i$.
+?h $2v_2=(3-i)v_1$.
+?h Med $v_1=2$: $2v_2=2(3-i)$.
+?h Del med $2$.
+$v_2=3-i$, så $\mathbf v=(2,3-i)$.
+>> trin Tjek anden række
+?? in | Anden række er $5v_1+(-3-i)v_2$. Udregn den for $\mathbf v=(2,3-i)$. | $(-3-i)(3-i)$ = -10 | hele rækken = 0
+?h Gang ud: $-9+3i-3i+i^2$.
+?h $i^2=-1$.
+?h $5\cdot2-10$.
+$(-3-i)(3-i)=-9-1=-10$, og $10-10=0$. Begge rækker giver $0$.
+>> tjek
+?? mc | $(2,3+i)$ ligner svaret. Hvorfor er den forkert? | *Den er egenvektor for $-i$. Konjugerer man vektoren, konjugeres egenværdien også | Den er også rigtig ~ Første række giver $(3-i)\cdot2-2(3+i)=-4i\neq0$. | Fordi $3+i$ er større end $3-i$ ~ Komplekse tal kan ikke ordnes efter størrelse.
+?h Sæt $(2,3+i)$ ind i første række.
+?h $(3-i)\cdot2-2(3+i)$.
+?h Det giver $-4i$, ikke $0$.
+For en reel matrix gælder: er $\mathbf v$ egenvektor for $\lambda$, er $\bar{\mathbf v}$ egenvektor for $\bar\lambda$. $(2,3+i)$ hører til $-i$.
+>> fejl
+At vælge nulvektoren eller den konjugerede vektor. Nulvektoren er aldrig en egenvektor.
+>> svar
+$\begin{bmatrix}2\\3-i\end{bmatrix}$ er en egenvektor for $\lambda=i$.
+
+=== e1:mc5 | odesys
+@hl Hvilket udtryk er løsningen
+>> type
+Et lineært system $\mathbf f'=\mathbf A\mathbf f$ med begyndelsesværdier og syv kandidater. Egenværdierne siger, hvilke eksponentialer der må være med, og begyndelsesværdierne afgør resten.
+>> plan
+?? mc | Hvad kan du se direkte af matricen? | *Den er øvre trekantet, så egenværdierne er diagonalen: $-1$ og $-2$ | Egenværdierne er $-1$ og $2$ ~ Diagonalen er $-1$ og $-2$. Pas på fortegnet. | Ingenting, før du har det karakteristiske polynomium ~ For en trekantsmatrix er egenværdierne bare diagonalelementerne.
+?h Se på elementet under diagonalen.
+?h Det er $0$, så matricen er øvre trekantet.
+?h Egenværdierne står på diagonalen.
+Egenværdierne er $-1$ og $-2$, så løsningen består af $e^{-t}$ og $e^{-2t}$.
+>> trin Udeluk
+?? mc | Hvilke svar er tilbage, når kun $e^{-t}$ og $e^{-2t}$ må indgå? | *b), c) og d) | a), b), c) og d) ~ En konstant svarer til egenværdien $0$, og den har matricen ikke. | Kun d) ~ b) og c) har også kun $e^{-t}$ og $e^{-2t}$. De skal udelukkes på anden måde.
+?h a) er konstant.
+?h e), f) og g) har $e^{t}$ eller $e^{2t}$.
+?h Tilbage er b), c) og d).
+Tre svar er tilbage. Begyndelsesværdierne afgør, hvilken af dem det er.
+>> trin Anden ligning
+?? in | Anden ligning er $f_2'=-2f_2$ med $f_2(0)=4$, så $f_2=ce^{-2t}$. Find $c$. | $c$ = 4
+?h Sæt $t=0$ ind.
+?h $e^0=1$.
+?h $c=f_2(0)$.
+$f_2=4e^{-2t}$. Det udelukker c), hvor $f_2(0)=1$.
+>> trin Første ligning
+?? in | Første ligning bliver $f_1'=-f_1+8e^{-2t}$ med løsningen $f_1=ce^{-t}-8e^{-2t}$. Find $c$ ud fra $f_1(0)=3$. | $c$ = 11
+?h Sæt $t=0$: $c-8=3$.
+?h Læg $8$ til.
+?h $c=11$.
+$f_1=11e^{-t}-8e^{-2t}$. Tjek: $f_1(0)=11-8=3$.
+>> tjek
+?? mc | b) løser systemet. Hvorfor er den alligevel forkert? | *$f_1(0)=-8$, ikke $3$ | Den indeholder en forkert eksponentialfunktion ~ $e^{-2t}$ er tilladt. Det er begyndelsesværdien, der fejler. | Den løser ikke systemet ~ Den gør, med $c=0$ foran $e^{-t}$. Men så passer $f_1(0)$ ikke.
+?h Sæt $t=0$ ind i b).
+?h $f_1(0)=-8e^0$.
+?h Begyndelsesværdien er $3$.
+Mange kandidater løser systemet. Begyndelsesværdierne udvælger den ene rigtige.
+>> fejl
+At stoppe ved den første kandidat med de rigtige eksponentialer uden at tjekke begyndelsesværdierne.
+>> svar
+$f_1=11e^{-t}-8e^{-2t}$ og $f_2=4e^{-2t}$.
+
+=== e1:mc6 | rekursion
+@hl Hvad er $f(5)$
+>> type
+En rekursion med to startværdier, hvor du skal finde et senere led. Ren udregning, ét led ad gangen.
+>> plan
+?? mc | Hvordan finder du $f(5)$? | *Regner $f(3)$, $f(4)$ og $f(5)$ i rækkefølge | Finder en lukket formel først ~ Det er ikke nødvendigt for tre led. Regn dem bare ud. | Sætter $n=5$ ind og bruger $f(4)$ og $f(3)$ uden at regne dem ~ De skal regnes ud først. Start fra $f(1)$ og $f(2)$.
+?h Hvert led bruger de to forrige.
+?h Du kender $f(1)$ og $f(2)$.
+?h Start med $f(3)$.
+Regn led for led fra startværdierne.
+>> trin De to næste led
+?? in | Udregn $f(3)=2f(2)+f(1)^2$ og $f(4)=2f(3)+f(2)^2$. | $f(3)$ = 2 | $f(4)$ = 5
+?h $f(3)=2\cdot1+0^2$.
+?h $f(4)=2\cdot2+1^2$.
+?h $f(3)=2$ og $f(4)=5$.
+$f(3)=2$ og $f(4)=5$.
+>> trin $f(5)$
+?? in | Udregn $f(5)=2f(4)+f(3)^2$. | $f(5)$ = 14
+?h $2\cdot5$.
+?h $f(3)^2=2^2=4$.
+?h $10+4$.
+$f(5)=10+4=14$.
+>> tjek
+?? mc | $12$ er også en mulighed. Hvilken fejl giver $12$? | *At glemme at kvadrere: $2\cdot5+2$ | At kvadrere $f(n-1)$: $2\cdot5+5^2$ ~ Det giver $35$, ikke $12$. | At starte med $f(0)$ ~ Der er intet $f(0)$ i opgaven.
+?h $12=10+2$.
+?h Hvad er $f(3)$?
+?h $f(3)=2$ uden kvadrat.
+$12$ kommer af at glemme kvadratet på $f(3)$. Skriv hvert led op med alle tal.
+>> fejl
+At kvadrere det forkerte led. Det er $f(n-2)$, der kvadreres, ikke $f(n-1)$.
+>> svar
+$f(5)=14$.
+
+=== e1:mc7 | afbm
+@hl Hvad er $L(1+Z+Z^2)$
+>> type
+En afbildningsmatrix mellem polynomierum og et konkret polynomium. Gå via koordinater: ind i $\beta$, gang matricen på, ud af $\gamma$.
+>> plan
+?? mc | Hvordan bruger du matricen? | *Finder koordinaterne i $\beta$, ganger matricen på og oversætter resultatet tilbage via $\gamma$ | Ganger matricen direkte med polynomiet ~ Matricen virker på koordinatvektorer, ikke på polynomier. | Sætter $Z=1$ ind i polynomiet og ganger med det ~ Et tal er ikke en koordinatvektor. Du skal bruge koordinaterne $(1,1,1)$.
+?h Matricen hedder $\,{}_\gamma[L]_\beta$.
+?h Den tager $\beta$-koordinater ind og giver $\gamma$-koordinater ud.
+?h Find først koordinaterne for $1+Z+Z^2$ i $\beta=(1,Z,Z^2)$.
+$\,{}_\gamma[L(p)]={}_\gamma[L]_\beta\,{}_\beta[p]$.
+>> trin Koordinaterne
+?? in | Skriv $1+Z+Z^2$ som koordinatvektor i $\beta=(1,Z,Z^2)$. | 1. koordinat = 1 | 2. koordinat = 1 | 3. koordinat = 1
+?h Koordinaterne er koefficienterne foran $1$, $Z$ og $Z^2$.
+?h Alle tre koefficienter er $1$.
+?h $(1,1,1)$.
+$\,{}_\beta[1+Z+Z^2]=(1,1,1)$.
+>> trin Gang matricen på
+?? in | Udregn $\begin{bmatrix}1&-1&0\\2&3&-1\end{bmatrix}\begin{bmatrix}1\\1\\1\end{bmatrix}$. | 1. koordinat = 0 | 2. koordinat = 4
+?h Med $(1,1,1)$ får du rækkesummerne.
+?h $1-1+0$.
+?h $2+3-1$.
+Resultatet er $(0,4)$.
+>> tjek
+?? mc | Hvad betyder $(0,4)$? | *$0\cdot1+4\cdot Z=4Z$ | Tallet $4$ ~ $4$ er koordinaten til $Z$ i $\gamma=(1,Z)$. Polynomiet er $4Z$. | $4+0\cdot Z=4$ ~ Rækkefølgen i $\gamma$ er $(1,Z)$. Første koordinat hører til $1$.
+?h $\gamma=(1,Z)$.
+?h Første koordinat ganges på $1$, anden på $Z$.
+?h $0\cdot1+4Z$.
+$(0,4)$ er $\gamma$-koordinater, så $L(1+Z+Z^2)=4Z$.
+>> fejl
+At læse $(0,4)$ som tallet $4$ eller glemme at oversætte tilbage via $\gamma$.
+>> svar
+$L(1+Z+Z^2)=4Z$.
+
+=== e1:10a | lignsys
+@hl Bestem den fuldstændige løsning
+>> type
+Tre ligninger med fire ubekendte. Der er mindst én fri variabel, så løsningen er en partikulær løsning plus et parameterled.
+>> plan
+?? mc | Hvordan griber du det an? | *Opstiller totalmatricen, reducerer og sætter den frie variabel lig $t$ | Finder løsningen for $t=0$ og stopper ~ Opgaven vil have den fuldstændige løsning, altså alle løsninger. | Bruger Cramers regel ~ Systemet har ikke lige mange ligninger og ubekendte, så den kan ikke bruges.
+?h Hvor mange ubekendte og ligninger er der?
+?h Fire ubekendte, tre ligninger.
+?h Mindst én variabel bliver fri.
+Rækkereducér totalmatricen. Søjle 4 får ingen pivot, så $x_4=t$ bliver parameter.
+>> trin Den sidste ligning
+?? in | Sæt $x_4=t$. Tredje ligning $x_3-x_4=1$ giver $x_3$. Hvad er $x_3$ for $t=0$ og $t=1$? | $t=0$ = 1 | $t=1$ = 2
+?h $x_3=1+x_4$.
+?h $x_3=1+t$.
+?h $1+0$ og $1+1$.
+$x_3=1+t$.
+>> trin De to første ligninger
+?? in | Med $x_3=1+t$ og $x_4=t$ bliver de to første ligninger $3x_1+2x_2=-1-t$ og $2x_1+x_2=-t$. Find $x_1$ og $x_2$ for $t=0$ og $t=1$. | $t=0$: $x_1$ = 1 | $t=0$: $x_2$ = -2 | $t=1$: $x_1$ = 0 | $t=1$: $x_2$ = -1
+?h Træk $2$ gange anden ligning fra den første.
+?h Det giver $-x_1=-1+t$, altså $x_1=1-t$.
+?h $x_2=-t-2x_1=-2+t$.
+$x_1=1-t$ og $x_2=-2+t$.
+>> tjek
+?? mc | Sæt løsningen for $t=1$, $(0,-1,2,1)$, ind i første ligning $3x_1+2x_2+x_3$. Hvad giver det? | *$0$, som det skal | $1$ ~ $3\cdot0+2\cdot(-1)+2=0$. Regn efter. | $-2$ ~ Du har glemt $x_3=2$.
+?h $3\cdot0=0$.
+?h $2\cdot(-1)=-2$.
+?h $0-2+2$.
+Første ligning giver $0$. Tjek de andre også: $2\cdot0-1+1=0$ og $2-1=1$.
+>> fejl
+At give én løsning i stedet for den fuldstændige, eller at glemme "$t\in\mathbb R$".
+>> skriv
+Totalmatricen, rækkeoperationerne og den reducerede form $\left[\begin{array}{cccc|c}1&0&0&1&1\\0&1&0&-1&-2\\0&0&1&-1&1\end{array}\right]$. Derefter: "$x_4=t$ er fri", og
+$\mathbf x=\begin{bmatrix}1\\-2\\1\\0\end{bmatrix}+t\begin{bmatrix}-1\\1\\1\\1\end{bmatrix},\ t\in\mathbb R$.
+>> svar
+$\mathbf x=(1,-2,1,0)+t(-1,1,1,1)$, $t\in\mathbb R$.
+
+=== e1:11a | logik
+@hl logisk ækvivalent med
+>> type
+To udsagn med $P$ og $Q$, og spørgsmålet "logisk ækvivalent?". Det afgøres ved at sammenligne sandhedsværdierne i alle tilfælde.
+>> plan
+?? mc | Hvad er den hurtigste vej? | *Dele op efter $P$: to tilfælde i stedet for fire rækker | En sandhedstabel med otte rækker ~ Der er kun to variable, så der er fire rækker. Og at dele op efter $P$ er endnu hurtigere. | Omskrive med De Morgans love ~ $\Leftrightarrow$ er ikke nem at omskrive med De Morgan. Del op i tilfælde.
+?h Begge udsagn har $\land P$ i sig.
+?h Hvad sker der, når $P$ er falsk?
+?h Del op i $P$ falsk og $P$ sand.
+Del op efter $P$. Begge sider har $P$ som en del af en konjunktion.
+>> trin $P$ falsk
+?? mc | Hvis $P$ er falsk, hvad er så begge sider? | *Begge falske, fordi en konjunktion med $P$ er falsk | Begge sande ~ En konjunktion er kun sand, når begge dele er sande. | Det afhænger af $Q$ ~ $\dots\land P$ er falsk uanset $Q$, når $P$ er falsk.
+?h Venstre side er $(\dots)\land P$.
+?h Højre side er $P\land\neg Q$.
+?h $\text{F}\land\text{noget}$ er falsk.
+Begge sider er falske, når $P$ er falsk.
+>> trin $P$ sand
+?? mc | Hvis $P$ er sand, hvad bliver $P\Leftrightarrow\neg Q$ så til? | *Det samme som $\neg Q$ | Altid sand ~ $\Leftrightarrow$ er sand, når begge sider har samme værdi. Med $P$ sand afhænger det af $\neg Q$. | Det samme som $Q$ ~ $\text{S}\Leftrightarrow X$ har samme værdi som $X$, og her er $X=\neg Q$.
+?h $\Leftrightarrow$ er sand, når siderne har samme sandhedsværdi.
+?h Med $P$ sand skal $\neg Q$ også være sand.
+?h Så $P\Leftrightarrow\neg Q$ har værdien af $\neg Q$.
+Med $P$ sand er venstre side $\neg Q\land\text{S}=\neg Q$, og højre side er $\text{S}\land\neg Q=\neg Q$.
+>> trin Konklusionen
+?? mc | Er udsagnene logisk ækvivalente? | *Ja | Nej ~ I begge tilfælde har de samme værdi: falsk når $P$ er falsk, $\neg Q$ når $P$ er sand.
+?h Sammenlign de to tilfælde.
+?h I begge tilfælde har siderne samme værdi.
+?h Så har de samme værdi i alle fire rækker.
+Ja. De har samme sandhedsværdi i alle tilfælde.
+>> tjek
+?? mc | Test rækken med $P$ sand og $Q$ sand. Hvad giver de to sider? | *Begge falske | Venstre sand, højre falsk ~ $P\Leftrightarrow\neg Q$ er $\text{S}\Leftrightarrow\text{F}$, som er falsk. | Begge sande ~ $\neg Q$ er falsk, så $P\land\neg Q$ er falsk.
+?h $\neg Q$ er falsk.
+?h $\text{S}\Leftrightarrow\text{F}$ er falsk.
+?h Begge sider bliver falske.
+Begge sider er falske. Det passer med konklusionen.
+>> fejl
+At regne én række og slutte derfra. Logisk ækvivalens kræver samme værdi i alle rækker.
+>> skriv
+En sandhedstabel med fire rækker og søjler for $\neg Q$, $P\Leftrightarrow\neg Q$, venstre side og højre side, eller de to tilfælde $P$ falsk og $P$ sand skrevet ud. Til sidst: "Søjlerne er ens, så udsagnene er logisk ækvivalente."
+>> svar
+Ja, de er logisk ækvivalente.
+
+=== e1:11b | maengder
+@hl Er $-2\in S$
+>> type
+En mængde bygget af kendte talmængder, og et konkret tal, der skal testes. Tjek hver betingelse for sig.
+>> plan
+?? mc | Hvad skal $-2$ opfylde for at ligge i $S$? | *$-2\in\mathbb Z$ og $-2\notin\mathbb N$ | Kun $-2\in\mathbb R$ ~ $S$ er fællesmængden med $\mathbb Z$, og $\mathbb N$ er trukket fra. | $-2\in\mathbb N$ og $-2\in\mathbb Z$ ~ $\setminus\mathbb N$ betyder, at tallet ikke må være naturligt.
+?h $\cap$ betyder "og".
+?h $\setminus\mathbb N$ betyder "ikke i $\mathbb N$".
+?h Tallet skal være helt og ikke naturligt.
+$x\in S$ netop når $x\in\mathbb Z$ og $x\notin\mathbb N$.
+>> trin Hvad er $S$
+?? mc | Hvilken mængde er $S$? | *$\{\dots,-2,-1,0\}$ | $\{0\}$ ~ Alle negative hele tal er også med. | $\mathbb Z$ ~ De naturlige tal $1,2,3,\dots$ er trukket fra.
+?h $\mathbb N=\{1,2,3,\dots\}$.
+?h Fjern dem fra $\mathbb Z$.
+?h Tilbage er $0$ og de negative hele tal.
+$S$ er de hele tal, der ikke er naturlige: $S=\{\dots,-2,-1,0\}$.
+>> tjek
+?? mc | Er $-2$ et naturligt tal? | *Nej | Ja ~ Naturlige tal er $1,2,3,\dots$. Negative tal er aldrig naturlige.
+?h Hvad er de naturlige tal?
+?h $1,2,3,\dots$
+?h $-2$ er negativt.
+$-2$ er helt og ikke naturligt, så $-2\in S$.
+>> fejl
+At læse $\mathbb R\setminus\mathbb N$ som "de reelle tal i $\mathbb N$". $\setminus$ betyder minus.
+>> skriv
+"$-2\in\mathbb Z$, og $-2\notin\mathbb N$, så $-2\in\mathbb R\setminus\mathbb N$ og dermed $-2\in(\mathbb R\setminus\mathbb N)\cap\mathbb Z=S$."
+>> svar
+Ja, $-2\in S$.
+
+=== e1:12a | span
+@hl Find en ordnet basis for
+>> type
+"Basis for udspændingen" af nogle vektorer. Spørgsmålet er, hvilke af dem der er lineært uafhængige.
+>> plan
+?? mc | Hvordan finder du basen? | *Sætter vektorerne som søjler, rækkereducerer og tager pivotsøjlerne | Tager alle tre, fordi ingen er nulvektoren ~ Vektorerne kan være afhængige uden at være nul. Det skal tjekkes. | Tager de to korteste ~ Længden siger intet om uafhængighed.
+?h En basis skal være lineært uafhængig.
+?h Sæt vektorerne som søjler i en matrix.
+?h Pivotsøjlerne viser, hvilke vektorer der er uafhængige.
+Med vektorerne som søjler peger pivotsøjlerne på de vektorer, der skal med i basen.
+>> trin Den reducerede form
+?? in | Den reducerede form af $[\mathbf u\ \mathbf v\ \mathbf w]$ er $\begin{bmatrix}1&0&a\\0&1&b\\0&0&0\\0&0&0\end{bmatrix}$. Find $a$ og $b$. | $a$ = 3 | $b$ = -2
+?h $R_2-R_1$, $R_3+R_1$ og $R_4-2R_1$.
+?h Ryd derefter søjle 2.
+?h Tredje søjle bliver $(3,-2,0,0)$.
+Pivoter i søjle 1 og 2. Søjle 3 har ingen pivot.
+>> trin Hvad betyder det
+?? mc | Hvad fortæller søjle 3 uden pivot? | *At $\mathbf w=3\mathbf u-2\mathbf v$ | At $\mathbf w$ er nulvektoren ~ $\mathbf w=(-3,-1,-1,4)$ er ikke nul. Den er en kombination af de andre. | At $\mathbf u$, $\mathbf v$ og $\mathbf w$ er uafhængige ~ En søjle uden pivot betyder netop afhængighed.
+?h En søjle uden pivot er en linearkombination af pivotsøjlerne.
+?h Koefficienterne står i den reducerede søjle.
+?h $3$ og $-2$.
+$\mathbf w=3\mathbf u-2\mathbf v$, så $\mathbf w$ tilføjer intet nyt.
+>> tjek
+?? in | Tjek det: udregn $3\mathbf u-2\mathbf v$. | 1. koordinat = -3 | 2. koordinat = -1 | 3. koordinat = -1 | 4. koordinat = 4
+?h $3\mathbf u=(3,3,-3,6)$.
+?h $2\mathbf v=(6,4,-2,2)$.
+?h Træk dem fra hinanden.
+$3\mathbf u-2\mathbf v=(-3,-1,-1,4)=\mathbf w$.
+>> fejl
+At tage rækker fra den reducerede matrix som basis og kalde dem $\mathbf u$ og $\mathbf v$. Pivotsøjlerne peger på de oprindelige vektorer.
+>> skriv
+Matricen med $\mathbf u,\mathbf v,\mathbf w$ som søjler, rækkeoperationerne og den reducerede form. Derefter: "Pivoter i søjle 1 og 2, så $(\mathbf u,\mathbf v)$ er en basis for udspændingen, som har dimension 2."
+>> svar
+$(\mathbf u,\mathbf v)$ er en basis, og udspændingen har dimension 2.
+
+=== e1:12b | span
+@hl Er $\mathbf x\in\mathrm{span}_{\mathbb R}(\mathbf u,\mathbf v,\mathbf w)$
+>> type
+"Ligger $\mathbf x$ i udspændingen?" Det er et spørgsmål om, hvorvidt et ligningssystem har en løsning.
+>> plan
+?? mc | Hvad skal du undersøge? | *Om $a\mathbf u+b\mathbf v=\mathbf x$ har en løsning ($\mathbf w$ kan udelades) | Om $\mathbf x$ er et multiplum af $\mathbf u$ ~ $\mathbf x$ kan ligge i udspændingen uden at være et multiplum af én vektor. | Om $\mathbf x$ er længere end $\mathbf u$ og $\mathbf v$ ~ Længden er ligegyldig.
+?h Hvad betyder det at ligge i udspændingen?
+?h $\mathbf x$ skal være en linearkombination.
+?h Fra 12a ved du, at $\mathbf w$ allerede er en kombination af $\mathbf u$ og $\mathbf v$.
+$\mathbf x$ ligger i udspændingen, netop når $a\mathbf u+b\mathbf v=\mathbf x$ har en løsning.
+>> trin De to første koordinater
+?? in | De to første koordinater giver $a+3b=2$ og $a+2b=1$. Find $a$ og $b$. | $a$ = -1 | $b$ = 1
+?h Træk den anden ligning fra den første.
+?h $b=1$.
+?h $a=1-2b$.
+$a=-1$ og $b=1$. Det er den eneste mulighed.
+>> trin Tredje koordinat
+?? in | Udregn tredje koordinat af $-\mathbf u+\mathbf v$. | tredje koordinat = 0
+?h Tredje koordinat af $\mathbf u$ er $-1$ og af $\mathbf v$ er $-1$.
+?h $-(-1)+(-1)$.
+?h Det giver $0$.
+Tredje koordinat bliver $0$, men $\mathbf x$ har $4$. Systemet har ingen løsning.
+>> tjek
+?? mc | Hvorfor må du se bort fra $\mathbf w$? | *Fordi $\mathbf w=3\mathbf u-2\mathbf v$ allerede ligger i $\mathrm{span}(\mathbf u,\mathbf v)$ | Fordi $\mathbf w$ er den længste ~ Længden er ligegyldig. | Det må du ikke ~ Udspændingen ændrer sig ikke, når en afhængig vektor fjernes.
+?h Se på 12a.
+?h $\mathbf w$ er en linearkombination af $\mathbf u$ og $\mathbf v$.
+?h Så er udspændingerne ens.
+$\mathrm{span}(\mathbf u,\mathbf v,\mathbf w)=\mathrm{span}(\mathbf u,\mathbf v)$, fordi $\mathbf w$ er afhængig.
+>> fejl
+At finde $a$ og $b$ fra to koordinater og stoppe. Alle fire koordinater skal passe.
+>> skriv
+Totalmatricen $[\,\mathbf u\ \mathbf v\mid\mathbf x\,]$ og rækkereduktionen til en række $[0\ 0\mid c]$ med $c\neq0$. Derefter: "Systemet er inkonsistent, så $\mathbf x\notin\mathrm{span}(\mathbf u,\mathbf v,\mathbf w)$."
+>> svar
+Nej, $\mathbf x$ ligger ikke i udspændingen.
+
+=== e1:14b | afbm
+@hl Bestem $\,{}_\varepsilon[L]_\varepsilon$
+>> type
+En afbildningsmatrix i én basis, og du skal finde den i en anden. Det er basisskifte: gang med basisskiftematricerne på begge sider.
+>> plan
+?? mc | Hvilken formel bruger du? | *$\,{}_\varepsilon[L]_\varepsilon={}_\varepsilon[\mathrm{id}]_\beta\,{}_\beta[L]_\beta\,{}_\beta[\mathrm{id}]_\varepsilon$ | $\,{}_\varepsilon[L]_\varepsilon={}_\beta[\mathrm{id}]_\varepsilon\,{}_\beta[L]_\beta\,{}_\varepsilon[\mathrm{id}]_\beta$ ~ Rækkefølgen er vendt. Læs fra højre: først skal vektoren over i $\beta$. | $\,{}_\varepsilon[L]_\varepsilon=({}_\beta[L]_\beta)^{\mathsf T}$ ~ Transponering skifter ikke basis.
+?h Læs produktet fra højre mod venstre.
+?h Vektoren kommer ind i $\varepsilon$ og skal først over i $\beta$.
+?h Så anvendes $L$, og til sidst går den tilbage til $\varepsilon$.
+Skift til $\beta$, anvend $L$, skift tilbage: $\,{}_\varepsilon[\mathrm{id}]_\beta\,{}_\beta[L]_\beta\,{}_\beta[\mathrm{id}]_\varepsilon$.
+>> trin Basisskiftematricerne
+?? in | $\,{}_\varepsilon[\mathrm{id}]_\beta$ har $\beta$-vektorerne som søjler. Dens inverse er $\,{}_\beta[\mathrm{id}]_\varepsilon=\begin{bmatrix}a&b&0\\c&d&0\\0&0&1\end{bmatrix}$. Find $a$, $b$, $c$ og $d$. | $a$ = 2 | $b$ = -1 | $c$ = -1 | $d$ = 1
+?h Den øverste $2\times2$-blok er $\begin{bmatrix}1&1\\1&2\end{bmatrix}$.
+?h Dens determinant er $1$.
+?h $\begin{bmatrix}1&1\\1&2\end{bmatrix}^{-1}=\begin{bmatrix}2&-1\\-1&1\end{bmatrix}$.
+$\,{}_\beta[\mathrm{id}]_\varepsilon=\begin{bmatrix}2&-1&0\\-1&1&0\\0&0&1\end{bmatrix}$.
+>> trin Første produkt
+?? in | Udregn $\,{}_\beta[L]_\beta\,{}_\beta[\mathrm{id}]_\varepsilon$. De to første rækker er $(2,-1,0)$ og $(-3,3,0)$. Find tredje række. | 1. tal = -1 | 2. tal = 1 | 3. tal = 1
+?h Tredje række af $\,{}_\beta[L]_\beta$ er $(0,1,1)$.
+?h Den tager anden plus tredje række af $\,{}_\beta[\mathrm{id}]_\varepsilon$.
+?h $(-1,1,0)+(0,0,1)$.
+Tredje række er $(-1,1,1)$.
+>> trin Sidste produkt
+?? in | Gang $\begin{bmatrix}1&1&0\\1&2&0\\0&0&1\end{bmatrix}$ på fra venstre. Find anden række af resultatet. | 1. tal = -4 | 2. tal = 5 | 3. tal = 0
+?h Anden række af den venstre matrix er $(1,2,0)$.
+?h Den tager første række plus to gange anden række af produktet.
+?h $(2,-1,0)+2(-3,3,0)$.
+Anden række er $(-4,5,0)$. Hele matricen er $\begin{bmatrix}-1&2&0\\-4&5&0\\-1&1&1\end{bmatrix}$.
+>> tjek
+?? in | $\beta$'s første vektor $(1,1,0)$ sendes i sig selv af $L$, fordi første søjle i $\,{}_\beta[L]_\beta$ er $(1,0,0)$. Udregn $\,{}_\varepsilon[L]_\varepsilon\begin{bmatrix}1\\1\\0\end{bmatrix}$. | 1. koordinat = 1 | 2. koordinat = 1 | 3. koordinat = 0
+?h Det er summen af de to første søjler.
+?h $(-1+2,\,-4+5,\,-1+1)$.
+?h $(1,1,0)$.
+$\,{}_\varepsilon[L]_\varepsilon(1,1,0)=(1,1,0)$, som det skal være.
+>> fejl
+At gange basisskiftematricerne på i forkert rækkefølge. Tjek altid med en vektor, hvor du kender svaret.
+>> skriv
+Formlen $\,{}_\varepsilon[L]_\varepsilon={}_\varepsilon[\mathrm{id}]_\beta\,{}_\beta[L]_\beta\,{}_\beta[\mathrm{id}]_\varepsilon$, de to basisskiftematricer og produktet $\begin{bmatrix}-1&2&0\\-4&5&0\\-1&1&1\end{bmatrix}$.
+>> svar
+$\,{}_\varepsilon[L]_\varepsilon=\begin{bmatrix}-1&2&0\\-4&5&0\\-1&1&1\end{bmatrix}$.
+
+=== e1:15a | induktion
+@hl Vis med induktion efter ; for alle
+>> type
+"Vis med induktion" en ulighed for en rekursivt defineret følge. Den skal gælde fra $n=3$, så basistrinnet ligger ved $n=3$.
+>> plan
+?? mc | Hvilke dele skal beviset have? | *Basistrin for $n=3$, induktionsantagelse for $n$ og skridt fra $n$ til $n+1$ | Basistrin for $n=1$, antagelse og skridt ~ Uligheden gælder fra $n=3$. For $n=1$ er $f(1)=1<2$. | Regne $f(3)$, $f(4)$ og $f(5)$ ud og se mønstret ~ Eksempler kan ikke vise "for alle $n$".
+?h Opgaven siger "for alle $n\ge3$".
+?h Et induktionsbevis har tre dele.
+?h Basistrinnet ligger ved det mindste $n$.
+Basistrin ved $n=3$, induktionsantagelse og induktionsskridt.
+>> trin Basistrin
+?? in | Udregn $f(2)$ og $f(3)$ med $f(n)=2f(n-1)+n-1$. | $f(2)$ = 3 | $f(3)$ = 8
+?h $f(2)=2f(1)+2-1$.
+?h $f(2)=2+1=3$.
+?h $f(3)=2\cdot3+3-1$.
+$f(3)=8=2^3$, så $f(3)\ge2^3$.
+>> trin Rekursionen for $n+1$
+?? mc | Hvad er $f(n+1)$? | *$2f(n)+n$ | $2f(n)+n+1$ ~ Leddet er $(n+1)-1=n$. | $2f(n-1)+n$ ~ $f(n+1)$ bruger det forrige led, som er $f(n)$.
+?h Sæt $n+1$ ind i stedet for $n$.
+?h $f(n+1)=2f(n)+(n+1)-1$.
+?h $(n+1)-1=n$.
+$f(n+1)=2f(n)+n$.
+>> trin Brug antagelsen
+?? mc | Antag $f(n)\ge2^n$. Hvad kan du så slutte om $2f(n)+n$? | *$2f(n)+n\ge2\cdot2^n+n\ge2^{n+1}$ | $2f(n)+n=2^{n+1}$ ~ Antagelsen er en ulighed, så du får en ulighed. | $2f(n)+n\ge2^n+n$ ~ Faktoren $2$ forsvandt. $2f(n)\ge2\cdot2^n=2^{n+1}$.
+?h Gang antagelsen med $2$.
+?h $2f(n)\ge2^{n+1}$.
+?h Og $n\ge0$, så $+n$ gør det kun større.
+$f(n+1)=2f(n)+n\ge2^{n+1}+n\ge2^{n+1}$.
+>> tjek
+?? mc | Hvad skulle skridtet nå frem til? | *$f(n+1)\ge2^{n+1}$ | $f(n)\ge2^n$ ~ Det er antagelsen. Målet er den med $n+1$. | $f(n+1)\ge2^n$ ~ Det er for svagt. Uligheden med $n+1$ indsat er $f(n+1)\ge2^{n+1}$.
+?h Skriv uligheden med $n+1$ i stedet for $n$.
+?h $f(n+1)\ge2^{n+1}$.
+?h Det er netop det, du nåede frem til.
+Skriv målet op først. Tjek også med et tal: $f(4)=2\cdot8+3=19\ge16$.
+>> fejl
+At tage basistrinnet ved $n=1$, hvor uligheden er falsk, eller at skrive lighedstegn, hvor der skal stå $\ge$.
+>> skriv
+**Basistrin.** $f(2)=3$ og $f(3)=2\cdot3+2=8\ge2^3$.
+
+**Induktionsantagelse.** Antag, at $f(n)\ge2^n$ for et $n\ge3$.
+
+**Induktionsskridt.** $f(n+1)=2f(n)+n\ge2\cdot2^n+n\ge2^{n+1}$, hvor antagelsen er brugt i første ulighed og $n\ge0$ i anden.
+
+**Konklusion.** Ifølge induktionsprincippet gælder $f(n)\ge2^n$ for alle $n\ge3$.
+>> svar
+Basistrin $f(3)=8\ge8$. Skridt: $f(n+1)=2f(n)+n\ge2^{n+1}$ med antagelsen. Konklusion ved induktionsprincippet.
+>> husk
+Skriv målet for $n+1$ op først, og brug rekursionen til at få $f(n)$ frem, så antagelsen kan sættes ind.
+
+=== e2:mc0 | polrod
+@hl er en løsning til ligningen
+>> type
+En andengradsligning med reelle koefficienter, men svarene står på polær form. Løs på rektangulær form, og skriv rødderne om.
+>> plan
+?? mc | Hvordan kommer du hurtigst til svaret? | *Løser ligningen på rektangulær form og skriver rødderne om til polær form | Sætter hver mulighed ind i ligningen ~ Det virker, men det er syv udregninger med komplekse potenser. Løs ligningen én gang. | Vælger den med tallene fra ligningen ~ Koefficienterne $3$, $-6$ og $12$ er ikke modulus eller argument for rødderne.
+?h Ligningen har reelle koefficienter og grad 2.
+?h Del med $3$ og brug løsningsformlen.
+?h Til sidst: modulus og argument.
+Del med $3$: $z^2-2z+4=0$. Løs, og skriv rødderne på polær form.
+>> trin Rødderne
+?? in | Rødderne er $a\pm b\sqrt3\,i$. Find $a$ og $b$. | $a$ = 1 | $b$ = 1
+?h Diskriminanten er $(-2)^2-4\cdot4=-12$.
+?h $\sqrt{-12}=2\sqrt3\,i$.
+?h $z=\frac{2\pm2\sqrt3\,i}{2}$.
+$z=1\pm\sqrt3\,i$.
+>> trin Polær form
+?? in | Find modulus $|z|$ for $z=1-\sqrt3\,i$. | $|z|$ = 2
+?h $|z|=\sqrt{1^2+(\sqrt3)^2}$.
+?h $\sqrt{1+3}$.
+?h $\sqrt4=2$.
+$|z|=2$. Vinklen har $\cos\theta=\frac12$ og $\sin\theta=-\frac{\sqrt3}2$, så $\theta=-\frac\pi3$. Altså $z=2e^{-\frac\pi3i}$.
+>> tjek
+?? mc | $3e^{\frac\pi3i}$ har det rigtige argument. Hvorfor er den forkert? | *Modulus skal være $2$, ikke $3$ | Argumentet skal være $-\frac\pi3$ ~ Begge $\pm\frac\pi3$ er rødder, så $\frac\pi3$ er fint. Det er modulus, der er forkert. | Den er rigtig ~ $|1+\sqrt3\,i|=2$, så $3e^{\frac\pi3i}$ er ikke en rod.
+?h Hvad er modulus af rødderne?
+?h $|1\pm\sqrt3\,i|=2$.
+?h Tallet $3$ er koefficienten foran $z^2$.
+Begge rødder har modulus $2$. Kun $2e^{-\frac\pi3i}$ af svarmulighederne har både rigtig modulus og rigtigt argument.
+>> fejl
+At læse koefficienterne som modulus eller argument. Løs ligningen, og regn modulus og argument af rødderne.
+>> svar
+$z=2e^{-\frac\pi3i}=1-\sqrt3\,i$ er en løsning.
+
+=== e2:mc1 | polrod
+@hl Hvilke to tal angiver
+>> type
+Oplysninger om rødder og en værdi bestemmer et polynomium. Skriv det op som produkt af faktorer, find den ledende koefficient, og gang ud.
+>> plan
+?? mc | Hvordan bruger du oplysningerne? | *Finder alle fire rødder, skriver $p$ som $a_4$ gange faktorerne og bruger $p(1)=7$ til $a_4$ | Indsætter de fem oplysninger i $a_0+a_1Z+\dots$ og løser et system ~ Det kan lade sig gøre, men faktorformen er langt hurtigere. | Bruger kun de rødder, der står ~ Grad 4 kræver fire rødder med multiplicitet. Én mangler.
+?h Hvor mange rødder har $p$ med multiplicitet?
+?h Reelle koefficienter giver en ekstra rod.
+?h $\overline{1+i}=1-i$.
+Rødderne er $2$, $2$, $1+i$ og $1-i$. Så er $p(Z)=a_4(Z-2)^2(Z^2-2Z+2)$.
+>> trin Den ledende koefficient
+?? in | Brug $p(1)=7$ til at finde $a_4$. | $a_4$ = 7
+?h $(1-2)^2=1$.
+?h $1-2+2=1$.
+?h $p(1)=a_4\cdot1\cdot1$.
+$a_4=7$.
+>> trin Gang ud
+?? in | $(Z^2-4Z+4)(Z^2-2Z+2)=Z^4+cZ^3+\dots+d$. Find $c$ og $d$. | $c$ = -6 | $d$ = 8
+?h $Z^3$-leddene kommer fra $Z^2\cdot(-2Z)$ og $(-4Z)\cdot Z^2$.
+?h $-2-4=-6$.
+?h Konstantleddet er $4\cdot2$.
+$Z^3$-koefficienten er $-6$, og konstantleddet er $8$. Med $a_4=7$: $a_3=-42$ og $a_0=56$.
+>> tjek
+?? mc | Hvorfor kan $a_3=1+i$ ikke være rigtigt? | *Alle koefficienter er reelle | Fordi $1+i$ ikke er en rod ~ $1+i$ er en rod. Men en rod er ikke en koefficient, og koefficienterne er reelle. | Det kan det godt ~ Oplysning 1 siger, at alle koefficienter er reelle.
+?h Læs oplysning 1.
+?h En rod og en koefficient er to forskellige ting.
+?h $a_3$ skal være reel.
+Koefficienterne er reelle. Det er netop derfor, $1-i$ også er en rod.
+>> fejl
+At glemme den konjugerede rod eller den ledende koefficient $a_4=7$.
+>> svar
+$a_0=56$ og $a_3=-42$.
+
+=== e2:mc3 | egen
+@hl Hvilke to tal er de rigtige elementer
+>> type
+Tre egenvektorer med egenværdier er givet, og du skal finde elementer i matricen. Søjle $j$ i $\mathbf A$ er $L(\mathbf e_j)$.
+>> plan
+?? mc | Hvordan finder du $a_{11}$ og $a_{32}$? | *Skriver $\mathbf e_1$ og $\mathbf e_2$ som kombinationer af egenvektorerne og bruger, at $L$ er lineær | Læser egenværdierne af som elementer ~ Egenværdierne står kun i $\mathbf A$, hvis egenvektorerne er standardbasen. | Sætter $a_{11}$ lig den første egenværdi ~ $\mathbf A$ er ikke diagonal her. Du skal finde søjlerne.
+?h Søjle $j$ i $\mathbf A$ er $L(\mathbf e_j)$.
+?h $a_{11}$ står i første søjle, $a_{32}$ i anden.
+?h Find $L(\mathbf e_1)$ og $L(\mathbf e_2)$.
+Find $L(\mathbf e_1)$ og $L(\mathbf e_2)$ ved at skrive $\mathbf e_1$ og $\mathbf e_2$ med egenvektorerne $\mathbf v_1,\mathbf v_2,\mathbf v_3$.
+>> trin Første søjle
+?? mc | $\mathbf v_1+\mathbf v_2=(2,0,0)$. Hvad er så $L(\mathbf e_1)$? | *$\frac12(-2\mathbf v_1+\mathbf v_2)$ | $\frac12(\mathbf v_1+\mathbf v_2)$ ~ Det er $\mathbf e_1$ selv. $L$ ganger $\mathbf v_1$ med $-2$ og $\mathbf v_2$ med $1$. | $\frac12(2\mathbf v_1+\mathbf v_2)$ ~ Egenværdien til $\mathbf v_1$ er $-2$, ikke $2$.
+?h $\mathbf e_1=\frac12(\mathbf v_1+\mathbf v_2)$.
+?h $L(\mathbf v_1)=-2\mathbf v_1$ og $L(\mathbf v_2)=\mathbf v_2$.
+?h Brug linearitet.
+$L(\mathbf e_1)=\frac12(-2\mathbf v_1+\mathbf v_2)=\frac12(-1,-3,3)$.
+>> trin $a_{11}$
+?? in | Hvad er første koordinat af $L(\mathbf e_1)=\frac12(-2(1,1,-1)+(1,-1,1))$? | $a_{11}$ = -1/2
+?h $-2\cdot1+1=-1$.
+?h Gang med $\frac12$.
+?h $-\frac12$.
+$a_{11}=-\frac12$.
+>> trin $a_{32}$
+?? in | $\mathbf e_2=\mathbf v_3-\mathbf v_1$, så $L(\mathbf e_2)=3\mathbf v_3+2\mathbf v_1$. Find tredje koordinat. | $a_{32}$ = -5
+?h $L(\mathbf v_3)=3\mathbf v_3$ og $L(-\mathbf v_1)=2\mathbf v_1$.
+?h Tredje koordinat af $3\mathbf v_3$ er $-3$, af $2\mathbf v_1$ er $-2$.
+?h $-3-2$.
+$L(\mathbf e_2)=(5,8,-5)$, så $a_{32}=-5$.
+>> tjek
+?? mc | Hvorfor er $a_{11}=-2$, $a_{32}=3$ forkert? | *$-2$ og $3$ er egenværdier, ikke elementer i $\mathbf A$ | Fortegnet er forkert ~ Det er ikke fortegnet. Egenværdier står kun på diagonalen, når egenvektorerne er standardbasen. | Det er rigtigt ~ Regn efter: $L(\mathbf e_1)$ har første koordinat $-\frac12$.
+?h Er egenvektorerne standardbasen?
+?h Nej, de er $(1,1,-1)$, $(1,-1,1)$ og $(1,2,-1)$.
+?h Så er $\mathbf A$ ikke diagonal.
+Egenværdierne står i den diagonale $\mathbf D$, ikke i $\mathbf A=\mathbf V\mathbf D\mathbf V^{-1}$.
+>> fejl
+At glemme fortegnet på egenværdien $-2$, eller at læse egenværdierne som elementer i $\mathbf A$.
+>> svar
+$a_{11}=-\frac12$ og $a_{32}=-5$.
+
+=== e2:mc4 | ode
+@hl er en partikulær løsning
+>> type
+En inhomogen andenordens ligning, hvor en partikulær løsning er givet og højresiden mangler. Indsæt for at finde højresiden, og brug karakterligningen til resten.
+>> plan
+?? mc | Hvad gør du først? | *Sætter $f_0=-t+5$ ind i venstresiden for at finde $p(t)$ | Sætter $a=-1$ og $b=5$, fordi $f_0=-t+5$ ~ $a$ og $b$ er koefficienter i $p$, ikke i $f_0$. Du skal indsætte. | Løser den homogene ligning og stopper ~ Den giver kun en del af svaret. Både $a$, $b$ og $f_p$ skal passe.
+?h $f_0$ løser ligningen, så venstresiden med $f_0$ er $p(t)$.
+?h $f_0'=-1$ og $f_0''=0$.
+?h Udregn $0+2(-1)-8(-t+5)$.
+Indsæt $f_0$ for at finde $p$. Find derefter de homogene løsninger.
+>> trin Højresiden
+?? in | Udregn $f_0''+2f_0'-8f_0$ for $f_0=-t+5$, og skriv den som $at+b$. | $a$ = 8 | $b$ = -42
+?h $0+2\cdot(-1)-8(-t+5)$.
+?h $-2+8t-40$.
+?h $8t-42$.
+$p(t)=8t-42$, så $a=8$ og $b=-42$.
+>> trin De homogene løsninger
+?? in | Karakterligningen $\lambda^2+2\lambda-8=0$ har to reelle rødder. Find dem. | største rod = 2 | mindste rod = -4
+?h Find to tal med produkt $-8$ og sum $-2$.
+?h $(\lambda-2)(\lambda+4)$.
+?h $\lambda=2$ og $\lambda=-4$.
+De homogene løsninger er $c_1e^{2t}+c_2e^{-4t}$. Alle partikulære løsninger er $-t+5$ plus en af dem.
+>> tjek
+?? mc | $4e^{4t}-t+5$ har de rigtige $a$ og $b$. Hvorfor er den forkert? | *$e^{4t}$ løser ikke den homogene ligning | $-t+5$ er forkert ~ $-t+5$ er givet som partikulær løsning. Det er $e^{4t}$, der ikke passer. | Den er rigtig ~ $16+8-8=16\neq0$, så $e^{4t}$ er ikke en homogen løsning.
+?h Er $4$ en rod i $\lambda^2+2\lambda-8$?
+?h $16+8-8=16$.
+?h Rødderne er $2$ og $-4$.
+Kun $e^{2t}$ og $e^{-4t}$ må lægges til. Svaret er $e^{-4t}-t+5$.
+>> fejl
+At aflæse $a$ og $b$ fra $f_0$ i stedet for at indsætte. Højresiden findes ved at sætte løsningen ind i venstresiden.
+>> svar
+$f_p(t)=e^{-4t}-t+5$ med $a=8$ og $b=-42$.
+
+=== e2:mc6 | det
+@hl Hvilket tal angiver
+>> type
+Determinanten af et matrixudtryk. Reducér udtrykket først. Symmetri gør det meget kortere.
+>> plan
+?? mc | Hvad gør du først? | *Reducerer udtrykket, fordi $\mathbf A$ er symmetrisk | Udregner $\mathbf A^2$, $\mathbf A^{\mathsf T}$ og $\mathbf A^{-1}$ ~ Det er meget regnearbejde og mange muligheder for fejl. Reducér først. | Bruger $\det(\mathbf A^{\mathsf T}+\mathbf A^2)=\det\mathbf A^{\mathsf T}+\det\mathbf A^2$ ~ Determinanten af en sum er ikke summen af determinanterne.
+?h Se på $\mathbf A^{\mathsf T}$.
+?h $\mathbf A$ er symmetrisk.
+?h Gang parentesen ud med $\mathbf A^{-1}$.
+$\mathbf A^{\mathsf T}=\mathbf A$, så $(\mathbf A+\mathbf A^2)\mathbf A^{-1}=\mathbf I+\mathbf A$.
+>> trin Reducér
+?? mc | Hvad er $(\mathbf A+\mathbf A^2)\mathbf A^{-1}$? | *$\mathbf I+\mathbf A$ | $\mathbf A+\mathbf A^2$ ~ $\mathbf A^{-1}$ forsvinder ikke. $\mathbf A\mathbf A^{-1}=\mathbf I$ og $\mathbf A^2\mathbf A^{-1}=\mathbf A$. | $2\mathbf A$ ~ $\mathbf A\mathbf A^{-1}=\mathbf I$, ikke $\mathbf A$.
+?h Gang hvert led med $\mathbf A^{-1}$.
+?h $\mathbf A\mathbf A^{-1}=\mathbf I$.
+?h $\mathbf A^2\mathbf A^{-1}=\mathbf A$.
+$D=\det(\mathbf I+\mathbf A)$. Læg $1$ til hvert diagonalelement.
+>> trin Underdeterminanterne
+?? in | Udvikl $\det(\mathbf I+\mathbf A)$ langs første række $(5,3,2,1)$. Underdeterminanterne er $51$, $29$, $-6$ og $-5$. Udregn de fire led med fortegn. | 1. led = 255 | 2. led = -87 | 3. led = -12 | 4. led = 5
+?h Fortegnsmønstret er $+,-,+,-$.
+?h $5\cdot51$ og $-3\cdot29$.
+?h $2\cdot(-6)$ og $-1\cdot(-5)$.
+Leddene er $255$, $-87$, $-12$ og $5$.
+>> trin Summen
+?? in | Læg leddene sammen. | $D$ = 161
+?h $255-87=168$.
+?h $168-12=156$.
+?h $156+5$.
+$D=161$.
+>> tjek
+?? mc | $20$ er også en mulighed. Hvad er $20$? | *$\det\mathbf A$ | $\det(\mathbf I+\mathbf A)$ ~ Den er $161$. | $\det\mathbf A^{-1}$ ~ $\det\mathbf A^{-1}=\frac1{20}$.
+?h Hvilken matrix har determinant $20$?
+?h Det er $\mathbf A$ selv.
+?h Udtrykket reduceres til $\mathbf I+\mathbf A$, ikke $\mathbf A$.
+$20=\det\mathbf A$. Den fælde rammer man, hvis man glemmer $\mathbf I$ i $\mathbf I+\mathbf A$.
+>> fejl
+At regne $\det$ af en sum som summen af determinanter. Reducér udtrykket til ét matrixprodukt først.
+>> svar
+$D=\det(\mathbf I+\mathbf A)=161$.
+
+=== e2:3a | matregn
+@hl Beregn $\mathbf A^2$ og $\mathbf A^3$
+>> type
+Potenser af en lille matrix med en parameter. Regn element for element, og genbrug $\mathbf A^2$ til $\mathbf A^3$.
+>> plan
+?? mc | Hvordan udregner du $\mathbf A^2$? | *Række gange søjle for hvert element | Kvadrerer hvert element ~ Matrixpotens er ikke elementvis. Det øverste højre element bliver $2a$, ikke $1$. | Bruger $\det\mathbf A^2=(\det\mathbf A)^2$ ~ Den siger kun noget om determinanten, ikke om matricen.
+?h $\mathbf A^2=\mathbf A\mathbf A$.
+?h Element $(i,j)$ er række $i$ gange søjle $j$.
+?h Nullet nederst til venstre gør det kort.
+Element $(i,j)$ i $\mathbf A\mathbf A$ er række $i$ gange søjle $j$.
+>> trin $\mathbf A^2$
+?? mc | Hvad er det øverste højre element i $\mathbf A^2$? | *$2a$ | $1$ ~ Række 1 gange søjle 2 er $a\cdot1+1\cdot a$. | $a^2$ ~ Det er diagonalelementet.
+?h Række 1 er $(a,1)$, søjle 2 er $(1,a)$.
+?h $a\cdot1+1\cdot a$.
+?h $2a$.
+$\mathbf A^2=\begin{bmatrix}a^2&2a\\0&a^2\end{bmatrix}$.
+>> trin $\mathbf A^3$
+?? mc | Hvad er det øverste højre element i $\mathbf A^3=\mathbf A^2\mathbf A$? | *$3a^2$ | $2a^2$ ~ Du mangler leddet $a^2\cdot1$. Det er $a^2\cdot1+2a\cdot a$. | $3a$ ~ $2a\cdot a=2a^2$, ikke $2a$.
+?h Række 1 af $\mathbf A^2$ er $(a^2,2a)$.
+?h Søjle 2 af $\mathbf A$ er $(1,a)$.
+?h $a^2+2a^2$.
+$\mathbf A^3=\begin{bmatrix}a^3&3a^2\\0&a^3\end{bmatrix}$.
+>> trin Tjek med $a=2$
+?? in | Sæt $a=2$. Angiv de øverste højre elementer i $\mathbf A^2$ og $\mathbf A^3$, og diagonalen i $\mathbf A^3$. | øverst til højre i $\mathbf A^2$ = 4 | øverst til højre i $\mathbf A^3$ = 12 | diagonalen i $\mathbf A^3$ = 8
+?h $2a=4$.
+?h $3a^2=12$.
+?h $a^3=8$.
+For $a=2$: $\mathbf A^2=\begin{bmatrix}4&4\\0&4\end{bmatrix}$ og $\mathbf A^3=\begin{bmatrix}8&12\\0&8\end{bmatrix}$.
+>> tjek
+?? mc | Hvilket mønster kan du se for $\mathbf A^n$? | *Diagonalen er $a^n$, og øverst til højre står $na^{n-1}$ | Alle elementer er $a^n$ ~ Nederst til venstre er altid $0$, og øverst til højre er $na^{n-1}$. | Øverst til højre står $n$ ~ Det står $na^{n-1}$: $2a$, $3a^2$, …
+?h $2a=2a^1$.
+?h $3a^2$.
+?h Næste ville være $4a^3$.
+Mønstret er $\begin{bmatrix}a^n&na^{n-1}\\0&a^n\end{bmatrix}$. Det bevises i 3b.
+>> fejl
+At kvadrere elementerne i stedet for at gange matricen med sig selv.
+>> skriv
+Begge produkter med mellemregning: $\mathbf A^2=\begin{bmatrix}a^2&2a\\0&a^2\end{bmatrix}$ og $\mathbf A^3=\mathbf A^2\mathbf A=\begin{bmatrix}a^3&3a^2\\0&a^3\end{bmatrix}$.
+>> svar
+$\mathbf A^2=\begin{bmatrix}a^2&2a\\0&a^2\end{bmatrix}$ og $\mathbf A^3=\begin{bmatrix}a^3&3a^2\\0&a^3\end{bmatrix}$.
+
+=== e2:3b | induktion
+@hl Vis med induktion efter ; for alle
+>> type
+"Vis med induktion" en formel for matrixpotenser. Basistrinnet er $\mathbf A^2$ fra 3a, og skridtet er ét matrixprodukt.
+>> plan
+?? mc | Hvilke dele skal beviset have? | *Basistrin for $n=2$, induktionsantagelse og skridtet $\mathbf A^{n+1}=\mathbf A^n\mathbf A$ | Basistrin for $n=1$ ~ Formlen skal vises fra $n=2$. | At regne $\mathbf A^4$ og $\mathbf A^5$ ud ~ Eksempler beviser ikke "for alle $n$".
+?h Opgaven siger "for alle $n\ge2$".
+?h Et induktionsbevis har tre dele.
+?h $\mathbf A^{n+1}=\mathbf A^n\mathbf A$.
+Basistrin $n=2$, antagelse for $n$, skridt med $\mathbf A^{n+1}=\mathbf A^n\mathbf A$.
+>> trin Basistrin
+?? mc | Hvad giver formlen for $n=2$? | *$\begin{bmatrix}a^2&2a\\0&a^2\end{bmatrix}$, som er $\mathbf A^2$ fra 3a | $\begin{bmatrix}a^2&a\\0&a^2\end{bmatrix}$ ~ $na^{n-1}$ med $n=2$ er $2a$. | $\begin{bmatrix}a^2&2\\0&a^2\end{bmatrix}$ ~ $na^{n-1}=2a^1=2a$.
+?h Sæt $n=2$ ind i $na^{n-1}$.
+?h $2a^1$.
+?h Sammenlign med 3a.
+Formlen giver $\mathbf A^2$ fra 3a. Basistrinnet holder.
+>> trin Skridtet
+?? mc | Med antagelsen er $\mathbf A^{n+1}=\begin{bmatrix}a^n&na^{n-1}\\0&a^n\end{bmatrix}\begin{bmatrix}a&1\\0&a\end{bmatrix}$. Hvad er øverste højre element? | *$a^n+na^n$ | $na^n$ ~ Du mangler leddet $a^n\cdot1$. | $a^n\cdot na^{n-1}$ ~ Det er ikke række gange søjle. Række 1 er $(a^n,na^{n-1})$, søjle 2 er $(1,a)$.
+?h Række 1 gange søjle 2.
+?h $a^n\cdot1+na^{n-1}\cdot a$.
+?h $na^{n-1}\cdot a=na^n$.
+Øverst til højre står $a^n+na^n$.
+>> tjek
+?? mc | Er $a^n+na^n$ det, formlen kræver for $n+1$? | *Ja, $(n+1)a^{(n+1)-1}=(n+1)a^n$ | Nej, den kræver $na^n$ ~ Formlen med $n+1$ indsat er $(n+1)a^{n}$. | Nej, den kræver $(n+1)a^{n+1}$ ~ Eksponenten er $(n+1)-1=n$.
+?h Sæt $n+1$ ind i $na^{n-1}$.
+?h $(n+1)a^{n}$.
+?h $a^n+na^n=(n+1)a^n$.
+$a^n+na^n=(n+1)a^n$, og diagonalen er $a^{n+1}$. Formlen holder for $n+1$.
+>> fejl
+At regne skridtet uden at sætte antagelsen ind, eller at ende med et udtryk uden at sammenligne med formlen for $n+1$.
+>> skriv
+**Basistrin.** For $n=2$ giver formlen $\begin{bmatrix}a^2&2a\\0&a^2\end{bmatrix}=\mathbf A^2$ (3a).
+
+**Induktionsantagelse.** Antag, at $\mathbf A^n=\begin{bmatrix}a^n&na^{n-1}\\0&a^n\end{bmatrix}$ for et $n\ge2$.
+
+**Induktionsskridt.** $\mathbf A^{n+1}=\mathbf A^n\mathbf A=\begin{bmatrix}a^{n+1}&a^n+na^n\\0&a^{n+1}\end{bmatrix}=\begin{bmatrix}a^{n+1}&(n+1)a^n\\0&a^{n+1}\end{bmatrix}$.
+
+**Konklusion.** Ifølge induktionsprincippet gælder formlen for alle $n\ge2$.
+>> svar
+Basistrin fra 3a. Skridtet: $\mathbf A^{n+1}=\mathbf A^n\mathbf A$ giver øverst til højre $a^n+na^n=(n+1)a^n$. Konklusion ved induktionsprincippet.
+
+=== e2:4b | kerne
+@hl Find en basis for søjlerummet
+>> type
+"Basis for søjlerummet". Pivotsøjlerne fra rækkereduktionen i 4a peger på de søjler i $\mathbf B$, der skal med.
+>> plan
+?? mc | Hvordan finder du basen? | *Tager de søjler i $\mathbf B$, hvor den reducerede form har pivot | Tager pivotsøjlerne fra den reducerede form ~ Rækkeoperationer ændrer søjlerummet. Tag de oprindelige søjler i $\mathbf B$. | Tager alle tre søjler ~ Søjlerne er afhængige, så det er ikke en basis.
+?h Brug den reducerede form fra 4a.
+?h Hvor står pivoterne?
+?h Tag de tilsvarende søjler i $\mathbf B$.
+Pivotsøjlerne i den reducerede form viser, hvilke søjler i $\mathbf B$ der er uafhængige.
+>> trin Pivoterne
+?? mc | Hvor står pivoterne i $\begin{bmatrix}1&0&3\\0&1&-2\\0&0&0\end{bmatrix}$? | *Søjle 1 og 2 | Søjle 1, 2 og 3 ~ Tredje række er nul, så der er kun to pivoter. | Kun søjle 1 ~ Anden række har pivot i søjle 2.
+?h En pivot er det første tal forskelligt fra $0$ i en række.
+?h Række 1: søjle 1. Række 2: søjle 2.
+?h Række 3 er nul.
+Pivoter i søjle 1 og 2.
+>> tjek
+?? in | Kernevektoren $(-3,2,1)$ siger, at $\mathbf b_3=3\mathbf b_1-2\mathbf b_2$. Udregn $3\mathbf b_1-2\mathbf b_2$. | 1. koordinat = -3 | 2. koordinat = 4 | 3. koordinat = 8
+?h $\mathbf b_1=(1,2,2)$ og $\mathbf b_2=(3,1,-1)$.
+?h $3\mathbf b_1=(3,6,6)$ og $2\mathbf b_2=(6,2,-2)$.
+?h Træk fra.
+$3\mathbf b_1-2\mathbf b_2=(-3,4,8)=\mathbf b_3$. Den tredje søjle tilføjer intet.
+>> fejl
+At tage søjlerne fra den reducerede matrix. De udspænder et andet rum.
+>> skriv
+"Den reducerede form har pivoter i søjle 1 og 2, så $\big((1,2,2),(3,1,-1)\big)$ er en basis for søjlerummet af $\mathbf B$."
+>> svar
+$(\mathbf b_1,\mathbf b_2)=\big((1,2,2),(3,1,-1)\big)$ er en basis for søjlerummet.
+
+=== e2:4c | kerne
+@hl Er $L$ surjektiv
+>> type
+"Er $L$ surjektiv?" for $L(\mathbf v)=\mathbf B\mathbf v$. Billedet er søjlerummet, så svaret står i rangen.
+>> plan
+?? mc | Hvad afgør, om $L$ er surjektiv? | *Om søjlerummet har dimension $3$ | Om $\mathbf B$ har et nul ~ Nuller i matricen afgør intet. Rangen gør. | Om kernen er $\{\mathbf 0\}$ ~ Det afgør injektivitet. For en kvadratisk matrix hænger det sammen, men spørgsmålet er billedet.
+?h Billedet af $L$ er søjlerummet.
+?h Surjektiv betyder, at billedet er hele $\mathbb R^3$.
+?h Det kræver dimension $3$.
+$L$ er surjektiv, netop når søjlerummet er hele $\mathbb R^3$, altså når rangen er $3$.
+>> trin Rangen
+?? in | Hvad er rangen af $\mathbf B$ ifølge 4b? | rang = 2
+?h Tæl pivoterne.
+?h Der er pivot i søjle 1 og 2.
+?h Rangen er $2$.
+Rangen er $2<3$.
+>> tjek
+?? mc | Passer det med dimensionssætningen? | *Ja: rang $2$ plus $\dim\ker\mathbf B=1$ giver $3$ | Nej, kernen skal have dimension $0$ ~ Kernen indeholder $(-3,2,1)$, så den har dimension $1$. | Det har intet med det at gøre ~ Dimensionssætningen forbinder rang og kerne: $2+1=3$.
+?h Dimensionssætningen: $\dim\ker+\mathrm{rang}=$ antal søjler.
+?h Kernen fra 4a har dimension $1$.
+?h $1+2=3$.
+$1+2=3$. Både billedet og kernen viser, at $L$ hverken er surjektiv eller injektiv.
+>> fejl
+At sige ja, fordi matricen er kvadratisk. En kvadratisk matrix er kun surjektiv, når den har fuld rang.
+>> skriv
+"Billedet af $L$ er søjlerummet af $\mathbf B$, som har dimension $\mathrm{rang}\,\mathbf B=2<3$. Altså er $L(\mathbb R^3)\neq\mathbb R^3$, og $L$ er ikke surjektiv."
+>> svar
+Nej. Billedet har dimension $2$, ikke $3$.
+
+=== e2:5a | afbm
+@hl Angiv basisskiftematricen
+>> type
+"Angiv basisskiftematricen" fra en ny basis til standardbasen. Den kan skrives direkte op.
+>> plan
+?? mc | Hvad står i søjlerne i $\,{}_\beta[\mathrm{id}]_\gamma$, når $\beta$ er standardbasen? | *$\gamma$-vektorerne selv | Standardbasens vektorer ~ Det giver identitetsmatricen. Søjlerne skal være $\gamma$-vektorerne i $\beta$-koordinater. | $\gamma$-vektorerne som rækker ~ De skal stå som søjler.
+?h $\,{}_\beta[\mathrm{id}]_\gamma$ tager $\gamma$-koordinater ind.
+?h Søjle $j$ er $\beta$-koordinaterne for den $j$'te $\gamma$-vektor.
+?h I standardbasen er koordinaterne vektoren selv.
+Søjlerne er $\gamma$-vektorerne.
+>> trin Matricen
+?? in | Skriv første række af $\,{}_\beta[\mathrm{id}]_\gamma$. | 1. tal = 2 | 2. tal = 1 | 3. tal = 0
+?h Første søjle er $(2,1,0)$, anden $(1,1,0)$, tredje $(0,0,2)$.
+?h Første række tager første koordinat af hver.
+?h $(2,1,0)$.
+$\,{}_\beta[\mathrm{id}]_\gamma=\begin{bmatrix}2&1&0\\1&1&0\\0&0&2\end{bmatrix}$.
+>> tjek
+?? in | Tjek: $\gamma$-koordinaterne $(0,1,0)$ betyder anden $\gamma$-vektor. Gang matricen på $(0,1,0)$. | 1. koordinat = 1 | 2. koordinat = 1 | 3. koordinat = 0
+?h Matrix gange $\mathbf e_2$ er anden søjle.
+?h Anden søjle er $(1,1,0)$.
+?h Det er anden $\gamma$-vektor.
+Resultatet er $(1,1,0)$, den anden $\gamma$-vektor. Matricen virker.
+>> fejl
+At skrive $\gamma$-vektorerne som rækker. Så får man den transponerede.
+>> skriv
+"$\,{}_\beta[\mathrm{id}]_\gamma$ har $\gamma$-vektorerne som søjler: $\begin{bmatrix}2&1&0\\1&1&0\\0&0&2\end{bmatrix}$."
+>> svar
+$\,{}_\beta[\mathrm{id}]_\gamma=\begin{bmatrix}2&1&0\\1&1&0\\0&0&2\end{bmatrix}$.
+
+=== e2:5b | afbm
+@hl Beregn basisskiftematricen
+>> type
+Basisskifte den anden vej: fra standardbasen til $\gamma$. Det er den inverse af matricen fra 5a.
+>> plan
+?? mc | Hvordan finder du $\,{}_\gamma[\mathrm{id}]_\beta$? | *Inverterer matricen fra 5a | Transponerer matricen fra 5a ~ Den transponerede er kun den inverse for ortogonale matricer. Her er den ikke. | Skriver $\gamma$-vektorerne som rækker ~ Det er den transponerede, ikke den inverse.
+?h At skifte frem og tilbage giver identiteten.
+?h $\,{}_\gamma[\mathrm{id}]_\beta\,{}_\beta[\mathrm{id}]_\gamma=\mathbf I$.
+?h Så er de hinandens inverse.
+$\,{}_\gamma[\mathrm{id}]_\beta=\big({}_\beta[\mathrm{id}]_\gamma\big)^{-1}$.
+>> trin 2×2-blokken
+?? in | Inverter $\begin{bmatrix}2&1\\1&1\end{bmatrix}$. Skriv den inverse som $\begin{bmatrix}p&q\\r&s\end{bmatrix}$. | $p$ = 1 | $q$ = -1 | $r$ = -1 | $s$ = 2
+?h Determinanten er $2\cdot1-1\cdot1=1$.
+?h Byt diagonalen, og skift fortegn uden for den.
+?h Del med determinanten, som er $1$.
+Blokken bliver $\begin{bmatrix}1&-1\\-1&2\end{bmatrix}$.
+>> trin Det sidste tal
+?? in | Det nederste hjørne er $2$. Hvad bliver det i den inverse? | nederste hjørne = 1/2
+?h En blokdiagonal matrix inverteres blok for blok.
+?h $2^{-1}$.
+?h $\frac12$.
+$\,{}_\gamma[\mathrm{id}]_\beta=\begin{bmatrix}1&-1&0\\-1&2&0\\0&0&\frac12\end{bmatrix}$.
+>> tjek
+?? in | Gang den inverse med første søjle fra 5a, $(2,1,0)$. Hvad giver det? | 1. koordinat = 1 | 2. koordinat = 0 | 3. koordinat = 0
+?h $1\cdot2-1\cdot1$.
+?h $-1\cdot2+2\cdot1$.
+?h $0$.
+Resultatet er $\mathbf e_1$, som det skal. Den første $\gamma$-vektor har $\gamma$-koordinaterne $(1,0,0)$.
+>> fejl
+At transponere i stedet for at invertere, eller at glemme at invertere det nederste hjørne.
+>> skriv
+"$\,{}_\gamma[\mathrm{id}]_\beta=({}_\beta[\mathrm{id}]_\gamma)^{-1}$." Derefter inversen af blokken med determinant $1$, og svaret $\begin{bmatrix}1&-1&0\\-1&2&0\\0&0&\frac12\end{bmatrix}$.
+>> svar
+$\,{}_\gamma[\mathrm{id}]_\beta=\begin{bmatrix}1&-1&0\\-1&2&0\\0&0&\frac12\end{bmatrix}$.
+
+=== e2:6a | homogen
+@hl homogent eller inhomogent
+>> type
+"Homogent eller inhomogent?" om et system af differentialligninger. Se efter led, der ikke indeholder de ukendte funktioner.
+>> plan
+?? mc | Hvad afgør, om systemet er homogent? | *Om der er et led $\mathbf u(t)$ ud over $\mathbf A\mathbf f$ | Om koefficienterne er konstante ~ Konstante koefficienter siger intet om homogenitet. | Om matricen er symmetrisk ~ Symmetri har intet med det at gøre.
+?h Skriv systemet som $\mathbf f'=\mathbf A\mathbf f+\mathbf u(t)$.
+?h Homogen betyder $\mathbf u(t)=\mathbf 0$.
+?h Er der led uden $f_1$ og $f_2$?
+Systemet er homogent, netop når $\mathbf u(t)=\mathbf 0$.
+>> trin Matrixformen
+?? mc | Skriv systemet som $\mathbf f'=\mathbf A\mathbf f+\mathbf u(t)$. Hvad er $\mathbf u(t)$? | *$\mathbf 0$ | $(1,2)$ ~ $1$ og $2$ er koefficienter i $\mathbf A$. | $(2,1)$ ~ Det er anden række af $\mathbf A$.
+?h $\mathbf A=\begin{bmatrix}1&2\\2&1\end{bmatrix}$.
+?h Alle led indeholder $f_1$ eller $f_2$.
+?h Intet bliver tilbage.
+$\mathbf u(t)=\mathbf 0$, så systemet er homogent.
+>> tjek
+?? mc | Hvad ville gøre systemet inhomogent? | *Et led som $+e^t$, der ikke indeholder $f_1$ eller $f_2$ | En koefficient som $3$ i stedet for $2$ ~ Koefficienterne ændrer kun $\mathbf A$. | Et minus foran $f_2$ ~ Det ændrer kun $\mathbf A$.
+?h Inhomogen betyder $\mathbf u(t)\neq\mathbf 0$.
+?h $\mathbf u(t)$ indeholder ikke de ukendte funktioner.
+?h Fx et led som $e^t$ eller $t$.
+Kun et led uden $f_1$ og $f_2$ gør systemet inhomogent.
+>> fejl
+At kalde systemet inhomogent, fordi der står tal foran $f_1$ og $f_2$.
+>> skriv
+"Systemet er $\mathbf f'=\mathbf A\mathbf f$ med $\mathbf A=\begin{bmatrix}1&2\\2&1\end{bmatrix}$ og $\mathbf u(t)=\mathbf 0$, så det er homogent."
+>> svar
+Homogent.
+
+=== e3:mc0 | det
+@hl Hvilket tal er
+>> type
+Determinanten af et produkt af to matricer. Du behøver ikke gange dem sammen: $\det(\mathbf A\mathbf B)=\det\mathbf A\cdot\det\mathbf B$.
+>> plan
+?? mc | Hvad er den hurtigste vej? | *Udregner $\det\mathbf A$ og $\det\mathbf B$ hver for sig og ganger | Ganger $\mathbf A\mathbf B$ ud og tager determinanten ~ Det giver det rigtige, men det er meget regnearbejde. Produktreglen sparer det. | Lægger determinanterne sammen ~ Determinanten af et produkt er produktet af determinanterne, ikke summen.
+?h Der findes en regneregel for $\det(\mathbf A\mathbf B)$.
+?h $\det(\mathbf A\mathbf B)=\det\mathbf A\cdot\det\mathbf B$.
+?h $\mathbf B$ er en diagonalmatrix.
+$\det(\mathbf A\mathbf B)=\det\mathbf A\cdot\det\mathbf B$.
+>> trin $\det\mathbf B$
+?? in | $\mathbf B$ er en diagonalmatrix. Hvad er $\det\mathbf B$? | $\det\mathbf B$ = 6
+?h Determinanten af en diagonalmatrix er produktet af diagonalen.
+?h $1\cdot2\cdot3$.
+?h $6$.
+$\det\mathbf B=6$.
+>> trin $\det\mathbf A$
+?? in | Udvikl $\det\mathbf A$ langs første søjle $(2,1,0)$. Udregn de to led, der ikke er nul. | 1. led = -12 | 2. led = 19
+?h Første led: $2\cdot\det\begin{bmatrix}3&0\\7&-2\end{bmatrix}=2\cdot(-6)$.
+?h Andet led har minus foran: $-1\cdot\det\begin{bmatrix}-1&3\\7&-2\end{bmatrix}$.
+?h $\det\begin{bmatrix}-1&3\\7&-2\end{bmatrix}=2-21=-19$, og $-1\cdot(-19)=19$.
+$\det\mathbf A=-12+19=7$.
+>> tjek
+?? mc | $21$ er også en mulighed. Hvilken fejl giver $21$? | *Kun at tage det sidste diagonalelement i $\mathbf B$ med: $7\cdot3$ | At glemme fortegnet i $\det\mathbf A$ ~ Det giver $-42$. | At lægge determinanterne sammen ~ Det giver $13$.
+?h $21=7\cdot3$.
+?h Hvor kommer $3$ fra?
+?h Det er kun ét af diagonalelementerne i $\mathbf B$.
+$\det\mathbf B$ er produktet af hele diagonalen, $1\cdot2\cdot3=6$. Svaret er $7\cdot6=42$.
+>> fejl
+At glemme fortegnsmønstret $+,-,+$ ned ad første søjle. Det giver $-7$ og dermed $-42$.
+>> svar
+$\det(\mathbf A\mathbf B)=7\cdot6=42$.
+
+=== e3:mc1 | lignsys
+@hl Hvilken vektor
+>> type
+Et lille ligningssystem $\mathbf A\mathbf x=\mathbf b$ med en trekantsmatrix. Løs nedefra.
+>> plan
+?? mc | Hvordan løser du det hurtigst? | *Løser nedefra, fordi matricen er øvre trekantet | Finder $\mathbf A^{-1}$ først ~ Det virker, men en trekantsmatrix kan løses direkte. | Sætter alle fem muligheder ind ~ Det virker også, men to linjer regning er hurtigere.
+?h Se på nederste række.
+?h Den har kun én ubekendt.
+?h Start med $x_2$.
+Nederste række har kun $x_2$. Find den, og sæt den op i første række.
+>> trin Løs nedefra
+?? in | Anden række er $2x_2=12$, og første række er $x_1-x_2=4$. Find $x_2$ og $x_1$. | $x_2$ = 6 | $x_1$ = 10
+?h $x_2=\frac{12}{2}$.
+?h $x_1=4+x_2$.
+?h $x_1=4+6$.
+$x_2=6$ og $x_1=10$.
+>> tjek
+?? in | Tjek: udregn $\mathbf A\begin{bmatrix}10\\6\end{bmatrix}$. | 1. koordinat = 4 | 2. koordinat = 12
+?h Første række: $10-6$.
+?h Anden række: $0\cdot10+2\cdot6$.
+?h Det skal give $\mathbf b$.
+$\mathbf A(10,6)=(4,12)=\mathbf b$.
+>> fejl
+At bytte om på koordinaterne. $x_2$ er den anden koordinat, og den bestemmes af anden række.
+>> svar
+$\mathbf x=\begin{bmatrix}10\\6\end{bmatrix}$.
+
+=== e3:mc2 | polrod
+@hl diskriminant $d$ og en af dets rødder
+>> type
+En andengradsligning med reelle koefficienter og komplekse rødder. Både diskriminanten og roden skal passe.
+>> plan
+?? mc | Hvad skal du regne? | *$d=b^2-4ac$ og derefter rødderne med løsningsformlen | Kun rødderne ~ Svaret skal have både den rigtige diskriminant og en rigtig rod. | Kun $\sqrt d$ ~ $\sqrt d$ er ikke diskriminanten. $d$ er tallet under kvadratroden.
+?h $a=3$, $b=-6$ og $c=6$.
+?h $d=b^2-4ac$.
+?h Rødderne er $\frac{-b\pm\sqrt d}{2a}$.
+Udregn $d$, og brug den i løsningsformlen.
+>> trin Diskriminanten
+?? in | Udregn $d=(-6)^2-4\cdot3\cdot6$. | $d$ = -36
+?h $(-6)^2=36$.
+?h $4\cdot3\cdot6=72$.
+?h $36-72$.
+$d=-36$, så $\sqrt d=6i$.
+>> trin Rødderne
+?? in | Rødderne er $\frac{6\pm6i}{6}=a\pm bi$. Find $a$ og $b$. | $a$ = 1 | $b$ = 1
+?h $-b=6$.
+?h Del både $6$ og $6i$ med $6$.
+?h $1\pm i$.
+Rødderne er $1+i$ og $1-i$.
+>> tjek
+?? mc | Hvorfor er $d=-6i$ forkert? | *Koefficienterne er reelle, så $d$ er reel. $6i$ er $\sqrt d$, ikke $d$ | Fordi fortegnet er forkert ~ Det er ikke fortegnet. $d$ kan slet ikke være imaginær her. | Den er rigtig ~ $d=36-72=-36$.
+?h Er $a$, $b$ og $c$ reelle?
+?h Så er $b^2-4ac$ reel.
+?h $\pm6i$ er kvadratrødderne af $-36$.
+$d$ er reel, når koefficienterne er reelle. Svaret er $d=-36$ med roden $1-i$.
+>> fejl
+At blande $d$ og $\sqrt d$ sammen, eller at glemme minus foran $b$, så rødderne bliver $-1\pm i$.
+>> svar
+$d=-36$ og $r=1-i$.
+
+=== e3:mc3 | ode
+@hl partikulær løsning
+>> type
+En førsteordens lineær ligning, hvor der spørges efter én partikulær løsning. Indsæt kandidaterne, eller brug panserformlen.
+>> plan
+?? mc | Hvad er hurtigst her? | *At sætte kandidaterne ind og tjekke begge sider | At udlede hele panserformlen ~ Det virker, men med fem kandidater er indsættelse hurtigere. | At vælge den med $e^t$, fordi der står $f'$ ~ Koefficienten er $\frac1t$, ikke en konstant. Løsningerne er ikke eksponentialfunktioner.
+?h En partikulær løsning er én bestemt funktion.
+?h Muligheder med en vilkårlig $c$ er familier.
+?h Prøv $t^2$.
+Sæt kandidaterne ind. Spring dem over, der indeholder en vilkårlig konstant.
+>> trin Indsæt $t^2$
+?? in | Sæt $f(t)=t^2$ ind. Udregn venstre side $f'(t)$ og højre side $\frac1tf(t)+t$ for $t=3$. | venstre side = 6 | højre side = 6
+?h $f'(t)=2t$.
+?h $\frac1t\cdot t^2=t$.
+?h $t+t=2t$, og for $t=3$ er det $6$.
+Begge sider er $2t$. $f(t)=t^2$ er en løsning.
+>> trin De homogene løsninger
+?? mc | Hvad er løsningerne til $f'=\frac1tf$? | *$ct$ | $ce^t$ ~ $f=ce^t$ giver $f'=ce^t$, men $\frac1tf=\frac{ce^t}{t}$. | $ct^2$ ~ $f'=2ct$, men $\frac1tf=ct$.
+?h Prøv $f=t$.
+?h $f'=1$ og $\frac1t\cdot t=1$.
+?h Så er $ct$ løsninger.
+Den fuldstændige løsning er $t^2+ct$. Med $c=0$ får du $t^2$.
+>> tjek
+?? mc | Hvorfor er $t^2+ce^t$ forkert? | *$ce^t$ løser ikke den homogene ligning | Fordi en partikulær løsning ikke må have en konstant ~ Det er også et problem, men selv med $c=1$ er den forkert, fordi $e^t$ ikke er en homogen løsning. | Den er rigtig ~ Den homogene løsning er $ct$, ikke $ce^t$.
+?h Hvad er de homogene løsninger?
+?h $ct$.
+?h $e^t$ er ikke på den form.
+Kun $t^2+ct$ løser ligningen. $e^t$ hører ikke til.
+>> fejl
+At tro, at alle førsteordens ligninger har $e^t$ i løsningen. Det gælder kun, når koefficienten er konstant.
+>> svar
+$f(t)=t^2$, $t>0$.
+
+=== e3:mc4 | ode
+@hl IKKE en løsning
+>> type
+En homogen andenordens ligning med en dobbeltrod, og spørgsmålet er negeret: find den, der IKKE er en løsning.
+>> plan
+?? mc | Hvad gør du først? | *Løser karakterligningen og skriver løsningsformen op | Sætter alle fem ind ~ Det virker, men løsningsformen afgør det på én gang. | Vælger $0$, fordi det ser forkert ud ~ Nulfunktionen løser altid en homogen ligning.
+?h Erstat $f''$ med $\lambda^2$, $f'$ med $\lambda$ og $f$ med $1$.
+?h $\lambda^2-6\lambda+9$.
+?h Det er et kvadrat.
+Karakterligningen er $(\lambda-3)^2=0$.
+>> trin Dobbeltroden
+?? mc | $\lambda=3$ er dobbeltrod. Hvad er løsningerne? | *$(c_1+c_2t)e^{3t}$ | $c_1e^{3t}$ ~ Ved en dobbeltrod kommer der en ekstra løsning $te^{3t}$. | $c_1\cos3t+c_2\sin3t$ ~ Det er løsningerne ved rødderne $\pm3i$.
+?h Ved en dobbeltrod $r$ er der to løsninger.
+?h $e^{rt}$ og $te^{rt}$.
+?h $r=3$.
+Løsningerne er $(c_1+c_2t)e^{3t}$.
+>> trin Gennemgå kandidaterne
+?? mc | Hvilken kandidat har ikke formen $(c_1+c_2t)e^{3t}$? | *$\cos(3t)+\sin(3t)$ | $e^{3t}(t-1)$ ~ Den har formen med $c_1=-1$ og $c_2=1$. | $0$ ~ Den har formen med $c_1=c_2=0$.
+?h $te^{3t}$: $c_1=0$, $c_2=1$.
+?h $4e^{3t}$: $c_1=4$, $c_2=0$.
+?h $\cos$ og $\sin$ har ingen $e^{3t}$.
+$\cos(3t)+\sin(3t)$ er ikke en løsning.
+>> tjek
+?? mc | Hvilken karakterligning ville give $\cos(3t)+\sin(3t)$ som løsning? | *$\lambda^2+9=0$ | $\lambda^2-9=0$ ~ Rødderne $\pm3$ giver $e^{3t}$ og $e^{-3t}$. | $(\lambda-3)^2=0$ ~ Den giver $(c_1+c_2t)e^{3t}$.
+?h $\cos3t$ og $\sin3t$ hører til rødderne $\pm3i$.
+?h $(\lambda-3i)(\lambda+3i)$.
+?h $\lambda^2+9$.
+Rødderne $\pm3i$ kommer fra $\lambda^2+9=0$. Her er det $(\lambda-3)^2$.
+>> fejl
+At overse, at spørgsmålet er negeret, og vælge den første løsning, man genkender.
+>> svar
+$\cos(3t)+\sin(3t)$ er IKKE en løsning.
+
+=== e3:mc5 | egen
+@hl både $\mathbf v_1$ og $\mathbf v_2$ egenvektorer
+>> type
+Par af vektorer, hvor begge skal være egenvektorer. Tjek $\mathbf A\mathbf v=\lambda\mathbf v$ direkte, og udeluk hurtigt.
+>> plan
+?? mc | Hvad er den hurtigste fremgangsmåde? | *Tjekker $\mathbf v_1$ først, fordi første søjle i $\mathbf A$ er $(2,0,0)$ | Finder det karakteristiske polynomium ~ Det er en omvej. $\mathbf A\mathbf v$ kan tjekkes direkte. | Tjekker kun $\mathbf v_2$ ~ Begge skal være egenvektorer.
+?h Første søjle er $(2,0,0)$.
+?h Så er $(a,0,0)$ en egenvektor med $\lambda=2$.
+?h Det udelukker de par, hvor $\mathbf v_1$ har nuller de forkerte steder.
+$(a,0,0)$ er egenvektorer med $\lambda=2$. Det udelukker c) og e).
+>> trin $\mathbf v_1$
+?? mc | Hvad er $\mathbf A\begin{bmatrix}0\\1\\0\end{bmatrix}$? | *$(3,0,-2)$, som ikke er et multiplum af $(0,1,0)$ | $(0,1,0)$ ~ Det er anden søjle i $\mathbf A$, og den er $(3,0,-2)$. | $(0,0,0)$ ~ Anden søjle er $(3,0,-2)$.
+?h $\mathbf A\mathbf e_2$ er anden søjle.
+?h Anden søjle er $(3,0,-2)$.
+?h Er det $\lambda(0,1,0)$?
+$(0,1,0)$ er ikke en egenvektor, så e) er ude. Tilbage er a), b) og d).
+>> trin $\mathbf v_2$
+?? in | Udregn $\mathbf A\begin{bmatrix}-2\\1\\1\end{bmatrix}$. | 1. koordinat = 4 | 2. koordinat = -2 | 3. koordinat = -2
+?h Første række: $2(-2)+3+5$.
+?h Anden række: $0+0-2$.
+?h Tredje række: $0-2+0$.
+$\mathbf A(-2,1,1)=(4,-2,-2)=-2\cdot(-2,1,1)$. Den er en egenvektor med $\lambda=-2$.
+>> tjek
+?? mc | $(3,1,1)$ i a) ligner. Er den en egenvektor? | *Nej, $\mathbf A(3,1,1)=(14,-2,-2)$ | Ja, med $\lambda=-2$ ~ $-2\cdot(3,1,1)=(-6,-2,-2)$, men første koordinat er $14$. | Ja, med $\lambda=2$ ~ Anden koordinat er $-2$, ikke $2$.
+?h Første række: $6+3+5$.
+?h $14$.
+?h Er $(14,-2,-2)$ et multiplum af $(3,1,1)$?
+Nej. Kun b) har to egenvektorer.
+>> fejl
+At tjekke kun den ene vektor i parret. Begge skal opfylde $\mathbf A\mathbf v=\lambda\mathbf v$.
+>> svar
+b): $\mathbf v_1=(5,0,0)$ med $\lambda=2$ og $\mathbf v_2=(-2,1,1)$ med $\lambda=-2$.
+
+=== e3:mc6 | diag
+@hl Hvilken matrix er $\mathbf A$
+>> type
+Egenværdier og egenrum er givet, og du skal finde matricen. Du behøver ikke regne $\mathbf Q\mathbf D\mathbf Q^{-1}$: tjek egenvektorerne på kandidaterne.
+>> plan
+?? mc | Hvad er hurtigst? | *At tjekke $\mathbf A\mathbf v=\lambda\mathbf v$ for de givne egenvektorer på kandidaterne | At regne $\mathbf Q\mathbf D\mathbf Q^{-1}$ ud ~ Det virker, men det kræver en invers og to produkter. | At vælge den med $1$, $-1$ og $2$ på diagonalen ~ Egenværdierne står kun på diagonalen, hvis matricen er diagonal eller trekantet.
+?h Egenvektoren $(0,1,0)$ er $\mathbf e_2$.
+?h $\mathbf A\mathbf e_2$ er anden søjle.
+?h Den skal være $1\cdot\mathbf e_2$.
+Anden søjle i $\mathbf A$ skal være $(0,1,0)$, fordi $\lambda_1=1$.
+>> trin Anden søjle
+?? mc | Hvilken kandidat har $(0,1,0)$ som anden søjle? | *b) | a) ~ Anden søjle i a) er $(0,1,1)$. | c) ~ Anden søjle i c) er $(\frac12,0,-\frac32)$.
+?h Se på midterste søjle i hver kandidat.
+?h Den skal være $0$, $1$, $0$.
+?h Kun b) har det.
+Kun b) har anden søjle $(0,1,0)$.
+>> trin Tjek en egenvektor mere
+?? in | Udregn $\mathbf A\begin{bmatrix}-1\\0\\1\end{bmatrix}$ for b). | 1. koordinat = -2 | 2. koordinat = 0 | 3. koordinat = 2
+?h Første række: $\frac12(-1)-\frac32\cdot1$.
+?h Tredje række: $-\frac32(-1)+\frac12\cdot1$.
+?h Anden række: $0$.
+$\mathbf A(-1,0,1)=(-2,0,2)=2\cdot(-1,0,1)$. Det passer med $\lambda_3=2$.
+>> tjek
+?? mc | Hvorfor er a) forkert, selv om den har $1$ på diagonalen? | *Den er trekantet med kun $1$ på diagonalen, så dens eneste egenværdi er $1$ | Fordi den har et $1$ under diagonalen ~ Det er en del af grunden, men det afgørende er, at egenværdierne $-1$ og $2$ mangler. | Den er rigtig ~ Anden søjle er $(0,1,1)$, ikke $(0,1,0)$.
+?h Er a) en trekantsmatrix?
+?h Ja, nedre trekantet.
+?h Egenværdierne er diagonalen: $1,1,1$.
+a) har kun egenværdien $1$. $\mathbf A$ skal have $1$, $-1$ og $2$.
+>> fejl
+At regne $\mathbf Q\mathbf D\mathbf Q^{-1}$ og lave en fejl i den inverse. Tjek kandidaterne med egenvektorerne i stedet.
+>> svar
+b): $\mathbf A=\begin{bmatrix}\frac12&0&-\frac32\\0&1&0\\-\frac32&0&\frac12\end{bmatrix}$.
+
+=== e3:1a | logik
+@hl Udfyld sandhedstabellen
+>> type
+En sandhedstabel med tre variable og otte rækker. Lav en hjælpesøjle for parentesen, og sammenlign den med $Q$.
+>> plan
+?? mc | Hvordan griber du det an? | *Laver en søjle for $P\Rightarrow R$ først og sammenligner den med $Q$ | Regner hele udsagnet i hovedet række for række ~ Det giver let fejl. En hjælpesøjle gør det sikkert. | Starter med $R\Leftrightarrow Q$ ~ Parentesen $(P\Rightarrow R)$ skal regnes først.
+?h Regn indefra og ud.
+?h Den inderste del er $P\Rightarrow R$.
+?h Derefter $\Leftrightarrow Q$.
+Lav en søjle for $P\Rightarrow R$, og sammenlign den med $Q$ række for række.
+>> trin $P\Rightarrow R$
+?? mc | Hvornår er $P\Rightarrow R$ falsk? | *Kun når $P=1$ og $R=0$ | Når $R=0$ ~ Med $P=0$ er implikationen sand uanset $R$. | Når $P=0$ ~ En falsk præmis gør implikationen sand.
+?h En implikation lover kun noget, når $P$ er sand.
+?h Den brydes kun, når $P$ er sand og $R$ falsk.
+?h I tabellen er det rækkerne $(1,1,0)$ og $(1,0,0)$.
+$P\Rightarrow R$ er $1,0,1,0,1,1,1,1$ i tabellens rækkefølge.
+>> trin Biimplikationen
+?? in | Sammenlign søjlen $1,0,1,0,1,1,1,1$ med $Q$-søjlen $1,1,0,0,1,1,0,0$. Skriv $1$, hvor de er ens. | $P=1,\ Q=1,\ R=1$ = 1 | $P=1,\ Q=1,\ R=0$ = 0 | $P=1,\ Q=0,\ R=1$ = 0 | $P=1,\ Q=0,\ R=0$ = 1 | $P=0,\ Q=1,\ R=1$ = 1 | $P=0,\ Q=1,\ R=0$ = 1 | $P=0,\ Q=0,\ R=1$ = 0 | $P=0,\ Q=0,\ R=0$ = 0
+?h $\Leftrightarrow$ er sand, når de to sider er ens.
+?h Række 1: $1$ og $1$. Række 2: $0$ og $1$.
+?h Række 4: $0$ og $0$ giver $1$.
+Søjlen for $(P\Rightarrow R)\Leftrightarrow Q$ er $1,0,0,1,1,1,0,0$.
+>> tjek
+?? mc | Række 4 har $P\Rightarrow R$ falsk og $Q$ falsk. Hvad giver biimplikationen? | *Sand | Falsk ~ $\Leftrightarrow$ er sand, når begge sider har samme værdi, også når begge er falske.
+?h Begge sider er falske.
+?h $\text{F}\Leftrightarrow\text{F}$.
+?h Samme værdi giver sand.
+$\text{F}\Leftrightarrow\text{F}$ er sand. Det er den række, flest får forkert.
+>> fejl
+At tro, at $\Leftrightarrow$ kun er sand, når begge sider er sande.
+>> skriv
+Hele tabellen med søjlerne $P$, $Q$, $R$, $P\Rightarrow R$ og $(P\Rightarrow R)\Leftrightarrow Q$. Hjælpesøjlen viser bedømmeren, hvordan du har regnet.
+>> svar
+Søjlen er $1,0,0,1,1,1,0,0$ i tabellens rækkefølge.
+
+=== e3:1b | logik
+@hl logisk ækvivalente
+>> type
+"Logisk ækvivalente?" om to udsagn, der kun adskiller sig ved implikationens retning. Ét modeksempel er nok til at sige nej.
+>> plan
+?? mc | Hvordan afgør du det hurtigst? | *Finder én række, hvor de har forskellig værdi | Laver to fulde tabeller ~ Det virker, men én række, hvor de er forskellige, er nok. | Bruger, at $P\Rightarrow R$ og $R\Rightarrow P$ altid er ens ~ Det er de ikke. Det er netop forskellen.
+?h Logisk ækvivalens skal gælde i alle rækker.
+?h Ét modeksempel afviser den.
+?h Den eneste forskel er $P\Rightarrow R$ mod $R\Rightarrow P$.
+Find en række, hvor $P\Rightarrow R$ og $R\Rightarrow P$ er forskellige.
+>> trin Modeksemplet
+?? mc | Tag rækken $P=1$, $Q=1$, $R=0$. Hvad er de to udsagn? | *Det første er falsk, det andet sandt | Begge er sande ~ $P\Rightarrow R$ er $1\Rightarrow0$, som er falsk. Så er $\text{F}\Leftrightarrow\text{S}$ falsk. | Begge er falske ~ $R\Rightarrow P$ er $0\Rightarrow1$, som er sand. Så er $\text{S}\Leftrightarrow\text{S}$ sand.
+?h $P\Rightarrow R$ er $1\Rightarrow0$.
+?h $R\Rightarrow P$ er $0\Rightarrow1$.
+?h Sammenlign hver med $Q=1$.
+Det første udsagn er falsk, det andet er sandt.
+>> trin Konklusionen
+?? mc | Er de logisk ækvivalente? | *Nej | Ja ~ I rækken $P=1$, $Q=1$, $R=0$ har de forskellig værdi.
+?h Ét modeksempel er nok.
+?h Det har du fundet.
+?h Så er svaret nej.
+Nej. De er forskellige i alle fire rækker med $P\neq R$.
+>> tjek
+?? mc | I hvilke rækker er de to udsagn ens? | *Når $P=R$ | Når $Q=1$ ~ Med $Q=1$ og $P\neq R$ er de forskellige. | Aldrig ~ Når $P=R$, er begge implikationer sande, og så er udsagnene ens.
+?h Hvornår er $P\Rightarrow R$ og $R\Rightarrow P$ begge sande?
+?h Når $P$ og $R$ har samme værdi.
+?h Så er begge udsagn lig $Q$.
+Når $P=R$, er de ens. Når $P\neq R$, er de forskellige.
+>> fejl
+At tro, at $P\Rightarrow R$ og $R\Rightarrow P$ er det samme. Den omvendte implikation er et andet udsagn.
+>> skriv
+"I rækken $P=1$, $Q=1$, $R=0$ er $(P\Rightarrow R)\Leftrightarrow Q$ falsk, mens $(R\Rightarrow P)\Leftrightarrow Q$ er sand. Udsagnene er derfor ikke logisk ækvivalente."
+>> svar
+Nej. Rækken $P=1$, $Q=1$, $R=0$ er et modeksempel.
+
+=== e3:2a | kompleks
+@hl rektangulær form
+>> type
+Et produkt med en kompleks eksponentialfunktion. Skriv $e^{i\pi/2}$ om med Eulers formel, og gang ud.
+>> plan
+?? mc | Hvad gør du med $e^{i\pi/2}$? | *Bruger Eulers formel: $e^{i\theta}=\cos\theta+i\sin\theta$ | Regner $e^{\pi/2}$ som et reelt tal ~ Eksponenten er imaginær. Brug Eulers formel. | Lader den stå ~ Svaret skal være på rektangulær form.
+?h $e^{i\theta}=\cos\theta+i\sin\theta$.
+?h $\theta=\frac\pi2$.
+?h $\cos\frac\pi2=0$ og $\sin\frac\pi2=1$.
+$e^{i\pi/2}=i$.
+>> trin Gang ud
+?? in | Udregn $i(2+i)$. | Realdel = -1 | Imaginærdel = 2
+?h $i\cdot2=2i$.
+?h $i\cdot i=i^2=-1$.
+?h $-1+2i$.
+$i(2+i)=-1+2i$.
+>> tjek
+?? mc | At gange med $i$ drejer tallet $90^\circ$ mod uret. Hvor ender $2+i$? | *I 2. kvadrant | I 4. kvadrant ~ Det svarer til at gange med $-i$. | Samme sted ~ Modulus er den samme, men vinklen ændres.
+?h $2+i$ ligger i 1. kvadrant.
+?h $90^\circ$ mod uret.
+?h $-1+2i$ har negativ realdel og positiv imaginærdel.
+$-1+2i$ ligger i 2. kvadrant. Det passer.
+>> fejl
+At glemme $i^2=-1$ og skrive $1+2i$.
+>> skriv
+"$e^{i\pi/2}=\cos\frac\pi2+i\sin\frac\pi2=i$, så $e^{i\pi/2}(2+i)=2i+i^2=-1+2i$."
+>> svar
+$-1+2i$.
+
+=== e3:2b | kompleks
+@hl rektangulær form
+>> type
+En potens af et komplekst tal. Potenser er nemmest på polær form.
+>> plan
+?? mc | Hvordan udregner du fjerde potens? | *Skriver tallet på polær form og ganger argumentet med $4$ | Ganger tallet med sig selv fire gange ~ Det virker, men det er langsomt og fejlfyldt. | Opløfter real- og imaginærdel hver for sig ~ $(a+bi)^4\neq a^4+b^4i$.
+?h Find modulus og argument.
+?h Real- og imaginærdel er ens.
+?h Så er vinklen $\frac\pi4$.
+Skriv tallet som $re^{i\theta}$. Så er fjerde potens $r^4e^{4i\theta}$.
+>> trin Polær form
+?? in | Find modulus og argumentet $\theta$ i grader. | modulus = 1 | $\theta$ i grader = 45
+?h $\left(\frac{\sqrt2}2\right)^2=\frac12$.
+?h $\sqrt{\frac12+\frac12}=1$.
+?h Real- og imaginærdel er ens og positive.
+Tallet er $e^{i\pi/4}$.
+>> trin Potensen
+?? in | Udregn $(e^{i\pi/4})^4=e^{i\pi}$ på rektangulær form. | Realdel = -1 | Imaginærdel = 0
+?h $4\cdot\frac\pi4=\pi$.
+?h $e^{i\pi}=\cos\pi+i\sin\pi$.
+?h $\cos\pi=-1$ og $\sin\pi=0$.
+$e^{i\pi}=-1$.
+>> tjek
+?? mc | Hvad er $(e^{i\pi/4})^8$? | *$1$ | $-1$ ~ $8\cdot\frac\pi4=2\pi$, og $e^{2\pi i}=1$. | $i$ ~ $e^{i\pi/2}=i$ er anden potens, ikke ottende.
+?h $8\cdot\frac\pi4=2\pi$.
+?h En hel omgang.
+?h $e^{2\pi i}=1$.
+Ottende potens er en hel omgang: $1$. Fjerde potens er en halv omgang: $-1$.
+>> fejl
+At opløfte real- og imaginærdel hver for sig. Brug polær form.
+>> skriv
+"$\frac{\sqrt2}2+i\frac{\sqrt2}2=e^{i\pi/4}$, så $\left(e^{i\pi/4}\right)^4=e^{i\pi}=-1$."
+>> svar
+$-1$.
+
+=== e3:3a | rekursion
+@hl Beregn $s_2$, $s_3$ og $s_4$
+>> type
+De første led i en sum med sumtegn. Skriv leddene op, og genbrug den forrige sum.
+>> plan
+?? mc | Hvordan regner du $s_n$ ud? | *Skriver leddene fra $k=2$ til $k=n$ op og lægger sammen | Starter ved $k=1$ ~ Summen starter ved $k=2$. | Bruger formlen fra 3b ~ Den skal bevises i 3b. Her skal du regne direkte.
+?h Summen starter ved $k=2$.
+?h $s_2$ har kun ét led.
+?h $s_{n}=s_{n-1}+\frac n2$.
+Skriv leddene op, og læg ét nyt led til ad gangen.
+>> trin De tre summer
+?? in | Udregn $s_2=\frac22$, $s_3=s_2+\frac32$ og $s_4=s_3+\frac42$. | $s_2$ = 1 | $s_3$ = 5/2 | $s_4$ = 9/2
+?h $s_2=1$.
+?h $1+\frac32=\frac52$.
+?h $\frac52+2=\frac92$.
+$s_2=1$, $s_3=\frac52$ og $s_4=\frac92$.
+>> tjek
+?? in | Tjek med formlen $\frac{n^2+n-2}{4}$ fra 3b for $n=4$. | formlen giver = 9/2
+?h $16+4-2=18$.
+?h $\frac{18}{4}$.
+?h $\frac92$.
+Formlen giver også $\frac92$.
+>> fejl
+At starte summen ved $k=1$ eller $k=0$. Se altid på den nedre grænse.
+>> skriv
+Skriv leddene op: $s_2=\frac22=1$, $s_3=\frac22+\frac32=\frac52$, $s_4=\frac22+\frac32+\frac42=\frac92$.
+>> svar
+$s_2=1$, $s_3=\frac52$ og $s_4=\frac92$.
+
+=== e3:3b | induktion
+@hl Vis med induktion efter ; for alle
+>> type
+"Vis med induktion" en lukket formel for en sum. Det nye led i skridtet er $\frac{n+1}{2}$.
+>> plan
+?? mc | Hvilke dele skal beviset have? | *Basistrin for $n=2$, induktionsantagelse og skridtet $s_{n+1}=s_n+\frac{n+1}{2}$ | Basistrin for $n=1$ ~ Summen er defineret fra $n=2$. | At vise det for $n=2$, $3$ og $4$ ~ Det er 3a. Eksempler beviser ikke "for alle".
+?h Opgaven siger "for alle $n\ge2$".
+?h Et induktionsbevis har tre dele.
+?h Summen til $n+1$ er summen til $n$ plus ét led.
+Basistrin $n=2$, antagelse for $n$ og skridt med det nye led.
+>> trin Basistrin
+?? in | Udregn formlen $\frac{n^2+n-2}{4}$ for $n=2$. | formlen giver = 1
+?h $4+2-2=4$.
+?h $\frac44$.
+?h Sammenlign med $s_2=1$.
+Formlen giver $1=s_2$.
+>> trin Skridtet
+?? mc | $s_{n+1}=\frac{n^2+n-2}{4}+\frac{n+1}{2}$. Hvad bliver det på fælles brøkstreg? | *$\frac{n^2+3n}{4}$ | $\frac{n^2+2n-1}{4}$ ~ $\frac{n+1}{2}=\frac{2n+2}{4}$. Så er tælleren $n^2+n-2+2n+2$. | $\frac{n^2+n-1}{4}$ ~ $\frac{n+1}{2}$ skal ganges med $2$ i tæller og nævner.
+?h $\frac{n+1}{2}=\frac{2n+2}{4}$.
+?h $n^2+n-2+2n+2$.
+?h $n^2+3n$.
+$s_{n+1}=\frac{n^2+3n}{4}$.
+>> tjek
+?? mc | Er $\frac{n^2+3n}{4}$ formlen med $n+1$ indsat? | *Ja, $(n+1)^2+(n+1)-2=n^2+3n$ | Nej, den skal være $\frac{n^2+n}{4}$ ~ Gang $(n+1)^2+(n+1)-2$ ud. | Nej, den skal være $\frac{(n+1)^2}{4}$ ~ Du har glemt $+(n+1)-2$.
+?h Gang $(n+1)^2$ ud: $n^2+2n+1$.
+?h Læg $n+1-2=n-1$ til.
+?h $n^2+3n$.
+Begge sider er $\frac{n^2+3n}{4}$. Skridtet holder.
+>> fejl
+At skrive resultatet op uden at vise, at det er formlen med $n+1$. Gang begge sider ud og sammenlign.
+>> skriv
+**Basistrin.** $\frac{4+2-2}{4}=1=s_2$.
+
+**Induktionsantagelse.** Antag, at $s_n=\frac{n^2+n-2}{4}$ for et $n\ge2$.
+
+**Induktionsskridt.** $s_{n+1}=s_n+\frac{n+1}{2}=\frac{n^2+n-2}{4}+\frac{2n+2}{4}=\frac{n^2+3n}{4}$, og $\frac{(n+1)^2+(n+1)-2}{4}=\frac{n^2+3n}{4}$.
+
+**Konklusion.** Ifølge induktionsprincippet gælder formlen for alle $n\ge2$.
+>> svar
+Basistrin $s_2=1$. Skridtet: $s_{n+1}=s_n+\frac{n+1}{2}=\frac{n^2+3n}{4}$, som er formlen for $n+1$. Konklusion ved induktionsprincippet.
+
+=== e3:4b | egen
+@hl Kan $0$ være en egenværdi
+>> type
+Et teorispørgsmål om egenværdier og invertibilitet. Svaret skal begrundes med definitionen.
+>> plan
+?? mc | Hvordan griber du det an? | *Antager, at $0$ er en egenværdi, og leder efter en modstrid | Tester med en konkret matrix ~ Ét eksempel viser ikke, at det aldrig kan ske. | Bruger, at egenværdier altid er positive ~ Egenværdier kan godt være negative eller $0$.
+?h Hvad betyder det, at $0$ er en egenværdi?
+?h Der findes $\mathbf v\neq\mathbf 0$ med $\mathbf B\mathbf v=\mathbf 0$.
+?h Brug $\mathbf B^{-1}$.
+Antag det modsatte, og vis at det fører til en modstrid.
+>> trin Modstriden
+?? mc | Antag $\mathbf B\mathbf v=\mathbf 0$ med $\mathbf v\neq\mathbf 0$. Hvad giver det at gange med $\mathbf B^{-1}$? | *$\mathbf v=\mathbf 0$, som er en modstrid | $\mathbf v=\mathbf B^{-1}$ ~ $\mathbf B^{-1}\mathbf B\mathbf v=\mathbf v$ og $\mathbf B^{-1}\mathbf 0=\mathbf 0$. | Intet ~ $\mathbf B^{-1}\mathbf 0=\mathbf 0$, så $\mathbf v=\mathbf 0$.
+?h $\mathbf B^{-1}\mathbf B=\mathbf I$.
+?h $\mathbf B^{-1}\mathbf 0=\mathbf 0$.
+?h Men $\mathbf v\neq\mathbf 0$.
+$\mathbf v=\mathbf 0$ strider mod, at $\mathbf v$ er en egenvektor.
+>> tjek
+?? mc | Hvordan ses det med determinanten? | *$\det(\mathbf B-0\mathbf I)=\det\mathbf B\neq0$ | $\det\mathbf B=0$ ~ For en invertibel matrix er $\det\mathbf B\neq0$. | Determinanten siger intet om det ~ Egenværdierne er rødderne i $\det(\mathbf B-\lambda\mathbf I)$.
+?h Egenværdierne er rødderne i $\det(\mathbf B-\lambda\mathbf I)$.
+?h Sæt $\lambda=0$.
+?h $\det\mathbf B\neq0$.
+$0$ er ikke rod i det karakteristiske polynomium, fordi $\det\mathbf B\neq0$.
+>> fejl
+At svare uden begrundelse, eller kun at vise det for en enkelt matrix.
+>> skriv
+"Antag, at $0$ er en egenværdi. Så findes $\mathbf v\neq\mathbf 0$ med $\mathbf B\mathbf v=\mathbf 0$. Ganges med $\mathbf B^{-1}$ fås $\mathbf v=\mathbf 0$, en modstrid. Altså kan $0$ ikke være en egenværdi."
+>> svar
+Nej. $\mathbf B\mathbf v=\mathbf 0$ giver $\mathbf v=\mathbf B^{-1}\mathbf 0=\mathbf 0$.
+
+=== e3:5a | kerne
+@hl Hvilke af basisvektorerne ; Er $1+2Z+Z^2\in\ker(L)$
+>> type
+Kernen af en afbildning givet ved en matrix i en polynomiebasis. Søjlerne er billederne af basisvektorerne.
+>> plan
+?? mc | Hvordan aflæser du, om en basisvektor er i kernen? | *Ser, om dens søjle i matricen er nul | Ser, om dens række er nul ~ Søjle $j$ er billedet af den $j$'te basisvektor. | Sætter $Z=0$ ind ~ Det har intet med kernen at gøre.
+?h Søjle $j$ er $\gamma$-koordinaterne for $L$ af den $j$'te basisvektor.
+?h En nulsøjle betyder, at billedet er $0$.
+?h Søjle 1 og 2 er nul.
+En basisvektor ligger i kernen, netop når dens søjle er nul.
+>> trin Basisvektorerne
+?? in | Skriv $1$, hvis vektoren er i kernen, og $0$ ellers. | $1+2Z$ = 1 | $2+Z-Z^2$ = 1 | $Z^2$ = 0
+?h Søjle 1 og 2 er nul.
+?h Søjle 3 er $(0,1,0)$.
+?h $L(Z^2)=2+Z-Z^2\neq0$.
+$1+2Z$ og $2+Z-Z^2$ er i kernen. $Z^2$ er ikke.
+>> trin $1+2Z+Z^2$
+?? mc | $1+2Z+Z^2=(1+2Z)+Z^2$. Hvad er $L(1+2Z+Z^2)$? | *$2+Z-Z^2$ | $0$ ~ $L(1+2Z)=0$, men $L(Z^2)\neq0$. | $1+2Z$ ~ $L(1+2Z)=0$, så det led bidrager intet.
+?h Koordinaterne er $(1,0,1)$.
+?h Matricen gange $(1,0,1)$ er $(0,1,0)$.
+?h Det er den anden basisvektor.
+$L(1+2Z+Z^2)=2+Z-Z^2\neq0$. Den er ikke i kernen.
+>> tjek
+?? mc | $1+2Z+Z^2$ indeholder en kernevektor. Hvorfor er den alligevel ikke i kernen? | *En kernevektor plus en vektor uden for kernen ligger uden for kernen | Fordi den har grad 2 ~ Graden afgør ikke kernen. $2+Z-Z^2$ har også grad 2 og er i kernen. | Den er i kernen ~ $L$ af den er $2+Z-Z^2\neq0$.
+?h Kernen er et underrum.
+?h Hvis $\mathbf u\in\ker$ og $\mathbf u+\mathbf w\in\ker$, så er $\mathbf w\in\ker$.
+?h Men $Z^2\notin\ker$.
+Kernevektoren bidrager med $0$, og $Z^2$ bidrager med noget forskelligt fra $0$.
+>> fejl
+At læse rækker i stedet for søjler, eller at tro, at alt med en kernevektor i ligger i kernen.
+>> skriv
+"Søjle 1 og 2 i $\,{}_\gamma[L]_\gamma$ er nul, så $1+2Z,\ 2+Z-Z^2\in\ker L$. Søjle 3 er $(0,1,0)$, så $L(Z^2)=2+Z-Z^2\neq0$. $1+2Z+Z^2$ har koordinaterne $(1,0,1)$, og $L(1+2Z+Z^2)=2+Z-Z^2\neq0$."
+>> svar
+$1+2Z$ og $2+Z-Z^2$ er i kernen. $Z^2$ og $1+2Z+Z^2$ er ikke.
+
+=== e3:5b | kerne
+@hl Find baser for $\ker(L)$ og $\mathrm{image}(L)$
+>> type
+Baser for kerne og billedrum af en afbildning givet ved en matrix. Regn i koordinater, og oversæt tilbage til polynomier.
+>> plan
+?? mc | Hvordan finder du billedrummet? | *Søjlerne i matricen udspænder det | Rækkerne i matricen udspænder det ~ Billedrummet er søjlerummet. | Det er det samme som kernen ~ Kernen er det, der sendes i $0$. Billedet er det, der rammes.
+?h $L(\mathbf v)$ er en linearkombination af søjlerne.
+?h Kun søjle 3 er ikke nul.
+?h Den svarer til $2+Z-Z^2$.
+Kernen findes ved at løse matrix gange $\mathbf x=\mathbf 0$. Billedrummet udspændes af søjlerne.
+>> trin Kernen
+?? mc | Matricen gange $(x_1,x_2,x_3)$ er $(0,x_3,0)$. Hvad er kernen af matricen? | *$\{(s,t,0)\}$ | $\{(0,0,t)\}$ ~ Det er dem, der IKKE sendes i $0$, når $t\neq0$. | $\{(0,t,0)\}$ ~ $x_1$ er også fri.
+?h $(0,x_3,0)=\mathbf 0$ kræver $x_3=0$.
+?h $x_1$ og $x_2$ er frie.
+?h $(s,t,0)$.
+Kernen er $\mathrm{span}(1+2Z,\ 2+Z-Z^2)$ med dimension $2$.
+>> trin Billedrummet og dimensionerne
+?? in | Billedrummet er $\mathrm{span}(2+bZ+cZ^2)$. Find $b$ og $c$ og dimensionerne. | $\dim\ker(L)$ = 2 | $\dim\mathrm{image}(L)$ = 1 | $b$ = 1 | $c$ = -1
+?h Søjle 3 er $(0,1,0)$, den anden basisvektor.
+?h Den anden basisvektor er $2+Z-Z^2$.
+?h Kernen har to basisvektorer, billedet én.
+$\mathrm{image}(L)=\mathrm{span}(2+Z-Z^2)$.
+>> tjek
+?? mc | Passer dimensionerne med dimensionssætningen? | *Ja, $2+1=3=\dim V$ | Nej, de skal give $2$ ~ $\dim V=3$, fordi polynomier af grad højst 2 har tre koefficienter. | Det har intet med det at gøre ~ Dimensionssætningen: $\dim\ker+\dim\mathrm{image}=\dim V$.
+?h $\dim V=3$.
+?h $\dim\ker=2$.
+?h $\dim\mathrm{image}=1$.
+$2+1=3$. Det passer.
+>> fejl
+At skrive koordinatvektorer som $(1,0,0)$ i svaret i stedet for polynomierne.
+>> skriv
+"Matricen gange $(x_1,x_2,x_3)$ er $(0,x_3,0)$, så kernen er alle koordinater $(s,t,0)$. $\ker L=\mathrm{span}(1+2Z,\ 2+Z-Z^2)$ med basis $(1+2Z,\ 2+Z-Z^2)$. Kun søjle 3 er forskellig fra nul, så $\mathrm{image}\,L=\mathrm{span}(2+Z-Z^2)$ med basis $(2+Z-Z^2)$. Tjek: $2+1=3=\dim V$."
+>> svar
+$\ker L$ har basis $(1+2Z,\ 2+Z-Z^2)$, og $\mathrm{image}\,L$ har basis $(2+Z-Z^2)$.
+
+=== e3:6a | homogen
+@hl homogent eller inhomogent
+>> type
+"Homogent eller inhomogent?" om et system på matrixform. Se efter et ekstra led uden de ukendte funktioner.
+>> plan
+?? mc | Hvad afgør det? | *Om der er et led $\mathbf u(t)$ ud over $\mathbf A\mathbf f$ | Om matricen har negative tal ~ Fortegnene i $\mathbf A$ afgør intet. | Om matricen er invertibel ~ Det har intet med homogenitet at gøre.
+?h Formen er $\mathbf f'=\mathbf A\mathbf f+\mathbf u(t)$.
+?h Homogen betyder $\mathbf u(t)=\mathbf 0$.
+?h Står der noget efter $\mathbf A\mathbf f$?
+Systemet er homogent, netop når $\mathbf u(t)=\mathbf 0$.
+>> trin Aflæs
+?? mc | Hvad er $\mathbf u(t)$ her? | *$\mathbf 0$ | $(2,-2)$ ~ Det er diagonalen i $\mathbf A$. | $(1,5)$ ~ Det er tal fra $\mathbf A$.
+?h Systemet er $\mathbf f'=\mathbf A\mathbf f$.
+?h Der står intet efter.
+?h $\mathbf u(t)=\mathbf 0$.
+Der er intet ekstra led. Systemet er homogent.
+>> tjek
+?? mc | Hvad kendetegner et homogent system? | *Nulfunktionen er en løsning | Det har ingen løsninger ~ Det har altid mindst nulløsningen. | Alle løsninger er konstante ~ Løsningerne er eksponentialfunktioner.
+?h Sæt $\mathbf f=\mathbf 0$ ind.
+?h $\mathbf 0'=\mathbf A\mathbf 0$.
+?h $\mathbf 0=\mathbf 0$.
+Nulfunktionen løser altid et homogent system.
+>> fejl
+At kalde systemet inhomogent, fordi matricen ikke er diagonal.
+>> skriv
+"Systemet er $\mathbf f'=\mathbf A\mathbf f$ med $\mathbf u(t)=\mathbf 0$, så det er homogent."
+>> svar
+Homogent.
+
+=== e3:6b | odesys
+@hl fuldstændige reelle løsning
+>> type
+Et homogent $2\times2$-system. Egenværdier og egenvektorer giver den fuldstændige løsning.
+>> plan
+?? mc | Hvad skal du finde? | *Egenværdier og egenvektorer for $\mathbf A$ | Integrere hver ligning for sig ~ Ligningerne er koblet: $f_1'$ afhænger af $f_2$. | Kun egenværdierne ~ Egenvektorerne er også en del af løsningen.
+?h Løsningen er $c_1e^{\lambda_1t}\mathbf v_1+c_2e^{\lambda_2t}\mathbf v_2$.
+?h Find $\lambda$ fra $\det(\mathbf A-\lambda\mathbf I)=0$.
+?h Find derefter $\mathbf v$ til hver.
+Find egenværdier og egenvektorer, og skriv $\mathbf f=c_1e^{\lambda_1t}\mathbf v_1+c_2e^{\lambda_2t}\mathbf v_2$.
+>> trin Egenværdierne
+?? in | $\det(\mathbf A-\lambda\mathbf I)=(2-\lambda)(-2-\lambda)-5$. Find egenværdierne. | største = 3 | mindste = -3
+?h $(2-\lambda)(-2-\lambda)=\lambda^2-4$.
+?h $\lambda^2-4-5=\lambda^2-9$.
+?h $\lambda=\pm3$.
+$\lambda=3$ og $\lambda=-3$.
+>> trin Egenvektorerne
+?? in | Skriv egenvektorerne på formen $(1,y)$. | $y$ for $\lambda=3$ = 1 | $y$ for $\lambda=-3$ = -5
+?h $\lambda=3$: første række af $\mathbf A-3\mathbf I$ er $(-1,1)$.
+?h $-1+y=0$.
+?h $\lambda=-3$: første række er $(5,1)$, så $5+y=0$.
+$\mathbf v_1=(1,1)$ og $\mathbf v_2=(1,-5)$.
+>> tjek
+?? in | Tjek: udregn $\mathbf A\begin{bmatrix}1\\-5\end{bmatrix}$. | 1. koordinat = -3 | 2. koordinat = 15
+?h $2\cdot1+1\cdot(-5)$.
+?h $5\cdot1-2\cdot(-5)$.
+?h $(-3,15)$.
+$(-3,15)=-3\cdot(1,-5)$. Egenvektoren passer.
+>> fejl
+At glemme egenvektorerne og kun skrive $c_1e^{3t}+c_2e^{-3t}$.
+>> skriv
+Det karakteristiske polynomium $\lambda^2-9$, egenværdierne, egenvektorerne med udregning, og svaret
+$\mathbf f(t)=c_1e^{3t}\begin{bmatrix}1\\1\end{bmatrix}+c_2e^{-3t}\begin{bmatrix}1\\-5\end{bmatrix}$, $c_1,c_2\in\mathbb R$.
+>> svar
+$\mathbf f(t)=c_1e^{3t}(1,1)+c_2e^{-3t}(1,-5)$, $c_1,c_2\in\mathbb R$.
+
+=== e4:mc0 | span
+@hl udspænder hele
+>> type
+To vektorer i $\mathbb R^3$, og du skal finde en tredje, så de udspænder hele rummet. Den tredje må ikke ligge i planen udspændt af de to.
+>> plan
+?? mc | Hvad skal den tredje vektor opfylde? | *Den må ikke være en linearkombination af $\mathbf v_1$ og $\mathbf v_2$ | Den skal være længere end $\mathbf v_1$ og $\mathbf v_2$ ~ Længden er ligegyldig. Retningen afgør det. | Den må ikke have nuller ~ $(4,0,0)$ har nuller, men problemet er, at den ligger i planen.
+?h Tre vektorer udspænder $\mathbb R^3$, netop når de er uafhængige.
+?h Den tredje må ikke ligge i $\mathrm{span}(\mathbf v_1,\mathbf v_2)$.
+?h Prøv $\mathbf v_1+\mathbf v_2$ og $\mathbf v_1-3\mathbf v_2$.
+Udeluk de kandidater, der er linearkombinationer af $\mathbf v_1$ og $\mathbf v_2$.
+>> trin Udeluk
+?? in | Udregn $\mathbf v_1+\mathbf v_2$ og $2\mathbf v_1+\mathbf v_2$. Skriv første koordinat af hver. | 1. koordinat af $\mathbf v_1+\mathbf v_2$ = 4 | 1. koordinat af $2\mathbf v_1+\mathbf v_2$ = 7
+?h $\mathbf v_1+\mathbf v_2=(4,0,0)$.
+?h $2\mathbf v_1+\mathbf v_2=(7,-1,2)$.
+?h Begge er kandidater.
+$(4,0,0)$ og $(7,-1,2)$ ligger i planen. Det samme gør $(0,-4,8)=\mathbf v_1-3\mathbf v_2$.
+>> trin Determinanten
+?? in | Udregn $\det\begin{bmatrix}3&1&1\\-1&1&2\\2&-2&3\end{bmatrix}$ med $(1,2,3)$ som tredje søjle. | $\det$ = 28
+?h Udvikl langs første række.
+?h $3(3+4)-1(-3-4)+1(2-2)$.
+?h $21+7+0$.
+$\det=28\neq0$, så de tre vektorer er uafhængige.
+>> tjek
+?? mc | Hvad betyder $\det=28\neq0$? | *De tre søjler er lineært uafhængige og udspænder $\mathbb R^3$ | At $(1,2,3)$ ligger i planen ~ Så ville determinanten være $0$. | Ingenting ~ $\det\neq0$ er netop kriteriet for, at søjlerne udspænder $\mathbb R^3$.
+?h Hvornår er determinanten $0$?
+?h Når søjlerne er afhængige.
+?h $28\neq0$.
+Determinanten er ikke $0$, så $(1,2,3)$ tilføjer en ny retning.
+>> fejl
+At vælge $(4,0,0)$, fordi den ser simpel ud. Den er $\mathbf v_1+\mathbf v_2$.
+>> svar
+$(1,2,3)$.
+
+=== e4:mc1 | matregn
+@hl Hvilken matrix $\mathbf B$ løser
+>> type
+En matrixligning $\mathbf A\mathbf B=\mathbf C$. Gang med $\mathbf A^{-1}$ fra venstre, eller sæt kandidaterne ind.
+>> plan
+?? mc | Hvordan isolerer du $\mathbf B$? | *$\mathbf B=\mathbf A^{-1}\mathbf C$ | $\mathbf B=\mathbf C\mathbf A^{-1}$ ~ $\mathbf A$ står til venstre for $\mathbf B$, så $\mathbf A^{-1}$ skal ganges på fra venstre. | $\mathbf B=\mathbf C-\mathbf A$ ~ Man kan ikke trække fra i et produkt.
+?h $\mathbf A$ står til venstre for $\mathbf B$.
+?h Gang begge sider med $\mathbf A^{-1}$ fra venstre.
+?h Matrixproduktet er ikke kommutativt.
+$\mathbf B=\mathbf A^{-1}\mathbf C$. Rækkefølgen betyder noget.
+>> trin Anden række
+?? in | Anden række i $\mathbf A\mathbf B$ er $-2$ gange anden række i $\mathbf B$, og den skal være $(-4,6)$. Find anden række i $\mathbf B$. | 1. tal = 2 | 2. tal = -3
+?h Anden række i $\mathbf A$ er $(0,-2)$.
+?h $-2b_{21}=-4$ og $-2b_{22}=6$.
+?h Del med $-2$.
+Anden række i $\mathbf B$ er $(2,-3)$.
+>> trin Første række
+?? in | Første række: $b_{1j}+2b_{2j}=c_{1j}$. Find første række i $\mathbf B$. | 1. tal = 0 | 2. tal = 2
+?h $b_{11}+2\cdot2=4$.
+?h $b_{12}+2\cdot(-3)=-4$.
+?h $b_{11}=0$ og $b_{12}=2$.
+$\mathbf B=\begin{bmatrix}0&2\\2&-3\end{bmatrix}$.
+>> tjek
+?? mc | $\begin{bmatrix}0&-2\\-2&3\end{bmatrix}$ ligner. Hvad giver den? | *$\mathbf A\mathbf B=-\mathbf C$ | $\mathbf A\mathbf B=\mathbf C$ ~ Alle fortegn er vendt, så produktet bliver $-\mathbf C$. | Ingenting ~ Den er $-1$ gange det rigtige svar, så produktet er $-\mathbf C$.
+?h Den er $-1$ gange svaret.
+?h Så er $\mathbf A\mathbf B$ også $-1$ gange.
+?h $-\mathbf C$.
+Fortegnsfejlen giver $-\mathbf C$. Tjek altid med ét element.
+>> fejl
+At gange $\mathbf A^{-1}$ på fra højre.
+>> svar
+$\mathbf B=\begin{bmatrix}0&2\\2&-3\end{bmatrix}$.
+
+=== e4:mc2 | det
+@hl For hvilken værdi af $k$
+>> type
+En determinant med en parameter, der skal være $0$. Udregn determinanten som et udtryk i $k$.
+>> plan
+?? mc | Hvordan finder du $k$? | *Udregner $\det\mathbf A$ som et udtryk i $k$ og sætter det lig $0$ | Sætter $k=0$ ~ Så får du bare et tal. Du skal finde den $k$, der giver $0$. | Prøver alle fire værdier ~ Det virker, men ét udtryk i $k$ er hurtigere.
+?h $k$ står i anden række.
+?h Udvikl langs første række.
+?h Fortegnsmønstret er $+,-,+$.
+Udregn $\det\mathbf A$ som en funktion af $k$.
+>> trin De tre led
+?? in | Udvikl langs første række $(1,-1,2)$. De tre led er $1\cdot(-3)$, $+1\cdot(6)$ og $2\cdot k$. Hvad giver de to første tilsammen? | $-3+6$ = 3
+?h $1\cdot\det\begin{bmatrix}0&3\\1&0\end{bmatrix}=-3$.
+?h $-(-1)\cdot\det\begin{bmatrix}k&3\\-2&0\end{bmatrix}=0+6=6$.
+?h $-3+6$.
+$\det\mathbf A=2k+3$.
+>> trin Løs
+?? in | Løs $2k+3=0$. | $k$ = -3/2
+?h Træk $3$ fra.
+?h Del med $2$.
+?h $k=-\frac32$.
+$k=-\frac32$.
+>> tjek
+?? mc | Hvilken fejl giver $k=\frac32$? | *Et fortegn galt i andet led | At vende brøken ~ Det giver $-\frac23$. | Ingen, den er også rigtig ~ $2\cdot\frac32+3=6\neq0$.
+?h Andet led har minus foran.
+?h $-(-1)=+1$.
+?h Med forkert fortegn får du $2k-3$.
+Minus foran andet led og $-1$ i matricen giver $+$. Glemmer man det, får man $k=\frac32$.
+>> fejl
+Fortegnsfejl i udviklingen. Skriv alle tre led op med fortegn.
+>> svar
+$k=-\frac32$.
+
+=== e4:mc3 | polrod
+@hl Hvilken mulighed angiver $p$
+>> type
+Et andengradspolynomium med reelle koefficienter, én kompleks rod og én værdi. Den anden rod er den konjugerede.
+>> plan
+?? mc | Hvad kan du bruge, at koefficienterne er reelle, til? | *$\overline{z_0}=1+2i$ er også rod | Rødderne er reelle ~ Den givne rod $1-2i$ er ikke reel. | Intet ~ Reelle koefficienter giver rødder i konjugerede par.
+?h Komplekse rødder kommer i konjugerede par.
+?h $\overline{1-2i}=1+2i$.
+?h Så kender du begge rødder.
+Rødderne er $1-2i$ og $1+2i$.
+>> trin Gang faktorerne ud
+?? in | $(z-(1-2i))(z-(1+2i))=z^2+bz+c$. Find $b$ og $c$. | $b$ = -2 | $c$ = 5
+?h Summen af rødderne er $2$, så $b=-2$.
+?h Produktet er $(1-2i)(1+2i)=1+4$.
+?h $c=5$.
+$p(z)=a(z^2-2z+5)$.
+>> trin Konstanten
+?? in | Brug $p(0)=10$ til at finde $a$. | $a$ = 2
+?h $p(0)=5a$.
+?h $5a=10$.
+?h $a=2$.
+$p(z)=2z^2-4z+10$.
+>> tjek
+?? mc | $z^2-2z+5$ har de rigtige rødder. Hvorfor er den forkert? | *$p(0)=5$, ikke $10$ | Den har forkerte rødder ~ Rødderne er rigtige. Det er konstanten, der mangler. | Den er rigtig ~ Begge betingelser skal passe, og $p(0)=5$.
+?h Sæt $z=0$ ind.
+?h $p(0)=5$.
+?h Det skal være $10$.
+Begge betingelser skal opfyldes. Gang med $2$.
+>> fejl
+At stoppe ved $z^2-2z+5$ og glemme $p(0)=10$.
+>> svar
+$p(z)=2z^2-4z+10$.
+
+=== e4:mc4 | matregn
+@hl Hvad er $\mathbf A\mathbf b$
+>> type
+Matrix gange vektor med en ikke-kvadratisk matrix. Tjek størrelsen først, så kan to svar udelukkes med det samme.
+>> plan
+?? mc | Hvor mange koordinater har $\mathbf A\mathbf b$? | *$2$, lige så mange som $\mathbf A$ har rækker | $3$, lige så mange som $\mathbf b$ har ~ En $2\times3$-matrix gange en $3\times1$-vektor giver $2\times1$. | Det kan ikke ganges ~ Antallet af søjler i $\mathbf A$ er $3$, og $\mathbf b$ har $3$ koordinater. Det passer.
+?h $\mathbf A$ er $2\times3$.
+?h $\mathbf b$ er $3\times1$.
+?h $(2\times3)(3\times1)=2\times1$.
+Svaret har $2$ koordinater. Det udelukker c) og d).
+>> trin Række for række
+?? in | Udregn hver række i $\mathbf A$ gange $\mathbf b$. | 1. koordinat = 6 | 2. koordinat = -16
+?h Række 1: $2(-2)+(-1)(-1)+3\cdot3$.
+?h $-4+1+9=6$.
+?h Række 2: $5(-2)+0-2\cdot3=-16$.
+$\mathbf A\mathbf b=(6,-16)$.
+>> tjek
+?? mc | $(6,16)$ er også en mulighed. Hvilken fejl giver den? | *Et fortegn galt i anden række | En regnefejl i første række ~ Første koordinat er rigtig. | Ingen ~ $-10-6=-16$, ikke $16$.
+?h Anden række: $-10+0-6$.
+?h Begge led er negative.
+?h $-16$.
+Begge led i anden række er negative. Fortegnsfejlen giver $16$.
+>> fejl
+At give et svar med tre koordinater. Tjek størrelsen først.
+>> svar
+$\mathbf A\mathbf b=\begin{bmatrix}6\\-16\end{bmatrix}$.
+
+=== e4:mc5 | odesys
+@hl en egenværdi for $\mathbf A$ med en tilhørende egenvektor
+>> type
+Den fuldstændige løsning er givet, og du skal aflæse en egenværdi og en egenvektor. Egenvektoren må være ethvert multiplum forskelligt fra nul.
+>> plan
+?? mc | Hvordan aflæser du egenværdier og egenvektorer? | *Eksponenten giver egenværdien, og vektoren foran giver egenvektoren | Vektoren foran er egenværdien ~ Egenværdien er et tal, nemlig tallet i eksponenten. | Konstanterne $k_1$ og $k_2$ er egenværdierne ~ $k_1$ og $k_2$ er frie konstanter.
+?h Løsningen har formen $k_1e^{\lambda_1t}\mathbf v_1+k_2e^{\lambda_2t}\mathbf v_2$.
+?h $e^{-2t}$ står med $(2,5)$.
+?h $e^{-t}$ står med $(-1,1)$.
+$\lambda=-2$ med $(2,5)$ og $\lambda=-1$ med $(-1,1)$.
+>> trin Multipla
+?? mc | Er $(2,-2)$ en egenvektor for $\lambda=-1$? | *Ja, den er $-2\cdot(-1,1)$ | Nej, den står ikke i løsningen ~ Ethvert multiplum forskelligt fra nul af en egenvektor er også en egenvektor. | Nej, fordi fortegnet er forkert ~ Et negativt multiplum er stadig et multiplum.
+?h Er $(2,-2)$ et multiplum af $(-1,1)$?
+?h $-2\cdot(-1,1)=(2,-2)$.
+?h Multipla af egenvektorer er egenvektorer.
+$(2,-2)$ er en egenvektor for $\lambda=-1$.
+>> tjek
+?? mc | Hvorfor er $(-2,5)$ ikke en egenvektor for $\lambda=-2$? | *Den er ikke et multiplum af $(2,5)$ | Fordi den har et negativt tal ~ Negative tal er fine. Den skal være et multiplum af $(2,5)$. | Den er det ~ Kun den ene koordinat har skiftet fortegn, så det er ikke et multiplum.
+?h Et multiplum ganger alle koordinater med samme tal.
+?h $(2,5)\to(-2,5)$ skifter kun den ene.
+?h Så er det ikke et multiplum.
+Kun et fælles tal på begge koordinater giver et multiplum.
+>> fejl
+At kræve præcis den vektor, der står i løsningen. Egenvektorer er kun bestemt op til en skalar.
+>> svar
+$\lambda=-1$ og $\mathbf v=(2,-2)$.
+
+=== e4:mc6 | kerne
+@hl Hvilken mulighed angiver $\ker(L_{\mathbf A})$
+>> type
+Kernen af en matrix. Løs $\mathbf A\mathbf v=\mathbf 0$, eller gang kandidaterne på.
+>> plan
+?? mc | Hvad er kernen? | *Løsningerne til $\mathbf A\mathbf v=\mathbf 0$ | Søjlerne i $\mathbf A$ ~ Søjlerne udspænder billedrummet. | Rækkerne i $\mathbf A$ ~ Rækkerne siger noget om rangen, ikke direkte om kernen.
+?h Kernen er det, der sendes i $\mathbf 0$.
+?h Løs $\mathbf A\mathbf v=\mathbf 0$.
+?h Eller sæt kandidaterne ind.
+Kernen er løsningsmængden til $\mathbf A\mathbf v=\mathbf 0$.
+>> trin Første koordinat
+?? mc | Træk række 2 fra række 1. Hvad får du at vide? | *$2v_1=0$, så $v_1=0$ | $4v_2=0$ ~ $2v_2$ forsvinder, fordi begge rækker har $2$ i anden søjle. | Intet ~ Rækkerne $(1,2,1)$ og $(-1,2,1)$ giver $(2,0,0)$.
+?h $(1,2,1)-(-1,2,1)$.
+?h $(2,0,0)$.
+?h $2v_1=0$.
+$v_1=0$. Så siger række 1 $2v_2+v_3=0$.
+>> trin Basisvektoren
+?? in | Med $v_1=0$ og $v_3=-2v_2$: sæt $v_2=-1$. Find $v_3$. | $v_3$ = 2
+?h $v_3=-2v_2$.
+?h $v_2=-1$.
+?h $v_3=2$.
+$(0,-1,2)$ udspænder kernen.
+>> tjek
+?? in | Tjek: udregn $\mathbf A\begin{bmatrix}0\\-1\\2\end{bmatrix}$. | 1. koordinat = 0 | 2. koordinat = 0 | 3. koordinat = 0
+?h Række 1: $0-2+2$.
+?h Række 2: $0-2+2$.
+?h Række 3: $0-8+8$.
+$\mathbf A(0,-1,2)=\mathbf 0$. Række 3 er $2\cdot$(række 1 + række 2), så rangen er $2$ og kernen har dimension $1$.
+>> fejl
+At vælge $\mathrm{span}(\mathbf 0)$, fordi man ikke opdager, at rækkerne er afhængige.
+>> svar
+$\ker(L_{\mathbf A})=\mathrm{span}\big((0,-1,2)\big)$.
+
+=== e4:1a | logik
+@hl Udfyld sandhedstabellen
+>> type
+En sandhedstabel med tre variable. En disjunktion med $Q$ gør halvdelen af rækkerne sande med det samme.
+>> plan
+?? mc | Hvad er den hurtigste vej? | *Udfylder alle rækker med $Q=1$ som sande og ser kun på $P\Leftrightarrow R$, når $Q=0$ | Regner hver række fra bunden ~ Det virker, men $Q=1$ afgør fire rækker med det samme. | Starter med $R\lor Q$ ~ Parentesen er $(P\Leftrightarrow R)$, og den regnes først.
+?h $\lor$ er sand, når mindst én side er sand.
+?h Når $Q=1$, er hele udsagnet sandt.
+?h Når $Q=0$, afgør $P\Leftrightarrow R$ det.
+Rækker med $Q=1$ er sande. Rækker med $Q=0$ er sande, netop når $P=R$.
+>> trin Rækkerne med $Q=0$
+?? mc | Hvilke rækker med $Q=0$ er falske? | *$(P,R)=(1,0)$ og $(0,1)$ | $(1,1)$ og $(0,0)$ ~ Der er $P=R$, så $P\Leftrightarrow R$ er sand. | Alle fire ~ Når $P=R$, er udsagnet sandt.
+?h Med $Q=0$ er udsagnet lig $P\Leftrightarrow R$.
+?h $P\Leftrightarrow R$ er falsk, når $P\neq R$.
+?h $(1,0)$ og $(0,1)$.
+Kun rækkerne $(1,0,0)$ og $(0,0,1)$ er falske.
+>> trin Tabellen
+?? in | Udfyld søjlen. | $P=1,\ Q=1,\ R=1$ = 1 | $P=1,\ Q=1,\ R=0$ = 1 | $P=1,\ Q=0,\ R=1$ = 1 | $P=1,\ Q=0,\ R=0$ = 0 | $P=0,\ Q=1,\ R=1$ = 1 | $P=0,\ Q=1,\ R=0$ = 1 | $P=0,\ Q=0,\ R=1$ = 0 | $P=0,\ Q=0,\ R=0$ = 1
+?h Alle rækker med $Q=1$ er $1$.
+?h Rækker med $Q=0$ og $P=R$ er $1$.
+?h Kun $(1,0,0)$ og $(0,0,1)$ er $0$.
+Søjlen er $1,1,1,0,1,1,0,1$.
+>> tjek
+?? mc | Rækken $P=0$, $Q=0$, $R=0$: hvad er $P\Leftrightarrow R$? | *Sand | Falsk ~ $\text{F}\Leftrightarrow\text{F}$ er sand, fordi begge sider har samme værdi.
+?h Begge er falske.
+?h $\Leftrightarrow$ sammenligner værdierne.
+?h Ens værdier giver sand.
+$\text{F}\Leftrightarrow\text{F}$ er sand, så den sidste række er $1$.
+>> fejl
+At sætte den sidste række til $0$, fordi alle variable er falske.
+>> skriv
+Tabellen med søjlerne $P$, $Q$, $R$, $P\Leftrightarrow R$ og $(P\Leftrightarrow R)\lor Q$.
+>> svar
+Søjlen er $1,1,1,0,1,1,0,1$ i tabellens rækkefølge.
+
+=== e4:1b | logik
+@hl tautologi
+>> type
+"Er det en tautologi?" om en implikation. Se kun på den eneste måde, implikationen kan blive falsk på.
+>> plan
+?? mc | Hvad er den hurtigste vej? | *At undersøge, om forudsætningen kan være sand, mens konklusionen er falsk | At lave alle fire rækker ~ Det virker, men én undersøgelse er nok. | At tjekke én række ~ En tautologi skal være sand i alle rækker.
+?h En implikation er kun falsk ved $\text{S}\Rightarrow\text{F}$.
+?h Hvornår er $\neg P\land Q$ sand?
+?h Er $P\lor Q$ falsk der?
+Implikationen kan kun blive falsk, når $\neg P\land Q$ er sand.
+>> trin Forudsætningen
+?? mc | Hvornår er $\neg P\land Q$ sand? | *Kun når $P=0$ og $Q=1$ | Når $P=1$ og $Q=1$ ~ $\neg P$ er falsk, når $P=1$. | Når $Q=1$ ~ $\neg P$ skal også være sand.
+?h Begge dele skal være sande.
+?h $\neg P$ er sand, når $P=0$.
+?h $Q=1$.
+Kun i rækken $P=0$, $Q=1$.
+>> trin Konklusionen
+?? mc | Hvad er $P\lor Q$ i rækken $P=0$, $Q=1$? | *Sand | Falsk ~ $Q=1$, så disjunktionen er sand.
+?h $\lor$ er sand, når én side er sand.
+?h $Q=1$.
+?h Sand.
+$P\lor Q$ er sand. Implikationen kan aldrig blive falsk.
+>> tjek
+?? mc | Er udsagnet en tautologi? | *Ja | Nej ~ Den eneste række, hvor implikationen kunne være falsk, giver $\text{S}\Rightarrow\text{S}$.
+?h Implikationen er sand i alle andre rækker.
+?h Og i den ene giver den $\text{S}\Rightarrow\text{S}$.
+?h Sand overalt.
+Ja, den er sand i alle rækker.
+>> fejl
+At regne én række og kalde det en tautologi. Argumentet skal dække alle rækker.
+>> skriv
+"Implikationen er kun falsk, hvis $\neg P\land Q$ er sand og $P\lor Q$ falsk. $\neg P\land Q$ er kun sand for $P=0$, $Q=1$, og der er $P\lor Q$ sand. Altså er udsagnet sandt i alle rækker og en tautologi." En sandhedstabel med fire rækker er også fin.
+>> svar
+Ja, det er en tautologi.
+
+=== e4:2a | binom
+@hl første kvadrant
+>> type
+En binom ligning $z^4=-4$. Løs på polær form, og vælg den løsning, der ligger i første kvadrant.
+>> plan
+?? mc | Hvordan løser du $z^4=-4$? | *Skriver $-4$ på polær form og tager fjerderoden af modulus og deler argumentet med $4$ | Tager $\sqrt[4]{-4}$ som et reelt tal ~ Et reelt tal i fjerde potens er aldrig negativt. | Prøver $z=\pm1$ og $z=\pm i$ ~ De har $z^4=1$, ikke $-4$.
+?h $-4=4e^{i\pi}$.
+?h Modulus af løsningerne er $\sqrt[4]4$.
+?h Argumenterne er $\frac{\pi+2p\pi}{4}$.
+Skriv $-4=4e^{i\pi}$. Løsningerne er $\sqrt2\,e^{i(\pi/4+p\pi/2)}$.
+>> trin Modulus og argument
+?? in | Find modulus og argumentet i grader for løsningen med $p=0$. | modulus i anden = 2 | argument i grader = 45
+?h $\sqrt[4]4=\sqrt2$, og $(\sqrt2)^2=2$.
+?h $\frac{\pi}{4}=45^\circ$.
+?h $p=0$ giver den mindste vinkel.
+Løsningen er $\sqrt2\,e^{i\pi/4}$.
+>> trin Rektangulær form
+?? in | Skriv $\sqrt2\left(\cos\frac\pi4+i\sin\frac\pi4\right)$ på rektangulær form. | Realdel = 1 | Imaginærdel = 1
+?h $\cos\frac\pi4=\sin\frac\pi4=\frac{\sqrt2}2$.
+?h $\sqrt2\cdot\frac{\sqrt2}2=1$.
+?h $1+i$.
+$z=1+i$.
+>> tjek
+?? mc | Tjek: hvad er $(1+i)^2$? | *$2i$, og $(2i)^2=-4$ | $2$ ~ $(1+i)^2=1+2i+i^2=2i$. | $-2$ ~ $1+2i-1=2i$.
+?h $(1+i)^2=1+2i+i^2$.
+?h $i^2=-1$.
+?h $2i$, og $(2i)^2=4i^2=-4$.
+$(1+i)^4=(2i)^2=-4$. Det passer.
+>> fejl
+At glemme at dele argumentet med $4$, eller at tage $\sqrt4$ i stedet for $\sqrt[4]4$.
+>> skriv
+"$-4=4e^{i\pi}$, så $z=\sqrt[4]4\,e^{i(\pi+2p\pi)/4}=\sqrt2\,e^{i(\pi/4+p\pi/2)}$, $p=0,1,2,3$. I første kvadrant ($p=0$): $z=\sqrt2\left(\frac{\sqrt2}2+i\frac{\sqrt2}2\right)=1+i$."
+>> svar
+$z=1+i$.
+
+=== e4:3a | rekursion
+@hl Beregn $t_2$ og $t_3$
+>> type
+De første led af en sum med sumtegn. Skriv leddene op.
+>> plan
+?? mc | Hvor mange led har $t_2$? | *Ét, nemlig $k=2$ | To, $k=1$ og $k=2$ ~ Summen starter ved $k=2$. | Ingen ~ Når grænserne er ens, er der præcis ét led.
+?h Summen går fra $k=2$ til $k=n$.
+?h For $n=2$ er det kun $k=2$.
+?h Ét led.
+$t_2$ har ét led, $t_3$ har to.
+>> trin De to summer
+?? in | Udregn $t_2=\frac{1}{1\cdot2}$ og $t_3=\frac12+\frac{1}{2\cdot3}$. | $t_2$ = 1/2 | $t_3$ = 2/3
+?h $t_2=\frac12$.
+?h $\frac{1}{2\cdot3}=\frac16$.
+?h $\frac36+\frac16=\frac46=\frac23$.
+$t_2=\frac12$ og $t_3=\frac23$.
+>> tjek
+?? mc | Hvilken formel passer med $t_2=\frac12$ og $t_3=\frac23$? | *$\frac{n-1}{n}$ | $\frac1n$ ~ For $n=3$ giver den $\frac13$. | $\frac{n}{n+1}$ ~ For $n=2$ giver den $\frac23$.
+?h Prøv $n=2$ og $n=3$.
+?h $\frac{2-1}{2}=\frac12$.
+?h $\frac{3-1}{3}=\frac23$.
+Formlen $\frac{n-1}{n}$ passer. Den bevises i 3b.
+>> fejl
+At starte summen ved $k=1$, hvor leddet $\frac{1}{0\cdot1}$ ikke er defineret.
+>> skriv
+"$t_2=\frac{1}{1\cdot2}=\frac12$ og $t_3=\frac{1}{1\cdot2}+\frac{1}{2\cdot3}=\frac12+\frac16=\frac23$."
+>> svar
+$t_2=\frac12$ og $t_3=\frac23$.
+
+=== e4:4b | span
+@hl som ikke er i $W$
+>> type
+Find en vektor uden for en udspænding. $W$ er en plan, så de fleste vektorer ligger udenfor. Det gælder om at begrunde det.
+>> plan
+?? mc | Hvordan viser du, at $\mathbf x\notin W$? | *Viser, at $a\mathbf v_1+b\mathbf v_2=\mathbf x$ ikke har nogen løsning | Viser, at $\mathbf x$ ikke er et multiplum af $\mathbf v_1$ ~ $\mathbf x$ kan ligge i $W$ uden at være et multiplum af én vektor. | Vælger en vektor med nuller ~ Nuller garanterer ingenting. Det skal regnes.
+?h Fra 4a: $\mathbf v_3$ ligger i $\mathrm{span}(\mathbf v_1,\mathbf v_2)$.
+?h Så er $W=\mathrm{span}(\mathbf v_1,\mathbf v_2)$.
+?h Løs $a\mathbf v_1+b\mathbf v_2=\mathbf x$.
+$\mathbf x\in W$, netop når $a\mathbf v_1+b\mathbf v_2=\mathbf x$ har en løsning.
+>> trin Udeluk
+?? mc | Hvilke to af kandidaterne ligger i $W$? | *$(5,-2,3)=\mathbf v_1+\mathbf v_2$ og $(3,4,-1)=\mathbf v_2-\mathbf v_1$ | $(0,0,1)$ og $(5,-2,3)$ ~ Prøv $\mathbf v_2-\mathbf v_1$. | Ingen af dem ~ $\mathbf v_1+\mathbf v_2=(5,-2,3)$.
+?h $\mathbf v_1+\mathbf v_2=(1+4,-3+1,2+1)$.
+?h $\mathbf v_2-\mathbf v_1=(4-1,1+3,1-2)$.
+?h Begge ligger i $W$.
+Kun $(0,0,1)$ er tilbage.
+>> trin $(0,0,1)$
+?? in | De to første koordinater giver $a+4b=0$ og $-3a+b=0$. Find $a$, $b$ og tredje koordinat $2a+b$. | $a$ = 0 | $b$ = 0 | $2a+b$ = 0
+?h Fra den anden: $b=3a$.
+?h Indsæt: $a+12a=0$.
+?h $a=b=0$, og $2a+b=0$.
+Tredje koordinat bliver $0$, men den skal være $1$. Systemet har ingen løsning.
+>> tjek
+?? mc | Hvad viser rækkereduktion af $[\,\mathbf v_1\ \mathbf v_2\mid(0,0,1)\,]$? | *En række $[0\ 0\mid c]$ med $c\neq0$ | En række af nuller ~ En nulrække betyder, at systemet er konsistent. | En pivot i hver søjle til venstre for stregen ~ Det siger ikke, om systemet er konsistent.
+?h En inkonsistent række ser ud som $0=c$.
+?h $c\neq0$.
+?h Det er det, der viser $\mathbf x\notin W$.
+En række $0=c$ med $c\neq0$ viser, at systemet er inkonsistent.
+>> fejl
+At give en vektor uden begrundelse. Vis, at systemet ikke har nogen løsning.
+>> skriv
+"$W=\mathrm{span}(\mathbf v_1,\mathbf v_2)$ (fra 4a). $a\mathbf v_1+b\mathbf v_2=(0,0,1)$ giver $a+4b=0$ og $-3a+b=0$, så $a=b=0$. Men tredje koordinat er så $0\neq1$. Altså er $(0,0,1)\notin W$."
+>> svar
+Fx $(0,0,1)\notin W$.
+
+=== e4:5a | afbm
+@hl Beregn afbildningsmatricen
+>> type
+En afbildningsmatrix i basen $\gamma$, og du skal finde den i standardbasen. Det er basisskifte med en invers.
+>> plan
+?? mc | Hvilken formel bruger du? | *$\,{}_e[L]_e={}_e[\mathrm{id}]_\gamma\,{}_\gamma[L]_\gamma\,{}_\gamma[\mathrm{id}]_e$ | $\,{}_e[L]_e={}_\gamma[\mathrm{id}]_e\,{}_\gamma[L]_\gamma\,{}_e[\mathrm{id}]_\gamma$ ~ Rækkefølgen er vendt. Læs fra højre: først over i $\gamma$. | $\,{}_e[L]_e={}_\gamma[L]_\gamma$ ~ Matricen afhænger af basen.
+?h Læs fra højre mod venstre.
+?h Skift til $\gamma$, anvend $L$, skift tilbage.
+?h $\,{}_e[\mathrm{id}]_\gamma$ har $\gamma$-vektorerne som søjler.
+$\,{}_e[L]_e={}_e[\mathrm{id}]_\gamma\,{}_\gamma[L]_\gamma\,{}_\gamma[\mathrm{id}]_e$.
+>> trin Den inverse
+?? in | $\,{}_\gamma[\mathrm{id}]_e$ er den inverse af $\begin{bmatrix}1&2&0\\2&0&0\\0&1&1\end{bmatrix}$. Find dens første række. | 1. tal = 0 | 2. tal = 1/2 | 3. tal = 0
+?h Anden række $(2,0,0)$ giver $x_1=\frac{y_2}{2}$.
+?h Første række af den inverse giver $x_1$ ud fra $\mathbf y$.
+?h $(0,\frac12,0)$.
+$\,{}_\gamma[\mathrm{id}]_e=\begin{bmatrix}0&\frac12&0\\\frac12&-\frac14&0\\-\frac12&\frac14&1\end{bmatrix}$.
+>> trin Første produkt
+?? in | $\,{}_e[\mathrm{id}]_\gamma\,{}_\gamma[L]_\gamma$ har søjlerne $L(\gamma_j)$ i standardkoordinater. Første søjle er $L(\gamma_1)=3\gamma_1+2\gamma_2+\gamma_3$. Udregn den. | 1. koordinat = 7 | 2. koordinat = 6 | 3. koordinat = 3
+?h $3(1,2,0)=(3,6,0)$.
+?h $2(2,0,1)=(4,0,2)$.
+?h Læg $(0,0,1)$ til.
+Produktet er $\begin{bmatrix}7&2&1\\6&0&2\\3&1&0\end{bmatrix}$.
+>> trin Sidste produkt
+?? in | Gang $\begin{bmatrix}7&2&1\\6&0&2\\3&1&0\end{bmatrix}$ med den inverse fra højre. Find første række. | 1. tal = 1/2 | 2. tal = 13/4 | 3. tal = 1
+?h Første række $(7,2,1)$ gange første søjle $(0,\frac12,-\frac12)$.
+?h $0+1-\frac12=\frac12$.
+?h Anden søjle $(\frac12,-\frac14,\frac14)$: $\frac72-\frac12+\frac14=\frac{13}4$.
+$\,{}_e[L]_e=\begin{bmatrix}\frac12&\frac{13}4&1\\-1&\frac72&2\\\frac12&\frac54&0\end{bmatrix}$.
+>> tjek
+?? in | Tjek: udregn $\,{}_e[L]_e\begin{bmatrix}1\\2\\0\end{bmatrix}$. Det skal give $L(\gamma_1)$. | 1. koordinat = 7 | 2. koordinat = 6 | 3. koordinat = 3
+?h Første række: $\frac12+2\cdot\frac{13}4$.
+?h Anden række: $-1+2\cdot\frac72$.
+?h Tredje række: $\frac12+2\cdot\frac54$.
+$(7,6,3)=L(\gamma_1)$. Matricen passer.
+>> fejl
+At gange i forkert rækkefølge, eller at lave en fejl i den inverse. Tjek altid på en $\gamma$-vektor.
+>> skriv
+Formlen, $\,{}_e[\mathrm{id}]_\gamma$, den inverse med Gauss-elimination, de to produkter og svaret. Til sidst tjekket på $\gamma_1$.
+>> svar
+$\,{}_e[L]_e=\begin{bmatrix}\frac12&\frac{13}4&1\\-1&\frac72&2\\\frac12&\frac54&0\end{bmatrix}$.
+
+=== e5:1a | logik
+@hl Opstil sandhedstabellen
+>> type
+En sandhedstabel med tre variable og en implikation. Konklusionen er bare $Q$, og det gør halvdelen af rækkerne nemme.
+>> plan
+?? mc | Hvad er den hurtigste vej? | *Alle rækker med $Q=1$ er sande, fordi konklusionen er sand | Regne hver række fra bunden ~ Det virker, men $Q=1$ afgør fire rækker med det samme. | Starte med $P\Rightarrow Q$ ~ Forudsætningen er hele $P\lor Q\lor R$.
+?h En implikation med sand konklusion er altid sand.
+?h Konklusionen er $Q$.
+?h Så er alle rækker med $Q=1$ sande.
+Rækker med $Q=1$ er sande. Rækker med $Q=0$ afhænger af forudsætningen.
+>> trin Rækkerne med $Q=0$
+?? mc | Med $Q=0$ er implikationen falsk, når forudsætningen er sand. Hvornår er $P\lor Q\lor R$ sand, når $Q=0$? | *Når $P=1$ eller $R=1$ | Kun når $P=1$ og $R=1$ ~ $\lor$ kræver kun én sand. | Aldrig ~ Med $P=1$ er disjunktionen sand.
+?h $\lor$ er sand, når mindst én er sand.
+?h Med $Q=0$ afhænger det af $P$ og $R$.
+?h Kun $(0,0,0)$ gør den falsk.
+Rækkerne $(1,0,1)$, $(1,0,0)$ og $(0,0,1)$ er falske. $(0,0,0)$ er sand, fordi forudsætningen er falsk.
+>> trin Tabellen
+?? in | Udfyld søjlen. | $P=1,\ Q=1,\ R=1$ = 1 | $P=1,\ Q=1,\ R=0$ = 1 | $P=1,\ Q=0,\ R=1$ = 0 | $P=1,\ Q=0,\ R=0$ = 0 | $P=0,\ Q=1,\ R=1$ = 1 | $P=0,\ Q=1,\ R=0$ = 1 | $P=0,\ Q=0,\ R=1$ = 0 | $P=0,\ Q=0,\ R=0$ = 1
+?h Rækker med $Q=1$: $1$.
+?h Rækker med $Q=0$ og $P$ eller $R$ sand: $0$.
+?h Den sidste række har falsk forudsætning: $1$.
+Søjlen er $1,1,0,0,1,1,0,1$.
+>> tjek
+?? mc | Hvorfor er den sidste række sand? | *Forudsætningen er falsk, og $\text{F}\Rightarrow\text{F}$ er sand | Fordi $Q=0$ ~ $Q=0$ gør konklusionen falsk. Det er den falske forudsætning, der redder den. | Den er falsk ~ $\text{F}\Rightarrow$ hvad som helst er sand.
+?h Alle tre er falske.
+?h Forudsætningen $P\lor Q\lor R$ er falsk.
+?h En falsk forudsætning gør implikationen sand.
+En falsk forudsætning gør implikationen sand. Det er den række, flest får forkert.
+>> fejl
+At sætte den sidste række til $0$, fordi alt er falsk.
+>> skriv
+Tabellen med søjlerne $P$, $Q$, $R$, $P\lor Q\lor R$ og $(P\lor Q\lor R)\Rightarrow Q$.
+>> svar
+Søjlen er $1,1,0,0,1,1,0,1$ i tabellens rækkefølge.
+
+=== e5:3a | matregn
+@hl Bestem $\mathbf A^2$
+>> type
+Kvadratet af en $2\times2$-matrix med en parameter. Regn element for element.
+>> plan
+?? mc | Hvordan regner du $\mathbf A^2$? | *Række gange søjle for hvert element | Kvadrerer hvert element ~ Det øverste højre element bliver $3a$, ikke $1$. | Bruger kun diagonalen ~ Elementet over diagonalen ændrer sig også.
+?h $\mathbf A^2=\mathbf A\mathbf A$.
+?h Element $(i,j)$ er række $i$ gange søjle $j$.
+?h Nederst til venstre er $0$.
+Række gange søjle for hvert af de fire elementer.
+>> trin Øverst til højre
+?? mc | Hvad er det øverste højre element? | *$3a$ | $2a$ ~ $a\cdot1+1\cdot2a=3a$. | $1$ ~ Det er ikke elementvis. Række 1 gange søjle 2 er $a\cdot1+1\cdot2a$.
+?h Række 1 er $(a,1)$.
+?h Søjle 2 er $(1,2a)$.
+?h $a+2a$.
+Øverst til højre er $3a$, og nederst til højre er $(2a)^2=4a^2$.
+>> trin Tjek med $a=2$
+?? in | Sæt $a=2$ ind i $\begin{bmatrix}a^2&3a\\0&4a^2\end{bmatrix}$. | øverst til venstre = 4 | øverst til højre = 6 | nederst til højre = 16
+?h $a^2=4$.
+?h $3a=6$.
+?h $4a^2=16$.
+For $a=2$ er $\mathbf A^2=\begin{bmatrix}4&6\\0&16\end{bmatrix}$.
+>> tjek
+?? mc | Regn efter med tal: $\begin{bmatrix}2&1\\0&4\end{bmatrix}^2$, øverst til højre. Hvad giver det? | *$2+4=6$ | $1$ ~ Række 1 $(2,1)$ gange søjle 2 $(1,4)$ er $2+4$. | $5$ ~ $2\cdot1+1\cdot4=6$.
+?h Række 1 er $(2,1)$.
+?h Søjle 2 er $(1,4)$.
+?h $2+4$.
+Det passer med $3a=6$.
+>> fejl
+At glemme, at $(2a)^2=4a^2$, og skrive $2a^2$.
+>> skriv
+"$\mathbf A^2=\begin{bmatrix}a&1\\0&2a\end{bmatrix}\begin{bmatrix}a&1\\0&2a\end{bmatrix}=\begin{bmatrix}a^2&a+2a\\0&4a^2\end{bmatrix}=\begin{bmatrix}a^2&3a\\0&4a^2\end{bmatrix}$."
+>> svar
+$\mathbf A^2=\begin{bmatrix}a^2&3a\\0&4a^2\end{bmatrix}$.
+
+=== e5:3b | induktion
+@hl Vis med induktion efter ; for alle
+>> type
+"Vis med induktion" en formel for matrixpotenser. Basistrinnet er 3a, og skridtet er ét matrixprodukt.
+>> plan
+?? mc | Hvilke dele skal beviset have? | *Basistrin for $n=2$, antagelse og skridtet $\mathbf A^{n+1}=\mathbf A^n\mathbf A$ | Basistrin for $n=1$ ~ Formlen skal vises fra $n=2$. | Regne $\mathbf A^3$ og $\mathbf A^4$ ~ Eksempler beviser ikke "for alle".
+?h Opgaven siger $n\ge2$.
+?h Et induktionsbevis har tre dele.
+?h $\mathbf A^{n+1}=\mathbf A^n\mathbf A$.
+Basistrin $n=2$, antagelse for $n$ og skridt med ét matrixprodukt.
+>> trin Basistrin
+?? in | Udregn formlens øverste højre element $(2^n-1)a^{n-1}$ for $n=2$ og $a=1$. | værdi = 3
+?h $2^2-1=3$.
+?h $a^{1}=1$.
+?h $3$.
+Formlen giver $3a$ og $(2a)^2=4a^2$, som i 3a.
+>> trin Skridtet
+?? mc | Øverste højre element i $\mathbf A^n\mathbf A$ er $a^n\cdot1+(2^n-1)a^{n-1}\cdot2a$. Hvad bliver det? | *$(2^{n+1}-1)a^n$ | $2^na^n$ ~ $1+2(2^n-1)=2^{n+1}-1$, ikke $2^n$. | $(2^n-1)a^n$ ~ Du mangler leddet $a^n$ og faktoren $2$.
+?h Sæt $a^n$ uden for en parentes.
+?h $a^n\big(1+2(2^n-1)\big)$.
+?h $1+2^{n+1}-2=2^{n+1}-1$.
+Øverst til højre: $(2^{n+1}-1)a^n$. Nederst til højre: $(2a)^n\cdot2a=(2a)^{n+1}$.
+>> tjek
+?? mc | Er $(2^{n+1}-1)a^n$ formlen med $n+1$ indsat? | *Ja, $(2^{n+1}-1)a^{(n+1)-1}$ | Nej, den skal være $(2^{n+1}-1)a^{n+1}$ ~ Eksponenten er $(n+1)-1=n$. | Nej, den skal være $(2^n-1)a^n$ ~ Det er $2^{n+1}$, når $n+1$ sættes ind.
+?h Sæt $n+1$ ind i $(2^n-1)a^{n-1}$.
+?h $(2^{n+1}-1)a^{n}$.
+?h Det er det, du fik.
+Ja. Alle fire elementer passer med formlen for $n+1$.
+>> fejl
+At regne skridtet uden at sætte antagelsen ind, eller at regne $1+2(2^n-1)$ forkert.
+>> skriv
+**Basistrin.** For $n=2$ giver formlen $\begin{bmatrix}a^2&3a\\0&4a^2\end{bmatrix}=\mathbf A^2$ (3a).
+
+**Induktionsantagelse.** Antag, at $\mathbf A^n=\begin{bmatrix}a^n&(2^n-1)a^{n-1}\\0&(2a)^n\end{bmatrix}$ for et $n\ge2$.
+
+**Induktionsskridt.** $\mathbf A^{n+1}=\mathbf A^n\mathbf A=\begin{bmatrix}a^{n+1}&a^n+2(2^n-1)a^n\\0&(2a)^{n+1}\end{bmatrix}=\begin{bmatrix}a^{n+1}&(2^{n+1}-1)a^n\\0&(2a)^{n+1}\end{bmatrix}$.
+
+**Konklusion.** Ifølge induktionsprincippet gælder formlen for alle $n\ge2$.
+>> svar
+Basistrin fra 3a. Skridtet: øverst til højre bliver $a^n+2(2^n-1)a^n=(2^{n+1}-1)a^n$. Konklusion ved induktionsprincippet.
+
+=== e5:4a | kerne
+@hl Bestem rangen
+>> type
+Rangen af en $3\times3$-matrix. Rækkereducér, og tæl pivoter.
+>> plan
+?? mc | Hvordan finder du rangen? | *Rækkereducerer og tæller pivoter | Tæller rækker uden nuller ~ Rækkerne kan være afhængige uden at have nuller. | Tæller søjler ~ Det er altid $3$ og siger intet om rangen.
+?h Rangen er antallet af pivoter i trappeformen.
+?h Brug række 1 til at rydde søjle 1.
+?h $R_2+R_1$ og $R_3-3R_1$.
+Rækkereducér, og tæl pivoter.
+>> trin Første søjle
+?? in | $R_2+R_1$ og $R_3-3R_1$. Skriv de nye rækker 2 og 3 (søjle 2 og 3). | række 2, søjle 2 = 4 | række 2, søjle 3 = -4 | række 3, søjle 2 = -4 | række 3, søjle 3 = 4
+?h $(-1,2,-4)+(1,2,0)=(0,4,-4)$.
+?h $(3,2,4)-3(1,2,0)=(0,-4,4)$.
+?h De to rækker er hinandens modsatte.
+Rækkerne er $(0,4,-4)$ og $(0,-4,4)$.
+>> trin Rangen
+?? in | $R_3+R_2$ giver en nulrække. Hvor mange pivoter er der? | rang = 2
+?h Række 1 har pivot i søjle 1.
+?h Række 2 har pivot i søjle 2.
+?h Række 3 er nul.
+$\mathrm{rang}\,\mathbf B=2$.
+>> tjek
+?? mc | Hvad betyder nulrækken? | *At række 3 er en linearkombination af række 1 og 2 | At $\mathbf B$ er nulmatricen ~ Kun én række blev nul. | At rangen er $3$ ~ En nulrække sænker rangen.
+?h Rækkeoperationer kombinerer rækker.
+?h Nulrækken kom fra $R_3-3R_1+(R_2+R_1)$.
+?h Altså $R_3=2R_1-R_2$.
+$R_3=2R_1-R_2$. Der er kun to uafhængige rækker.
+>> fejl
+At stoppe før den sidste operation og tælle tre pivoter.
+>> skriv
+Rækkeoperationerne $R_2+R_1$, $R_3-3R_1$ og $R_3+R_2$, trappeformen $\begin{bmatrix}1&2&0\\0&4&-4\\0&0&0\end{bmatrix}$ og: "To pivoter, så $\mathrm{rang}\,\mathbf B=2$."
+>> svar
+$\mathrm{rang}\,\mathbf B=2$.
+
+=== e5:4b | kerne
+@hl dimensionen af kernen
+>> type
+Kernens dimension. Når rangen er kendt, giver dimensionssætningen svaret med det samme.
+>> plan
+?? mc | Hvad er den hurtigste vej? | *Dimensionssætningen: rang plus $\dim\ker$ er antallet af søjler | Løse $\mathbf B\mathbf v=\mathbf 0$ fra bunden ~ Det virker, men rangen fra 4a giver svaret direkte. | $\dim\ker$ er lig rangen ~ De to lægges sammen til antallet af søjler.
+?h Brug rangen fra 4a.
+?h $\mathbf B$ har $3$ søjler.
+?h $\mathrm{rang}+\dim\ker=3$.
+$\dim\ker\mathbf B=3-\mathrm{rang}\,\mathbf B$.
+>> trin Dimensionen
+?? in | Rangen er $2$. Hvad er $\dim\ker\mathbf B$? | $\dim\ker\mathbf B$ = 1
+?h $3-2$.
+?h Der er én søjle uden pivot.
+?h Én fri variabel.
+$\dim\ker\mathbf B=1$.
+>> tjek
+?? in | Tjek med en kernevektor: udregn $\mathbf B\begin{bmatrix}-2\\1\\1\end{bmatrix}$. | 1. koordinat = 0 | 2. koordinat = 0 | 3. koordinat = 0
+?h Række 1: $-2+2+0$.
+?h Række 2: $2+2-4$.
+?h Række 3: $-6+2+4$.
+$(-2,1,1)$ ligger i kernen, så kernen er ikke kun $\{\mathbf 0\}$.
+>> fejl
+At sige $\dim\ker=2$ ved at forveksle med rangen.
+>> skriv
+"Ifølge dimensionssætningen er $\dim\ker\mathbf B=3-\mathrm{rang}\,\mathbf B=3-2=1$."
+>> svar
+$\dim\ker\mathbf B=1$.
+
+=== e5:5a | homogen
+@hl homogent eller inhomogent
+>> type
+"Homogent eller inhomogent?" om et system af differentialligninger.
+>> plan
+?? mc | Hvad afgør det? | *Om der er et led uden $f_1$ og $f_2$ | Om matricen er trekantet ~ Formen af matricen har intet med homogenitet at gøre. | Om der står tal foran $f_2$ ~ Tal foran de ukendte er en del af $\mathbf A$.
+?h Formen er $\mathbf f'=\mathbf A\mathbf f+\mathbf u(t)$.
+?h Homogen betyder $\mathbf u(t)=\mathbf 0$.
+?h Se efter led uden $f_1$ og $f_2$.
+Systemet er homogent, netop når $\mathbf u(t)=\mathbf 0$.
+>> trin Matrixformen
+?? mc | Hvad er $\mathbf A$? | *$\begin{bmatrix}1&1\\0&2\end{bmatrix}$ | $\begin{bmatrix}1&0\\1&2\end{bmatrix}$ ~ Første ligning er $f_1+f_2$, så første række er $(1,1)$. | $\begin{bmatrix}1&1\\2&0\end{bmatrix}$ ~ Anden ligning har kun $2f_2$, så anden række er $(0,2)$.
+?h Første række: koefficienterne i $f_1'=f_1+f_2$.
+?h Anden række: koefficienterne i $f_2'=2f_2$.
+?h Ingen led tilbage.
+$\mathbf A=\begin{bmatrix}1&1\\0&2\end{bmatrix}$ og $\mathbf u(t)=\mathbf 0$.
+>> tjek
+?? mc | Er systemet homogent? | *Ja | Nej ~ Der er intet led uden $f_1$ eller $f_2$.
+?h $\mathbf u(t)=\mathbf 0$.
+?h Det er definitionen på homogen.
+?h Ja.
+Homogent.
+>> fejl
+At kalde det inhomogent, fordi anden ligning kun har $f_2$.
+>> skriv
+"Systemet er $\mathbf f'=\mathbf A\mathbf f$ med $\mathbf A=\begin{bmatrix}1&1\\0&2\end{bmatrix}$ og intet ekstra led, så det er homogent."
+>> svar
+Homogent.
+
+=== e5:5b | odesys
+@hl Er $(f_1(t),f_2(t))=(e^{t},e^{2t})$ en løsning
+>> type
+"Er det en løsning?" til et system. Sæt ind i begge ligninger.
+>> plan
+?? mc | Hvad skal du tjekke? | *At begge ligninger er opfyldt for alle $t$ | Kun den første ligning ~ En løsning skal opfylde alle ligninger. | At $f_1$ og $f_2$ hver for sig er eksponentialfunktioner ~ Det er ikke nok. De skal passe i ligningerne.
+?h Sæt $f_1=e^t$ og $f_2=e^{2t}$ ind.
+?h Tjek anden ligning først, den er nemmest.
+?h Tjek derefter første.
+Sæt ind i begge ligninger.
+>> trin Anden ligning
+?? mc | Er $f_2'=2f_2$ opfyldt for $f_2=e^{2t}$? | *Ja | Nej ~ $(e^{2t})'=2e^{2t}$.
+?h $(e^{2t})'=2e^{2t}$.
+?h $2f_2=2e^{2t}$.
+?h Ens.
+Anden ligning er opfyldt.
+>> trin Første ligning
+?? mc | Første ligning: venstre side er $f_1'=e^t$. Hvad er højre side $f_1+f_2$? | *$e^t+e^{2t}$, som ikke er $e^t$ | $e^t$ ~ $f_2=e^{2t}$ skal også lægges til. | $2e^t$ ~ $f_2$ er $e^{2t}$, ikke $e^t$.
+?h $f_1+f_2=e^t+e^{2t}$.
+?h $e^{2t}\neq0$.
+?h Så er de ikke ens.
+Første ligning fejler. $(e^t,e^{2t})$ er ikke en løsning.
+>> tjek
+?? mc | Hvilket par er en løsning? | *$(e^{2t},e^{2t})$ | $(e^t,e^{2t})$ ~ Første ligning fejler. | $(e^{2t},e^t)$ ~ Anden ligning kræver $f_2'=2f_2$, og $(e^t)'=e^t$.
+?h Prøv $(e^{2t},e^{2t})$.
+?h $f_1'=2e^{2t}$ og $f_1+f_2=2e^{2t}$.
+?h Anden ligning: $2e^{2t}=2e^{2t}$.
+$(e^{2t},e^{2t})$ opfylder begge ligninger.
+>> fejl
+At tjekke kun den ligning, der passer.
+>> skriv
+"Anden ligning er opfyldt: $(e^{2t})'=2e^{2t}$. Første ligning: $f_1'=e^t$, men $f_1+f_2=e^t+e^{2t}\neq e^t$. Så er det ikke en løsning."
+>> svar
+Nej. Første ligning er ikke opfyldt.
+
+=== e5:5c | odesys
+@hl fuldstændige reelle løsning
+>> type
+Et homogent $2\times2$-system med en trekantsmatrix. Egenværdierne står på diagonalen.
+>> plan
+?? mc | Hvad giver løsningen? | *Egenværdier og egenvektorer for $\mathbf A$ | Integration af hver ligning hver for sig ~ Første ligning afhænger af $f_2$, så de er koblet. | Kun egenværdierne ~ Egenvektorerne er også en del af løsningen.
+?h $\mathbf A=\begin{bmatrix}1&1\\0&2\end{bmatrix}$.
+?h Den er trekantet.
+?h Egenværdierne er $1$ og $2$.
+Find egenværdier og egenvektorer, og skriv $\mathbf f=c_1e^{\lambda_1t}\mathbf v_1+c_2e^{\lambda_2t}\mathbf v_2$.
+>> trin Egenvektorerne
+?? in | Skriv egenvektorerne på formen $(1,y)$. | $y$ for $\lambda=1$ = 0 | $y$ for $\lambda=2$ = 1
+?h $\lambda=1$: $\mathbf A-\mathbf I=\begin{bmatrix}0&1\\0&1\end{bmatrix}$, så $y=0$.
+?h $\lambda=2$: $\mathbf A-2\mathbf I=\begin{bmatrix}-1&1\\0&0\end{bmatrix}$.
+?h $-1+y=0$.
+$\mathbf v_1=(1,0)$ og $\mathbf v_2=(1,1)$.
+>> tjek
+?? mc | Passer svaret med 5b? | *Ja, $(e^t,e^{2t})$ har ikke formen $c_1e^t(1,0)+c_2e^{2t}(1,1)$ | Nej, $(e^t,e^{2t})$ skulle være en løsning ~ 5b viste, at den ikke er. | Det har intet med det at gøre ~ Den fuldstændige løsning skal indeholde alle løsninger og kun dem.
+?h $f_2=c_2e^{2t}$.
+?h Så skal $f_1=c_1e^t+c_2e^{2t}$.
+?h Med $c_2=1$ skal $f_1$ indeholde $e^{2t}$.
+$(e^t,e^{2t})$ kræver $c_2=1$ og så $f_1=c_1e^t+e^{2t}$, ikke $e^t$. Det passer med 5b.
+>> fejl
+At aflæse egenvektorerne som søjler eller rækker i $\mathbf A$.
+>> skriv
+Egenværdierne $1$ og $2$ fra diagonalen, egenvektorerne med udregning, og
+$\mathbf f(t)=c_1e^{t}\begin{bmatrix}1\\0\end{bmatrix}+c_2e^{2t}\begin{bmatrix}1\\1\end{bmatrix}$, $c_1,c_2\in\mathbb R$.
+>> svar
+$f_1(t)=c_1e^{t}+c_2e^{2t}$ og $f_2(t)=c_2e^{2t}$, $c_1,c_2\in\mathbb R$.
+
+=== e5:5d | odesys
+@hl der opfylder $f_1(0)=0$ og $f_2(0)=1$
+>> type
+Begyndelsesværdier til et system. Sæt $t=0$ ind i den fuldstændige løsning, og løs for konstanterne.
+>> plan
+?? mc | Hvad giver $t=0$? | *Et lineært ligningssystem i $c_1$ og $c_2$ | En differentialligning ~ Ved $t=0$ er alle eksponentialer $1$, så det bliver almindelige ligninger. | Ingenting ~ Begyndelsesværdierne bestemmer konstanterne.
+?h $e^0=1$.
+?h $c_1(1,0)+c_2(1,1)=(0,1)$.
+?h Anden koordinat giver $c_2$.
+Ved $t=0$: $c_1+c_2=0$ og $c_2=1$.
+>> trin Konstanterne
+?? in | Løs $c_1+c_2=0$ og $c_2=1$. | $c_1$ = -1 | $c_2$ = 1
+?h $c_2=1$.
+?h $c_1=-c_2$.
+?h $c_1=-1$.
+$c_1=-1$ og $c_2=1$.
+>> trin Løsningen
+?? in | Skriv $f_1=Ae^t+Be^{2t}$ og $f_2=Ce^t+De^{2t}$. | $A$ = -1 | $B$ = 1 | $C$ = 0 | $D$ = 1
+?h $f_1=c_1e^t+c_2e^{2t}$.
+?h $f_2=c_2e^{2t}$.
+?h Sæt $c_1=-1$ og $c_2=1$ ind.
+$f_1=-e^t+e^{2t}$ og $f_2=e^{2t}$.
+>> tjek
+?? mc | Tjek: hvad er $f_1(0)$? | *$0$, som det skal | $1$ ~ $-e^0+e^0=-1+1=0$. | $-1$ ~ Du har glemt $e^{2\cdot0}=1$.
+?h $-e^0=-1$.
+?h $e^0=1$.
+?h $-1+1$.
+$f_1(0)=0$ og $f_2(0)=1$.
+>> fejl
+At sætte begyndelsesværdierne direkte ind som $c_1$ og $c_2$ uden at løse systemet.
+>> skriv
+"$t=0$ giver $c_1+c_2=0$ og $c_2=1$, så $c_1=-1$. Løsningen er $f_1(t)=-e^{t}+e^{2t}$ og $f_2(t)=e^{2t}$."
+>> svar
+$f_1(t)=-e^{t}+e^{2t}$ og $f_2(t)=e^{2t}$.
+
+=== e5:6a | span
+@hl Angiv dimensionen af $V$
+>> type
+Dimensionen af et vektorrum med en given basis. Tæl basisvektorerne.
+>> plan
+?? mc | Hvad er dimensionen? | *Antallet af vektorer i en basis | Antallet af rækker i en matrix ~ Matricerne er $2\times2$, men vektorrummet af dem har dimension $4$. | Antallet af ettaller i basismatricerne ~ Det har intet med dimensionen at gøre.
+?h $\beta$ er en basis.
+?h Tæl matricerne i $\beta$.
+?h Fire.
+Dimensionen er antallet af basisvektorer.
+>> trin Tæl
+?? in | Hvor mange matricer er der i $\beta$? | $\dim V$ = 4
+?h Se på parentesen med $\beta$.
+?h Der står fire matricer.
+?h $\dim V=4$.
+$\dim V=4$.
+>> tjek
+?? mc | Passer det med, at en $2\times2$-matrix har fire frie tal? | *Ja, standardbasen har fire matricer med ét $1$ hver | Nej, dimensionen er $2$ ~ $2$ er størrelsen på matricerne, ikke dimensionen af rummet. | Nej, dimensionen er $8$ ~ Der er fire indgange, ikke otte.
+?h En $2\times2$-matrix har fire indgange.
+?h Standardbasen har fire matricer.
+?h Alle baser har lige mange elementer.
+Ja. Alle baser har fire elementer.
+>> fejl
+At svare $2$, fordi matricerne er $2\times2$.
+>> skriv
+"$\beta$ er en basis for $V$ med 4 elementer, så $\dim V=4$."
+>> svar
+$\dim V=4$.
+
+=== e5:6b | afbm
+@hl Beregn $L\left(\begin{bmatrix}3&3\\3&3\end{bmatrix}\right)$
+>> type
+En afbildningsmatrix på et rum af matricer. Gå via koordinater: ind i $\beta$, gang på, ud af $\beta$.
+>> plan
+?? mc | Hvordan bruger du afbildningsmatricen? | *Finder $\beta$-koordinaterne, ganger matricen på og oversætter tilbage | Ganger afbildningsmatricen direkte med $\begin{bmatrix}3&3\\3&3\end{bmatrix}$ ~ Afbildningsmatricen er $4\times4$ og virker på koordinatvektorer. | Bruger standardbasen ~ Matricen er givet i $\beta$, så koordinaterne skal være i $\beta$.
+?h $\,{}_\beta[L]_\beta$ tager $\beta$-koordinater ind.
+?h Find koordinaterne for $\begin{bmatrix}3&3\\3&3\end{bmatrix}$.
+?h Prøv at lægge basismatricerne sammen.
+$\,{}_\beta[L(A)]={}_\beta[L]_\beta\,{}_\beta[A]$.
+>> trin Koordinaterne
+?? in | Summen af de fire basismatricer er $\begin{bmatrix}3&3\\3&3\end{bmatrix}$. Hvad er koordinatvektoren? | 1. = 1 | 2. = 1 | 3. = 1 | 4. = 1
+?h Hver plads har $1$ i tre af matricerne.
+?h $1+1+1=3$.
+?h Koefficienterne er alle $1$.
+Koordinatvektoren er $(1,1,1,1)$.
+>> trin Gang på
+?? in | Gang $\,{}_\beta[L]_\beta$ på $(1,1,1,1)$. Det giver rækkesummerne. | 1. = 4 | 2. = 3 | 3. = 2 | 4. = 1
+?h Række 1: $1+1+1+1$.
+?h Række 2: $0+1+1+1$.
+?h Rækkesummerne er $4,3,2,1$.
+Resultatet er $(4,3,2,1)$ i $\beta$-koordinater.
+>> trin Oversæt tilbage
+?? in | Udregn $4\beta_1+3\beta_2+2\beta_3+\beta_4$. | øverst til venstre = 6 | øverst til højre = 7 | nederst til venstre = 8 | nederst til højre = 9
+?h Øverst til venstre: $4\cdot0+3\cdot1+2\cdot1+1\cdot1$.
+?h Øverst til højre: $4\cdot1+3\cdot0+2\cdot1+1\cdot1$.
+?h Nederst: $4+3+0+1$ og $4+3+2+0$.
+$L\left(\begin{bmatrix}3&3\\3&3\end{bmatrix}\right)=\begin{bmatrix}6&7\\8&9\end{bmatrix}$.
+>> tjek
+?? mc | Hvorfor er $(4,3,2,1)$ ikke svaret? | *Det er koordinater i $\beta$, ikke selve matricen | Det er svaret ~ Spørgsmålet er $L$ af en matrix, så svaret er en matrix. | Fordi rækkefølgen skal vendes ~ Rækkefølgen er rigtig. Den skal bare oversættes via $\beta$.
+?h Hvad tager matricen ind, og hvad giver den ud?
+?h $\beta$-koordinater ud.
+?h Oversæt med basismatricerne.
+$(4,3,2,1)$ er koordinater. Svaret er matricen $\begin{bmatrix}6&7\\8&9\end{bmatrix}$.
+>> fejl
+At stoppe ved koordinatvektoren $(4,3,2,1)$.
+>> skriv
+"$\begin{bmatrix}3&3\\3&3\end{bmatrix}=\beta_1+\beta_2+\beta_3+\beta_4$, så koordinaterne er $(1,1,1,1)$. $\,{}_\beta[L]_\beta(1,1,1,1)=(4,3,2,1)$, og $L\left(\begin{bmatrix}3&3\\3&3\end{bmatrix}\right)=4\beta_1+3\beta_2+2\beta_3+\beta_4=\begin{bmatrix}6&7\\8&9\end{bmatrix}$."
+>> svar
+$L\left(\begin{bmatrix}3&3\\3&3\end{bmatrix}\right)=\begin{bmatrix}6&7\\8&9\end{bmatrix}$.
+
+=== e5:6c | kerne
+@hl injektiv
+>> type
+"Er $L$ injektiv?" ud fra afbildningsmatricen. Det handler om, hvorvidt kernen kun er $\{\mathbf 0\}$.
+>> plan
+?? mc | Hvad afgør, om $L$ er injektiv? | *Om kernen kun er $\{\mathbf 0\}$, altså om matricen er invertibel | Om matricen har nuller ~ Nuller afgør intet. Det er invertibiliteten. | Om matricen er symmetrisk ~ Symmetri har intet med det at gøre.
+?h Injektiv betyder, at kun $\mathbf 0$ sendes i $\mathbf 0$.
+?h Det sker, når matricen er invertibel.
+?h Se på determinanten.
+$L$ er injektiv, netop når $\,{}_\beta[L]_\beta$ er invertibel.
+>> trin Determinanten
+?? in | Matricen er øvre trekantet. Hvad er dens determinant? | $\det$ = 1
+?h For en trekantsmatrix er determinanten produktet af diagonalen.
+?h Diagonalen er $1,1,1,1$.
+?h $1$.
+$\det=1\neq0$. Matricen er invertibel.
+>> tjek
+?? mc | Hvad siger dimensionssætningen så om $L$? | *$L$ er også surjektiv, altså bijektiv | $L$ er ikke surjektiv ~ $\dim\ker=0$ giver rang $4=\dim V$. | Intet ~ $\dim\ker+\mathrm{rang}=4$, og med $\dim\ker=0$ er rangen $4$.
+?h $\dim\ker L=0$.
+?h $\mathrm{rang}=4-0=4$.
+?h Billedet er hele $V$.
+$L$ er bijektiv.
+>> fejl
+At forveksle injektiv og surjektiv. Injektiv handler om kernen.
+>> skriv
+"$\,{}_\beta[L]_\beta$ er øvre trekantet med determinant $1\cdot1\cdot1\cdot1=1\neq0$. Den er invertibel, så $\ker L=\{\mathbf 0\}$, og $L$ er injektiv."
+>> svar
+Ja, $L$ er injektiv.
+
+=== e6:mc0 | lignsys
+@hl fuldstændige løsning
+>> type
+To ligninger med tre ubekendte. Der er én fri parameter, så løsningen er en partikulær løsning plus et parameterled.
+>> plan
+?? mc | Hvad skal den rigtige løsning opfylde? | *Den faste vektor løser systemet, og retningsvektoren løser det homogene system | Det er nok, at den faste vektor løser systemet ~ Retningsvektoren skal også give $0$ i begge ligninger, ellers er de andre punkter ikke løsninger. | Der er kun én løsning ~ Tre ubekendte og rang 2 giver én fri parameter.
+?h Hvor mange ubekendte og ligninger er der?
+?h Én fri parameter.
+?h Tjek både den faste vektor og retningen.
+Tjek den faste vektor i systemet og retningsvektoren i det homogene system.
+>> trin Den faste vektor
+?? mc | Hvilken fast vektor løser systemet? | *$(6,1,0)$ | $(6,1,1)$ ~ Første ligning giver $1+1=2\neq1$. | Begge ~ $(6,1,1)$ fejler i første ligning.
+?h Første ligning: $x_2+x_3=1$.
+?h $(6,1,0)$: $1+0=1$.
+?h Anden ligning: $6-2+0=4$.
+$(6,1,0)$ løser systemet. Det udelukker b) og e).
+>> trin Retningen
+?? in | Sæt retningen $(3,1,-1)$ ind i det homogene system. Udregn venstresiderne. | $x_2+x_3$ = 0 | $x_1-2x_2+x_3$ = 0
+?h $1+(-1)$.
+?h $3-2-1$.
+?h Begge giver $0$.
+$(3,1,-1)$ løser det homogene system, men $(3,1,0)$ giver $x_2+x_3=1\neq0$.
+>> tjek
+?? mc | Hvorfor er a), $(6,1,0)$ alene, forkert? | *Det er kun én løsning. Den fuldstændige løsning har en fri parameter | Fordi $(6,1,0)$ ikke er en løsning ~ Den er en løsning, men ikke alle. | Den er rigtig ~ Der er uendeligt mange løsninger.
+?h Hvor mange løsninger er der?
+?h Rang 2 og 3 ubekendte.
+?h Én fri parameter.
+Den fuldstændige løsning skal indeholde alle løsninger.
+>> fejl
+At tjekke kun den faste vektor og vælge et svar med forkert retning.
+>> svar
+$\mathbf x=(6,1,0)+t(3,1,-1)$, $t\in\mathbb R$.
+
+=== e6:mc1 | matregn
+@hl $(\mathbf A\cdot\mathbf B)^{\mathsf T}\cdot\mathbf v$
+>> type
+Et matrixudtryk med produkt, transponering og en vektor. Tjek størrelsen først.
+>> plan
+?? mc | Hvilken størrelse har resultatet? | *$3\times1$, fordi $(\mathbf A\mathbf B)^{\mathsf T}$ er $3\times2$ | $2\times1$ ~ $\mathbf A\mathbf B$ er $2\times3$, så den transponerede er $3\times2$. | $3\times2$ ~ Du mangler at gange med $\mathbf v$.
+?h $\mathbf A$ er $2\times2$, $\mathbf B$ er $2\times3$.
+?h $\mathbf A\mathbf B$ er $2\times3$.
+?h Den transponerede er $3\times2$, og gange $\mathbf v$ giver $3\times1$.
+Resultatet har 3 koordinater. Det udelukker c), d) og e).
+>> trin Første række i $\mathbf A\mathbf B$
+?? in | Gange med $\mathbf v=(1,0)$ udvælger første søjle i $(\mathbf A\mathbf B)^{\mathsf T}$, altså første række i $\mathbf A\mathbf B$. Udregn den. | 1. = 5 | 2. = 2 | 3. = -1
+?h Række 1 i $\mathbf A$ er $(1,2)$.
+?h Gange søjlerne i $\mathbf B$: $(1,2)$, $(0,1)$ og $(-1,0)$.
+?h $1+4$, $0+2$ og $-1+0$.
+Første række i $\mathbf A\mathbf B$ er $(5,2,-1)$.
+>> tjek
+?? mc | $(-1,2,5)$ har de samme tal. Hvorfor er den forkert? | *Rækkefølgen er vendt | Fortegnet er forkert ~ Fortegnene er de samme. Det er rækkefølgen. | Den er rigtig ~ Første koordinat skal være $5$.
+?h Første koordinat er række 1 gange søjle 1.
+?h Det er $5$.
+?h $(-1,2,5)$ starter med $-1$.
+Transponering bytter rækker og søjler, men ændrer ikke rækkefølgen inden i rækken.
+>> fejl
+At glemme transponeringen eller at glemme at gange med $\mathbf v$.
+>> svar
+$\begin{bmatrix}5\\2\\-1\end{bmatrix}$.
+
+=== e6:mc2 | det
+@hl For hvilke værdier af $a$ ; invertibel
+>> type
+"For hvilke værdier er matricen invertibel?" Det er de værdier, hvor determinanten ikke er $0$.
+>> plan
+?? mc | Hvornår er en kvadratisk matrix invertibel? | *Når determinanten ikke er $0$ | Når den ikke har nuller ~ Nuller afgør det ikke. | Når $a\neq0$ ~ Det afhænger af determinanten, ikke af $a$ selv.
+?h Invertibel $\iff\det\neq0$.
+?h Udregn $\det\mathbf A$ som udtryk i $a$.
+?h Find de $a$, der giver $0$, og fjern dem.
+Find $\det\mathbf A$ som udtryk i $a$, og udeluk rødderne.
+>> trin Determinanten
+?? in | Udvid langs første søjle $(1,1,0)$: $\det\mathbf A=1\cdot(a^2+1)-1\cdot(2a+9)=a^2+pa+q$. Find $p$ og $q$. | $p$ = -2 | $q$ = -8
+?h Første led: $a\cdot a-1\cdot(-1)=a^2+1$.
+?h Andet led har minus foran: $-(2a-9\cdot(-1))=-(2a+9)$.
+?h $a^2+1-2a-9$.
+$\det\mathbf A=a^2-2a-8$.
+>> trin Rødderne
+?? in | Løs $a^2-2a-8=0$. | mindste rod = -2 | største rod = 4
+?h Find to tal med produkt $-8$ og sum $2$.
+?h $(a-4)(a+2)$.
+?h $a=4$ og $a=-2$.
+$\det\mathbf A=0$ for $a=-2$ og $a=4$.
+>> tjek
+?? mc | Svaret $a\in\{-2,4\}$ er også en mulighed. Hvad er galt med det? | *Det er netop de værdier, hvor $\mathbf A$ IKKE er invertibel | Intet ~ For $a=4$ er $\det\mathbf A=0$, så $\mathbf A$ er ikke invertibel. | Fortegnene er forkerte ~ Fortegnene er rigtige. Mængden skal bare vendes om.
+?h Hvad betyder $\det\mathbf A=0$?
+?h Ikke invertibel.
+?h Svaret er alle andre $a$.
+$\mathbf A$ er invertibel for $a\in\mathbb R\setminus\{-2,4\}$.
+>> fejl
+At give rødderne som svar i stedet for at fjerne dem.
+>> svar
+$a\in\mathbb R\setminus\{-2,4\}$.
+
+=== e6:mc3 | polrod
+@hl alle rødder i $P$ og deres multipliciteter
+>> type
+Et produkt af to polynomier, og du skal finde alle rødder med multiplicitet. En rod, der går igen i begge faktorer, får højere multiplicitet.
+>> plan
+?? mc | Hvad er graden af $P$? | *$5$, så multipliciteterne skal give $5$ | $3$ ~ $Q$ har grad 2, og tredjegradsfaktoren har grad 3. | $6$ ~ $2+3=5$.
+?h Graden af et produkt er summen af graderne.
+?h $Q$ har grad 2.
+?h $2+3=5$.
+$P$ har grad $5$. Tæl rødderne med multiplicitet til sidst.
+>> trin Tredjegradsfaktoren
+?? in | $-1$ er rod i $z^3-5z^2-z+5$. Division med $z+1$ giver $z^2+bz+c$. Find $b$ og $c$. | $b$ = -6 | $c$ = 5
+?h $z^3\div z=z^2$.
+?h $-5z^2-z^2=-6z^2$, så næste led er $-6z$.
+?h Konstantleddet: $5\div1=5$.
+$z^3-5z^2-z+5=(z+1)(z^2-6z+5)=(z+1)(z-1)(z-5)$.
+>> trin Saml rødderne
+?? mc | $P(z)=q(z-1)(z-3)(z+1)(z-1)(z-5)$. Hvilken rod har multiplicitet 2? | *$1$ | $-1$ ~ $(z+1)$ står kun én gang. | Ingen ~ $(z-1)$ står både i $Q$ og i tredjegradsfaktoren.
+?h Tæl, hvor mange gange hver faktor optræder.
+?h $(z-1)$ står to gange.
+?h De andre én gang.
+$1$ har multiplicitet 2. $-1$, $3$ og $5$ har multiplicitet 1. I alt $5$.
+>> tjek
+?? mc | Hvorfor kan $0$ ikke være en rod? | *$P(0)=Q(0)\cdot5\neq0$ | Fordi $0$ ikke er et komplekst tal ~ $0$ er et komplekst tal. Men $P(0)\neq0$. | Den kan godt ~ $Q(0)=3q\neq0$ og tredjegradsfaktoren giver $5$.
+?h Sæt $z=0$ ind.
+?h $Q(0)=q\cdot(-1)(-3)=3q$.
+?h $z^3-5z^2-z+5$ giver $5$ for $z=0$.
+$P(0)=15q\neq0$.
+>> fejl
+At glemme, at en rod i begge faktorer får multiplicitet 2.
+>> svar
+$-1$, $3$ og $5$ med multiplicitet 1, og $1$ med multiplicitet 2.
+
+=== e6:mc4 | diag
+@hl Hvilken matrix $\mathbf\Lambda$ opfylder
+>> type
+En diagonalisering, hvor $\mathbf V$ er givet. Søjlerne i $\mathbf V$ er egenvektorer, og $\mathbf\Lambda$ har egenværdierne i samme rækkefølge.
+>> plan
+?? mc | Hvordan finder du $\mathbf\Lambda$ uden at regne $\mathbf V^{-1}$? | *Ganger $\mathbf B$ på hver søjle i $\mathbf V$ og aflæser egenværdien | Finder $\mathbf V^{-1}$ og ganger $\mathbf V^{-1}\mathbf B\mathbf V$ ud ~ Det virker, men det er meget regnearbejde. | Tager diagonalen i $\mathbf B$ ~ $\mathbf B$ er ikke trekantet, så diagonalen er ikke egenværdierne.
+?h $\mathbf V^{-1}\mathbf B\mathbf V=\mathbf\Lambda$ betyder $\mathbf B\mathbf V=\mathbf V\mathbf\Lambda$.
+?h Søjle $j$: $\mathbf B\mathbf v_j=\lambda_j\mathbf v_j$.
+?h Gang $\mathbf B$ på hver søjle.
+Søjle $j$ i $\mathbf V$ har egenværdien $\lambda_j$ på plads $j$ i $\mathbf\Lambda$.
+>> trin Første søjle
+?? in | Udregn $\mathbf B\begin{bmatrix}1\\1\\-1\end{bmatrix}$. | 1. koordinat = 4 | 2. koordinat = 4 | 3. koordinat = -4
+?h Række 1: $4-1+1$.
+?h Række 2: $6-3+1$.
+?h Række 3: $-6+5-3$.
+$\mathbf B(1,1,-1)=4\cdot(1,1,-1)$, så $\lambda_1=4$.
+>> trin De to andre
+?? in | Udregn egenværdierne for $(1,1,1)$ og $(0,1,-1)$. | $\lambda_2$ = 2 | $\lambda_3$ = -2
+?h $\mathbf B(1,1,1)=(4-1-1,\,6-3-1,\,-6+5+3)$.
+?h Det er $(2,2,2)$.
+?h $\mathbf B(0,1,-1)=(0,-2,2)$.
+$\lambda_2=2$ og $\lambda_3=-2$.
+>> tjek
+?? mc | a) har de samme egenværdier. Hvorfor er den forkert? | *Rækkefølgen skal følge søjlerne i $\mathbf V$ | Fordi $-2$ ikke er en egenværdi ~ $-2$ er en egenværdi. Det er rækkefølgen. | Den er rigtig ~ Første søjle har $\lambda=4$, ikke $-2$.
+?h Første diagonalelement hører til første søjle.
+?h Første søjle har $\lambda=4$.
+?h a) starter med $-2$.
+$\mathbf\Lambda=\mathrm{diag}(4,2,-2)$ i søjlernes rækkefølge.
+>> fejl
+At give egenværdierne i en anden rækkefølge end søjlerne i $\mathbf V$.
+>> svar
+$\mathbf\Lambda=\begin{bmatrix}4&0&0\\0&2&0\\0&0&-2\end{bmatrix}$.
+
+=== e6:mc5 | egen
+@hl Hvad er egenværdierne for $f$
+>> type
+Egenværdier for en lineær afbildning på polynomier. Opstil afbildningsmatricen, og find rødderne i det karakteristiske polynomium.
+>> plan
+?? mc | Hvad gør du først? | *Opstiller afbildningsmatricen $\,{}_\alpha[f]_\alpha$ | Aflæser egenværdierne fra billederne ~ Billederne er ikke multipla af basisvektorerne. Du skal bruge matricen. | Bruger koefficienterne $1,-1,1$ som egenværdier ~ Det er diagonalen, og matricen er ikke trekantet.
+?h Søjle $j$ er koordinaterne for $f$ af den $j$'te basisvektor.
+?h $f(1)=1+Z$ giver søjlen $(1,1,0)$.
+?h $f(Z)=1-Z$ giver $(1,-1,0)$, og $f(Z^2)=Z+Z^2$ giver $(0,1,1)$.
+$\,{}_\alpha[f]_\alpha=\begin{bmatrix}1&1&0\\1&-1&1\\0&0&1\end{bmatrix}$.
+>> trin Det karakteristiske polynomium
+?? mc | Udvid $\det({}_\alpha[f]_\alpha-\lambda\mathbf I)$ langs tredje række. Hvad får du? | *$(1-\lambda)(\lambda^2-2)$ | $(1-\lambda)(\lambda^2-1)$ ~ $(1-\lambda)(-1-\lambda)=\lambda^2-1$, og så trækkes $1\cdot1$ fra: $\lambda^2-2$. | $(1-\lambda)^2(-1-\lambda)$ ~ Det er kun diagonalen. Der står $1$ uden for diagonalen.
+?h Tredje række er $(0,0,1-\lambda)$.
+?h Det giver $(1-\lambda)\cdot\det\begin{bmatrix}1-\lambda&1\\1&-1-\lambda\end{bmatrix}$.
+?h $(1-\lambda)(-1-\lambda)-1=\lambda^2-2$.
+$p(\lambda)=(1-\lambda)(\lambda^2-2)$.
+>> trin Rødderne
+?? in | Rødderne er $1$ og $\pm\sqrt k$. Find $k$. | $k$ = 2
+?h $\lambda^2-2=0$.
+?h $\lambda^2=2$.
+?h $\lambda=\pm\sqrt2$.
+Egenværdierne er $1$, $\sqrt2$ og $-\sqrt2$.
+>> tjek
+?? mc | Summen af egenværdierne er sporet. Passer det? | *Ja: $1+\sqrt2-\sqrt2=1=1-1+1$ | Nej, sporet er $3$ ~ Sporet er $1+(-1)+1=1$. | Det har intet med det at gøre ~ Summen af egenværdierne er altid sporet.
+?h Sporet er summen af diagonalen.
+?h $1-1+1=1$.
+?h $1+\sqrt2-\sqrt2=1$.
+Det passer. Det tjek fanger mange forkerte svarmuligheder.
+>> fejl
+At tage diagonalelementerne som egenværdier, når matricen ikke er trekantet.
+>> svar
+$1$, $\sqrt2$ og $-\sqrt2$.
+
+=== e6:mc6 | odesys
+@hl Hvad er løsningen
+>> type
+Et $2\times2$-system med begyndelsesværdier og fem kandidater. Egenvektorerne afgør, hvilke former der er tilladt.
+>> plan
+?? mc | Hvad gør du først? | *Finder egenværdier og egenvektorer | Tjekker kun begyndelsesværdierne ~ Tre af kandidaterne har de rigtige begyndelsesværdier, men løser ikke systemet. | Vælger $6e^{2t}$, fordi $f_1(0)=6$ ~ Den løser ikke anden ligning.
+?h $\mathbf A$ er symmetrisk.
+?h Prøv $(1,1)$ og $(1,-1)$.
+?h $\mathbf A(1,1)=(2,2)$.
+Egenværdier $2$ og $-4$ med egenvektorer $(1,1)$ og $(1,-1)$.
+>> trin Egenværdierne
+?? in | $\det(\mathbf A-\lambda\mathbf I)=(-1-\lambda)^2-9$. Find egenværdierne. | største = 2 | mindste = -4
+?h $(-1-\lambda)^2=9$.
+?h $-1-\lambda=\pm3$.
+?h $\lambda=2$ eller $\lambda=-4$.
+$\lambda=2$ med $(1,1)$ og $\lambda=-4$ med $(1,-1)$.
+>> trin Konstanterne
+?? in | Løsningen er $c_1e^{2t}(1,1)+c_2e^{-4t}(1,-1)$. Brug $(f_1(0),f_2(0))=(6,0)$. | $c_1$ = 3 | $c_2$ = 3
+?h $c_1+c_2=6$.
+?h $c_1-c_2=0$.
+?h $c_1=c_2=3$.
+$f_1=3e^{2t}+3e^{-4t}$ og $f_2=3e^{2t}-3e^{-4t}$.
+>> tjek
+?? mc | a) har de rigtige begyndelsesværdier. Hvorfor er den forkert? | *Koefficienterne til $e^{-4t}$ er $(5,-1)$, som ikke er et multiplum af $(1,-1)$ | Den har forkerte eksponentialer ~ $e^{2t}$ og $e^{-4t}$ er rigtige. | Den er rigtig ~ $(5,-1)$ er ikke et multiplum af egenvektoren.
+?h Hvad står foran $e^{-4t}$ i $f_1$ og $f_2$?
+?h $5$ og $-1$.
+?h Det skal være $c$ og $-c$.
+Koefficienterne foran hver eksponential skal være et multiplum af egenvektoren.
+>> fejl
+At tjekke kun begyndelsesværdierne. Løsningen skal også opfylde systemet.
+>> svar
+$f_1(t)=3e^{2t}+3e^{-4t}$ og $f_2(t)=3e^{2t}-3e^{-4t}$.
+
+=== e6:mc7 | polrod
+@hl Hvad er $a$ og $b$
+>> type
+Et andengradspolynomium med komplekse koefficienter og to givne rødder. Koefficienterne er minus summen og produktet af rødderne.
+>> plan
+?? mc | Hvordan finder du $a$ og $b$? | *$a=-(z_1+z_2)$ og $b=z_1z_2$ | $a=z_1$ og $b=z_2$ ~ Rødderne er ikke koefficienterne. | $a=z_1+z_2$ og $b=-z_1z_2$ ~ Fortegnene er vendt. Gang $(Z-z_1)(Z-z_2)$ ud.
+?h $P(Z)=(Z-z_1)(Z-z_2)$.
+?h Gang ud.
+?h $Z^2-(z_1+z_2)Z+z_1z_2$.
+$a=-(z_1+z_2)$ og $b=z_1z_2$.
+>> trin $a$
+?? in | Udregn $a=-(z_1+z_2)$ med $z_1=1+i$ og $z_2=2i$. | Realdel af $a$ = -1 | Imaginærdel af $a$ = -3
+?h $z_1+z_2=1+3i$.
+?h Minus foran.
+?h $-1-3i$.
+$a=-1-3i$.
+>> trin $b$
+?? in | Udregn $b=(1+i)\cdot2i$. | Realdel af $b$ = -2 | Imaginærdel af $b$ = 2
+?h $1\cdot2i=2i$.
+?h $i\cdot2i=2i^2=-2$.
+?h $-2+2i$.
+$b=-2+2i$.
+>> tjek
+?? mc | Rødderne er ikke hinandens konjugerede. Er det et problem? | *Nej, koefficienterne er komplekse, så rødderne behøver ikke komme i par | Ja, rødder kommer altid i konjugerede par ~ Det gælder kun for reelle koefficienter. | Ja, så findes polynomiet ikke ~ Med $a,b\in\mathbb C$ findes det.
+?h Hvornår kommer rødder i konjugerede par?
+?h Når koefficienterne er reelle.
+?h Her er $a,b\in\mathbb C$.
+Konjugerede par kræver reelle koefficienter. Her er de komplekse.
+>> fejl
+At glemme minus foran summen, eller at regne $i^2=1$.
+>> svar
+$a=-1-3i$ og $b=-2+2i$.
+
+=== e6:1a | logik
+@hl logisk ækvivalente
+>> type
+"Logisk ækvivalente?" om en implikation og en disjunktion. En sandhedstabel med fire rækker afgør det.
+>> plan
+?? mc | Hvad er den hurtigste vej? | *At finde den eneste række, hvor implikationen er falsk | At lave otte rækker ~ Der er kun to variable, altså fire rækker. | At omskrive $\neg(P\lor Q)$ med De Morgan og stoppe ~ Det hjælper, men du skal sammenligne med $P\lor Q$ i alle rækker.
+?h En implikation er kun falsk ved $\text{S}\Rightarrow\text{F}$.
+?h Hvornår er $\neg(P\lor Q)$ sand?
+?h Kun når $P=Q=0$.
+Find de rækker, hvor implikationen er falsk, og sammenlign med $P\lor Q$.
+>> trin Implikationen
+?? mc | I hvilken række er $\neg(P\lor Q)\Rightarrow P$ falsk? | *Kun $P=0$, $Q=0$ | $P=1$, $Q=0$ ~ Der er forudsætningen falsk, så implikationen er sand. | Ingen ~ Med $P=Q=0$ er forudsætningen sand og konklusionen falsk.
+?h Forudsætningen er sand kun ved $P=Q=0$.
+?h Konklusionen $P$ er så falsk.
+?h $\text{S}\Rightarrow\text{F}$ er falsk.
+Implikationen har søjlen $1,1,1,0$ for $(1,1),(1,0),(0,1),(0,0)$.
+>> trin Sammenlign
+?? mc | Hvad er søjlen for $P\lor Q$ i samme rækkefølge? | *$1,1,1,0$ | $1,0,0,0$ ~ Det er $P\land Q$. | $0,1,1,1$ ~ $P\lor Q$ er falsk kun ved $P=Q=0$.
+?h $\lor$ er falsk kun, når begge er falske.
+?h Det er den sidste række.
+?h $1,1,1,0$.
+Søjlerne er ens.
+>> tjek
+?? mc | Er de logisk ækvivalente? | *Ja | Nej ~ Begge søjler er $1,1,1,0$.
+?h Sammenlign søjlerne.
+?h De er ens.
+?h Så er de logisk ækvivalente.
+Ja. Det ses også af $X\Rightarrow P\equiv\neg X\lor P$, som her giver $(P\lor Q)\lor P=P\lor Q$.
+>> fejl
+At tro, at en implikation med falsk forudsætning er falsk.
+>> skriv
+Sandhedstabellen med søjlerne $P$, $Q$, $P\lor Q$, $\neg(P\lor Q)$ og $\neg(P\lor Q)\Rightarrow P$, og konklusionen: "Søjlerne for de to udsagn er ens, så de er logisk ækvivalente."
+>> svar
+Ja, de er logisk ækvivalente.
+
+=== e6:2a | binom
+@hl Beregn rødderne
+>> type
+Rødderne i $Z^3+27$ er løsningerne til den binome ligning $Z^3=-27$. Løs på polær form.
+>> plan
+?? mc | Hvordan finder du rødderne? | *Løser $Z^3=-27$ på polær form | Tager kun $\sqrt[3]{-27}=-3$ ~ Et tredjegradspolynomium har tre rødder. De to andre er komplekse. | Bruger løsningsformlen for andengradsligninger ~ Polynomiet har grad 3.
+?h $-27=27e^{i\pi}$.
+?h Modulus af rødderne er $\sqrt[3]{27}=3$.
+?h Argumenterne er $\frac{\pi+2p\pi}3$.
+$Z=3e^{i(\pi/3+2p\pi/3)}$, $p=0,1,2$.
+>> trin Den reelle rod
+?? in | $p=1$ giver argumentet $\pi$. Hvad er roden? | den reelle rod = -3
+?h $3e^{i\pi}$.
+?h $e^{i\pi}=-1$.
+?h $-3$.
+$-3$ er den reelle rod.
+>> trin De komplekse rødder
+?? in | $p=0$ giver $3e^{i\pi/3}=x+yi$. Find $x$ og $y^2$. | $x$ = 3/2 | $y^2$ = 27/4
+?h $\cos\frac\pi3=\frac12$, så $x=\frac32$.
+?h $\sin\frac\pi3=\frac{\sqrt3}2$, så $y=\frac{3\sqrt3}2$.
+?h $y^2=\frac{9\cdot3}{4}$.
+Rødderne er $\frac32\pm\frac{3\sqrt3}2i$.
+>> tjek
+?? mc | Hvordan kan du tjekke de komplekse rødder? | *Division med $Z+3$ giver $Z^2-3Z+9$, og løsningsformlen giver $\frac{3\pm3\sqrt3\,i}{2}$ | Ved at sætte $Z=3$ ind ~ $3$ er ikke en rod. | Det kan man ikke ~ Faktorisering og løsningsformlen giver et uafhængigt tjek.
+?h $Z^3+27=(Z+3)(Z^2-3Z+9)$.
+?h $d=9-36=-27$.
+?h $Z=\frac{3\pm\sqrt{27}\,i}{2}$.
+Begge veje giver de samme rødder.
+>> fejl
+At give kun den reelle rod, eller at glemme at tage tredjeroden af modulus.
+>> skriv
+"$Z^3=-27=27e^{i\pi}$, så $Z=3e^{i(\pi/3+2p\pi/3)}$, $p=0,1,2$. Det giver $Z=-3$ og $Z=\frac32\pm\frac{3\sqrt3}2i$."
+>> svar
+$-3$ og $\frac32\pm\frac{3\sqrt3}2i$.
+
+=== e6:3a | rekursion
+@hl Bestem $s_1$, $s_2$ og $s_3$
+>> type
+De første led i en rekursiv følge. Start ved startværdien, og brug rekursionen.
+>> plan
+?? mc | Hvordan finder du $s_2$? | *$s_2=2s_1+2$ | $s_2=2\cdot2+2$ ~ $s_{n-1}$ er det forrige led, ikke $n$. | $s_2=2^2-2$ ~ Den formel bevises i 3b. Her skal du bruge rekursionen.
+?h $s_1=0$ er givet.
+?h $s_n=2s_{n-1}+2$.
+?h Sæt $n=2$ ind.
+Brug rekursionen led for led.
+>> trin Leddene
+?? in | Udregn $s_1$, $s_2$ og $s_3$. | $s_1$ = 0 | $s_2$ = 2 | $s_3$ = 6
+?h $s_1=0$.
+?h $s_2=2\cdot0+2$.
+?h $s_3=2\cdot2+2$.
+$s_1=0$, $s_2=2$ og $s_3=6$.
+>> tjek
+?? in | Tjek med formlen $2^n-2$ fra 3b for $n=3$. | formlen giver = 6
+?h $2^3=8$.
+?h $8-2$.
+?h $6$.
+Formlen giver også $6$.
+>> fejl
+At sætte $n$ ind i stedet for $s_{n-1}$.
+>> skriv
+"$s_1=0$, $s_2=2s_1+2=2$ og $s_3=2s_2+2=6$."
+>> svar
+$s_1=0$, $s_2=2$ og $s_3=6$.
+
+=== e6:3b | induktion
+@hl Vis med induktion efter ; for alle
+>> type
+"Vis med induktion" en lukket formel for en rekursiv følge. Rekursionen giver $s_{n+1}$ ud fra $s_n$, så antagelsen kan sættes direkte ind.
+>> plan
+?? mc | Hvilke dele skal beviset have? | *Basistrin for $n=1$, antagelse og skridtet $s_{n+1}=2s_n+2$ | Basistrin for $n=2$ ~ Formlen skal gælde fra $n=1$. | At regne $s_1$ til $s_5$ ~ Eksempler beviser ikke "for alle".
+?h Opgaven siger $n\ge1$.
+?h Basistrinnet er $n=1$.
+?h Skridtet bruger rekursionen.
+Basistrin $n=1$, antagelse for $n$ og skridt med rekursionen.
+>> trin Basistrin
+?? in | Udregn formlen $2^n-2$ for $n=1$. | formlen giver = 0
+?h $2^1=2$.
+?h $2-2$.
+?h $0=s_1$.
+Formlen giver $0=s_1$.
+>> trin Skridtet
+?? mc | $s_{n+1}=2s_n+2$. Sæt antagelsen $s_n=2^n-2$ ind. Hvad får du? | *$2^{n+1}-2$ | $2^{n+1}-4$ ~ Du har glemt $+2$ til sidst. | $2^n$ ~ $2(2^n-2)+2=2^{n+1}-4+2$.
+?h $2(2^n-2)=2^{n+1}-4$.
+?h Læg $2$ til.
+?h $2^{n+1}-2$.
+$s_{n+1}=2^{n+1}-2$, som er formlen med $n+1$.
+>> tjek
+?? mc | Hvad skulle skridtet nå frem til? | *$s_{n+1}=2^{n+1}-2$ | $s_n=2^n-2$ ~ Det er antagelsen. | $s_{n+1}=2^n-2$ ~ Formlen med $n+1$ indsat er $2^{n+1}-2$.
+?h Sæt $n+1$ ind i formlen.
+?h $2^{n+1}-2$.
+?h Det er det, du fik.
+Skriv målet op først, så ved du, hvornår du er færdig.
+>> fejl
+At glemme $+2$ i rekursionen eller at gange forkert: $2\cdot2^n=2^{n+1}$, ikke $4^n$.
+>> skriv
+**Basistrin.** $2^1-2=0=s_1$.
+
+**Induktionsantagelse.** Antag, at $s_n=2^n-2$ for et $n\ge1$.
+
+**Induktionsskridt.** $s_{n+1}=2s_n+2=2(2^n-2)+2=2^{n+1}-2$.
+
+**Konklusion.** Ifølge induktionsprincippet gælder $s_n=2^n-2$ for alle $n\ge1$.
+>> svar
+Basistrin $s_1=0=2^1-2$. Skridtet: $s_{n+1}=2(2^n-2)+2=2^{n+1}-2$. Konklusion ved induktionsprincippet.
+
+=== e6:4a | homogen
+@hl homogent eller inhomogent
+>> type
+"Homogent eller inhomogent?" om et lineært ligningssystem. Se på højresiderne.
+>> plan
+?? mc | Hvad afgør det? | *Om alle højresider er $0$ | Om der er lige mange ligninger og ubekendte ~ Antallet har intet med homogenitet at gøre. | Om koefficienterne er heltal ~ Det er ligegyldigt.
+?h Homogen betyder, at alle højresider er $0$.
+?h Højresiderne er tallene efter lighedstegnet.
+?h Se på $1$, $5$ og $-1$.
+Systemet er homogent, netop når alle højresider er $0$.
+>> trin Aflæs
+?? mc | Hvad er højresiderne? | *$1$, $5$ og $-1$ | $0$, $0$ og $0$ ~ Der står $1$, $5$ og $-1$ efter lighedstegnene. | $2$, $4$ og $4$ ~ Det er koefficienter.
+?h Første ligning: $=1$.
+?h Anden ligning: $=5$.
+?h Tredje ligning: $=-1$.
+Højresiderne er ikke alle $0$. Systemet er inhomogent.
+>> tjek
+?? mc | Er nulvektoren en løsning? | *Nej, første ligning giver $0\neq1$ | Ja ~ Nulvektoren løser kun homogene systemer.
+?h Sæt alle $x_i=0$.
+?h Venstresiden bliver $0$.
+?h Højresiden er $1$.
+Nulvektoren er ikke en løsning, så systemet er inhomogent.
+>> fejl
+At kalde det homogent, fordi der er mange ubekendte.
+>> skriv
+"Højresiderne er $1$, $5$ og $-1$, som ikke alle er $0$. Systemet er inhomogent."
+>> svar
+Inhomogent.
+
+=== e6:4b | lignsys
+@hl Er $\mathbf v-\mathbf w$ også en løsning
+>> type
+Et teorispørgsmål om løsninger til inhomogene systemer. Brug matrixformen og lineariteten.
+>> plan
+?? mc | Hvordan undersøger du det? | *Udregner $\mathbf A(\mathbf v-\mathbf w)$ og sammenligner med $\mathbf b$ | Finder to konkrete løsninger og trækker dem fra ~ Det virker for ét eksempel, men et generelt argument er bedre. | Siger ja, fordi løsninger danner et underrum ~ Det gælder kun for homogene systemer.
+?h Skriv systemet som $\mathbf A\mathbf x=\mathbf b$.
+?h $\mathbf A\mathbf v=\mathbf b$ og $\mathbf A\mathbf w=\mathbf b$.
+?h Brug lineariteten.
+$\mathbf A(\mathbf v-\mathbf w)=\mathbf A\mathbf v-\mathbf A\mathbf w$.
+>> trin Linearitet
+?? mc | Hvad er $\mathbf A(\mathbf v-\mathbf w)$? | *$\mathbf 0$ | $\mathbf b$ ~ $\mathbf b-\mathbf b=\mathbf 0$. | $2\mathbf b$ ~ Det er $\mathbf A(\mathbf v+\mathbf w)$.
+?h $\mathbf A\mathbf v-\mathbf A\mathbf w$.
+?h $\mathbf b-\mathbf b$.
+?h $\mathbf 0$.
+$\mathbf A(\mathbf v-\mathbf w)=\mathbf 0$.
+>> trin Konklusionen
+?? mc | Er $\mathbf v-\mathbf w$ en løsning til systemet? | *Nej, fordi $\mathbf 0\neq\mathbf b$ | Ja ~ Den løser det homogene system $\mathbf A\mathbf x=\mathbf 0$, men ikke $\mathbf A\mathbf x=\mathbf b$.
+?h $\mathbf b=(1,5,-1)$.
+?h $\mathbf b\neq\mathbf 0$.
+?h Så er $\mathbf v-\mathbf w$ ikke en løsning.
+Nej. $\mathbf v-\mathbf w$ løser det homogene system.
+>> tjek
+?? mc | Hvad bruges det til? | *Den fuldstændige løsning er en partikulær løsning plus alle homogene løsninger | Ingenting ~ Det er netop strukturen af den fuldstændige løsning. | At vise, at systemet ingen løsning har ~ Det siger intet om, hvorvidt der er løsninger.
+?h Forskellen mellem to løsninger er homogen.
+?h Så er enhver løsning $\mathbf w$ plus en homogen løsning.
+?h Partikulær plus homogen.
+Den fuldstændige løsning er $\mathbf x_0+\ker\mathbf A$.
+>> fejl
+At sige ja, fordi løsningsmængden til homogene systemer er lukket under subtraktion.
+>> skriv
+"Skriv systemet som $\mathbf A\mathbf x=\mathbf b$ med $\mathbf b=(1,5,-1)$. Så er $\mathbf A(\mathbf v-\mathbf w)=\mathbf A\mathbf v-\mathbf A\mathbf w=\mathbf b-\mathbf b=\mathbf 0\neq\mathbf b$. Altså er $\mathbf v-\mathbf w$ ikke en løsning."
+>> svar
+Nej. $\mathbf A(\mathbf v-\mathbf w)=\mathbf 0\neq\mathbf b$.
+
+=== e6:5a | egen
+@hl Vis, at det karakteristiske polynomium
+>> type
+"Vis, at det karakteristiske polynomium er …". Regn $\det(\mathbf A-Z\mathbf I)$ ud, og vis, at det giver det angivne.
+>> plan
+?? mc | Hvad er det karakteristiske polynomium? | *$\det(\mathbf A-Z\mathbf I)$ | $\det\mathbf A$ ~ Det er polynomiets værdi i $Z=0$. | Produktet af diagonalen i $\mathbf A$ ~ Det gælder kun for trekantsmatricer, og her er $\mathbf A$ ikke trekantet.
+?h Træk $Z$ fra i diagonalen.
+?h Udvid langs en række med nuller.
+?h Første række er $(1-Z,0,0)$.
+$p_{\mathbf A}(Z)=\det(\mathbf A-Z\mathbf I)$.
+>> trin Udvid
+?? mc | Udvid langs første række $(1-Z,0,0)$. Hvad får du? | *$(1-Z)\big((-Z)(8-Z)-0\big)$ | $(1-Z)(-Z)(8-Z)-4$ ~ Der er kun ét led, fordi de to andre har faktoren $0$. | $(1-Z)(8-Z)$ ~ Underdeterminanten er $\det\begin{bmatrix}-Z&1\\0&8-Z\end{bmatrix}$.
+?h Kun det første element er forskelligt fra $0$.
+?h Stryg række 1 og søjle 1.
+?h $\det\begin{bmatrix}-Z&1\\0&8-Z\end{bmatrix}=-Z(8-Z)$.
+$p_{\mathbf A}(Z)=(1-Z)(Z^2-8Z)$.
+>> trin Gang ud
+?? in | $(1-Z)(Z^2-8Z)=aZ^3+bZ^2+cZ$. Find $a$, $b$ og $c$. | $a$ = -1 | $b$ = 9 | $c$ = -8
+?h $1\cdot(Z^2-8Z)=Z^2-8Z$.
+?h $-Z\cdot(Z^2-8Z)=-Z^3+8Z^2$.
+?h $-Z^3+9Z^2-8Z$.
+$p_{\mathbf A}(Z)=-Z^3+9Z^2-8Z$.
+>> tjek
+?? mc | Hvad er egenværdierne? | *$0$, $1$ og $8$ | $-1$, $0$ og $8$ ~ $-1$ er ikke en rod: $p_{\mathbf A}(-1)=1+9+8=18\neq0$. | $-1$, $9$ og $-8$ ~ Det er koefficienterne, ikke rødderne.
+?h $-Z^3+9Z^2-8Z=-Z(Z-1)(Z-8)$.
+?h Rødderne er $0$, $1$ og $8$.
+?h Diagonalen $1,0,8$ passer tilfældigvis også.
+Rødderne er $0$, $1$ og $8$. De bruges i 5b.
+>> fejl
+At udvide langs en række uden nuller og lave fortegnsfejl.
+>> skriv
+"$\mathbf A-Z\mathbf I=\begin{bmatrix}1-Z&0&0\\4&-Z&1\\3&0&8-Z\end{bmatrix}$. Udvikling langs første række: $\det(\mathbf A-Z\mathbf I)=(1-Z)\big((-Z)(8-Z)-0\big)=(1-Z)(Z^2-8Z)=-Z^3+9Z^2-8Z$."
+>> svar
+$p_{\mathbf A}(Z)=(1-Z)(Z^2-8Z)=-Z^3+9Z^2-8Z$.
+
+=== e6:5b | egen
+@hl Hvad er deres tilhørende egenværdier
+>> type
+Egenvektorerne er givet, og du skal finde egenværdierne. Gang $\mathbf A$ på, og aflæs faktoren.
+>> plan
+?? mc | Hvad er hurtigst? | *At gange $\mathbf A$ på hver vektor og aflæse faktoren | At løse $(\mathbf A-\lambda\mathbf I)\mathbf v=\mathbf 0$ for hver egenværdi ~ Det er en omvej, når vektoren er givet. | At gætte ud fra koordinaterne ~ Du skal regne $\mathbf A\mathbf v$.
+?h $\mathbf A\mathbf v=\lambda\mathbf v$.
+?h Udregn $\mathbf A\mathbf v$.
+?h Find $\lambda$ fra en koordinat, der ikke er $0$.
+Gang $\mathbf A$ på, og find $\lambda$ med $\mathbf A\mathbf v=\lambda\mathbf v$.
+>> trin Første vektor
+?? in | Udregn $\mathbf A\begin{bmatrix}-7\\-25\\3\end{bmatrix}$. | 1. koordinat = -7 | 2. koordinat = -25 | 3. koordinat = 3
+?h Række 1: $1\cdot(-7)$.
+?h Række 2: $4(-7)+0+3$.
+?h Række 3: $3(-7)+0+24$.
+Resultatet er vektoren selv, så $\lambda=1$.
+>> trin Anden vektor
+?? in | Udregn $\mathbf A\begin{bmatrix}0\\1\\8\end{bmatrix}$. | 1. koordinat = 0 | 2. koordinat = 8 | 3. koordinat = 64
+?h Række 1: $0$.
+?h Række 2: $0+0+8$.
+?h Række 3: $0+0+64$.
+$(0,8,64)=8\cdot(0,1,8)$, så $\lambda=8$.
+>> tjek
+?? mc | Passer det med 5a? | *Ja, $1$ og $8$ er rødder i $p_{\mathbf A}$ | Nej, egenværdierne skulle være $0$ og $1$ ~ Polynomiet har rødderne $0$, $1$ og $8$. | Det har intet med det at gøre ~ Egenværdierne skal være rødder i det karakteristiske polynomium.
+?h Rødderne i 5a er $0$, $1$ og $8$.
+?h $1$ og $8$ er blandt dem.
+?h Det passer.
+Begge er rødder i polynomiet fra 5a.
+>> fejl
+At aflæse egenværdien fra en koordinat, der er $0$. Brug en koordinat forskellig fra $0$.
+>> skriv
+"$\mathbf A(-7,-25,3)=(-7,-25,3)$, så egenværdien er $1$. $\mathbf A(0,1,8)=(0,8,64)=8(0,1,8)$, så egenværdien er $8$."
+>> svar
+$\lambda=1$ for $(-7,-25,3)$ og $\lambda=8$ for $(0,1,8)$.
+
+=== e6:6a | afbm
+@hl Bestem matricen
+>> type
+Basisskifte den modsatte vej. Det er den inverse matrix.
+>> plan
+?? mc | Hvordan finder du $\,{}_\beta[\mathrm{id}]_\gamma$? | *Som den inverse af $\,{}_\gamma[\mathrm{id}]_\beta$ | Som den transponerede ~ Den transponerede er kun den inverse for ortogonale matricer. | Det kan ikke lade sig gøre uden baserne ~ Den inverse kan findes direkte.
+?h At skifte frem og tilbage giver identiteten.
+?h Så er de hinandens inverse.
+?h Brug formlen for en $2\times2$-invers.
+$\,{}_\beta[\mathrm{id}]_\gamma=\big({}_\gamma[\mathrm{id}]_\beta\big)^{-1}$.
+>> trin Determinanten
+?? in | Udregn $\det\begin{bmatrix}1&-1\\1&0\end{bmatrix}$. | $\det$ = 1
+?h $ad-bc$.
+?h $1\cdot0-(-1)\cdot1$.
+?h $0+1$.
+Determinanten er $1$.
+>> trin Den inverse
+?? in | Byt diagonalen, og skift fortegn uden for den. Skriv den inverse $\begin{bmatrix}p&q\\r&s\end{bmatrix}$. | $p$ = 0 | $q$ = 1 | $r$ = -1 | $s$ = 1
+?h Diagonalen $(1,0)$ bliver $(0,1)$.
+?h $-1$ bliver $1$, og $1$ bliver $-1$.
+?h Del med $\det=1$.
+$\,{}_\beta[\mathrm{id}]_\gamma=\begin{bmatrix}0&1\\-1&1\end{bmatrix}$.
+>> tjek
+?? mc | Tjek: hvad er $\begin{bmatrix}1&-1\\1&0\end{bmatrix}\begin{bmatrix}0&1\\-1&1\end{bmatrix}$? | *$\mathbf I$ | $\begin{bmatrix}1&0\\0&-1\end{bmatrix}$ ~ Regn øverst til venstre: $0+1=1$, og nederst til højre: $1+0=1$. | $\begin{bmatrix}0&1\\1&0\end{bmatrix}$ ~ Øverst til venstre er $1\cdot0+(-1)(-1)=1$.
+?h Øverst til venstre: $1\cdot0+(-1)(-1)$.
+?h Øverst til højre: $1-1$.
+?h Nederst: $0$ og $1$.
+Produktet er $\mathbf I$, så den inverse er rigtig.
+>> fejl
+At glemme at skifte fortegn uden for diagonalen.
+>> skriv
+"$\,{}_\beta[\mathrm{id}]_\gamma=({}_\gamma[\mathrm{id}]_\beta)^{-1}=\frac11\begin{bmatrix}0&1\\-1&1\end{bmatrix}=\begin{bmatrix}0&1\\-1&1\end{bmatrix}$."
+>> svar
+$\,{}_\beta[\mathrm{id}]_\gamma=\begin{bmatrix}0&1\\-1&1\end{bmatrix}$.
+
+=== e6:7a | ode
+@hl Vis, at funktionen
+>> type
+"Vis, at $f$ er en løsning." Sæt ind og sammenlign. Du skal ikke løse ligningen.
+>> plan
+?? mc | Hvad skal du gøre? | *Differentiere $f$ to gange og sætte ind i venstresiden | Løse ligningen fra bunden ~ Det er ikke nødvendigt. Indsættelse er nok. | Sætte $t=0$ ind ~ Ligningen skal gælde for alle $t$.
+?h Du skal bruge $f'$ og $f''$.
+?h $f(t)=t+\frac32$.
+?h Sæt ind i $f''-3f'+2f$.
+Sæt $f$ ind i venstresiden, og vis, at det giver $2t$.
+>> trin Afledede
+?? in | Find $f'(t)$ og $f''(t)$. | $f'(t)$ = 1 | $f''(t)$ = 0
+?h Den afledede af $t$ er $1$.
+?h Konstanten $\frac32$ forsvinder.
+?h Den afledede af $1$ er $0$.
+$f'=1$ og $f''=0$.
+>> trin Indsæt
+?? mc | Hvad bliver $0-3\cdot1+2\left(t+\frac32\right)$? | *$2t$ | $2t-3$ ~ $2\cdot\frac32=3$, og $-3+3=0$. | $2t+3$ ~ Du har glemt $-3$.
+?h $2\left(t+\frac32\right)=2t+3$.
+?h $-3+2t+3$.
+?h $2t$.
+Venstresiden er $2t$, som er højresiden.
+>> tjek
+?? mc | Er det nok at vise det for én værdi af $t$? | *Nej, ligheden skal gælde for alle $t$, og det gør den her | Ja ~ En løsning skal opfylde ligningen for alle $t$. | Ja, for $t=0$ ~ Ét punkt beviser ikke, at den er en løsning.
+?h Hvad betyder det at være en løsning?
+?h Ligheden skal gælde for alle $t$.
+?h Det viser udregningen.
+Udregningen gælder for alle $t$, og det er det, der kræves.
+>> fejl
+At sætte $t=0$ ind i stedet for at vise ligheden for alle $t$.
+>> skriv
+"$f(t)=t+\frac32$ giver $f'(t)=1$ og $f''(t)=0$. Indsat: $f''-3f'+2f=0-3+2t+3=2t$. Altså er $f$ en løsning."
+>> svar
+$f''-3f'+2f=0-3+2t+3=2t$, så $f$ er en løsning.
+
+=== e6:7b | ode
+@hl Beregn den fuldstændige løsning
+>> type
+Den fuldstændige løsning til en inhomogen andenordens ligning. Den partikulære løsning er givet i 7a, så du mangler kun de homogene.
+>> plan
+?? mc | Hvordan er den fuldstændige løsning bygget op? | *Partikulær løsning plus alle homogene løsninger | Kun de homogene løsninger ~ Højresiden er $2t$, så en partikulær løsning skal med. | Kun den partikulære løsning fra 7a ~ Det er kun én løsning.
+?h Den partikulære løsning er $t+\frac32$.
+?h De homogene løsninger findes med karakterligningen.
+?h Læg dem sammen.
+$f=t+\frac32+$ alle løsninger til $f''-3f'+2f=0$.
+>> trin Karakterligningen
+?? in | Løs $\lambda^2-3\lambda+2=0$. | mindste rod = 1 | største rod = 2
+?h Find to tal med produkt $2$ og sum $3$.
+?h $(\lambda-1)(\lambda-2)$.
+?h $1$ og $2$.
+De homogene løsninger er $c_1e^{t}+c_2e^{2t}$.
+>> trin Konstanterne
+?? in | Brug $f(0)=\frac92$ og $f'(0)=5$ på $f=t+\frac32+Ae^t+Be^{2t}$. | $A$ = 2 | $B$ = 1
+?h $f(0)=\frac32+A+B=\frac92$, så $A+B=3$.
+?h $f'(0)=1+A+2B=5$, så $A+2B=4$.
+?h Træk fra: $B=1$, og så $A=2$.
+$f=t+\frac32+2e^t+e^{2t}$.
+>> tjek
+?? mc | Hvorfor er $t+\frac32$ ikke den fuldstændige løsning? | *Den er kun én løsning. De homogene løsninger skal lægges til | Fordi den ikke løser ligningen ~ Den løser ligningen (7a), men den er ikke alle løsninger. | Den er den fuldstændige løsning ~ Der er uendeligt mange løsninger, én for hvert valg af $c_1$ og $c_2$.
+?h Hvor mange løsninger har ligningen?
+?h Uendeligt mange.
+?h $t+\frac32+c_1e^t+c_2e^{2t}$.
+Den fuldstændige løsning har to frie konstanter.
+>> fejl
+At glemme den partikulære løsning eller de frie konstanter.
+>> skriv
+"Karakterligningen $\lambda^2-3\lambda+2=(\lambda-1)(\lambda-2)=0$ har rødderne $1$ og $2$. Med den partikulære løsning fra 7a er den fuldstændige løsning $f(t)=t+\frac32+c_1e^{t}+c_2e^{2t}$, $c_1,c_2\in\mathbb R$."
+>> svar
+$f(t)=t+\frac32+c_1e^{t}+c_2e^{2t}$, $c_1,c_2\in\mathbb R$.
 `.split('$§{').join('$'+'{');
 
 /* ---------- Eksamenshjælp: gennemgang, opgavetyper og oversigt (visning) ----------
@@ -7265,6 +10269,20 @@ const xhStats=()=>XTL().map(xhTypeStat);
 /* næste anbefalede type: den, der kommer oftest, og som du er mindst klar til */
 function xhNext(){const st=xhStats().filter(s=>s.T.id!=='andet');if(!st.length)return null;
   return st.map(s=>({s,v:s.freq*(1-s.r)+Math.min(s.n,8)*0.004})).sort((a,b)=>b.v-a.v)[0].s}
+/* emnekort (19/11): et sikkert svar er et rigtigt svar uden hjælp (repetition, minieksamen, prøveeksamen).
+   En type er mestret ved 3 sikre svar (alle, hvis typen har færre delopgaver) og ingen åbne fejl. */
+const XLV=['Ikke startet','Gennemgået','I gang','Mestret'];
+function xhMastery(s){const st=s.ps.map(xhStatus),ok=st.filter(x=>x.own==='ok').length,bad=st.filter(x=>x.own==='fejl').length,need=Math.min(3,s.n),m=Math.max(0,need-ok);
+  const lvl=ok>=need&&!bad&&need?3:ok?2:s.seen||bad?1:0;
+  const miss=lvl===3?'Mestret':[m?`mangler ${m} sikre${m===1?'t':''} svar`.replace('sikret','sikkert'):'',bad?`${bad} fejl at rette`:''].filter(Boolean).join(' · ');
+  return{ok,bad,need,lvl,miss:miss.charAt(0).toUpperCase()+miss.slice(1)}}
+function xhMap(st,nx){const ms=st.filter(s=>s.T.id!=='andet').map(s=>({s,m:xhMastery(s)})).sort((a,b)=>a.s.T.w-b.s.T.w),done=ms.filter(x=>x.m.lvl===3).length;
+  return`<section class="xhmap" id="emnekort"><div class="xhmh"><h2>Dit emnekort</h2><span class="xhmsum"><b>${done}</b> af ${ms.length} typer mestret</span></div>
+    <p class="sub">Et sikkert svar er et rigtigt svar uden hjælp: i repetitionen, i minieksamen eller i en prøveeksamen. En type er mestret ved 3 sikre svar og ingen åbne fejl. Gennemgangene lægger selv delopgaverne i din repetition.</p>
+    <div class="xhmgrid">${ms.map(({s,m})=>`<a class="xhmt l${m.lvl}${nx&&nx.T.id===s.T.id?' next':''}" href="#type-${s.T.id}" style="${uvars(s.T.w)}" aria-label="${esc(s.T.t)}: ${XLV[m.lvl]}, ${m.ok} af ${m.need} sikre svar"><span class="xhmic" aria-hidden="true">${esc(s.T.ic||'')}</span><b>${esc(s.T.t)}</b><span class="xhmn"><i class="xhmdots">${Array.from({length:m.need},(_,i)=>`<em class="${i<m.ok?'on':''}"></em>`).join('')}</i>${m.ok}/${m.need} sikre</span><small>${nx&&nx.T.id===s.T.id&&m.lvl<3?'Næste: '+esc(m.miss.charAt(0).toLowerCase()+m.miss.slice(1)):esc(m.miss)}</small></a>`).join('')}</div>
+    <p class="xhmleg">${XLV.map((l,i)=>`<span class="l${i}"><i></i>${l}</span>`).join('')}</p></section>`}
+function xhStrip(){const ms=xhStats().filter(s=>s.T.id!=='andet').map(s=>({s,m:xhMastery(s)})).sort((a,b)=>a.s.T.w-b.s.T.w),done=ms.filter(x=>x.m.lvl===3).length;
+  return`<a class="xhstrip" href="#gamle" aria-label="Emnekort: ${done} af ${ms.length} opgavetyper mestret"><span class="xhsd">${ms.map(({s,m})=>`<i class="l${m.lvl}" title="${esc(s.T.t)}: ${esc(m.miss)}"></i>`).join('')}</span><small><b>${done}</b> af ${ms.length} typer mestret</small></a>`}
 const xhSetList=s=>s.sets.map(x=>x.S.s).join(', ');
 const xhFreqTxt=s=>`${s.sets.length} af ${XSETS.length} sæt`;
 
@@ -7335,13 +10353,13 @@ function xhRow(X,o){o=o||{};const s=xhStatus(X);
   return`<a class="xhrow" href="#L-${X.lk}" style="${uvars(X.w)}" data-st="${s.own}${s.set?' set':''}"><span class="xhset">${esc(X.S.s)}<small>${esc(X.lab)}</small></span><span class="xhq">${MD.inline(((X.intro?X.intro+' ':'')+X.q).replace(/\\dfrac/g,'\\frac').replace(/\\displaystyle/g,''))}</span><span class="xhmeta">${o.type&&X.T.id!=='andet'?`<span class="badge plainb">${esc(X.T.t)}</span>`:''}${xhBadge(X)}</span><span class="xhgo2" aria-hidden="true">›</span></a>`}
 function xhReadyBar(pct){return`<span class="xhbar" role="img" aria-label="${pct} % klar"><i style="width:${pct}%"></i></span>`}
 function xhHome(){const s=xhNext();if(!s)return'';const T=s.T,tr=xhTrActive(T.id),all=XP.length,seen=XP.filter(X=>xhStatus(X).set).length;
-  return`<div class="lhome xhhome"><div class="xhhc" style="${uvars(T.w)}"><a class="xhhmain" href="#gamle"><span class="xhhic" aria-hidden="true">📝</span><span class="xhht"><small>Gamle eksamensopgaver · ${seen} af ${all} gennemgået</small><b>Næste type: ${esc(T.t)}</b><span>Kom i ${xhFreqTxt(s)} · du er ${s.pct} % klar</span></span></a><button class="b u sm" data-xhtr="${T.id}">${tr?'Fortsæt':'Træn typen'}</button></div></div>`}
+  return`<div class="lhome xhhome"><div class="xhhc" style="${uvars(T.w)}"><a class="xhhmain" href="#gamle"><span class="xhhic" aria-hidden="true">📝</span><span class="xhht"><small>Gamle eksamensopgaver · ${seen} af ${all} gennemgået</small><b>Næste type: ${esc(T.t)}</b><span>Kom i ${xhFreqTxt(s)} · ${esc(xhMastery(s).miss.toLowerCase())}</span></span></a><button class="b u sm" data-xhtr="${T.id}">${tr?'Fortsæt':'Træn typen'}</button></div>${xhStrip()}</div>`}
 function xhWeekRow(k){const w=+k;if(!w)return'';const ts=XTL().filter(T=>T.w===w),n=XP.filter(X=>X.w===w).length;if(!ts.length&&!n)return'';
   return`<a class="prerow xhwk" href="#gamle-u${w}"><span class="lkubi" aria-hidden="true">📝</span><span class="lct"><b>Sådan kommer ugen til eksamen</b><span>${ts.length?ts.map(T=>esc(T.t)).join(' · '):n+' gamle delopgaver'}</span></span><span class="chev" aria-hidden="true">›</span></a>`}
 function xhForConcept(id){const ps=XP.filter(X=>X.c===id),T=XT_BY[XC2T[id]],more=T?xhOfType(T.id).filter(X=>X.c!==id):[];if(!ps.length&&!more.length)return'';
   const list=(ps.length?ps:more).slice(0,6);
   return`<h3 style="margin-top:26px">Sådan kommer det til eksamen</h3>${T?`<p class="sub xhcsub">Opgavetype: <a href="#type-${T.id}">${esc(T.t)}</a>. Den kom i ${xhFreqTxt(xhTypeStat(T))}.</p>`:''}<div class="xhlist">${list.map(X=>xhRow(X)).join('')}</div>${T&&xhOfType(T.id).length>list.length?`<p><a class="link" href="#type-${T.id}">Se alle ${xhOfType(T.id).length} delopgaver af typen ›</a></p>`:''}`}
-function xhFreqTable(st){return`<div class="xhfreq">${st.slice().sort((a,b)=>b.sets.length-a.sets.length||b.n-a.n).map(s=>`<a class="xhfrow" href="#type-${s.T.id}" style="${uvars(s.T.w)}"><span class="xhfic" aria-hidden="true">${esc(s.T.ic||'')}</span><span class="xhft"><b>${esc(s.T.t)}</b><small>${s.n} delopgave${s.n===1?'':'r'} · ${xhFreqTxt(s)}</small></span><span class="xhdots" aria-label="Kom i ${esc(xhSetList(s))}">${XSETS.map(x=>`<i class="${s.sets.includes(x)?'on':''}" title="${esc(x.S.s)}"></i>`).join('')}</span><span class="xhrd">${xhReadyBar(s.pct)}<small>${s.pct} % klar</small></span></a>`).join('')}</div>`}
+function xhFreqTable(st){return`<div class="xhfreq">${st.slice().sort((a,b)=>b.sets.length-a.sets.length||b.n-a.n).map(s=>`<a class="xhfrow" href="#type-${s.T.id}" style="${uvars(s.T.w)}"><span class="xhfic" aria-hidden="true">${esc(s.T.ic||'')}</span><span class="xhft"><b>${esc(s.T.t)}</b><small>${s.n} delopgave${s.n===1?'':'r'} · ${xhFreqTxt(s)}</small></span><span class="xhdots" aria-label="Kom i ${esc(xhSetList(s))}">${XSETS.map(x=>`<i class="${s.sets.includes(x)?'on':''}" title="${esc(x.S.s)}"></i>`).join('')}</span><span class="xhrd">${xhReadyBar(s.pct)}<small>${(m=>m.lvl===3?'Mestret ✓':m.ok+'/'+m.need+' sikre')(xhMastery(s))}</small></span></a>`).join('')}</div>`}
 function viewXh(wk){document.title='Gamle eksamensopgaver · Mat1a';const ui=ST.xh.ui;if(wk){ui.g='uge';save()}
   const st=xhStats(),nx=xhNext(),all=XP.length,cnt={alle:all,ny:0,fejl:0,ok:0,set:0};XP.forEach(X=>{const s=xhStatus(X);cnt[s.own]++;if(s.set)cnt.set++});
   const keep=X=>{const s=xhStatus(X);return ui.s==='alle'||(ui.s==='set'?s.set:s.own===ui.s)};
@@ -7350,7 +10368,8 @@ function viewXh(wk){document.title='Gamle eksamensopgaver · Mat1a';const ui=ST.
     :XSETS.map(x=>({id:'s-'+x.E.id,h:`<a href="#eksamen-${x.E.id}">${esc(x.S.l)}</a>`,sub:esc(x.E.title),ps:XP.filter(X=>X.E===x.E),w:0}));
   const seg=(k,opts)=>`<div class="xhseg" role="group">${opts.map(([v,l,n])=>`<button class="${ui[k]===v?'on':''}" aria-pressed="${ui[k]===v}" data-xhui="${k}:${v}">${l}${n!=null?` <i>${n}</i>`:''}</button>`).join('')}</div>`;
   main.innerHTML=`<div class="page xhpage"><h1>Gamle eksamensopgaver</h1><div class="sub">${all} delopgaver fra ${XSETS.length} rigtige sæt, sorteret efter type. Hver delopgave har en gennemgang, der spørger dig før hvert trin, og hver type har en opskrift.</div>
-    ${nx?`<div class="xhrec" style="${uvars(nx.T.w)}"><div><small>Næste anbefalede type</small><b>${esc(nx.T.t)}</b><span>Kom i ${xhFreqTxt(nx)} (${esc(xhSetList(nx))}). Du er ${nx.pct} % klar.</span></div><div class="xhrecb"><button class="b" data-xhtr="${nx.T.id}">${xhTrActive(nx.T.id)?'Fortsæt træningen':'Træn denne type'}</button><a class="b ghost" href="#type-${nx.T.id}">Se opskriften</a></div></div>`:''}
+    ${nx?`<div class="xhrec" style="${uvars(nx.T.w)}"><div><small>Næste anbefalede type</small><b>${esc(nx.T.t)}</b><span>Kom i ${xhFreqTxt(nx)} (${esc(xhSetList(nx))}). ${esc(xhMastery(nx).miss)}.</span></div><div class="xhrecb"><button class="b" data-xhtr="${nx.T.id}">${xhTrActive(nx.T.id)?'Fortsæt træningen':'Træn denne type'}</button><a class="b ghost" href="#type-${nx.T.id}">Se opskriften</a></div></div>`:''}
+    ${xhMap(st,nx)}
     <h2>Hvad kommer oftest?</h2><p class="sub">Prikkerne viser, hvilke sæt typen kom i (nyeste først). Bjælken viser, hvor klar du er.</p>${xhFreqTable(st.filter(s=>s.T.id!=='andet'))}
     <h2 id="xhall">Alle delopgaver</h2>
     <div class="xhfilters">${seg('g',[['type','Efter type'],['uge','Efter uge'],['saet','Efter sæt']])}${seg('s',[['alle','Alle',cnt.alle],['ny','Ikke prøvet',cnt.ny],['fejl','Forkert',cnt.fejl],['ok','Rigtig',cnt.ok],['set','Gennemgået',cnt.set]])}</div>
@@ -7365,7 +10384,7 @@ function xhExample(X){const P=X.src;
 function viewXhType(id){const T=XT_BY[id];if(!T||!xhOfType(id).length&&id==='andet')return viewXh();document.title=T.t+' · Opgavetyper · Mat1a';
   const s=xhTypeStat(T),ex=XPK[T.ex]||s.ps.find(X=>X.C)||s.ps[0],tr=xhTrActive(id),kon=KON.find(k=>k.id===T.kon),cs=T.c.filter(c=>CONCEPTS[c]);
   const li=a=>a.map(x=>`<li>${MD.inline(x)}</li>`).join('');
-  main.innerHTML=`<div class="page narrow xhtype" style="${uvars(T.w)}"><div class="ehead"><div class="crumb"><a href="#gamle">Gamle eksamensopgaver</a><span>›</span>${T.w?`<a href="#uge-${T.w}">Uge ${T.w} · ${esc(unit(T.w)[1])}</a>`:'<span>Opgavetype</span>'}</div><h1>${esc(T.t)}</h1><div class="xhfacts"><span>${s.n} delopgave${s.n===1?'':'r'}</span><span>${s.sets.length?'Kom i '+xhFreqTxt(s)+': '+esc(xhSetList(s)):'Har ikke været i de sæt, appen har'}</span><span>Du er ${s.pct} % klar</span></div><div class="glyph">${esc(T.ic||'')}</div></div>
+  main.innerHTML=`<div class="page narrow xhtype" style="${uvars(T.w)}"><div class="ehead"><div class="crumb"><a href="#gamle">Gamle eksamensopgaver</a><span>›</span>${T.w?`<a href="#uge-${T.w}">Uge ${T.w} · ${esc(unit(T.w)[1])}</a>`:'<span>Opgavetype</span>'}</div><h1>${esc(T.t)}</h1><div class="xhfacts"><span>${s.n} delopgave${s.n===1?'':'r'}</span><span>${s.sets.length?'Kom i '+xhFreqTxt(s)+': '+esc(xhSetList(s)):'Har ikke været i de sæt, appen har'}</span><span>${(m=>m.lvl===3?'Mestret ✓':`${m.ok} af ${m.need} sikre svar`+(m.bad?` · ${m.bad} fejl`:''))(xhMastery(s))}</span></div><div class="glyph">${esc(T.ic||'')}</div></div>
     ${s.n?`<div class="xhcta"><button class="b" data-xhtr="${id}">${tr?`Fortsæt træningen (${tr.i} af ${tr.ids.length})`:`Træn denne type · ${s.n} delopgave${s.n===1?'':'r'}`}</button><span class="sub">Delopgaverne fra alle sæt, én ad gangen, med fuld hjælp.</span></div>`:''}
     ${T.know.length?`<div class="pcard"><h2>Sådan genkender du den</h2><ul class="xhul">${li(T.know)}</ul></div>`:''}
     ${T.rec.length?`<div class="pcard"><h2>Opskriften</h2><ol class="xhrec2">${li(T.rec)}</ol></div>`:''}
