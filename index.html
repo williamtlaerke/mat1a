@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-Ncg7uH41GFgFZJfSm91ZrdM4MtcVIaEaTnHOAlTVhmY=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-BkGD2TmzUdB8cftoNYY5QmoHiMkogXNprsL8CStfYLY=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-Ncg7uH41GFgFZJfSm91ZrdM4MtcVIaEaTnHOAlTVhmY=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-IlajBuawcSIcX3gM9RcJk1uRTLDtiC5D6ImKSMpHwBQ=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -6133,10 +6133,12 @@ function openVideo(n){const old=document.getElementById('vidpop');if(old)old.rem
 function viewVideos(){const seen=ST.vids||{};const ns=Object.keys(VID_TITLES).map(Number);
   return `<div class="wrap"><div class="pagehead"><h1>🎬 Ugevideoer</h1><p class="lead">Kubi viser hver uges emner på et par minutter – uden lyd, med tekst på skærmen. Se videoen før du går i gang med opgaverne, eller som repetition før eksamen.</p></div>
   <div class="vidgrid">${ns.map(n=>`<button class="vidcard${seen[n]?' seen':''}" data-v="${n}"><span class="vidthumb">${VID_POSTER[n]?`<img src="${VID_POSTER[n]}" alt="">`:''}<span class="vidplay">▶</span>${VID_LEN[n]?`<span class="vidlen">${Math.floor(VID_LEN[n]/60)}:${vidPad(Math.round(VID_LEN[n]%60))}</span>`:''}</span><span class="vidtxt"><small>Uge ${n}${seen[n]?' · set ✓':''}</small><b>${esc(VID_TITLES[n])}</b></span></button>`).join('')}</div></div>`}
-function wireVideos(root){(root||document).querySelectorAll('[data-v]').forEach(b=>{if(!b.closest('#vidpop'))b.onclick=e=>{e.preventDefault();openVideo(+b.dataset.v)}})}
+function wireVideos(root){(root||document).querySelectorAll('[data-v]').forEach(b=>{if(isVidBtn(b)&&!b.closest('#vidpop'))b.onclick=e=>{e.preventDefault();openVideo(+b.dataset.v)}})}
 function vidRow(k){const n=+k;if(!VID_TITLES[n])return '';const L=VID_LEN[n];const seen=(ST.vids||{})[n];
   return `<button class="vidrow${seen?' seen':''}" data-v="${n}"><span class="vidrowp">▶</span><span><b>Se ugens video</b><small>${L?Math.floor(L/60)+':'+vidPad(Math.round(L%60))+' · ':''}Kubi forklarer ugens emner${seen?' · set ✓':''}</small></span></button>`}
-document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-v]');if(b&&!b.closest('#vidpop')){e.preventDefault();openVideo(+b.dataset.v)}});
+/* kun knapper med et ugenummer, der har en video (22/11: andre elementer med data-v må ikke åbne videoer) */
+const isVidBtn=b=>b&&b.tagName==='BUTTON'&&/^\d{1,2}$/.test(b.dataset.v||'')&&!!VID_TITLES[+b.dataset.v];
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-v]');if(isVidBtn(b)&&!b.closest('#vidpop')){e.preventDefault();openVideo(+b.dataset.v)}});
 
 /* ---------- Kontrastkort: par, der ofte forveksles (indhold) ----------
    Matematikken er tjekket med sympy (review/kontrast_check.py). Visningen ligger i learn.js.
