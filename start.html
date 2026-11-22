@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-Ncg7uH41GFgFZJfSm91ZrdM4MtcVIaEaTnHOAlTVhmY=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-IlajBuawcSIcX3gM9RcJk1uRTLDtiC5D6ImKSMpHwBQ=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-Ncg7uH41GFgFZJfSm91ZrdM4MtcVIaEaTnHOAlTVhmY=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-RQYCXlDiHGDrxxMcCKXuFjXoqbIieC/dz9KYv/2U9fA=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -1448,6 +1448,10 @@ button.ubanner{width:100%; border:0; font:inherit; text-align:left; cursor:point
 .ttb{display:inline-flex; gap:6px} .ttb button{min-width:44px; min-height:44px; border-radius:12px; border:2px solid var(--line); background:var(--card); color:var(--ink); font-weight:900; font-size:17px; cursor:pointer}
 .ttb button.on{border-color:var(--accent); background:var(--accent-soft)}
 
+/* interaktive opgaver (22/11) */
+.kongrid .ccard .ct .isn{display:block; margin-top:6px; font-size:14px; line-height:1.4; color:var(--ink)}
+.kongrid .ccard .ct small{display:block}
+
 /* ---------- Læringsideer (learn.js): kontrastkort, eksamensplan, prætest, pause før hint, coach, eksport, eksamensmorgen ---------- */
 .menu .mhead{padding:10px 12px 2px; font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-top:2px solid var(--line); margin:6px 4px 0}
 .lkubi{display:block; flex:none; width:56px; height:56px; position:relative}
@@ -1826,7 +1830,7 @@ ol.xhsteps{margin:0 14px 12px; padding-left:22px; display:grid; gap:8px}
   <button class="ibtn" id="themeBtn" aria-label="Skift farvetema" title="Farvetema"><svg><use href="#i-auto"/></svg></button>
   <button class="ibtn" id="menuBtn" aria-label="Menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
   <nav class="menu" id="menu" hidden>
-    <a href="#">Læringssti</a><a href="#uge-h">Hjemmeopgaver</a><a href="#repetition">Repetition</a><a href="#metode">Hvilken metode?</a><a href="#formler">Formeltræner</a><a href="#kontrast">Kontrastkort</a><a href="#begreber">Begreber</a><a href="#graf">Videnskort</a><a href="#tools">Værktøjer</a><a href="#videoer">Ugevideoer</a><a href="#repetition/fejl">Fejllog</a><a href="#faelles">Fællesskab</a><div class="mhead" id="mExam">Eksamen</div><a href="#gamle">Gamle eksamensopgaver</a><a href="#plan">Eksamensplan</a><a href="#eksamen">Prøveeksamen</a><a href="#mini">Minieksamen</a><hr><button id="mBook" class="monly">Lærebogen</button><button id="mTheme" class="monly">Farvetema</button><hr class="monly">
+    <a href="#">Læringssti</a><a href="#uge-h">Hjemmeopgaver</a><a href="#repetition">Repetition</a><a href="#metode">Hvilken metode?</a><a href="#formler">Formeltræner</a><a href="#kontrast">Kontrastkort</a><a href="#interaktiv">Interaktive opgaver</a><a href="#begreber">Begreber</a><a href="#graf">Videnskort</a><a href="#tools">Værktøjer</a><a href="#videoer">Ugevideoer</a><a href="#repetition/fejl">Fejllog</a><a href="#faelles">Fællesskab</a><div class="mhead" id="mExam">Eksamen</div><a href="#gamle">Gamle eksamensopgaver</a><a href="#plan">Eksamensplan</a><a href="#eksamen">Prøveeksamen</a><a href="#mini">Minieksamen</a><hr><button id="mBook" class="monly">Lærebogen</button><button id="mTheme" class="monly">Farvetema</button><hr class="monly">
     <a href="#indstillinger">Indstillinger og statistik</a><a href="#om">Om appen</a><button id="expBtn">Gem en backup af fremgang</button><button id="impBtn">Hent backup …</button><input type="file" id="impFile" accept="application/json" hidden><hr id="lockHr" hidden><button id="lockBtn" hidden>🔒 Lås appen på denne enhed</button>
   </nav>
 </div></header>
@@ -6579,6 +6583,17 @@ function mornCard(){if(examDays()!==0||Date.now()>=new Date(EXAM_DATE).getTime()
   return`<a class="panel lhc" href="#morgen">${lkubi('wave')}<div class="lct"><b>Nervøs? Skriv bekymringen ned</b><span>10 minutter, helt valgfrit. Teksten gemmes ikke.</span></div><span class="b ghost sm" aria-hidden="true">Åbn</span></a>`}
 (()=>{const d=examDays(),m=document.querySelector('#menu a[href="#mini"]');if(m&&(d===0||d===1))m.after($('a',{href:'#morgen',text:'Eksamensmorgen'}))})();
 
+/* ---------- interaktive opgaver (22/11): alle træk- og klikopgaver samlet ét sted ---------- */
+const IKIND={eig:['↗','Egenvektor'],root:['✳','Komplekse rødder'],map:['▱','Lineær afbildning'],ode:['∿','Faseplan'],coord:['⌗','Koordinater'],det:['▭','Determinant'],poly:['∪','Polynomiumsrødder'],inj:['↔','Injektivitet'],venn:['◎','Venn-diagram'],polar:['◉','Polær form']};
+function interList(){const out=[];PARTS.forEach(p=>{const S=SOL[p.key];if(!S||!p.opg)return;S.cards.forEach(c=>{if(c.q&&c.q.t==='drag'){const id=lessonId(p,c.q);
+  out.push({p,c,k:c.q.p.kind==='root'&&c.q.p.n===1?'polar':c.q.p.kind||'eig',done:ST.ans.some(a=>a.i===id&&a.ok)})}})});return out.sort((a,b)=>(a.p.opg.week||0)-(b.p.opg.week||0))}
+function viewInteractive(){document.title='Interaktive opgaver · Mat1a';const L=interList(),n=L.filter(x=>x.done).length;
+  const first=s=>{const t=String(s).replace(/\s+/g,' '),j=t.search(/(Træk|Farv|Placér|Klik)\b/),u=j>0?t.slice(j):t,i=u.search(/[.?!] (?=[A-ZÆØÅ$])/);return MD.inline(i>0?u.slice(0,i+1):u)};
+  main.innerHTML=`<div class="page"><div class="pagehead"><h1>🖐 Interaktive opgaver</h1><p class="lead">Opgaver, hvor du trækker i en figur eller klikker i et diagram, og appen tjekker svaret. De ligger inde i lektionerne. Her er de samlet. ${L.length?`Du har løst <b>${n}</b> af ${L.length}.`:''}</p></div>
+    <div class="cgrid kongrid">${L.map(x=>{const [ic,kn]=IKIND[x.k]||['•','Opgave'],w=x.p.opg.week||0;
+      return`<a class="ccard${x.done?' tried':''}" href="#L-${x.p.key}" style="${uvars(w)}"><div class="cg" aria-hidden="true">${ic}</div><div class="ct"><b>${esc(kn)}${x.done?' · løst ✓':''}</b><small>Uge ${w} · opgave ${x.p.opg.nr}${x.p.label?' '+esc(x.p.label):''} · ${esc(x.c.title||'')}</small><span class="isn">${first(x.c.q.q)}</span></div></a>`}).join('')}</div>
+    <p class="note">Tip: Interaktive opgaver kommer ikke i repetitionen, så kig forbi her en gang imellem.</p></div>`}
+
 /* ---------- forsiden ---------- */
 function learnHome(){const h=mornCard()+planHomeCard()+coachCard();return h?`<div class="lhome">${h}</div>`:''}
 function learnWire(root){planWire(root);const x=root.querySelector('#lcx');if(x)x.onclick=()=>{LRN().coach.x=today();save();const c=root.querySelector('#lcoach');if(c)c.remove();const h=root.querySelector('.lhome');if(h&&!h.children.length)h.remove()}}
@@ -6586,6 +6601,7 @@ function learnWire(root){planWire(root);const x=root.querySelector('#lcx');if(x)
 /* ---------- ruter ---------- */
 function learnRoute(r){
   if(r==='plan'){viewPlan();return true}
+  if(r==='interaktiv'){viewInteractive();return true}
   if(r==='indstillinger'){viewSettings();return true}
   if(r==='om'){viewOm();return true}
   if(r==='morgen'){viewMorn();return true}
@@ -6593,6 +6609,7 @@ function learnRoute(r){
   if(r==='kontrast'){viewKonList();return true}
   if(r.startsWith('kontrast-')){viewKon(r.slice(9));return true}
   return false}
+PITEMS.push(pitem('Side','Interaktive opgaver','Træk i figurer og klik i diagrammer: egenvektorer, komplekse rødder, afbildninger, faseplan og mere','interaktiv','interaktiv træk trækopgave figur klik venn egenvektor rødder afbildning faseplan koordinater determinant',2));
 PITEMS.push(pitem('Side','Eksamensplan','Tre spørgsmål og en plan dag for dag for de sidste 10 dage før prøven','plan','eksamen plan playbook strategi forberedelse',2));
 PITEMS.push(pitem('Side','Indstillinger og statistik','Pause før hint, Kubi som coach og eksport af statistik','indstillinger','indstillinger pause hint coach eksport statistik csv json underviser',1));
 PITEMS.push(pitem('Side','Skriv bekymringen ned','Valgfri skriveøvelse på 10 minutter til eksamensmorgenen. Teksten gemmes ikke.','morgen','eksamensmorgen nervøs angst bekymring eksamensangst rolig',1));
