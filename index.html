@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-gqRO0oWc5RuejN//kLhg1YEM7LS8SpW0BJM9qjOWwbI=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-9KRruft0gu8hamCliLJGBxhcLkAOSZEk7PxL3w22kGI=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-vbhNWiwMQoZFN/n2poM4xU1rVceFLTa7RANqh4MYqYw=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-9KRruft0gu8hamCliLJGBxhcLkAOSZEk7PxL3w22kGI=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -3399,7 +3399,7 @@ W.cmultask=(box,p)=>{const z=p.z[0],m=p.v,R=p.range||[-5,5,-5,5],sn=p.snap||1;co
   box.__check=()=>{const q=h.z;if(near(q,T))return{ok:true};
     const C=[[mul(z,[0,1]),'Det er $i\\cdot '+(p.label||'z')+'$: en kvart omgang mod uret.'],[mul(z,[0,-1]),'Det er $-i\\cdot '+(p.label||'z')+'$: en kvart omgang med uret.'],[[-z[0],-z[1]],'Det er $-'+(p.label||'z')+'$: en halv omgang.'],[[z[0],-z[1]],'Det er spejlingen i den reelle akse (konjugering), ikke en drejning.'],[[-z[0],z[1]],'Det er spejlingen i den imaginære akse, ikke en drejning.'],[z,'Punktet står på $'+(p.label||'z')+'$ selv. Det skal flyttes.']];
     const hit=C.find(c=>near(q,c[0]));if(hit)return{ok:false,fb:hit[1]+' '+(p.hint||'')};
-    if(Math.abs(Math.hypot(...q)-r)>1e-6)return{ok:false,fb:'Punktet ligger ikke på den stiplede cirkel. At gange med et tal med modulus $1$ ændrer ikke afstanden til $0$.'};
+    const rt=Math.hypot(...T);if(Math.abs(Math.hypot(...q)-rt)>1e-6)return{ok:false,fb:Math.abs(rt-r)<1e-9?'Punktet ligger ikke på den stiplede cirkel. At gange med et tal med modulus $1$ ændrer ikke afstanden til $0$.':'Afstanden til $0$ passer ikke. Ved multiplikation ganges modulus sammen.'};
     return{ok:false,fb:'Afstanden er rigtig, men vinklen passer ikke. '+(p.hint||'')}};
   box.__solve=()=>box.__set(T);
   box.__lock=()=>{P.svg.style.pointerEvents='none';P.svg.setAttribute('aria-disabled','true');box.querySelectorAll('[tabindex]').forEach(e=>e.setAttribute('tabindex','-1'))};
