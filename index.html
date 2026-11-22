@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-vbhNWiwMQoZFN/n2poM4xU1rVceFLTa7RANqh4MYqYw=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-9KRruft0gu8hamCliLJGBxhcLkAOSZEk7PxL3w22kGI=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-vbhNWiwMQoZFN/n2poM4xU1rVceFLTa7RANqh4MYqYw=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-YQd3F8o03egd+oSijfy2TlwGBYzp/eepl8gZ0oXfp2k=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -1454,6 +1454,8 @@ button.ubanner{width:100%; border:0; font:inherit; text-align:left; cursor:point
 
 .tttab{border-collapse:collapse;margin:6px auto 10px;font-variant-numeric:tabular-nums}.tttab th,.tttab td{padding:6px 14px;text-align:center;border-bottom:1px solid var(--line,#ddd)}.tttab th.out,.tttab td.out{border-left:2px solid var(--muted)}.tttab .ttb{min-width:48px;min-height:40px;font-weight:700}.tttab .ttb.on{background:var(--accent);color:#fff;border-color:var(--accent)}.tttab .ttb.off{background:var(--sheet);border-color:var(--ink)}
 
+.figtabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.figtabs small{opacity:.7;margin-left:2px}.figcard{display:block;padding:14px}.figq{margin:0 0 10px}.figq small{color:var(--muted)}.figfoot{display:flex;align-items:center;gap:10px;justify-content:space-between;margin-top:10px;flex-wrap:wrap}.figfoot #figmsg{flex:1;min-width:180px}
+
 /* ---------- Læringsideer (learn.js): kontrastkort, eksamensplan, prætest, pause før hint, coach, eksport, eksamensmorgen ---------- */
 .menu .mhead{padding:10px 12px 2px; font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-top:2px solid var(--line); margin:6px 4px 0}
 .lkubi{display:block; flex:none; width:56px; height:56px; position:relative}
@@ -1832,7 +1834,7 @@ ol.xhsteps{margin:0 14px 12px; padding-left:22px; display:grid; gap:8px}
   <button class="ibtn" id="themeBtn" aria-label="Skift farvetema" title="Farvetema"><svg><use href="#i-auto"/></svg></button>
   <button class="ibtn" id="menuBtn" aria-label="Menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
   <nav class="menu" id="menu" hidden>
-    <a href="#">Læringssti</a><a href="#uge-h">Hjemmeopgaver</a><a href="#repetition">Repetition</a><a href="#metode">Hvilken metode?</a><a href="#formler">Formeltræner</a><a href="#kontrast">Kontrastkort</a><a href="#interaktiv">Interaktive opgaver</a><a href="#begreber">Begreber</a><a href="#graf">Videnskort</a><a href="#tools">Værktøjer</a><a href="#videoer">Ugevideoer</a><a href="#repetition/fejl">Fejllog</a><a href="#faelles">Fællesskab</a><div class="mhead" id="mExam">Eksamen</div><a href="#gamle">Gamle eksamensopgaver</a><a href="#plan">Eksamensplan</a><a href="#eksamen">Prøveeksamen</a><a href="#mini">Minieksamen</a><hr><button id="mBook" class="monly">Lærebogen</button><button id="mTheme" class="monly">Farvetema</button><hr class="monly">
+    <a href="#">Læringssti</a><a href="#uge-h">Hjemmeopgaver</a><a href="#repetition">Repetition</a><a href="#metode">Hvilken metode?</a><a href="#formler">Formeltræner</a><a href="#kontrast">Kontrastkort</a><a href="#interaktiv">Interaktive opgaver</a><a href="#figurer">Figurtræning</a><a href="#begreber">Begreber</a><a href="#graf">Videnskort</a><a href="#tools">Værktøjer</a><a href="#videoer">Ugevideoer</a><a href="#repetition/fejl">Fejllog</a><a href="#faelles">Fællesskab</a><div class="mhead" id="mExam">Eksamen</div><a href="#gamle">Gamle eksamensopgaver</a><a href="#plan">Eksamensplan</a><a href="#eksamen">Prøveeksamen</a><a href="#mini">Minieksamen</a><hr><button id="mBook" class="monly">Lærebogen</button><button id="mTheme" class="monly">Farvetema</button><hr class="monly">
     <a href="#indstillinger">Indstillinger og statistik</a><a href="#om">Om appen</a><button id="expBtn">Gem en backup af fremgang</button><button id="impBtn">Hent backup …</button><input type="file" id="impFile" accept="application/json" hidden><hr id="lockHr" hidden><button id="lockBtn" hidden>🔒 Lås appen på denne enhed</button>
   </nav>
 </div></header>
@@ -4068,7 +4070,8 @@ function normLearn(l){l=isObj(l)?l:{};const DK=/^\d{4}-\d\d-\d\d$/,str=(v,n)=>ty
     kon:clean(l.kon,(v,k)=>/^[a-z0-9]{1,16}$/.test(k)&&Array.isArray(v)?[fint(v[0],0,1e4),fint(v[1],0,10),ts(v[2])||0]:undefined),
     coach:{d:day(c.d),k:typeof c.k==='string'&&/^[a-z0-9:]{1,24}$/.test(c.k)?c.k:'',x:day(c.x),h:lim(clean(c.h,(v,k)=>/^[a-z0-9:]{1,24}$/.test(k)&&day(v)?v:undefined),40)},
     set:{nopause:st.nopause===true,nocoach:st.nocoach===true},
-    morn:day(l.morn)}}
+    morn:day(l.morn),
+    fig:clean(l.fig,(v,k)=>/^[a-z]{1,8}$/.test(k)&&Array.isArray(v)?[fint(v[0],0,1e5),fint(v[1],0,1e5)]:undefined)}}
 function normMini(m){m=isObj(m)?m:{};const run=c=>{if(!isObj(c)||!ts(c.at)||!Array.isArray(c.ids))return null;const ids=c.ids.filter(x=>typeof x==='string'&&ITEM_RE.test(x)).slice(0,20);
     const a=lim(clean(c.a,(v,k)=>!ids.includes(k)?undefined:Number.isInteger(v)&&v>=0&&v<20?v:Array.isArray(v)?v.slice(0,12).map(x=>typeof x==='string'?x.slice(0,200):''):isObj(v)?clean(v,(x,kk)=>/^\d{1,2},\d{1,2},\d{1,2}$/.test(kk)&&typeof x==='string'?x.slice(0,60):undefined):undefined),20);
     return{at:c.at,ids,a,...(Number.isFinite(c.s)?{s:fint(c.s,0,86400)}:{}),...(c.auto?{auto:1}:{})}};
@@ -6690,7 +6693,7 @@ function viewInteractive(){document.title='Interaktive opgaver · Mat1a';const L
   main.innerHTML=`<div class="page"><div class="pagehead"><h1>🖐 Interaktive opgaver</h1><p class="lead">Opgaver, hvor du trækker i en figur eller klikker i et diagram, og appen tjekker svaret. De ligger inde i lektionerne. Her er de samlet. ${L.length?`Du har løst <b>${n}</b> af ${L.length}.`:''}</p></div>
     <div class="cgrid kongrid">${L.map(x=>{const [ic,kn]=IKIND[x.k]||['•','Opgave'],w=x.p.opg.week||0;
       return`<a class="ccard${x.done?' tried':''}" href="#L-${x.p.key}" style="${uvars(w)}"><div class="cg" aria-hidden="true">${ic}</div><div class="ct"><b>${esc(kn)}${x.done?' · løst ✓':''}</b><small>Uge ${w} · opgave ${x.p.opg.nr}${x.p.label?' '+esc(x.p.label):''} · ${esc(x.c.title||'')}</small><span class="isn">${first(x.c.q.q)}</span></div></a>`}).join('')}</div>
-    <p class="note">Tip: Interaktive opgaver kommer ikke i repetitionen, så kig forbi her en gang imellem.</p></div>`}
+    <p class="note">Vil du øve figurerne igen med nye tal? Prøv <a href="#figurer">Figurtræning</a>.</p></div>`}
 
 /* ---------- forsiden ---------- */
 function learnHome(){const h=mornCard()+planHomeCard()+coachCard();return h?`<div class="lhome">${h}</div>`:''}
@@ -6700,6 +6703,7 @@ function learnWire(root){planWire(root);const x=root.querySelector('#lcx');if(x)
 function learnRoute(r){
   if(r==='plan'){viewPlan();return true}
   if(r==='interaktiv'){viewInteractive();return true}
+  if(r==='figurer'||r.startsWith('figurer-')){viewFig(r.slice(8)||null);return true}
   if(r==='indstillinger'){viewSettings();return true}
   if(r==='om'){viewOm();return true}
   if(r==='morgen'){viewMorn();return true}
@@ -6713,6 +6717,46 @@ PITEMS.push(pitem('Side','Indstillinger og statistik','Pause før hint, Kubi som
 PITEMS.push(pitem('Side','Skriv bekymringen ned','Valgfri skriveøvelse på 10 minutter til eksamensmorgenen. Teksten gemmes ikke.','morgen','eksamensmorgen nervøs angst bekymring eksamensangst rolig',1));
 PITEMS.push(pitem('Side','Kontrastkort','Par, der ofte forveksles, stillet side om side','kontrast','Arg arg injektiv surjektiv nulrum søjlerum forveksler forskel',2));
 KON.forEach(k=>PITEMS.push(pitem('Kontrast',k.t,plain(k.diff).slice(0,110),'kontrast-'+k.id,plain(k.a.d+' '+k.b.d+' '+k.diff)+' forskel forveksle',2)));
+
+
+/* ---------- Figurtræning (#figurer, 22/11): nye tilfældige trækopgaver, så figurerne kan øves igen og igen ---------- */
+const FR=(a,b)=>a+Math.floor(Math.random()*(b-a+1)),FP=a=>a[Math.floor(Math.random()*a.length)];
+const cTex=(a,b)=>{if(!b)return String(a);const im=(Math.abs(b)===1?'':Math.abs(b))+'i';return a?`${a}${b<0?'-':'+'}${im}`:(b<0?'-':'')+im};
+const FIGGEN={
+  tt:{n:'Sandhedstabel',w:1,g(){const [e,t]=FP([['A&B','A\\land B'],['A|B','A\\lor B'],['A->B','A\\Rightarrow B'],['A<->B','A\\Leftrightarrow B'],['!A|B','\\lnot A\\lor B'],['!(A|B)','\\lnot(A\\lor B)'],['!A&!B','\\lnot A\\land\\lnot B'],['A&!B','A\\land\\lnot B'],['!(A->B)','\\lnot(A\\Rightarrow B)'],['(A->B)&(B->A)','(A\\Rightarrow B)\\land(B\\Rightarrow A)']]);
+    return{q:`Udfyld kolonnen for $${t}$.`,p:{kind:'tt',e,sets:['A','B'],label:t}}}},
+  venn:{n:'Venn-diagram',w:2,g(){const [e,t]=FP([['A&B&!C','(A\\cap B)\\setminus C'],['(A|B)&C','(A\\cup B)\\cap C'],['A&!(B|C)','A\\setminus(B\\cup C)'],['(A&B)|(B&C)','(A\\cap B)\\cup(B\\cap C)'],['!A&(B|C)','(B\\cup C)\\setminus A'],['(A|B)&!(A&B)','(A\\cup B)\\setminus(A\\cap B)'],['A|(B&C)','A\\cup(B\\cap C)'],['(A&C)|(B&!C)','(A\\cap C)\\cup(B\\setminus C)']]);
+    return{q:`Klik de områder, der udgør $${t}$.`,p:{kind:'venn',sets:['A','B','C'],e}}}},
+  cmul:{n:'Gange med i',w:3,g(){let z;do z=[FR(-3,3),FR(-3,3)];while(!z[0]||!z[1]||Math.abs(z[0])===Math.abs(z[1]));const [m,t,h]=FP([[[0,1],'i\\,z','Gang med $i$ drejer en kvart omgang mod uret.'],[[0,-1],'\\dfrac{z}{i}','At dividere med $i$ er at gange med $-i$.'],[[0,-1],'-i\\,z','$-i$ drejer en kvart omgang med uret.'],[[-1,0],'i^2z','$i^2=-1$: en halv omgang.']]);
+    return{q:`Her er $z=${cTex(z[0],z[1])}$. Træk $w$ hen til $${t}$ uden at regne først.`,p:{kind:'cmul',z:[z],v:m,hint:h,start:[0,0],range:[-4,4,-4,4],snap:1}}}},
+  det:{n:'Determinant',w:7,g(){let v1;do v1=[FR(-2,2),FR(-2,2)];while(!v1[0]&&!v1[1]||Math.abs(v1[0])+Math.abs(v1[1])<2);const v=[-v1[1]||1,v1[0]||1];
+    return{q:`$\\mathbf v_1=(${v1[0]},${v1[1]})$ står fast. Træk $\\mathbf v_2$, så $\\det[\\mathbf v_1\\ \\mathbf v_2]=0$, uden at $\\mathbf v_2=\\mathbf 0$.`,p:{kind:'det',v1,v,snap:0.5,range:[-3,4,-3,4],ex:[-v1[0],-v1[1]]}}}},
+  sys:{n:'Ligningssystem',w:6,g(){let A,x;do{A=[[FR(-2,2),FR(-2,2)],[FR(-2,2),FR(-2,2)]];x=[FR(-2,2),FR(-2,2)]}while(A[0][0]*A[1][1]-A[0][1]*A[1][0]===0||A.some(r=>!r[0]&&!r[1]));const b=A.map(r=>r[0]*x[0]+r[1]*x[1]);
+    const eq=(r,c)=>{const t=(k,v,f)=>!k?'':(k===1?(f?'':'+'):k===-1?'-':(k>0&&!f?'+':'')+k)+v;let s=t(r[0],'x_1',1);s+=t(r[1],'x_2',!s);return s+'='+c};
+    return{q:`Træk punktet til løsningen af systemet $${eq(A[0],b[0])}$ og $${eq(A[1],b[1])}$.`,p:{kind:'sys',A,v:b,ex:x,start:[x[0]>0?-2:2,x[1]>0?-2:2],range:[-3,3,-3,3],snap:0.5}}}},
+  coord:{n:'Koordinater i en basis',w:8,g(){let u,v;do{u=[FR(-1,2),FR(-1,2)];v=[FR(-1,2),FR(-1,2)]}while(u[0]*v[1]-u[1]*v[0]===0||(u[0]===1&&!u[1]&&!v[0]&&v[1]===1));let a,b;do{a=FR(-1,2);b=FR(-1,2)}while(!a&&!b||a===1&&!b);const x=[a*u[0]+b*v[0],a*u[1]+b*v[1]];
+    const all=[...x,...u,...v],lo=Math.min(-1,...all)-1,hi=Math.max(4,...all)+1;
+    return{q:`Basen er $\\mathbf u=(${u})$ og $\\mathbf v=(${v})$. Træk punktet, så det rammer $\\mathbf x=(${x})$, og aflæs $[\\mathbf x]_\\beta$.`,p:{kind:'coord',B:[u,v],x,snap:0.5,start:[1,0],range:[lo,hi,lo,hi],ex:[a,b]}}}}
+};
+function viewFig(kind){document.title='Figurtræning · Mat1a';const F=LRN().fig||(LRN().fig={}),ks=Object.keys(FIGGEN);if(!FIGGEN[kind])kind=null;
+  const tot=ks.reduce((s,k)=>s+((F[k]||[0])[0]),0);
+  main.innerHTML=`<div class="page"><div class="pagehead"><h1>🎯 Figurtræning</h1><p class="lead">Nye tilfældige opgaver med figurer, hver gang du trykker. Vælg en type, eller tag dem blandet. ${tot?`Du har løst <b>${tot}</b> i alt.`:''}</p></div>
+    <div class="figtabs" role="group" aria-label="Opgavetype"><button type="button" class="btn ${kind?'ghost':''} sm" data-fk="">Blandet</button>${ks.map(k=>`<button type="button" class="btn ${kind===k?'':'ghost'} sm" data-fk="${k}">${esc(FIGGEN[k].n)}${F[k]&&F[k][0]?` <small>${F[k][0]}</small>`:''}</button>`).join('')}</div>
+    <div class="ccard figcard"><p id="figq" class="figq"></p><div id="figbox" class="qdrag viz"></div><div class="figfoot"><span id="figmsg" aria-live="polite"></span><button type="button" class="btn" id="figgo">Tjek</button></div></div>
+    <p class="note">Opgaverne i lektionerne står under <a href="#interaktiv">Interaktive opgaver</a>.</p></div>`;
+  main.querySelectorAll('[data-fk]').forEach(b=>b.onclick=()=>{viewFig(b.dataset.fk||null)});
+  const qEl=main.querySelector('#figq'),go=main.querySelector('#figgo'),msg=main.querySelector('#figmsg');let box,k,tries;
+  function load(){k=kind||FP(ks);const t=FIGGEN[k].g();tries=0;const old=main.querySelector('#figbox');box=$('div',{id:'figbox',class:'qdrag viz'});old.replaceWith(box);
+    qEl.innerHTML=`<small>${esc(FIGGEN[k].n)} · uge ${FIGGEN[k].w}</small><br>`+MD.inline(t.q);msg.innerHTML='';go.textContent='Tjek';go.className='btn';go.onclick=check;
+    const W_={root:'roottask',map:'maptask',ode:'odetask',coord:'coordtask',det:'dettask',poly:'polytask',inj:'injtask',venn:'venntask',union:'uniontask',sys:'systask',tt:'tttask',cmul:'cmultask'}[t.p.kind];
+    try{WIDGETS[W_](box,{...t.p,onChange:()=>{box.classList.remove('wrong');if(go.onclick===check)msg.innerHTML=''}})}catch(e){console.error(e);msg.textContent='Opgaven kunne ikke vises. Tryk på Ny opgave.';go.textContent='Ny opgave';go.onclick=load}}
+  function check(){tries++;const r=box.__check?box.__check():{ok:false};hap(r.ok);
+    if(r.ok){const f=F[k]||(F[k]=[0,0]);f[0]++;if(tries===1)f[1]++;save();box.classList.add('right');if(box.__lock)box.__lock();
+      msg.innerHTML=`<b>${tries===1?'Rigtigt i første forsøg!':'Rigtigt!'}</b>`;go.textContent='Ny opgave';go.className="btn";go.onclick=load;go.focus()}
+    else{box.classList.remove('wrong');void box.offsetWidth;box.classList.add('wrong');msg.innerHTML=`<b>Ikke helt.</b> ${MD.inline(r.fb||'Prøv igen.')}${tries>=2?' <button type="button" class="btn ghost sm" id="figshow">Vis svaret</button>':''}`;
+      const s=msg.querySelector('#figshow');if(s)s.onclick=()=>{if(box.__solve)box.__solve();if(box.__lock)box.__lock();box.classList.remove('wrong');msg.innerHTML='Sådan ser svaret ud. Prøv en ny.';go.textContent='Ny opgave';go.onclick=load}}}
+  load()}
+PITEMS.push(pitem('Side','Figurtræning','Nye tilfældige opgaver med figurer: sandhedstabeller, Venn-diagrammer, gange med i, determinant, ligningssystemer og koordinater','figurer','figur træning tilfældig øv trækopgave sandhedstabel venn drejning determinant ligningssystem koordinater basis',2));
 
 /* web-udgaven kan ikke selv sende en daglig besked, så den får en gentagen kalenderbegivenhed (pa/HHMM.ics fra open_build.py) */
 const calTimes=()=>{const a=[];for(let h=6;h<24;h++)for(const m of['00','30'])a.push(String(h).padStart(2,'0')+':'+m);return a};
