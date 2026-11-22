@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-Ncg7uH41GFgFZJfSm91ZrdM4MtcVIaEaTnHOAlTVhmY=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-zcsAFh1p5Bf5+06IgRQLoAOegPUfOoGZY5PPC0iC4vo=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-Ncg7uH41GFgFZJfSm91ZrdM4MtcVIaEaTnHOAlTVhmY=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-BkGD2TmzUdB8cftoNYY5QmoHiMkogXNprsL8CStfYLY=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -1440,6 +1440,13 @@ button.ubanner{width:100%; border:0; font:inherit; text-align:left; cursor:point
 /* trækopgave (19/11) */
 .qdrag{margin-top:6px; border-radius:16px; border:2px solid var(--line); padding:6px; background:var(--card)}
 .qdrag.right{border-color:var(--ok)} .qdrag.wrong{border-color:var(--bad)}
+
+/* sandhedstabel med knapper (22/11) */
+.fields.ttfields .field.tt{display:flex; align-items:center; gap:8px; flex-wrap:nowrap; margin-bottom:6px}
+.fields.ttfields .field.tt label{flex:1 1 auto; min-width:0; margin:0; font-size:15px}
+.fields.ttfields .field.tt input.ttin{width:2.6em !important; min-width:0; flex:none; text-align:center; padding:8px 0; margin:0}
+.ttb{display:inline-flex; gap:6px} .ttb button{min-width:44px; min-height:44px; border-radius:12px; border:2px solid var(--line); background:var(--card); color:var(--ink); font-weight:900; font-size:17px; cursor:pointer}
+.ttb button.on{border-color:var(--accent); background:var(--accent-soft)}
 
 /* ---------- Læringsideer (learn.js): kontrastkort, eksamensplan, prætest, pause før hint, coach, eksport, eksamensmorgen ---------- */
 .menu .mhead{padding:10px 12px 2px; font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-top:2px solid var(--line); margin:6px 4px 0}
@@ -4482,6 +4489,9 @@ function next(){const old=document.getElementById('lcard');
   if(cur){const y=cur.getBoundingClientRect().top-b.getBoundingClientRect().top+b.scrollTop-20;requestAnimationFrame(()=>b.scrollTo({top:Math.max(0,y),behavior:'smooth'}))}}
 function qHTML(q){
   if(q.t==='mc')return`<div class="opts" role="radiogroup">${q.opts.map((o,i)=>`<button class="opt" role="radio" aria-checked="false" data-i="${i}" data-o="${o.orig??i}"><span class="k">${i+1}</span><span>${MD.inline(o.x)}</span></button>`).join('')}</div><div class="kbd-hint">Tast 1–${q.opts.length} og Enter</div>`;
+  /* sandhedstabel (22/11): felter med etiketter som "P=1, Q=0" og svar 0/1 får knapperne 0 og 1, så man ikke skal bruge tastaturet */
+  if(q.t==='in'&&q.fields.length>=2&&q.fields.every(f=>/^[01]$/.test(String(f.ans).trim())&&/[A-Z]\s*=\s*[01]/.test(f.label||'')))
+    return`<div class="fields ttfields">${q.fields.map((f,i)=>`<div class="field tt"><label for="qf${i}">${MD.inline(f.label)}</label><input id="qf${i}" class="ttin" readonly inputmode="none" autocomplete="off" aria-label="Sandhedsværdi"><span class="ttb" role="group"><button type="button" data-tt="${i}" data-tv="1">1</button><button type="button" data-tt="${i}" data-tv="0">0</button></span><div class="preview" id="pv${i}" hidden></div></div>`).join('')}</div><div class="kbd-hint">Tryk 1 for sand og 0 for falsk i hver række.</div>`;
   if(q.t==='in')return`<div class="fields">${q.fields.map((f,i)=>`<div><div class="field">${f.label?`<label for="qf${i}">${MD.inline(f.label)}</label>`:''}<input id="qf${i}" autocomplete="off" spellcheck="false" placeholder="Dit svar"><button type="button" class="fracb" data-i="${i}" title="Skriv svaret som en brøk" aria-label="Skriv som brøk"><span>□</span><i></i><span>□</span></button></div><div class="preview" id="pv${i}"></div></div>`).join('')}</div><div class="kbd-hint">Skriv fx 5/3, -1+2i, sqrt(13), 3pi/4 eller 2^40. Tryk på brøk-knappen for at skrive tæller og nævner hver for sig.</div>`;
   if(q.t==='drag')return`<div class="qdrag viz"></div><div class="kbd-hint">${q.p.kind==='venn'?'Klik områderne. Tryk Tjek, når du har farvet hele udtrykket.':q.p.kind==='ode'?'Træk startpunktet. Tryk Tjek, når banen løber ind mod 0.':q.p.kind==='root'||q.p.kind==='map'||q.p.kind==='coord'||q.p.kind==='det'||q.p.kind==='poly'||q.p.kind==='inj'?'Træk punkterne, eller vælg et og brug piletasterne. Tryk Tjek, når du har placeret dem.':'Træk spidsen af v, eller vælg den og brug piletasterne. Tryk Tjek, når Av ligger på samme linje som v.'}</div>`;
   if(q.t==='set')return`<div class="fields"><div><div class="field"><input id="qf0" autocomplete="off" spellcheck="false" placeholder="Adskil med semikolon"></div><div class="preview" id="pv0"></div></div></div><div class="kbd-hint">Der er ${q.ans.length} svar. Adskil dem med semikolon. Rækkefølgen er ligegyldig.</div>`;
@@ -4511,6 +4521,8 @@ function wireQ(c,card,go,foot,msg){const q=c.q;let sel=null;const HS=hintsFor(c)
     const upd=()=>{const a=fn.value.trim(),d=fd.value.trim();inp.value=a&&d?`(${a})/(${d})`:a;inp.dispatchEvent(new Event('input'))};fn.oninput=fd.oninput=upd;
     fn.onkeydown=e=>{if(e.key==='Enter'||e.key==='ArrowDown'){if(!fd.value){e.preventDefault();e.stopPropagation();fd.focus()}}};
     inp.hidden=true;inp.after(fb);b.classList.add('on');fn.focus()});
+  card.querySelectorAll('[data-tt]').forEach(b=>b.onclick=()=>{if(LS.phase!=='ask')return;const inp=card.querySelector('#qf'+b.dataset.tt);inp.value=b.dataset.tv;inp.dispatchEvent(new Event('input',{bubbles:true}));
+    b.parentNode.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b))});
   if(q.t==='mc'){const pick=i=>{if(LS.phase!=='ask')return;rearm();sel=i;os.forEach((o,j)=>o.setAttribute('aria-checked',j===i));go.disabled=false;showConf()};os.forEach((o,i)=>o.onclick=()=>pick(i));LS.key=e=>{const n=+e.key;if(n>=1&&n<=os.length)pick(n-1)}}
   else if(q.t==='drag'){dg=card.querySelector('.qdrag');try{WIDGETS[{root:'roottask',map:'maptask',ode:'odetask',coord:'coordtask',det:'dettask',poly:'polytask',inj:'injtask',venn:'venntask'}[q.p.kind]||'eigtask'](dg,{...q.p,onChange:()=>{rearm();showConf()}})}catch(e){console.error(e)}go.disabled=false;setTimeout(showConf,0)}
   else{ins.forEach((inp,i)=>inp.oninput=()=>{rearm();inp.classList.remove('wrong');const pv=document.getElementById('pv'+i);try{if(q.t==='set'){const vs=splitList(inp.value).map(evalExpr);pv.textContent=vs.length?'= '+vs.map(fmtC).join(' ; '):''}else pv.textContent=inp.value.trim()?'= '+fmtC(evalExpr(inp.value)):''}catch(e){pv.textContent=inp.value.trim()?'…':''}go.disabled=!ins.every(x=>x.value.trim());if(!go.disabled)showConf()});setTimeout(()=>ins[0]&&ins[0].focus(),60)}
