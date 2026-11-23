@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-vbhNWiwMQoZFN/n2poM4xU1rVceFLTa7RANqh4MYqYw=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-aT/3t0tiyOuZfHWe5h4u20xKCO+yG7E8K5nrtUB/o7E=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-vbhNWiwMQoZFN/n2poM4xU1rVceFLTa7RANqh4MYqYw=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-MNDzmEJq8QShCw2ixJmkCS7lWWkdaNB8FW0Qc8ZvF4g=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -1525,6 +1525,12 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 .emeta[open] summary{margin-bottom:10px}
 
 .lbar .lnoteb svg,.lbar .lhelpb svg{width:22px;height:22px}
+
+.homepage .wfocus{margin-top:44px}
+.homepage .wfocus:first-of-type{margin-top:12px}
+.homepage .nhero{margin-top:44px;scroll-margin-top:calc(var(--toph,60px) + 90px)}
+.homepage .nhero+.wfocus{margin-top:16px}
+.homepage .wfocus .ubanner{position:relative}
 
 /* ---------- Læringsideer (learn.js): kontrastkort, eksamensplan, prætest, pause før hint, coach, eksport, eksamensmorgen ---------- */
 .menu .mhead{padding:10px 12px 2px; font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-top:2px solid var(--line); margin:6px 4px 0}
@@ -4433,19 +4439,30 @@ function stopsRow(k){const w=+k;if(!w||!weekOf(w))return'';const st=[];
   return st.length?`<div class="stops" role="list">${st.join('')}</div>`:''}
 function weekFocus(k){const isH=k==='h',u=isH?unit(0):unit(+k),pct=weekPct(k);
   const lab=isH?'Afleveringer':'Uge '+k+(+k===CUR?' · nu':''),right=pct==null?'snart':isH?hjemProg().join('/'):pct+'%';
-  return`<section class="unit open wfocus${pct==null?' soon':''}" id="unit-${k}" style="${uvars(isH?0:+k)}"><div class="ubanner"><span class="ug">${esc(u[2])}</span><span class="ut"><small>${lab}</small><b>${esc(u[1])}</b></span><span class="pct">${right}</span></div>
+  return`<section class="unit open wfocus${pct==null?' soon':''}" id="unit-${k}" data-w="${k}" style="${uvars(isH?0:+k)}"><div class="ubanner"><span class="ug">${esc(u[2])}</span><span class="ut"><small>${lab}</small><b>${esc(u[1])}</b></span><span class="pct">${right}</span></div>
     <div class="upath" id="up-${k}">${stopsRow(k)}${pathHTML(k)}</div></section>`}
-function viewHome(){document.title='Mat1a';curId=curNode();if(!/^(h|\d+)$/.test(SELW))SELW=String(CUR);
-  const calm=calmMode();
-  let h=`<div class="page homepage">${onboardHTML()}${calm?calmHome()+learnHome():heroHTML()}${weekStrip()}${weekFocus(SELW)}</div>`;
+/* 23/11: alle uger ligger i én lang sti (Hjemmeopgaver, uge 1 … 13), så man swiper sømløst fra uge til uge.
+   Kortet med næste opgave står lige over den aktuelle uge, og siden åbner dér. Ugestriben følger med, mens man scroller. */
+const stickH=()=>{const t=document.querySelector('header.top'),s=main.querySelector('.wkstrip');return(t?t.offsetHeight:60)+(s?s.offsetHeight:0)+6};
+function scrollToEl(el,smooth){if(!el)return;const y=el.getBoundingClientRect().top+scrollY-stickH();window.scrollTo({top:Math.max(0,y),behavior:smooth?'smooth':'instant'})}
+function markStrip(k){SELW=String(k);const s=main.querySelector('.wkstrip');if(!s)return;let c=null;s.querySelectorAll('.wkc').forEach(x=>{const on=x.getAttribute('href')==='#uge-'+k;x.classList.toggle('sel',on);if(on)c=x});
+  if(c)s.scrollTo({left:c.offsetLeft-s.clientWidth/2+c.offsetWidth/2,behavior:'smooth'})}
+let HOMEIO=null;
+function viewHome(target){document.title='Mat1a';curId=curNode();const cur=String(CUR),calm=calmMode();
+  const ks=['h',...UNITS.map(x=>String(x[0]))];
+  const top=onboardHTML()+(calm?`<div id="nhero">${calmHome()}${learnHome()}</div>`:heroHTML());
+  let h=`<div class="page homepage">${weekStrip()}${ks.map(k=>(k===cur?top:'')+weekFocus(k)).join('')}${ks.includes(cur)?'':top}</div>`;
   main.innerHTML=h+bgfx();decoLive(main);wireOnboard();learnWire(main);
-  main.querySelectorAll('.wkc').forEach(c=>c.classList.toggle('sel',c.getAttribute('href')==='#uge-'+SELW));
-  {const c=main.querySelector('.wkc.sel'),s=main.querySelector('.wkstrip');if(c&&s)s.scrollLeft=c.offsetLeft-s.clientWidth/2+c.offsetWidth/2}
-  const up=main.querySelector('.upath');if(up)up.querySelectorAll('.node').forEach((n,i)=>n.style.setProperty('--d',Math.min(i,14)*45+'ms'));
-  window.scrollTo(0,0)}
+  main.querySelectorAll('.upath').forEach(up=>up.querySelectorAll('.node').forEach((n,i)=>n.style.setProperty('--d',Math.min(i,14)*45+'ms')));
+  if(HOMEIO)removeEventListener('scroll',HOMEIO);let tick=0;
+  HOMEIO=()=>{if(tick)return;tick=requestAnimationFrame(()=>{tick=0;if(!main.querySelector('.homepage .wfocus'))return;const line=stickH()+innerHeight*.3;let k=null;
+    main.querySelectorAll('.wfocus').forEach(s=>{if(s.getBoundingClientRect().top<=line)k=s.dataset.w});
+    const hb=main.querySelector('#onb')||main.querySelector('.nhero')||main.querySelector('#nhero');if(hb){const r=hb.getBoundingClientRect();if(r.top<=line&&r.bottom+60>=line-innerHeight*.3)k=cur}
+    if(k&&k!==SELW)markStrip(k)})};addEventListener('scroll',HOMEIO,{passive:true});
+  const go=target?document.getElementById('unit-'+target):(main.querySelector('#onb')||main.querySelector('.nhero')||main.querySelector('#nhero'));
+  markStrip(target||cur);const jump=()=>scrollToEl(go,false);jump();requestAnimationFrame(jump);setTimeout(jump,60)}
 /* #uge-N: fold ugen ud og rul hen til den (uden at tegne forsiden igen, hvis den allerede vises) */
-function showWeek(k){SELW=String(k);viewHome();requestAnimationFrame(()=>{const s=main.querySelector('.wkstrip');if(s){const y=s.getBoundingClientRect().top+scrollY-(document.querySelector('.top').offsetHeight||60)-8;window.scrollTo(0,Math.max(0,y))}
-  const c=main.querySelector('.wkc.sel');if(c&&c.scrollIntoView)c.scrollIntoView({block:'nearest',inline:'center'})})}
+function showWeek(k){k=String(k);if(!main.querySelector('.homepage .wfocus'))viewHome(k);else{markStrip(k);scrollToEl(document.getElementById('unit-'+k),true)}}
 
 /* ---------- exercise page ---------- */
 let PENDING=null;
@@ -5091,14 +5108,15 @@ function enterFx(){const m=document.getElementById('main');if(!m)return;m.classL
 function route(o){try{route_(o||{})}catch(e){console.error(e);crashUI(e)}try{setTab()}catch(_){}}
 function setTab(){const r=HASH||'',t=/^(traen|repetition|metode|formler|kontrast|interaktiv|figurer|videoer)/.test(r)?'traen':/^(eks|eksamen|gamle|type-|plan|mini|morgen|emnekort|x-)/.test(r)?'eks':(!r||/^uge-|^opg|^h\d|^L-/.test(r)||OPG[r])?'idag':'';
   document.querySelectorAll('#tabbar [data-tab]').forEach(b=>{const on=b.dataset.tab===t;b.classList.toggle('on',on);if(b.tagName==='A'){if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')}})}
-function route_(o){const r=HASH;pop.classList.remove('on');closePal();closeSide();setMenu(false);
+let HOMEY=null;
+function route_(o){const r=HASH;if(main.querySelector('.homepage .wfocus'))HOMEY=scrollY;pop.classList.remove('on');closePal();closeSide();setMenu(false);
   /* lektion: historikken får en post til opgavesiden og en til lektionen, så "tilbage" lukker lektionen (og gemmer) */
   if(r.startsWith('L-')&&PK[r.slice(2)]){const p=PK[r.slice(2)],oid=p.xh?xhBgId(p,o):p.opg.id;HASH=oid;
     if(canHist&&!o.noHist){try{if('from' in o){if(o.from!==oid)history.pushState({h:oid},'','#'+oid)}else history.replaceState({h:oid},'','#'+oid);history.pushState({h:oid,lesson:p.key},'','#'+oid)}catch(e){canHist=false}}
     if(!L.hidden)closeLesson();PENDING='pc-'+(p.label||'x');if(p.xh){if(o.from!==oid||!main.children.length)route_({bg:1})}else viewOpg(oid);startLesson(p.key);return}
   if(!L.hidden)closeLesson();
   requestAnimationFrame(enterFx);requestAnimationFrame(()=>fitMath(main));
-  if(!r){if(!o.keepW)SELW=String(CUR);viewHome()}else if(/^uge-(\d+|h)$/.test(r))showWeek(r.slice(4));
+  if(!r){if(!o.keepW)SELW=String(CUR);const back=window.__pop&&HOMEY!=null,y=HOMEY;viewHome();if(back)requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo(0,y)))}else if(/^uge-(\d+|h)$/.test(r))showWeek(r.slice(4));
   else if(r==='repetition'||r.startsWith('repetition/'))viewRep(r.slice(11))
   else if(r==='faelles'||r.startsWith('faelles/')){if(window.SOCIAL&&!STORE)SOCIAL.view(r.slice(8));else viewHome()}else if(r==='eksamen'||r.startsWith('eksamen-')){viewExams(r.slice(8));if(r==='eksamen')examExtras()}else if(r==='mini')viewMini();else if(r==='begreber')viewConcepts();else if(r==='metode')viewMix();else if(r==='formler')viewForms();else if(r==='videoer'){main.innerHTML=viewVideos();document.title='Ugevideoer · Mat1a';window.scrollTo(0,0)}else if(r==='graf')viewGraph();else if(r==='tools'||r.startsWith('tools-'))viewTools(r.slice(6));else if(learnRoute(r)||xhRoute(r)){}else if(OPG[r])viewOpg(r);else if(CONCEPTS[r])viewConcept(r);else viewHome()}
 /* fejlskærm i stedet for hvid skærm: tilbyd forsiden, eksport af de rå data og nulstilling */
@@ -5109,8 +5127,8 @@ function crashUI(e){try{main.innerHTML=`<div class="page narrow"><h1>Noget gik g
     if(!raw)try{raw=JSON.stringify(ST)}catch(_){}const a=$('a',{href:URL.createObjectURL(new Blob([raw],{type:'application/json'})),download:'mat1a-raa-data-'+dkey(new Date())+'.json'});document.body.append(a);a.click();a.remove()};
   main.querySelector('#crReset').onclick=()=>{if(!confirm('Slet al fremgang, alle noter og prøveeksamener på denne enhed? Gem gerne de rå data først.'))return;try{localStorage.removeItem(KEY)}catch(_){}location.hash='';location.reload()}}catch(_){}}
 window.addEventListener('error',()=>{if(!main.children.length)crashUI(new Error('Appen kunne ikke starte'))});
-window.addEventListener('hashchange',()=>{try{HASH=location.hash.slice(1)}catch(e){}route()});
-window.addEventListener('popstate',e=>{if(e.state&&e.state.h!=null){if(e.state.lesson&&PK[e.state.lesson]){HASH='L-'+e.state.lesson;route({noHist:true})}else{HASH=e.state.h;route()}}});
+window.addEventListener('hashchange',()=>{if(!window.__pop&&performance.now()-(window.__hcT||0)>0){}try{HASH=location.hash.slice(1)}catch(e){}route()});
+window.addEventListener('popstate',e=>{window.__pop=1;setTimeout(()=>{window.__pop=0},400);if(e.state&&e.state.h!=null){if(e.state.lesson&&PK[e.state.lesson]){HASH='L-'+e.state.lesson;route({noHist:true})}else{HASH=e.state.h;route()}}});
 document.addEventListener('click',e=>{if(e.defaultPrevented||e.button||e.ctrlKey||e.metaKey||e.shiftKey)return;const a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;e.preventDefault();go(a.getAttribute('href'))});
 /* ---------- Prøveeksamener (bygget på DTU's tidligere eksamenssæt) ---------- */
 const EXAMS=[{id:'e1',title:'Prøveeksamen 1',src:'Skriftlig eksamen 7. december 2025 (01001)',mins:240,
