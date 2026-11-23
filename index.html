@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-vbhNWiwMQoZFN/n2poM4xU1rVceFLTa7RANqh4MYqYw=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-sca5vTn26zBLMJrX7KnRWrnxX1If5+qNyhKAj/w5Nec=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-vt9ngReQSgigdwllrw0T2l31SE9Yf3PwdiL0qFEpAMk=' 'sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4=' 'sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=' 'sha256-vbhNWiwMQoZFN/n2poM4xU1rVceFLTa7RANqh4MYqYw=' 'sha256-RyMexvC7piAMW6Ab5VOTqGxd4RIIrP6I6UkEsWD4zNk=' 'sha256-aT/3t0tiyOuZfHWe5h4u20xKCO+yG7E8K5nrtUB/o7E=' blob: https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/; worker-src 'self' blob:; connect-src 'self' https://bopjbetmhmjabaybjwos.supabase.co wss://bopjbetmhmjabaybjwos.supabase.co; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mat1a</title>
@@ -1458,6 +1458,74 @@ button.ubanner{width:100%; border:0; font:inherit; text-align:left; cursor:point
 
 .xvid .xvtop{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}.xvid .xvtop>div{flex:1;min-width:220px}.xvid h2{margin:0 0 6px}.xvthumb{position:relative;padding:0;border:0;border-radius:14px;overflow:hidden;width:min(320px,100%);aspect-ratio:16/9;cursor:pointer;background:#05061a}.xvthumb img{width:100%;height:100%;object-fit:cover;display:block}.xvch{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:14px}.xvc{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:8px 12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-align:left;cursor:pointer;min-height:44px}.xvc small{color:var(--muted)}.xvnav{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;scrollbar-width:thin}.xvnav .b{white-space:nowrap;color:#f4f1ff;border-color:rgba(255,255,255,.25);background:transparent}.xvnav .b.on{background:#f5a524;color:#1a1300;border-color:#f5a524}
 
+/* ===== Navigation og forside (23/11): én næste ting, ugevælger, stien. Bundmenu: I dag · Træn · Eksamen · Mere ===== */
+.top{background:color-mix(in srgb, var(--bg) 96%, transparent)}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;justify-content:center;gap:4px;padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb, var(--card) 94%, transparent);backdrop-filter:blur(12px);border-top:2px solid var(--line)}
+.tabbar>*{flex:1;max-width:120px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 4px;border:0;background:none;border-radius:14px;color:var(--muted);font:inherit;font-size:12px;font-weight:800;text-decoration:none;cursor:pointer;min-height:48px}
+.tabbar svg{width:24px;height:24px}
+.tabbar .on{color:var(--accent);background:var(--accent-soft)}
+body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+.lesson:not([hidden])~.tabbar,body.inlesson .tabbar{display:none}
+.updbar{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.menu.sheet{position:fixed;left:12px;right:12px;top:auto;bottom:calc(76px + env(safe-area-inset-bottom,0px));min-width:0;max-height:70dvh}
+@media (max-width:760px){#menuBtn,.top .ibtn[aria-label="Fællesskab"]{display:none}}
+.homepage>.panel.onb{margin-bottom:14px}
+.nhero{padding:22px 22px 20px}
+.nhero .hi{font-weight:800;opacity:.9}
+.nhero .ey{margin-top:10px}
+.nhero h2{font-size:26px;line-height:1.2;margin:4px 0 4px;padding-right:96px}
+.nhero .nsub{margin:0 0 16px;font-size:15px;opacity:.9}
+.nhero .nbig{font-size:18px;padding:14px 26px;border-radius:18px;display:inline-flex;align-items:center;gap:10px}
+.nhero .nbig svg{width:20px;height:20px}
+.nhero .nside{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px}
+.nhero .nside a{display:inline-flex;align-items:center;gap:6px;color:#fff;font-weight:800;font-size:14px;text-decoration:none;background:rgba(255,255,255,.18);padding:6px 12px;border-radius:999px}
+.nhero .nside svg{width:16px;height:16px}
+.nhero .masc{width:96px;height:96px;right:12px;top:14px;bottom:auto}
+.homepage .wkstrip{margin:18px 0 6px}
+.wkc.sel{outline:3px solid var(--u);outline-offset:2px}
+.wfocus{margin-top:10px}
+.wfocus .ubanner{cursor:default}
+.stops{display:flex;gap:10px;overflow-x:auto;padding:14px 2px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.stops::-webkit-scrollbar{display:none}
+.stop{flex:none;display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px;border:2px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-weight:800;font-size:14px;text-decoration:none;cursor:pointer;min-height:48px}
+.stop .si{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb, var(--u) 16%, transparent);color:var(--u)}
+.stop .si svg{width:19px;height:19px}
+.stop small{display:block;font-weight:700;font-size:12px;color:var(--muted);line-height:1.2}
+.stop>span:last-child{display:flex;flex-direction:column;text-align:left;line-height:1.2}
+.stop.new{border-color:var(--u)}
+.stop.done .si{background:var(--u);color:#fff}
+.bgfx{display:none}
+.xhhic svg{width:28px;height:28px;color:var(--u)}
+/* hubsider */
+.hub .hubh{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.hub h1{margin:0}
+.hub .hubh .sub{margin:4px 0 0;color:var(--muted);width:100%}
+.hubcount{display:flex;align-items:center;gap:10px;background:var(--accent-soft);padding:8px 16px;border-radius:16px}
+.hubcount b{font-size:34px;line-height:1;color:var(--accent)}
+.hubcount span{font-weight:800;line-height:1.2}
+.hubcount small{display:block;color:var(--muted);font-weight:700}
+.hubt{font-size:18px;margin:26px 0 10px}
+.hubp .stat{text-decoration:none;color:inherit;padding:4px 0}
+.hubp .chevr{margin-left:auto;font-size:22px;color:var(--muted)}
+.hub .lhome,.hub .weekcard,.hub .xvid{margin-top:16px}
+.stat .ic svg{width:24px;height:24px}
+.ic.tone-v{background:color-mix(in srgb,#6d5cff 14%,transparent);color:#6d5cff}
+.ic.tone-o{background:color-mix(in srgb,#ff7a1a 15%,transparent);color:#f06a10}
+.ic.tone-b{background:color-mix(in srgb,#2f80ff 14%,transparent);color:#2f80ff}
+.ic.tone-t{background:color-mix(in srgb,#12a594 15%,transparent);color:#0f9786}
+.ic.tone-y{background:color-mix(in srgb,#f5b400 18%,transparent);color:#c98f00}
+.ic.tone-p{background:color-mix(in srgb,#e84393 14%,transparent);color:#d63384}
+.ic.tone-r{background:color-mix(in srgb,#e5484d 14%,transparent);color:#d9363e}
+/* opgavesiden: bog og begreber foldet sammen, så delopgaverne ses med det samme */
+.ehead h1{font-size:clamp(24px,6vw,34px);line-height:1.15}
+.emeta{margin-top:12px}
+.emeta summary{cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:14px;background:rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;list-style:none}
+.emeta summary::-webkit-details-marker{display:none}
+.emeta summary svg{width:16px;height:16px}
+.emeta[open] summary{margin-bottom:10px}
+
+.lbar .lnoteb svg,.lbar .lhelpb svg{width:22px;height:22px}
+
 /* ---------- Læringsideer (learn.js): kontrastkort, eksamensplan, prætest, pause før hint, coach, eksport, eksamensmorgen ---------- */
 .menu .mhead{padding:10px 12px 2px; font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-top:2px solid var(--line); margin:6px 4px 0}
 .lkubi{display:block; flex:none; width:56px; height:56px; position:relative}
@@ -1825,6 +1893,17 @@ ol.xhsteps{margin:0 14px 12px; padding-left:22px; display:grid; gap:8px}
   <symbol id="i-people" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.2c2.6-.3 4.5 1.3 5 4.3"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
   <symbol id="i-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3.5 11 12 4l8.5 7v8.5a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M2 9.5 12 4.5l10 5-10 5z"/><path d="M6 11.6V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.4M21 10v5"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 11a7.5 7.5 0 0 1 13.2-4.6M19 3.5V8h-4.5M19.5 13a7.5 7.5 0 0 1-13.2 4.6M5 20.5V16h4.5"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5V4.5a1.5 1.5 0 0 1 3 0V11m0-4a1.5 1.5 0 0 1 3 0v7a7 7 0 0 1-7 7h-.6a6 6 0 0 1-5-2.7l-2.6-4a1.6 1.6 0 0 1 2.6-1.8L9 15"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></symbol>
+  <symbol id="i-quest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.3c-.7.3-1 .9-1 1.6M12 16.8h.01"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 20v-8M10.5 20V5M16 20v-6M21 20H3"/></symbol>
+  <symbol id="i-cards" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="6" width="12" height="14" rx="2.5"/><path d="M8 3.5h10.5A2.5 2.5 0 0 1 21 6v11.5"/></symbol>
 </svg>
 <header class="top"><div class="topin">
   <a class="logo" href="#" aria-label="Mat1a, forside"><span class="mk kmk"><svg viewBox="16 0 90 112" aria-hidden="true"><defs><linearGradient id="lgf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffa64a"/><stop offset="1" stop-color="#ff7116"/></linearGradient><linearGradient id="lgt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe0a8"/><stop offset="1" stop-color="#ffb35f"/></linearGradient><linearGradient id="lgs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f58a2c"/><stop offset="1" stop-color="#c8510a"/></linearGradient><radialGradient id="lgg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3b0"/><stop offset="1" stop-color="#ffc93c" stop-opacity="0"/></radialGradient></defs><rect x="36" y="96" width="13" height="12" rx="6" fill="#b84a08"/><rect x="66" y="96" width="13" height="12" rx="6" fill="#b84a08"/><path d="M26 34 L44 20 H98 L82 34Z" fill="url(#lgt)" stroke="url(#lgt)" stroke-width="5" stroke-linejoin="round"/><path d="M82 34 L98 20 V84 L82 98Z" fill="url(#lgs)" stroke="url(#lgs)" stroke-width="5" stroke-linejoin="round"/><ellipse cx="63" cy="27" rx="4.5" ry="2" fill="#e8892e" opacity=".55"/><ellipse cx="87" cy="45" rx="2.3" ry="3.2" fill="#9a3f06" opacity=".5"/><ellipse cx="90" cy="59" rx="2.3" ry="3.2" fill="#9a3f06" opacity=".5"/><ellipse cx="93" cy="73" rx="2.3" ry="3.2" fill="#9a3f06" opacity=".5"/><rect x="22" y="34" width="62" height="64" rx="14" fill="url(#lgf)"/><path d="M30 52 V45 q0-5 5-5 h12" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="54" cy="40" r="2" fill="#fff" opacity=".5"/><circle cx="60" cy="7" r="9" fill="url(#lgg)"/><path d="M60 20v-9" stroke="#e86c1e" stroke-width="3.5" stroke-linecap="round"/><path d="M56.5 10l3.5-6 3.5 6z" fill="#ffc93c" stroke="#ffc93c" stroke-width="3" stroke-linejoin="round"/><ellipse cx="33" cy="73" rx="6.5" ry="4" fill="#ff4f86" opacity=".45"/><ellipse cx="74" cy="73" rx="6.5" ry="4" fill="#ff4f86" opacity=".45"/><ellipse cx="42" cy="58" rx="6.2" ry="7.6" fill="#22243a"/><ellipse cx="66" cy="58" rx="6.2" ry="7.6" fill="#22243a"/><circle cx="44.6" cy="54.6" r="2.4" fill="#fff"/><circle cx="68.6" cy="54.6" r="2.4" fill="#fff"/><circle cx="40" cy="61.5" r="1.1" fill="#fff" opacity=".8"/><circle cx="64" cy="61.5" r="1.1" fill="#fff" opacity=".8"/><path d="M50.5 78.5q3.5 5 7 0z" fill="#ff5f8f"/><path d="M45 74q9 10 18 0" fill="none" stroke="#22243a" stroke-width="3.5" stroke-linecap="round"/></svg></span>Mat1a</a>
@@ -1837,10 +1916,11 @@ ol.xhsteps{margin:0 14px 12px; padding-left:22px; display:grid; gap:8px}
   <button class="ibtn" id="menuBtn" aria-label="Menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
   <nav class="menu" id="menu" hidden>
     <a href="#">Læringssti</a><a href="#uge-h">Hjemmeopgaver</a><a href="#repetition">Repetition</a><a href="#metode">Hvilken metode?</a><a href="#formler">Formeltræner</a><a href="#kontrast">Kontrastkort</a><a href="#interaktiv">Interaktive opgaver</a><a href="#figurer">Figurtræning</a><a href="#begreber">Begreber</a><a href="#graf">Videnskort</a><a href="#tools">Værktøjer</a><a href="#videoer">Ugevideoer</a><a href="#repetition/fejl">Fejllog</a><a href="#faelles">Fællesskab</a><div class="mhead" id="mExam">Eksamen</div><a href="#gamle">Gamle eksamensopgaver</a><a href="#plan">Eksamensplan</a><a href="#eksamen">Prøveeksamen</a><a href="#mini">Minieksamen</a><hr><button id="mBook" class="monly">Lærebogen</button><button id="mTheme" class="monly">Farvetema</button><hr class="monly">
-    <a href="#indstillinger">Indstillinger og statistik</a><a href="#om">Om appen</a><button id="expBtn">Gem en backup af fremgang</button><button id="impBtn">Hent backup …</button><input type="file" id="impFile" accept="application/json" hidden><hr id="lockHr" hidden><button id="lockBtn" hidden>🔒 Lås appen på denne enhed</button>
+    <a href="#faelles">Fællesskab</a><a href="#indstillinger">Indstillinger og statistik</a><a href="#om">Om appen</a><button id="expBtn">Gem en backup af fremgang</button><button id="impBtn">Hent backup …</button><input type="file" id="impFile" accept="application/json" hidden><hr id="lockHr" hidden><button id="lockBtn" hidden>🔒 Lås appen på denne enhed</button>
   </nav>
 </div></header>
 <main id="main" tabindex="-1"></main>
+<nav class="tabbar" id="tabbar" aria-label="Hovedmenu"><a href="#" data-tab="idag"><svg><use href="#i-home"/></svg><span>I dag</span></a><a href="#traen" data-tab="traen"><svg><use href="#i-target"/></svg><span>Træn</span></a><a href="#eks" data-tab="eks"><svg><use href="#i-cap"/></svg><span>Eksamen</span></a><button type="button" id="tabMore" data-tab="mere" aria-haspopup="true"><svg><use href="#i-menu"/></svg><span>Mere</span></button></nav>
 <div class="lesson" id="lesson" hidden></div>
 <div class="pop" id="pop" role="tooltip"></div>
 <div class="pal" id="pal" role="dialog" aria-label="Søg"><div class="palbox"><input id="palIn" type="text" placeholder="Søg i opgaver og begreber …" autocomplete="off" aria-label="Søg"><div class="palres" id="palRes"></div></div></div>
@@ -4327,31 +4407,45 @@ function nextPart(){const ok=p=>hasSol(p)&&!isDone(p.key)&&!p.xh&&p.opg&&p.opg.k
 function fiveBtn(){let n=0;try{n=Math.min(8,repSummary().n)}catch(_){}const p=nextPart();if(!n&&!p)return'';
   const sub=[n?n+' kort':'',p?'1 ny opgave':''].filter(Boolean).join(' + ');
   return`<a class="b fiveb" href="#repetition/start-5"><span class="fl">${ico('play')} 5 min med Kubi</span><small>${sub}</small></a>`}
-function viewHome(){
-  document.title='Mat1a';curId=curNode();
-  const w=weekOf(CUR),u=unit(CUR),last=ST.last&&PK[ST.last];
-  const tot=PARTS.filter(hasSol).length,done=PARTS.filter(p=>hasSol(p)&&isDone(p.key)).length;
-  const d=new Date(),dow=(d.getDay()+6)%7,wk=[];for(let k=0;k<7;k++){const x=new Date(d);x.setDate(d.getDate()-dow+k);wk.push([['M','T','O','T','F','L','S'][k],activeDay(dkey(x)),k===dow,fzDay(dkey(x))])}
-  const nxt=DEADLINES.filter(x=>x.d>NOW).sort((a,b)=>a.d-b.d)[0];const sk=streak();const fresh=!ST.last&&!ST.xp;
-  const calm=calmMode();if(calm&&!CALMW){CALMW=1;OPENW.delete(String(CUR))}
-  let h=calm?`<div class="page homepage">${calmHome()}${xhHome()}${weekCard()}${learnHome()}${weekStrip()}`:`<div class="page homepage">${onboardHTML()}<div class="hello">
-    <div class="panel hero" style="${uvars(CUR)}"><div class="hi">${greet()} 👋</div><div class="ey">Uge ${CUR} · denne uge</div><h2>${esc(u[1])}</h2><p>${w?esc(plain(w.keywords).slice(0,160))+'…':'Opgaverne er ikke lagt op endnu.'}</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">${fiveBtn()}${curId?`<a class="b lastb" href="#${curId}">${fresh?'Start ugen':'Fortsæt ugen'}</a>`:''}${last?`<a class="b lastb" href="#${last.opg.id}">Sidst: ${esc(last.opg.kind==='hjem'?last.opg.title:'U'+last.opg.week+' opg. '+last.opg.nr)}</a>`:''}${VID_TITLES[CUR]?`<button class="b lastb" data-v="${CUR}">🎬 Ugens video</button>`:''}</div>
-      <div class="glyph${u[2].length>2?' long':''}">${esc(u[2])}</div>${MASCOT('wave')}</div>
-    <div class="panel">
-      ${repHomeCard()}
-      <div class="stat"><div class="ic" style="background:#fff1e6">🔥</div><div><b>${sk} dag${sk===1?'':'e'} i træk</b><span>Én aktivitet om dagen holder flammen i live${ST.fz.n?` · ❄ ${ST.fz.n} fridag${ST.fz.n>1?'e':''} gemt`:''}</span></div></div>${fzNote()}
-      <div class="week-dots" aria-label="Aktive dage denne uge">${wk.map(([l,on,t,f])=>`<i class="${on?'on':''} ${t?'today':''} ${f?'fz':''}" ${f?'title="Dækket af en fridag"':''}>${f?'❄':l}</i>`).join('')}</div>
-      <div class="stat" style="margin-top:16px"><div class="ic" style="background:#fff7d6">⚡</div><div><b>${ST.xp} XP</b><span>${done} af ${tot} delopgaver klaret</span></div></div>
-      ${nxt?`<a class="stat" href="#${nxt.go}"><div class="ic" style="background:var(--accent-soft)">${ico('flag')}</div><div><b>${esc(nxt.t)}</b><span>om ${Math.max(0,Math.ceil((nxt.d-NOW)/864e5))} dage · ${nxt.d.getDate()}/${nxt.d.getMonth()+1}</span></div></a>`:''}<a class="stat" href="#eksamen"><div class="ic" style="background:var(--accent-soft)">📝</div><div><b>Prøveeksamen</b><span>Rigtige eksamenssæt</span></div></a>${mixHomeCard()}${typeof figHomeCard==='function'?figHomeCard():''}<a class="stat" href="#videoer"><div class="ic" style="background:var(--accent-soft)">🎬</div><div><b>Ugevideoer</b><span>${Object.keys(ST.vids||{}).length} af ${Object.keys(VID_LEN).length||12} set</span></div></a>
-    </div>${xhHome()}${weekCard()}${learnHome()}</div>${weekStrip()}`;
-  h+=unitHTML('h');UNITS.forEach(x=>h+=unitHTML(x[0]));
-  main.innerHTML=h+'</div>'+bgfx();decoLive(main);wireOnboard();learnWire(main);
-  main.querySelectorAll('.unit>.ubanner').forEach(b=>b.onclick=()=>toggleWeek(b.dataset.w));
+/* Forsiden "I dag" (23/11): én næste ting, ugevælger og stien. Alt andet ligger under Træn og Eksamen i bundmenuen. */
+let SELW=String(CUR);
+function streakBlock(){const sk=streak(),d=new Date(),dow=(d.getDay()+6)%7,wk=[];for(let k=0;k<7;k++){const x=new Date(d);x.setDate(d.getDate()-dow+k);wk.push([['M','T','O','T','F','L','S'][k],activeDay(dkey(x)),k===dow,fzDay(dkey(x))])}
+  return`<div class="stat"><div class="ic tone-o">${ico('fire')}</div><div><b>${sk} dag${sk===1?'':'e'} i træk</b><span>Én aktivitet om dagen holder flammen i live${ST.fz.n?` · ❄ ${ST.fz.n} fridag${ST.fz.n>1?'e':''} gemt`:''}</span></div></div>${fzNote()}
+    <div class="week-dots" aria-label="Aktive dage denne uge">${wk.map(([l,on,t,f])=>`<i class="${on?'on':''} ${t?'today':''} ${f?'fz':''}" ${f?'title="Dækket af en fridag"':''}>${f?'❄':l}</i>`).join('')}</div>`}
+// næste opgave på stien i en given uge (første ikke-færdige), ellers den globale næste
+function nextInWeek(k){if(k==='h')return HJEM.find(o=>{const [a,b]=opgProgress(o);return a<b})||null;const w=weekOf(+k);if(!w)return null;
+  for(const d of ['SD','LD'])for(const o of w.days[d]){if(!opgHasSol(o))continue;const [a,b]=opgProgress(o);if(a<b)return o}return null}
+function heroHTML(){const o=nextInWeek(String(CUR))||(()=>{const p=nextPart();return p&&p.opg})(),fresh=!ST.last&&!ST.xp;
+  let s=0;try{s=repSummary().n}catch(_){}const ex=DEADLINES.filter(x=>x.d>NOW).sort((a,b)=>a.d-b.d)[0];
+  const p=o&&o.parts.find(q=>hasSol(q)&&!isDone(q.key)),w=o?(o.week||0):CUR,ttl=o?(o.kind==='hjem'?esc(o.title):'Opgave '+o.nr+(o.title?': '+MD.inline(o.title):'')):'Alt på stien er klaret';
+  const sub=o?(o.kind==='hjem'?'Hjemmeopgave':`Uge ${o.week} · ${DAYNAME[o.day]}`)+(p&&p.label?` · delopgave ${esc(p.label)}`:''):'Tag en repetition eller en gammel eksamensopgave';
+  return`<div class="panel hero nhero" style="${uvars(w)}"><div class="hi">${greet()}</div><div class="ey">${fresh?'Start her':'Fortsæt her'}</div><h2>${ttl}</h2><p class="nsub">${sub}</p>
+    <div class="nacts">${o?`<a class="b nbig" href="${p?'#L-'+p.key:'#'+o.id}">${ico('play')} ${fresh?'Start':'Fortsæt'}</a>`:`<a class="b nbig" href="#traen">${ico('target')} Træn</a>`}</div>
+    <div class="nside">${s?`<a href="#repetition/start-5">${ico('repeat')} ${s} kort til repetition</a>`:''}${ex?`<a href="#eks">${ico('cap')} ${esc(ex.t)} om ${Math.max(0,Math.ceil((ex.d-NOW)/864e5))} dage</a>`:''}</div>
+    ${MASCOT('wave')}</div>`}
+// små stop før stien: prætest, video, interaktiv opgave og eksamenskobling (erstatter de fire store kort)
+function stopsRow(k){const w=+k;if(!w||!weekOf(w))return'';const st=[];
+  try{const P=LRN().pre[w];if(!P&&!preStarted(w)&&prePick(w).length>=3)st.push(`<a class="stop new" href="#praetest-${w}"><span class="si">${ico('quest')}</span><span>3 hurtige<small>før du starter</small></span></a>`);
+    else if(P&&!P.skip&&P.ids.length)st.push(`<a class="stop" href="#praetest-${w}"><span class="si">${ico('quest')}</span><span>Før og efter<small>prætest</small></span></a>`)}catch(_){}
+  if(VID_TITLES[w]){const seen=(ST.vids||{})[w],L=VID_LEN[w];st.push(`<button type="button" class="stop${seen?' done':''}" data-v="${w}"><span class="si">${ico('film')}</span><span>Ugens video<small>${L?Math.floor(L/60)+':'+String(Math.round(L%60)).padStart(2,'0'):''}${seen?' · set':''}</small></span></button>`)}
+  try{const L=interList().filter(x=>(x.p.opg.week||0)===w);if(L.length){const x=L.find(y=>!y.done)||L[0],all=L.every(y=>y.done);st.push(`<a class="stop${all?' done':''}" href="#L-${x.p.key}"><span class="si">${ico('hand')}</span><span>Træk i figuren<small>${L.length>1?L.length+' opgaver':'1 opgave'}${all?' · løst':''}</small></span></a>`)}}catch(_){}
+  try{const n=XP.filter(X=>X.w===w).length;if(n)st.push(`<a class="stop" href="#gamle-u${w}"><span class="si">${ico('note')}</span><span>Til eksamen<small>${n} gamle delopgaver</small></span></a>`)}catch(_){}
+  return st.length?`<div class="stops" role="list">${st.join('')}</div>`:''}
+function weekFocus(k){const isH=k==='h',u=isH?unit(0):unit(+k),pct=weekPct(k);
+  const lab=isH?'Afleveringer':'Uge '+k+(+k===CUR?' · nu':''),right=pct==null?'snart':isH?hjemProg().join('/'):pct+'%';
+  return`<section class="unit open wfocus${pct==null?' soon':''}" id="unit-${k}" style="${uvars(isH?0:+k)}"><div class="ubanner"><span class="ug">${esc(u[2])}</span><span class="ut"><small>${lab}</small><b>${esc(u[1])}</b></span><span class="pct">${right}</span></div>
+    <div class="upath" id="up-${k}">${stopsRow(k)}${pathHTML(k)}</div></section>`}
+function viewHome(){document.title='Mat1a';curId=curNode();if(!/^(h|\d+)$/.test(SELW))SELW=String(CUR);
+  const calm=calmMode();
+  let h=`<div class="page homepage">${onboardHTML()}${calm?calmHome()+learnHome():heroHTML()}${weekStrip()}${weekFocus(SELW)}</div>`;
+  main.innerHTML=h+bgfx();decoLive(main);wireOnboard();learnWire(main);
+  main.querySelectorAll('.wkc').forEach(c=>c.classList.toggle('sel',c.getAttribute('href')==='#uge-'+SELW));
+  {const c=main.querySelector('.wkc.sel'),s=main.querySelector('.wkstrip');if(c&&s)s.scrollLeft=c.offsetLeft-s.clientWidth/2+c.offsetWidth/2}
+  const up=main.querySelector('.upath');if(up)up.querySelectorAll('.node').forEach((n,i)=>n.style.setProperty('--d',Math.min(i,14)*45+'ms'));
   window.scrollTo(0,0)}
 /* #uge-N: fold ugen ud og rul hen til den (uden at tegne forsiden igen, hvis den allerede vises) */
-function showWeek(k){if(!main.querySelector('.homepage'))viewHome();toggleWeek(k,true);requestAnimationFrame(()=>{const u=document.getElementById('unit-'+k);if(u)u.scrollIntoView({block:'start',behavior:'instant'});
-  main.querySelectorAll('.wkc').forEach(c=>c.classList.toggle('sel',c.getAttribute('href')==='#uge-'+k))})}
+function showWeek(k){SELW=String(k);viewHome();requestAnimationFrame(()=>{const s=main.querySelector('.wkstrip');if(s){const y=s.getBoundingClientRect().top+scrollY-(document.querySelector('.top').offsetHeight||60)-8;window.scrollTo(0,Math.max(0,y))}
+  const c=main.querySelector('.wkc.sel');if(c&&c.scrollIntoView)c.scrollIntoView({block:'nearest',inline:'center'})})}
 
 /* ---------- exercise page ---------- */
 let PENDING=null;
@@ -4366,8 +4460,9 @@ function viewOpg(id){
     <h1>${o.kind==='hjem'?esc(o.title):'Opgave '+o.nr+(o.title?': '+MD.inline(o.title):'')}</h1>
     ${o.deadline?`<div class="prose" style="font-weight:800">Afleveres ${esc(o.deadline)}.</div>`:''}
     ${o.intro?`<div class="prose">${MD.block(o.intro)}</div>`:''}
-    ${o.concepts.length?`<div class="tags">${o.concepts.map(c=>`<a class="tag" style="background:rgba(255,255,255,.2);color:#fff" href="#${c}" data-c="${c}"># ${esc(CONCEPTS[c].title)}</a>`).join('')}</div>`:''}
-    ${(()=>{const seen=new Set(),all=[];o.parts.forEach(p=>partRefs(p).forEach(x=>{if(!seen.has(x.r)){seen.add(x.r);all.push(x)}}));return all.length?`<div class="ebook">${ico('book')} <span>I bogen:</span> ${all.slice(0,8).map(x=>refA(x.r,x.pg)).join(' ')}</div>`:''})()}
+    ${(()=>{const tg=o.concepts.length?`<div class="tags">${o.concepts.map(c=>`<a class="tag" style="background:rgba(255,255,255,.2);color:#fff" href="#${c}" data-c="${c}"># ${esc(CONCEPTS[c].title)}</a>`).join('')}</div>`:'';
+      const seen=new Set(),all=[];o.parts.forEach(p=>partRefs(p).forEach(x=>{if(!seen.has(x.r)){seen.add(x.r);all.push(x)}}));const bk=all.length?`<div class="ebook">${ico('book')} <span>I bogen:</span> ${all.slice(0,8).map(x=>refA(x.r,x.pg)).join(' ')}</div>`:'';
+      return tg||bk?`<details class="emeta"><summary>${ico('book')} Bog og begreber${all.length?` · ${all.length}`:''}</summary>${tg}${bk}</details>`:''})()}
     <div class="glyph">${esc(u[2])}</div></div><div class="plist">`;
   o.parts.forEach(p=>{const s=SOL[p.key],ps=pstate(p.key),nq=s?s.cards.filter(c=>c.q).length:0;
     h+=`<div class="pcard" id="pc-${p.label||'x'}" data-key="${p.key}"><div class="ph"><span class="pl">${esc(p.label||'✱')}</span><span class="pt">${p.label?'Delopgave '+esc(p.label):'Opgaven'}<small>${s?`${nq} spørgsmål undervejs · ${s.cards.length+2} kort`:'Kursets hint og facit'}</small></span>${ps&&ps.done?`<span class="badge ok">${'⭐'.repeat(ps.stars||1)}</span>`:s?'<span class="badge u">Interaktiv</span>':'<span class="badge">Kun facit</span>'}</div>
@@ -4463,7 +4558,7 @@ function closeLesson(){const fp=document.getElementById('figpop');if(fp)fp.remov
 function leaveLesson(){if(canHist&&history.state&&history.state.lesson){history.back();return}closeLesson();route()}
 function renderLesson(){
   const {p,cards,i}=LS,c=cards[i],total=cards.length-1;
-  L.innerHTML=`<div class="lbar"><button class="x" id="lx" aria-label="Luk">${ico('x')}</button><div class="prog"><i style="width:${Math.min(100,i/total*100)}%"></i></div>${figBtn()}<button class="b ghost sm lnoteb${ST.notes[p.key]?' has':''}" id="lnoteb" title="Skriv noter undervejs">✏️<span class="blbl"> Noter</span></button>${STORE?'':'<button class="b ghost sm lhelpb" id="lhelp" title="Spørg en ven eller din gruppe">🙋<span class="blbl"> Spørg</span></button>'}<div class="lxp">⚡ ${LS.xp}</div></div><div class="lbody" id="lbody"><div class="lfig" id="lfig" hidden></div><div class="lfig lnotes" id="lnotes" hidden></div><div class="lhist" id="lhist"></div><div class="lcard" id="lcard"></div></div><div class="lfoot" id="lfoot"><div class="in"><div class="msg" id="lmsg"></div><button class="b" id="lgo">Fortsæt</button></div></div>`;
+  L.innerHTML=`<div class="lbar"><button class="x" id="lx" aria-label="Luk">${ico('x')}</button><div class="prog"><i style="width:${Math.min(100,i/total*100)}%"></i></div>${figBtn()}<button class="b ghost sm lnoteb${ST.notes[p.key]?' has':''}" id="lnoteb" title="Skriv noter undervejs" aria-label="Noter">${ico('note')}<span class="blbl"> Noter</span></button>${STORE?'':`<button class="b ghost sm lhelpb" id="lhelp" title="Spørg en ven eller din gruppe" aria-label="Spørg en ven">${ico('people')}<span class="blbl"> Spørg</span></button>`}<div class="lxp">⚡ ${LS.xp}</div></div><div class="lbody" id="lbody"><div class="lfig" id="lfig" hidden></div><div class="lfig lnotes" id="lnotes" hidden></div><div class="lhist" id="lhist"></div><div class="lcard" id="lcard"></div></div><div class="lfoot" id="lfoot"><div class="in"><div class="msg" id="lmsg"></div><button class="b" id="lgo">Fortsæt</button></div></div>`;
   document.getElementById('lx').onclick=leaveLesson;
   const lhb=document.getElementById('lhelp');if(lhb)lhb.onclick=()=>{if(window.SOCIAL)SOCIAL.ask({key:p.key,step:c&&c.kind==='trin'?(c.title||''):''})};
   const nbt=document.getElementById('lnoteb');nbt.onclick=()=>{const f=document.getElementById('lnotes');if(!f.hidden){f.hidden=true;nbt.classList.remove('on');return}f.hidden=false;nbt.classList.add('on');f.innerHTML=`<div class="lfh">✏️ Mine noter til denne opgave <button class="link" id="lnx">Skjul</button></div>`;f.append(notesEditor(p.key,()=>nbt.classList.toggle('has',!!ST.notes[p.key])));document.getElementById('lnx').onclick=()=>nbt.click();f.querySelector('textarea').focus();document.getElementById('lbody').scrollTop=0};
@@ -4951,8 +5046,9 @@ document.getElementById('bookBtn').onclick=()=>Book.show();
 const menu=document.getElementById('menu'),mb=document.getElementById('menuBtn');
 /* åbn/luk ét sted, så aria-expanded altid passer; tastatur: fokus ind i menuen, pil op/ned, Esc/Tab ud */
 const menuItems=()=>[...menu.querySelectorAll('a,button')].filter(x=>x.offsetParent);
-function setMenu(open,focus){menu.hidden=!open;mb.setAttribute('aria-expanded',String(open));if(open&&focus){const f=menuItems()[0];if(f)f.focus()}else if(!open&&focus)mb.focus()}
+function setMenu(open,focus){menu.hidden=!open;if(!open){menu.classList.remove('sheet');if(window.__menuHome&&menu.parentNode!==window.__menuHome)window.__menuHome.append(menu);const tm=document.getElementById('tabMore');if(tm)tm.classList.remove('on')}mb.setAttribute('aria-expanded',String(open));if(open&&focus){const f=menuItems()[0];if(f)f.focus()}else if(!open&&focus)mb.focus()}
 mb.onclick=e=>{e.stopPropagation();setMenu(menu.hidden,true)};
+(()=>{const tm=document.getElementById('tabMore'),home=menu.parentNode;if(tm)tm.onclick=e=>{e.stopPropagation();const open=menu.hidden;if(open){document.body.append(menu);menu.classList.add('sheet')}setMenu(open,true);tm.classList.toggle('on',open)};window.__menuHome=home})();
 document.addEventListener('click',e=>{if(!menu.hidden&&(!menu.contains(e.target)||e.target.closest('a')))setMenu(false)});
 menu.addEventListener('keydown',e=>{const it=menuItems(),i=it.indexOf(document.activeElement);if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();it[(i+(e.key==='ArrowDown'?1:-1)+it.length)%it.length].focus()}else if(e.key==='Home'||e.key==='End'){e.preventDefault();it[e.key==='Home'?0:it.length-1].focus()}});
 menu.addEventListener('focusout',e=>{if(!menu.hidden&&e.relatedTarget&&!menu.contains(e.relatedTarget)&&e.relatedTarget!==mb)setMenu(false)});
@@ -4992,7 +5088,9 @@ function go(h){h=String(h==null?'':h).replace(/^#/,'');const from=HASH;
 function go_(h){if(canHist&&history.state&&history.state.lesson){HASH=h;try{history.replaceState({h},'','#'+h)}catch(e){canHist=false}route();return}go(h)}
 function lessonHistReplace(key){const p=PK[key];if(!p||!canHist)return;try{history.replaceState({h:p.opg.id,lesson:key},'','#'+p.opg.id)}catch(e){canHist=false}HASH=p.opg.id}
 function enterFx(){const m=document.getElementById('main');if(!m)return;m.classList.remove('enter');void m.offsetWidth;m.classList.add('enter');m.querySelectorAll('.node').forEach((n,i)=>n.style.setProperty('--d',Math.min(i,14)*45+'ms'));m.querySelectorAll('.pcard,.ccard,.toolgrid>*').forEach((n,i)=>n.style.setProperty('--d',Math.min(i,10)*50+'ms'))}
-function route(o){try{route_(o||{})}catch(e){console.error(e);crashUI(e)}}
+function route(o){try{route_(o||{})}catch(e){console.error(e);crashUI(e)}try{setTab()}catch(_){}}
+function setTab(){const r=HASH||'',t=/^(traen|repetition|metode|formler|kontrast|interaktiv|figurer|videoer)/.test(r)?'traen':/^(eks|eksamen|gamle|type-|plan|mini|morgen|emnekort|x-)/.test(r)?'eks':(!r||/^uge-|^opg|^h\d|^L-/.test(r)||OPG[r])?'idag':'';
+  document.querySelectorAll('#tabbar [data-tab]').forEach(b=>{const on=b.dataset.tab===t;b.classList.toggle('on',on);if(b.tagName==='A'){if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')}})}
 function route_(o){const r=HASH;pop.classList.remove('on');closePal();closeSide();setMenu(false);
   /* lektion: historikken får en post til opgavesiden og en til lektionen, så "tilbage" lukker lektionen (og gemmer) */
   if(r.startsWith('L-')&&PK[r.slice(2)]){const p=PK[r.slice(2)],oid=p.xh?xhBgId(p,o):p.opg.id;HASH=oid;
@@ -5000,7 +5098,7 @@ function route_(o){const r=HASH;pop.classList.remove('on');closePal();closeSide(
     if(!L.hidden)closeLesson();PENDING='pc-'+(p.label||'x');if(p.xh){if(o.from!==oid||!main.children.length)route_({bg:1})}else viewOpg(oid);startLesson(p.key);return}
   if(!L.hidden)closeLesson();
   requestAnimationFrame(enterFx);requestAnimationFrame(()=>fitMath(main));
-  if(!r)viewHome();else if(/^uge-(\d+|h)$/.test(r))showWeek(r.slice(4));
+  if(!r){if(!o.keepW)SELW=String(CUR);viewHome()}else if(/^uge-(\d+|h)$/.test(r))showWeek(r.slice(4));
   else if(r==='repetition'||r.startsWith('repetition/'))viewRep(r.slice(11))
   else if(r==='faelles'||r.startsWith('faelles/')){if(window.SOCIAL&&!STORE)SOCIAL.view(r.slice(8));else viewHome()}else if(r==='eksamen'||r.startsWith('eksamen-')){viewExams(r.slice(8));if(r==='eksamen')examExtras()}else if(r==='mini')viewMini();else if(r==='begreber')viewConcepts();else if(r==='metode')viewMix();else if(r==='formler')viewForms();else if(r==='videoer'){main.innerHTML=viewVideos();document.title='Ugevideoer · Mat1a';window.scrollTo(0,0)}else if(r==='graf')viewGraph();else if(r==='tools'||r.startsWith('tools-'))viewTools(r.slice(6));else if(learnRoute(r)||xhRoute(r)){}else if(OPG[r])viewOpg(r);else if(CONCEPTS[r])viewConcept(r);else viewHome()}
 /* fejlskærm i stedet for hvid skærm: tilbyd forsiden, eksport af de rå data og nulstilling */
@@ -6250,7 +6348,7 @@ document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest
 const XVID={meta:null};// XVID.meta sættes af xvidmeta.js: {file,title,len,ch:[[sek,label]],cues:[[t0,t1,tekst]],poster}
 const xvT=s=>Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');
 function xvidCard(){const M=XVID.meta;if(!M||STORE)return '';
-  return `<div class="pcard xvid"><div class="xvtop">${M.poster?`<button class="xvthumb" data-xvt="0" aria-label="Afspil videoen"><img src="${M.poster}" alt=""><span class="vidplay">▶</span><span class="vidlen">${xvT(M.len)}</span></button>`:''}<div><h2>🎬 ${esc(M.title)}</h2><p class="sub">Alle ${M.ch.length} opgaver regnet trin for trin, fra grundidéen til svaret. Med oplæsning og tekst. Hop direkte til den opgave, du vil se.</p><button class="b" data-xvt="0">▶ Se hele gennemgangen · ${Math.round(M.len/60)} min</button></div></div>
+  return `<div class="pcard xvid"><div class="xvtop">${M.poster?`<button class="xvthumb" data-xvt="0" aria-label="Afspil videoen"><img src="${M.poster}" alt=""><span class="vidplay">▶</span><span class="vidlen">${xvT(M.len)}</span></button>`:''}<div><h2>${esc(M.title)}</h2><p class="sub">Alle ${M.ch.length} opgaver regnet trin for trin, fra grundidéen til svaret. Med oplæsning og tekst. Hop direkte til den opgave, du vil se.</p><button class="b" data-xvt="0">▶ Se hele gennemgangen · ${Math.round(M.len/60)} min</button></div></div>
     <div class="xvch">${M.ch.map(([t,l])=>`<button class="xvc" data-xvt="${t}"><b>${esc(l)}</b><small>${xvT(t)}</small></button>`).join('')}</div></div>`}
 function openXVid(t0){const M=XVID.meta;if(!M)return;const old=document.getElementById('vidpop');if(old)old.remove();
   const el=document.createElement('div');el.id='vidpop';el.className='vidpop';el.setAttribute('role','dialog');el.setAttribute('aria-label','Video: '+M.title);
@@ -6729,6 +6827,8 @@ function learnWire(root){planWire(root);const x=root.querySelector('#lcx');if(x)
 
 /* ---------- ruter ---------- */
 function learnRoute(r){
+  if(r==='traen'){viewTraen();return true}
+  if(r==='eks'){viewEksHub();return true}
   if(r==='plan'){viewPlan();return true}
   if(r==='interaktiv'){viewInteractive();return true}
   if(r==='figurer'||r.startsWith('figurer-')){viewFig(r.slice(8)||null);return true}
@@ -6804,6 +6904,38 @@ function calHTML(){if(STORE)return'';{const t=calTimes().includes(ST.rem.t)?ST.r
     <label class="remtime"><span>Tidspunkt</span><select id="remcal">${calTimes().map(x=>`<option${x===t?' selected':''}>${x}</option>`).join('')}</select></label>
     <p><a class="b u" id="remcalgo" href="${calHref(t)}">📅 Tilføj til kalender</a></p><p class="sub">På iPhone: tryk på knappen og vælg "Tilføj alle". Du kan slette begivenheden i Kalender, når du vil.</p></section>`}}
 function calWire(){const cs=main.querySelector('#remcal');if(cs)cs.onchange=()=>{ST.rem.t=cs.value;save();main.querySelector('#remcalgo').href=calHref(cs.value)}}
+
+/* ---------- Bundmenuens to sider (23/11): Træn og Eksamen samler alt det, der før lå på forsiden ---------- */
+const hrow=(href,ic,tone,t,s,extra='')=>`<a class="stat" href="${href}"><div class="ic tone-${tone}">${ico(ic)}</div><div><b>${t}</b><span>${s}</span></div>${extra||'<span class="chevr" aria-hidden="true">›</span>'}</a>`;
+function viewTraen(){document.title='Træn · Mat1a';let rs={n:0,min:0,done:0};try{rs=repSummary()}catch(_){}
+  const mix=(()=>{try{const S=mixSt(),l=S.runs[S.runs.length-1];return`${MIXN} blandede opgaver · ca. 3 min${l?` · sidst ${l.ok} af ${l.n}`:''}`}catch(_){return'Blandede opgaver på tværs af uger'}})();
+  const F=LRN().fig||{},fn=Object.values(F).reduce((s,v)=>s+v[0],0),IL=(()=>{try{return interList()}catch(_){return[]}})(),errs=Object.keys(ST.errs).filter(id=>{try{return errOpen(id)}catch(_){return false}}).length;
+  main.innerHTML=`<div class="page narrow hub"><div class="hubh"><h1>Træn</h1><p class="sub">Hold stoffet frisk. Lidt hver dag slår meget én gang.</p></div>
+    <div class="panel hubp">${hrow('#repetition','repeat','v',rs.n?'Dagens repetition':rs.done?'Færdig for i dag ✓':'Dagens repetition',rs.n?`${rs.n} kort · ca. ${rs.min} min`:'Intet at repetere lige nu',rs.n?'<span class="b u sm" aria-hidden="true">Start</span>':'')}
+      ${errs?hrow('#repetition/fejl','check','r','Fejllog',`${errs} fejl, der venter på at blive rettet`):''}
+      ${streakBlock()}</div>
+    ${weekCard()}
+    <h2 class="hubt">Øv på en ny måde</h2><div class="panel hubp">
+      ${hrow('#metode','compass','b','Hvilken metode?',mix)}
+      ${hrow('#figurer','target','o','Figurtræning',`${Object.keys(FIGGEN).length} typer med nye tal hver gang${fn?` · ${fn} løst`:''}`)}
+      ${hrow('#interaktiv','hand','t','Interaktive opgaver',`${IL.length} opgaver, hvor du trækker i figuren${IL.length?` · ${IL.filter(x=>x.done).length} løst`:''}`)}
+      ${hrow('#formler','cards','y','Formeltræner','Udfyld hullet i de vigtigste formler')}
+      ${hrow('#kontrast','eye','p','Kontrastkort','Begreber, der ofte forveksles, side om side')}
+      ${hrow('#videoer','film','v','Ugevideoer',`${Object.keys(ST.vids||{}).length} af ${Object.keys(VID_LEN).length||12} set`)}
+    </div>${coachCard()?`<div class="lhome">${coachCard()}</div>`:''}</div>`;learnWire(main);window.scrollTo(0,0)}
+function viewEksHub(){document.title='Eksamen · Mat1a';const ex=DEADLINES.filter(x=>x.d>NOW).sort((a,b)=>a.d-b.d)[0],days=ex?Math.max(0,Math.ceil((ex.d-NOW)/864e5)):null;
+  let xs={n:0,set:0};try{xs={n:XP.length,set:XP.filter(X=>xhStatus(X).set).length}}catch(_){}
+  main.innerHTML=`<div class="page narrow hub"><div class="hubh"><h1>Eksamen</h1>${ex?`<div class="hubcount"><b>${days}</b><span>dage til ${esc(ex.t.toLowerCase())}<small>${ex.d.getDate()}/${ex.d.getMonth()+1}</small></span></div>`:''}</div>
+    ${learnHome()}${xhHome()}
+    <div class="panel hubp">
+      ${hrow('#gamle','note','v','Gamle eksamensopgaver',`${xs.set} af ${xs.n} delopgaver gennemgået · efter type`)}
+      ${hrow('#emnekort','chart','t','Emnekort','Hvor sikker du er i hver opgavetype')}
+      ${hrow('#eksamen','flag','o','Prøveeksamen','Rigtige sæt med tid på, som til eksamen')}
+      ${hrow('#mini','task','b','Minieksamen','40 minutter, blandet')}
+      ${hrow('#plan','route','p','Eksamensplan','En plan dag for dag for de sidste 10 dage')}
+    </div>${typeof xvidCard==='function'?xvidCard():''}</div>`;learnWire(main);window.scrollTo(0,0)}
+PITEMS.push(pitem('Side','Træn','Repetition, fejllog, stime og alle træningsformer samlet','traen','træn repetition stime fejllog øv',1));
+PITEMS.push(pitem('Side','Eksamen','Nedtælling, eksamensplan, gamle opgaver, prøveeksamen og eksamensvideo','eks','eksamen nedtælling plan prøveeksamen gamle opgaver',1));
 
 /* ---------- Eksamenshjælp: indhold ----------
    XT: opgavetyperne fra de gamle sæt med opskrift, kendetegn, typiske fejl og hvad bedømmerne vil se.
@@ -10864,7 +10996,7 @@ function xhRow(X,o){o=o||{};const s=xhStatus(X);
   return`<a class="xhrow" href="#L-${X.lk}" style="${uvars(X.w)}" data-st="${s.own}${s.set?' set':''}"><span class="xhset">${esc(X.S.s)}<small>${esc(X.lab)}</small></span><span class="xhq">${MD.inline(((X.intro?X.intro+' ':'')+X.q).replace(/\\dfrac/g,'\\frac').replace(/\\displaystyle/g,''))}</span><span class="xhmeta">${o.type&&X.T.id!=='andet'?`<span class="badge plainb">${esc(X.T.t)}</span>`:''}${xhBadge(X)}</span><span class="xhgo2" aria-hidden="true">›</span></a>`}
 function xhReadyBar(pct){return`<span class="xhbar" role="img" aria-label="${pct} % klar"><i style="width:${pct}%"></i></span>`}
 function xhHome(){const s=xhNext();if(!s)return'';const T=s.T,tr=xhTrActive(T.id),all=XP.length,seen=XP.filter(X=>xhStatus(X).set).length;
-  return`<div class="lhome xhhome"><div class="xhhc" style="${uvars(T.w)}"><a class="xhhmain" href="#gamle"><span class="xhhic" aria-hidden="true">📝</span><span class="xhht"><small>Gamle eksamensopgaver · ${seen} af ${all} gennemgået</small><b>Næste type: ${esc(T.t)}</b><span>Kom i ${xhFreqTxt(s)} · ${esc(xhMastery(s).miss.toLowerCase())}</span></span></a><button class="b u sm" data-xhtr="${T.id}">${tr?'Fortsæt':'Træn typen'}</button></div>${xhStrip()}</div>`}
+  return`<div class="lhome xhhome"><div class="xhhc" style="${uvars(T.w)}"><a class="xhhmain" href="#gamle"><span class="xhhic" aria-hidden="true">${ico('note')}</span><span class="xhht"><small>Gamle eksamensopgaver · ${seen} af ${all} gennemgået</small><b>Næste type: ${esc(T.t)}</b><span>Kom i ${xhFreqTxt(s)} · ${esc(xhMastery(s).miss.toLowerCase())}</span></span></a><button class="b u sm" data-xhtr="${T.id}">${tr?'Fortsæt':'Træn typen'}</button></div>${xhStrip()}</div>`}
 function xhWeekRow(k){const w=+k;if(!w)return'';const ts=XTL().filter(T=>T.w===w),n=XP.filter(X=>X.w===w).length;if(!ts.length&&!n)return'';
   return`<a class="prerow xhwk" href="#gamle-u${w}"><span class="lkubi" aria-hidden="true">📝</span><span class="lct"><b>Sådan kommer ugen til eksamen</b><span>${ts.length?ts.map(T=>esc(T.t)).join(' · '):n+' gamle delopgaver'}</span></span><span class="chev" aria-hidden="true">›</span></a>`}
 function xhForConcept(id){const ps=XP.filter(X=>X.c===id),T=XT_BY[XC2T[id]],more=T?xhOfType(T.id).filter(X=>X.c!==id):[];if(!ps.length&&!more.length)return'';
